@@ -5,5 +5,7 @@
 
 分力开始为期中考试复习，在Lagrange function 上总是犯错，以致怀疑自己是否不适合处理物理字母运算。用时多而心情沮。 
 ## 周六
+2015/4/18
+
 分力演算Kepler Problem 步履维艰 而做中心力场一节的作业又被Maupertuis’ Principle and Processing ellipse 卡住。
 
