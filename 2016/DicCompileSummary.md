@@ -1,4 +1,7 @@
-﻿DudenDic Noun Extraction Stage Summary:
+﻿# Dic Compile Summary
+2016/9/26
+
+DudenDic Noun Extraction Stage Summary:
 
 最近我了解了一下XML在一般文本文档标记中的应用，并初步制定语料库所采用的标记方案，并人工标注了第六课的2篇课文。
 

@@ -1,4 +1,6 @@
-﻿这两天我看了一下关于ie和firefox浏览器利用插件快速查词的资料，并在原来index.html名词词典上添加了鼠标double clixk查词的功能.
+﻿# Browser AddOn Try
+
+这两天我看了一下关于ie和firefox浏览器利用插件快速查词的资料，并在原来index.html名词词典上添加了鼠标double clixk查词的功能.
 
 首先，利用 `<body ondblclick="GetSelection()">` 事件可以很容易地获取到当前body下选中的单词，主要时间花在多框架html子窗体将得到的单词交给左边的导航栏处理，并根据处理的结果对子窗体进行跳转。
 
