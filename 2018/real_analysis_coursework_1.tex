@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsthm}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}
+\usepackage{amsmath,amsfonts}
+\def\B{\mathcal{B}}
+\def\R{\mathbb{R}}
+\begin{document}
+\title{real analysis note}
+\author{zhaofeng-shu33}
+\date{2018/5/2}
+\maketitle
+\begin{definition}[function inverse]
+The inverse of a function $f: A\to B$ is a function $g: f(A) \to A$ which satisfies $g(f(x))=x,\forall x\in A$.
+\end{definition}
+The inverse of a function may not exist.
+\begin{theorem}
+Only injective function has inverse function. And inverse functions are therefore surjective.
+\begin{proof}
+If $f$ has inverse function $g$, then
+$\forall x_1,x_2\in A, x_1\neq x_2, g(f(x_1))\neq g(f(x_2))\Rightarrow f(x_1)\neq f(x_2)$, that is, $f$ is injective.
+$\forall x\in A$, choose $y=f(x)\in B$ then $g(y)=x$. That is $g$ is surjective.
+
+Otherwise, if $f$ is injective,  the function constructed as $g(f(x))=x,\forall x\in A$ is well defined and $g$ is the inverse function of $f$ by definition.
+\end{proof}
+\end{theorem}
+\begin{theorem}
+If $f$ is surjective, then the inverse of $f$ is injective.
+\begin{proof}
+$\forall y_1, y_2 \in B, y_1\neq y_2$. Since $f$ is surjective, $\exists x_1, x_2 \in A$ such that $f(x_1) = y_1, f(x_2) = y_2 $.
+ Since $y_1 \neq y_2$, $x_1\neq x_2$. Let $g$ be the inverse function of $f$, by definition, $x_1 = g(f(x_1)) = g(y_1), x_2 = g(f(x_2)) = g(y_2)$. Since $x_1\neq x_2$, $g(y_1) \neq g(y_2)$. That is, $g$ is injective. 
+ \end{proof}
+ \end{theorem}
+ \begin{theorem}
+ If $f$ is surjective, and then the inverse of $f$ is $g$, well defined on $B$. Then $f(g(y)) = y ,\forall y\in B$
+ \begin{proof}
+ $\forall y \in B$, there exists $x\in A$ such that $f(x)=y$ by the surjective property of $f$. Then $f(g(y)) = f(g(f(x))) = f(x) = y$.
+ \end{proof}
+ \end{theorem}
+\begin{example}
+Show that the collection of Borel sets is the smallest $\sigma$-algebra that contains the closed set.
+\begin{proof}
+Let $\B$ be the collection of all open sets of $\R$ and $D$ be the collection of all closed sets of $\R$. We only need to show
+that $\sigma(\B)=\sigma(D)$.
+
+$\forall V \in \B, V=\bigcup_{i=1}^{\infty} (a_i,b_i) = \R\backslash \bigcap_{i=1}^{\infty} (a_i,b_i)^c \in \sigma(D) \Rightarrow$
+$\B \subseteq \sigma(D) \Rightarrow \sigma(\B) \subseteq \sigma(D)$
+
+On the other hand, $\forall V \in D$, since $V$ is closed, $V = \R\backslash \bigcup_{i=1}^{\infty} (a_i,b_i) 
+\in \sigma(\B) \Rightarrow D \subseteq \sigma(\B) \Rightarrow \sigma(D)\subseteq \sigma(\B)$
+
+Therefore, $\sigma(\B) = \sigma(D)$.
+\end{proof}
+\end{example}
+\end{document}
