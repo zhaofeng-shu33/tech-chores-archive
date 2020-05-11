@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{cancel}
+\usepackage{bm}
+\DeclareMathOperator{\diag}{diag}
+\def\T{\mathrm{T}}
+\def\E{\mathbb{E}}
+\def\Var{\textrm{Var}}
+\begin{document}
+\textbf{Problem}: 
+Consider a MLP nerual network with one hidden layer. Let the activation function of the hidden layer be a monotonic function $f(\cdot)$. Then the output of the $z$-th hidden node is
+\begin{equation}\label{eq:constraint}
+s_z(x)=f(w^\T(z)t(x)+c(z)),z=1,\dots,k
+\end{equation}
+Denote $s=[s_1,\dots,s_k]^\T$, which is a $k \times|\mathcal{X}|$ matrix.
+
+Suppose $|v(y)^\T s(x)|+|d(y)|\leq \epsilon,Q_{Y|X}$ is a given conditional distribution,
+$$\tilde{P}_{Y|X}(y|x)=\frac{Q_{Y|X}(y|x) e^{v(y)^\T s(x)+d(y)}}{\sum_{y'\in \mathcal{Y}} Q_{Y|X}(y'|x) e^{v(y')^\T s(x)+d(y')}}$$
+With further assumption of $|w(z)^\T t(x)|<\epsilon$. Given $v(y),d(y)$, which is the parameter of the output layer and input feature $t(x)$. Optimize $w(z),c(z)$ such that $D(P_{Y,X}||P_X \tilde{P}_{Y|X})$ is minimized.
+
+By the previous deduction, we should minimize
+\begin{equation}\label{eq:min_total}
+L(s)=\sum_{x\in \mathcal{X}} P_X(x)L_x(s)
+\end{equation}
+where
+\begin{equation}\label{eq:min_each}
+L_x(s)=\frac{1}{2}s(x)^\T v \bm{W}_x v^\T s(x) +(d^\T \bm{W}_x v^\T-\Xi_x^T v^\T) s(x)+C
+\end{equation}
+If $s(x)$ is unconstrained, then we only need to solve $|\mathcal{X}|$ quaractic optimization problem, and the optimal $s(x)$ is given by:
+\begin{equation}
+s^*(x)=(v\bm{W}_xv^\T)^{-1}(\Xi_x^\T v^\T -d^\T \bm{W}_x v^\T)
+\end{equation}
+
+However, $s(x)$ is contraint by \eqref{eq:constraint}. Therefore, for each $x$ we measure the difference between optimal $L_x(s^*)$ and $L_x(s)$.
+In \eqref{eq:min_total}  $L(s)$ can be rewritten as:
+\begin{equation}
+L(s)=L(s^*)+\frac{1}{2}\sum_{x\in\mathcal{X}}P_X(x)(s(x)-s^*(x))^\T v \bm{W}_x v^\T (s(x)-s^*(x))
+\end{equation}
+for the $z$-th component of $s(x)$, we expand \eqref{eq:constraint} around $c(z)$:
+$$
+s_z(x)=w^\T(z) t(x)\cdot f'(c(z))+f(c(z))+o(\epsilon)
+$$
+Let $w=[w(1)f'(c(1)),\dots,w(k)f'(c(k))]$, which is $m\times k$ matrix and $f_z=[f(c(1)),\dots,f(c(k))]^\T$. Then 
+$s(x)=w^\T t(x)+f_z$. The matrix $w$ and vector $f_z$ are parameters to be optimized.
+Let $\tilde{\bm{W}}_x=v\bm{W}_x v^\T,\tilde{\Xi}_x=\tilde{\bm{W}}_x s^*(x)$, then \eqref{eq:min_total} can be rewritten as
+\begin{equation}\label{eq:total_sim}
+L(s)=L(s^*) + \frac{1}{2}\sum_{x\in\mathcal{X}}(t(x)-s^*(x))^\T v \bm{W}_x v^\T (s(x)-s^*(x))
+\end{equation}
+By assumption that $|s(x)^\T v(y)|<\epsilon$, if we omit $o(\epsilon^2)$ term, equation \eqref{eq:total_sim} can be simplified to:
+\begin{equation}
+L(s)=L(s^*) + \sum_{x \in \mathcal{X}} P_X(x)\left(\frac{1}{2}t(x)^\T w \tilde{\bm{W}}_x w^\T t(x) + f_z^\T \tilde{\bm{W}}_x w^\T t(x) + \frac{1}{2} f_z^\T \tilde{\bm{W}}_x f_z - \tilde{\Xi}_x^\T (w^\T t(x)+f_z)\right)
+\end{equation}
+Similar to the deduction for one layer, stack $[w(1)^\T,\dots,w(k)^\T]$ as a $mk$ dimensional vector, by the definition of Kronecker matrix product we
+have
+\begin{equation}
+\begin{bmatrix}
+\sum_{x\in \mathcal{X}} P_X(x) (t(x)t(x)^\T)\otimes \tilde{\bm{W}}_x & \sum_{x\in \mathcal{X}} P_X(x) t(x)\otimes \tilde{\bm{W}}_x \\
+\sum_{x\in \mathcal{X}} P_X(x) \tilde{\bm{W}}_x \otimes t(x)^\T & \sum_{x\in \mathcal{X}} P_X(x)\tilde{\bm{W}}_x
+\end{bmatrix}\binom{W}{f_z}=\binom{\sum_{x\in \mathcal{X}}t(x)\tilde{\Xi}_x^\T}{\sum_{x\in \mathcal{X}}\tilde{\Xi}_x}
+\end{equation}
+Notice that $t(x)\otimes \tilde{\bm{W}}_x$ is $mk\times k$ dimensional matrix and its transpose is $\tilde{\bm{W}}_x \otimes t(x)^\T$.
+$(t(x)t(x)^\T)\otimes \tilde{\bm{W}}_x$ is $mk \times mk$ dimensional matrix.
+
+
+\end{document}
+
+
+
+
+
+

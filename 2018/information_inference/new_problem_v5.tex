@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{cancel}
+\usepackage{bm}
+\DeclareMathOperator{\diag}{diag}
+\def\T{\mathrm{T}}
+\def\E{\mathbb{E}}
+\def\Var{\textrm{Var}}
+\begin{document}
+\textbf{Problem}: Suppose $|v(y)^\T s(x)|+|d(y)|\leq \epsilon,Q_{Y|X}$ is a given conditional distribution,$$\tilde{P}_{Y|X}(y|x)=\frac{Q_{Y|X}(y|x) e^{v(y)^\T s(x)+d(y)}}{\sum_{y'\in \mathcal{Y}} Q_{Y|X}(y'|x) e^{v(y')^\T s(x)+d(y')}}$$
+Find constraints on $s(x),v(y),d(y)$ such that $D(P_{Y,X}||P_X \tilde{P}_{Y|X})$ is minimized.
+
+%We characterize the closeness by:
+%\begin{equation}\label{eq:QP}
+%Q_{Y|X=x}(y)=P_{Y|X=x}(y)(1+\epsilon \xi(x,y))
+%\end{equation}
+%where $\xi(x,y)=O(1)$ and 
+%\begin{equation}\label{eq:orth}
+%\sum_{y\in \mathcal{Y}}P_{Y|X=x}(y) \xi(x,y)=0
+%\end{equation}
+
+%We assume $v(y)=\epsilon v_1(y)+\epsilon^2 v_2(y),d(y)=\epsilon d_1(y)+\epsilon^2 d_2(y)$
+we expand the denominator of $\tilde{P}_{Y|X}(y|x)$ first:
+\begin{align*}
+\sum_{y'\in \mathcal{Y}} Q_{Y|X=x}(y'|x) e^{v(y')^\T s(x)+d(y')}=&
+1+\E_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))\\
++&\frac{1}{2}(v(Y)^T s(x)+d(Y))^2]+O(\epsilon^3)
+\end{align*}
+\begin{align*}
+-\log\left[\sum_{y'\in \mathcal{Y}} Q_{Y|X=x}(y'|x) e^{v(y')^\T s(x)+d(y')}\right]=&
+-\E_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))] \\
+-&\frac{1}{2}\E_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))^2]\\
++&\frac{1}{2}  \E^2_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))]+O(\epsilon^3)
+\end{align*}
+By Maximum Likelyhood Method, the objective function is $\E_{P_{X,Y}}[\log \tilde{P}_{Y|X}]$, and 
+\begin{align*}
+\E_{P_{X,Y}}[\log \tilde{P}_{Y|X}]=&\E_{P_{X,Y}}[\log Q_{Y|X}]+ \E_{P_{X,Y}}[v(Y)^T s(X)+d(Y)]+\\%\cancelto{0}{\E[d(Y)]}
++&\E_{P_X}\left[-\log\sum_{y'\in \mathcal{Y}} Q_{Y|X}(y'|x) e^{v(y')^\T s(X)+d(y')}]\right]\\
+=& C +  \E_{P_X}\left[\sum_{y\in \mathcal{Y}}(P_{Y|X}(y)-Q_{Y|X}(y))(v(y)^\T s(X)+d(y))\right]+\\
++&\frac{1}{2}\E_{P_X}\left[\E^2_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))]\right]-\\
+-&\frac{1}{2}\E_{P_X}\left[\E_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))^2]\right]+ O(\epsilon^3)
+\end{align*}
+%In \eqref{eq:main}, we assume $\E_Y[d(Y)]=0$ without loss of generality.
+%We maximize the coeffient of $\epsilon $ and $\epsilon^2$ in \eqref{eq:main} %seperately.
+
+%The coefficient of $\epsilon $ in \eqref{eq:main} comes from 
+%$$
+%c_{\epsilon}=\E_{X,Y}[v_1(Y)^T s(X)]-\E_{X}[\E_{Q_{Y|X}}[(v_1(Y)^T s(X)+d_1(Y))]]
+%$$
+%replacing $Q_{Y|X}$ with \eqref{eq:QP} in the above equation, we can get:
+%\begin{equation}
+%c_{\epsilon}=-\epsilon \E_{X,Y}[\xi(X,Y)(v_1(Y)^T s(X)+d_1(Y))]
+%\end{equation}
+%which is of order $O(\epsilon)$
+
+
+
+%For the second order term, then we have
+%\begin{align*}
+%c'_{\epsilon}=&\E_{X,Y}[v_2(Y)^T s(X)]-\E_{X}\left[\E_{Q_{Y|X}}[(v_2(Y)^T s(X)+d_2(Y))+\frac{1}{2}(v_1(Y)^T s(X)+d_1(Y))^2]\right]\\
+%+&\frac{1}{2} \E_X\left[\E^2_{Q_{Y|X}}[(v_1(Y)^T s(X)+d_1(Y))]\right]+\frac{c_{\epsilon}}{\epsilon}\\
+%=& -\frac{1}{2}\E_{X,Y}[(v_1(Y)^T s(X)+d_1(Y))^2]]+\frac{1}{2} \E_X\left[\E^2_{P_{Y|X}}[(v_1(Y)^T s(X)+d_1(Y))]\right]\\
+%-&\E_{X,Y}[\xi(X,Y)(v_1(Y)^T s(X)+d_1(Y))]+O(\epsilon)\\
+%=& -\frac{1}{2}\E_X\left[\Var_{Y|X}[v_1(Y)^T s(X)+d_1(Y)]\right]-\E_X[\E_{Y|X}[\xi(X,Y)(v_1(Y)^T s(X)+d_1(Y))]]+O(\epsilon)\\
+%=& -\frac{1}{2}\E_X\left[\Var_{Y|X}[v_1(Y)^\T s(X)+d_1(Y)+\xi(X,Y)]\right]+\frac{1}{2}\E_X[\Var_{Y|X}[\xi(X,Y)]]+O(\epsilon)
+%\end{align*}
+%In the last equation, we use equation \eqref{eq:orth}, that is $E_{Y|X}[\phi_X(Y)]=0$.
+%It is not always possible to make $v_1(Y)^\T s(X)+d_1(Y)+\xi(X,Y)$ a constant for all $X$,
+%To maximize the coefficient of $\epsilon^2$, we only need to minimize the following expression
+%\begin{equation}\label{eq:obj}
+%\min \sum_{x\in \mathcal{X}}P_X(x)\left(\frac{1}{2}\Var_{Y|X=x}[v_1(Y)^T s(x)+d_1(Y)]+\E_{Y|X=x}[\xi(x,Y)(v_1(Y)^T s(x)+d_1(Y))]\right)
+%\end{equation}
+We simplify the above expression in matrix form as follows:
+
+let $n\triangleq |\mathcal{Y}|$ and $s(x)$ is a $k-$dimensional vector,$v_1(Y)=[v_1(1),\dots,v_1(n)]$ is a $k\times n$ matrix.
+We assume $\mathcal{Y}=\{1,2,\dots,n\}$,then the objective function to minimize can be rewritten in matrix notation as
+\begin{equation}\label{eq:min}
+\sum_{x\in \mathcal{X}} P_X(x)\left(\frac{1}{2}s(x)^\T v_1 \bm{Q}_x v_1^\T s(x) +d_1^\T \bm{Q}_x v_1^\T s(x)+\frac{1}{2}d_1^\T \bm{Q}_x d_1-\Xi_x^T (v_1^\T s(x)+d_1)\right)
+\end{equation}
+where $\Xi_x(y)=P_{Y|X=x}(y)-Q_{Y|X=x}(y),\bm{Q}_x(i,j)=Q_{Y|X=x}(i)\delta_{ij}-Q_{Y|X=x}(i)Q_{Y|X=x}(j)$.
+$\Xi_x$ is a n-dimensional vector and $\bm{Q}_x$ is a $n\times n$ matrix.
+Taking the derivative w.r.t $v_1$(matrix) and $d_1$(vector) and make them equal zero gives
+\begin{align}
+\sum_{x\in \mathcal{X}} P_X(x)\left(ss^\T v_1 \bm{Q}_x+sd_1^\T \bm{Q}_x-s\Xi_x^\T\right) = & 0 \label{eq:joint_pre_1}\\
+\sum_{x\in \mathcal{X}} P_X(x)\left(\bm{Q}_x v_1^Ts(x)+ \bm{Q}_x d_1-\Xi_x\right)=& 0\label{eq:joint_pre_2}
+\end{align}
+where $s=s(x)$.
+Notice that in general \eqref{eq:joint_pre_1} contains $k\times n$ equations and \eqref{eq:joint_pre_2} contains $n$ equations.
+
+However, if we multiply \eqref{eq:joint_pre_2} by $s^T$ on the right, then it is equivalent to \eqref{eq:joint_pre_1}. Therefore, we only need to consider
+\eqref{eq:joint_pre_2} and the solution is not unique.
+
+
+First we consider $k=1$, denote $Q_{X,Y}=P_X Q_{Y|X}$, which is a joint distribution and can be computed.
+Then $Q_{X}=P_X,Q_{Y}=\sum_{x\in \mathcal{X}}Q_{X,Y}$ and $Q_{X,Y}=Q_Y Q_{X|Y}$
+ then the equation \eqref{eq:joint_pre_1} can be simplified as :
+\begin{equation}\label{eq:1d}
+\E_{Q_{X|Y=\hat{y}}}[s^2(X)]v_1(\hat{y})Q_Y(\hat{y})+M(\epsilon)+\E_{Q_{X|Y=\hat{y}}}[s(X)]Q_Y(\hat{y})= \E_{P_{X|Y=\hat{y}}}[s(X)]P_Y(\hat{y})
+\end{equation}
+where $\hat{y}\in \{1,2,\dots,n\}$. and $M(\epsilon)$ is
+$$
+M(\epsilon)=\sum_{x\in \mathcal{X}}\left(s(x)Q_{Y|X=x}(\hat{y})(d(\hat{y})-\E_{Q_{Y|X=x}}[v_1(Y)s(x)+d(Y)])\right)
+$$
+%In the above equation, we replace $P_{Y|X=x}(i)$ with $Q_{Y|X=x}(i)$, because they only differ $\epsilon$ term. The replacement has no impact on the result.
+In equation \eqref{eq:1d}, $M(\epsilon)=O(\epsilon)$. Its contribution to $v(y)$ is higher order term since 
+we are solving matrix equation $(I+M(\epsilon))v_1=b$. Therefore, we can omit it and get the solution to $v(\hat{y})$ as:
+\begin{equation}\label{eq:1dv1sol}
+v(\hat{y})=\frac{\E_{P_{X|Y=\hat{y}}}[s(X)]P_Y(\hat{y})-\E_{Q_{X|Y=\hat{y}}}[s(X)]Q_Y(\hat{y})}{\E_{Q_{X|Y=\hat{y}}}[s^2(X)]Q_Y(\hat{y})}+O(\epsilon^2)
+\end{equation}
+The above approximation holds if $Q_{Y|X}$ is near to $P_{Y|X}$, or more specifically, $Q_{Y|X}$ is within $\epsilon$ neighborhood of $P_{Y|X}$,then $\Sigma_{x}=O(\epsilon)$ and the higher order term in $v(\hat{y})$ is included in $O(\epsilon)$.
+
+Notice that when $Q_{Y|X}=P_Y$,then $Q_Y=P_Y,Q_{X|Y}=_X$ by definition.Then \eqref{eq:1dv1sol} can be reduced to
+\begin{equation}
+v_1(\hat{y})= \frac{\E_{P_{X|Y=\hat{y}}}[s(X)]-\E_{P_X}[s(X)]}{\E_{Q_{X|Y=\hat{y}}}[s^2(X)]}+O(\epsilon^2)
+\end{equation}
+%since we can adjust $v_1(Y),s(X)$ to have zero mean w.r.t $P_X,P_Y$.
+
+%Also notice that when $\epsilon\to 0$, that is $Q_{Y|X}\to P_{Y|X}$
+%In general, \eqref{eq:1d} can be computed by matrix solving.
+%Q_{P|X}不能写成同一个epsilon 邻域。
+%We change the form of \eqref{eq:joint_pre_1} as follows (assume $d_1=0$ first):
+Once the dominate term for $v(y)$ is solved. Then by \eqref{eq:joint_pre_2}, we can solve $d(y)$ as 
+\begin{equation}\label{eq:1dd}
+d(\hat{y})=\frac{Q_Y(\hat{y})-P_Y(\hat{y})-\E_{P_X}\left[s(X)Q_{Y|X}(\hat{y})(v_1(\hat{y})-\E_{Q_{Y|X}}[v_1(Y)])\right]}{Q_Y(\hat{y})}+O(\epsilon^2)
+\end{equation}
+When $Q_{Y|X}=P_Y$, then $d(\hat{y})=-\E_X[s(X)](v_1(\hat{y})-\E_{P_Y}[v_1(Y)])+O(\epsilon^2)$
+%\begin{align*}
+%\E_{P_{X|Y}}(ss^\T) v_1 \bm{P}_{Y}+s\Xi_x^\T
+%\end{align*}
+%where $\bm{P}_{Y}=\diag[P_Y(1),\dots,P_Y(n)]$ is a diagonal matrix.
+%We then seek a solution $(v_1,d_1)$ such that their norm is minimized(?).
+
+SGD $\iff$ ACE
+ 
+
+\end{document}
+
+
+
+

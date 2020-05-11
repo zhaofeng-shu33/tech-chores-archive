@@ -1,0 +1,192 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{cancel}
+\usepackage{bm}
+\DeclareMathOperator{\diag}{diag}
+\def\T{\mathrm{T}}
+\def\Cov{\mathrm{Cov}}
+\def\E{\mathbb{E}}
+\def\Var{\textrm{Var}}
+\begin{document}
+\textbf{Problem}: Suppose $|v(y)^\T s(x)|+|d(y)|\leq \epsilon,Q_{Y|X}$ is a given conditional distribution,$$\tilde{P}_{Y|X}(y|x)=\frac{Q_{Y|X}(y|x) e^{v(y)^\T s(x)+d(y)}}{\sum_{y'\in \mathcal{Y}} Q_{Y|X}(y'|x) e^{v(y')^\T s(x)+d(y')}}$$
+Find constraints on $s(x),v(y),d(y)$ such that $D(P_{Y,X}||P_X \tilde{P}_{Y|X})$ is minimized.
+
+we expand the denominator of $\tilde{P}_{Y|X}(y|x)$ first:
+\begin{align*}
+\sum_{y'\in \mathcal{Y}} Q_{Y|X=x}(y'|x) e^{v(y')^\T s(x)+d(y')}=&
+1+\E_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))\\
++&\frac{1}{2}(v(Y)^T s(x)+d(Y))^2]+O(\epsilon^3)
+\end{align*}
+\begin{align*}
+-\log\left[\sum_{y'\in \mathcal{Y}} Q_{Y|X=x}(y'|x) e^{v(y')^\T s(x)+d(y')}\right]=&
+-\E_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))] \\
+-&\frac{1}{2}\E_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))^2]\\
++&\frac{1}{2}  \E^2_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))]+O(\epsilon^3)
+\end{align*}
+By Maximum Likelyhood Method, the objective function is $\E_{P_{X,Y}}[\log \tilde{P}_{Y|X}]$, and 
+\begin{align*}
+\E_{P_{X,Y}}[\log \tilde{P}_{Y|X}]=&\E_{P_{X,Y}}[\log Q_{Y|X}]+ \E_{P_{X,Y}}[v(Y)^T s(X)+d(Y)]+\\%\cancelto{0}{\E[d(Y)]}
++&\E_{P_X}\left[-\log\sum_{y'\in \mathcal{Y}} Q_{Y|X}(y'|x) e^{v(y')^\T s(X)+d(y')}]\right]\\
+=& C +  \E_{P_X}\left[\sum_{y\in \mathcal{Y}}(P_{Y|X}(y)-Q_{Y|X}(y))(v(y)^\T s(X)+d(y))\right]+\\
++&\frac{1}{2}\E_{P_X}\left[\E^2_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))]\right]-\\
+-&\frac{1}{2}\E_{P_X}\left[\E_{Q_{Y|X=x}}[(v(Y)^T s(x)+d(Y))^2]\right]+ O(\epsilon^3)
+\end{align*}
+
+We simplify the above expression in matrix form as follows:
+
+let $n\triangleq |\mathcal{Y}|$ and $s(x)$ is a $k-$dimensional vector,$v(Y)=[v(1),\dots,v(n)]$ is a $k\times n$ matrix.
+We assume $\mathcal{Y}=\{1,2,\dots,n\}$,then the objective function (omit the high order term) to minimize can be rewritten in matrix notation as
+\begin{equation}\label{eq:min}
+\sum_{x\in \mathcal{X}} P_X(x)\left(\frac{1}{2}s(x)^\T v \bm{W}_x v^\T s(x) +d^\T \bm{W}_x v^\T s(x)+\frac{1}{2}d^\T \bm{W}_x d-\Xi_x^T (v^\T s(x)+d)\right)
+\end{equation}
+where $\Xi_x(y)=P_{Y|X=x}(y)-Q_{Y|X=x}(y),\bm{W}_x(i,j)=Q_{Y|X=x}(i)\delta_{ij}-Q_{Y|X=x}(i)Q_{Y|X=x}(j)$.
+$\Xi_x$ is a n-dimensional vector and $\bm{W}_x$ is a $n\times n$ matrix.
+Taking the derivative w.r.t $v$(matrix) and $d$(vector) and make them equal zero gives
+\begin{align}
+\sum_{x\in \mathcal{X}} P_X(x)\left(ss^\T v \bm{W}_x+sd^\T \bm{W}_x-s\Xi_x^\T\right) = & 0 \label{eq:joint_pre_1}\\
+\sum_{x\in \mathcal{X}} P_X(x)\left(\bm{W}_x v^Ts(x)+ \bm{W}_x d-\Xi_x\right)=& 0\label{eq:joint_pre_2}
+\end{align}
+where $s=s(x)$.
+Notice that in general \eqref{eq:joint_pre_1} contains $k\times n$ equations and \eqref{eq:joint_pre_2} contains $n$ equations.
+
+
+
+First we consider $k=1$. The combination of (\ref{eq:joint_pre_1},\ref{eq:joint_pre_2}) gives $2n$ equations with $2n$ unknowns $v(y),d(y),y=1,\dots,n$.
+
+Denote $Q_{X,Y}=P_X Q_{Y|X}$, which is a joint distribution and can be computed.
+Then $Q_{X}=P_X,Q_{Y}=\sum_{x\in \mathcal{X}}Q_{X,Y}$ and $Q_{X,Y}=Q_Y Q_{X|Y}$
+ then the equation \eqref{eq:joint_pre_1} can be simplified as :
+\begin{align}\notag
+\E_{Q_{X|Y=\hat{y}}}[s^2(X)]v(\hat{y})Q_Y(\hat{y})+&\E_{Q_{X|Y=\hat{y}}}[s(X)]Q_Y(\hat{y})d(\hat{y}) \\
++M_1(\epsilon)+\E_{Q_{X|Y=\hat{y}}}[s(X)]Q_Y(\hat{y})=& \E_{P_{X|Y=\hat{y}}}[s(X)]P_Y(\hat{y})\label{eq:joint_simplify_1}
+\end{align}
+where $\hat{y}\in \{1,2,\dots,n\}$. and $M_1(\epsilon)$ is
+$$
+M_1(\epsilon)=-\sum_{x\in \mathcal{X}}P_X(x)\left(s(x)Q_{Y|X=x}(\hat{y})\E_{Q_{Y|X=x}}[v(Y)s(x)+d(Y)]\right)
+$$
+
+And equation \eqref{eq:joint_pre_2} can be simplified as:
+\begin{align}\notag
+\E_{Q_{X|Y=\hat{y}}}[s(X)]v(\hat{y})Q_Y(\hat{y})+&Q_Y(\hat{y})d(\hat{y}) \\
++M_2(\epsilon)+Q_Y(\hat{y})=& P_Y(\hat{y})\label{eq:joint_simplify_2}
+\end{align}
+where $M_2(\epsilon)$ is
+$$
+M_2(\epsilon)=-\sum_{x\in \mathcal{X}}P_X(x)\left(Q_{Y|X=x}(\hat{y})\E_{Q_{Y|X=x}}[v(Y)s(x)+d(Y)]\right)
+$$
+stack $[v(1),\dots,v(n),d(1),\dots,d(n)]$ as a $2n$ dimensional vector $\binom{V}{d}$, the combination of (\ref{eq:joint_pre_1},\ref{eq:joint_pre_2}) gives
+the matrix equation :
+\begin{equation}\label{eq:MVd}
+\begin{bmatrix}
+\sum_{x\in \mathcal{X}} s^2(x)\bm{W}_xP_X(x) & \sum_{x\in \mathcal{X}} s(x)\bm{W}_xP_X(x) \\
+\sum_{x\in \mathcal{X}} s(x)\bm{W}_xP_X(x) & \sum_{x\in \mathcal{X}} \bm{W}_xP_X(x)
+\end{bmatrix}\binom{V}{d}=\binom{\sum_{x\in \mathcal{X}}s(x)P_X(x)\Xi_x}{\sum_{x\in \mathcal{X}}P_X(x)\Xi_x}
+\end{equation}
+the $2n\times 2n$ matrix in the above equation is positive definite when $s(x)$ is not a constant. Then we can solve $\binom{V}{d}$ by standard matrix inversion.
+
+Below we optimize $s(x)$ given $v(y),d(y)$(1 dimensional case),\eqref{eq:min} is a quadratic function about $s(x)$ (seperate each sum term) and can be solved
+explicitly as:
+\begin{equation}
+s(x)=\frac{\Xi_x^\T v^\T -d^\T \bm{W}_x v^\T}{v\bm{W}_xv^\T}
+\end{equation}
+
+
+Then we consider $k$ dimensional case, stack $[v(1)^\T,\dots,v(n)^\T]$ as a $kn$ dimensional vector, by the definition of Kronecker matrix product 
+the combination of (\ref{eq:joint_pre_1},\ref{eq:joint_pre_2}) gives
+the matrix equation :
+\begin{equation}
+\begin{bmatrix}
+\sum_{x\in \mathcal{X}} P_X(x) (s(x)s(x)^\T)\otimes \bm{W}_x & \sum_{x\in \mathcal{X}} P_X(x) s(x)\otimes \bm{W}_x \\
+\sum_{x\in \mathcal{X}} P_X(x) \bm{W}_x\otimes s(x)^\T & \sum_{x\in \mathcal{X}} P_X(x)\bm{W}_x
+\end{bmatrix}\binom{V}{d}=\binom{\sum_{x\in \mathcal{X}}s(x)\Xi_x^\T}{\sum_{x\in \mathcal{X}}\Xi_x}
+\end{equation}
+Notice that $s(x)\otimes \bm{W}_x$ is $kn\times n$ dimensional matrix and its transpose is $\bm{W}_x \otimes s(x)^\T$.
+$(s(x)s(x)^\T)\otimes \bm{W}_x$ is $kn \times kn$ dimensional matrix.
+The $kn\times (k+1)n$ matrix in the above equation is positive definite when $s(x)$ is not a constant. Then we can solve $\binom{V}{d}$ by standard matrix inversion.
+
+In expectation notation, we can rewrite the above equation as:
+\begin{equation}
+\E_X\begin{bmatrix}
+(s(X)s(X)^\T)\otimes \bm{W}_X & s(X)\otimes \bm{W}_X \\
+\bm{W}_X\otimes s(X)^\T & \bm{W}_X
+\end{bmatrix}\binom{V}{d}=\E_X\left[\binom{s(X)\Xi_X^\T}{\Xi_X}\right]
+\end{equation}
+Below we optimize $s(x)$ given $v(y),d(y)$($k$ dimensional case),\eqref{eq:min} is a quadratic form about $s(x)$ (seperate each sum term) and can be solved
+explicitly as:
+\begin{equation}
+s(x)=(v\bm{W}_xv^\T)^{-1}(\Xi_x^\T v^\T -d^\T \bm{W}_x v^\T)
+\end{equation}
+In expectation notation
+\begin{equation}
+s(x)=\Cov_{Q_{Y|X}}(v(y)|X=x)^{-1} [\E_{P_{Y|X}}[v(Y)|X=x]-\E_{Q_{Y|X}}[v(Y)|X=x]]
+\end{equation}
+
+We verify and interprete our result by directly differentiating the object function $\E_{P_{X,Y}}[\log \tilde{P}_{Y|X}]$
+\begin{align*}
+\frac{\partial \E_{P_{X,Y}}[\log \tilde{P}_{Y|X}]}{\partial d(\hat{y})} = & \E_{P_X}[-\frac{Q_{Y|X}(\hat{y}|x)\exp(v(\hat{y})^\T s(x)+d(\hat{y}))}{
+\sum_{y'\in \mathcal{Y}}Q_{Y|X}(y'|x)\exp(v(y')^\T s(x)+d(y'))}]+\sum_{x\in \mathcal{X}} P_{X,Y}(x,\hat{y})\\
+= & \sum_{x\in \mathcal{X}} P_X(x)(P_{Y|X=x}(\hat{y})-\tilde{P}_{Y|X=x}(\hat{y}))
+\end{align*}
+At $[v,d]=0$, $\tilde{P}_{Y|X}=Q_{Y|X}$,the derivative above reduces to $\sum_{x\in \mathcal{X}}P_X(x)\Xi_x$. The same verification can be applied to $v(\hat{y})$, therefore the right hand side of \eqref{eq:MVd} is the gradient of the loss function about $[v,d]$。
+
+Furthermore, when $y\neq \hat{y}$
+\begin{align*}
+\frac{\partial^2 \E_{P_{X,Y}}[\log \tilde{P}_{Y|X}]}{\partial d(\hat{y})\partial d(y)} = & \E_{P_X}[-\frac{\partial}{\partial d(y)}\frac{Q_{Y|X}(\hat{y}|x)\exp(v(\hat{y})^\T s(x)+d(\hat{y}))}{
+\sum_{y'\in \mathcal{Y}}Q_{Y|X}(y'|x)\exp(v(y')^\T s(x)+d(y'))}]\\
+= & \E_{P_X}[\tilde{P}_{Y|X=x}(\hat{y})\tilde{P}_{Y|X=x}(y)]
+\end{align*}
+and
+$$
+\frac{\partial^2 \E_{P_{X,Y}}[\log \tilde{P}_{Y|X}]}{\partial d(\hat{y})^2} =
+\E_{P_X}[\tilde{P}_{Y|X=x}(\hat{y})^2-\tilde{P}_{Y|X=x}(\hat{y})]
+$$
+Similar result can be shown for second partial derivative of $v(\hat{y}),v(y)$ and mixed partial derivative of $v(\hat{y}),d(y)$.
+As a result, the Hessian matrix is the negative of the matrix on the left side of \eqref{eq:MVd}.
+
+Next we explore the joint optimization of $s(x),v(y),d(y)$. (open problem by now)
+
+Let $u_i^\T=s(i)^\T v+d^\T$, which is a $n$ dimensional vector. and 
+%$\bm{U}=[u_1,\dots,u_m]$ which is a $n\times m(|\mathcal{Y}|\times|\mathcal{X}|)$ matrix. Then the object function in \eqref{eq:min} can be rewritten in matrix inner product form:
+%\begin{equation}\label{eq:joint_opt}
+%\frac{1}{2}\diag[P_X(1)\bm{W}_1,\dots,P_X(m)\bm{W}_m]\cdot \diag[u_1 u_1^\T,\dots,u_m u_m^\T] -U \cdot [P_X(1)\Xi_1,\dots,P_X(m)\Xi^\T_m]
+%\end{equation}
+$u^\T=[s(1)^\T v+d^\T,s(2)^\T v_2+d^\T,\dots,s(m)^\T v_m+d^\T]$, where $m=|\mathcal{X}|$.
+$u$ is $mn$ dimensional column vector. Then the object function in \eqref{eq:min} can be rewritten %in matrix form:
+\begin{equation}\label{eq:joint_opt}
+\frac{1}{2}u^T \diag[P_X(1)\bm{W}_1,\dots,P_X(m)\bm{W}_m] u -u^\T [P_X(1)\Xi^\T_1,\dots,P_X(m)\Xi^\T_m]^\T
+\end{equation}
+%We minimize the above function about $u$, which gives $u^\T_{\textrm{opt}}=[\tilde{u}^\T_1,\dots,\tilde{u}^\T_m]$, where $\tilde{u}_j$
+%satisfies $\bm{W}_j \tilde{u}_j = \Xi_j$,$\tilde{u}_j$ can be determined up to a constant vector $-c_j[1,\dots,1]^\T$. 
+%Then
+%\begin{equation}
+%\begin{bmatrix}
+%s(1) & \dots & s(m)\\
+%1 & \dots & 1
+%\end{bmatrix}^\T \binom{v}{d^\T}=[\tilde{u}_1,\dots,\tilde{u}_m]^\T +[c_1 e_1,\dots,c_m e_1]^T
+%\end{equation}
+%where $e_1=[1,\dots,1]^\T$ with dimension $n$.
+%We can rewrite the above equation as:
+%\begin{equation}\label{eq:SVD}
+%\begin{bmatrix}
+%s(1) & \dots & s(m)\\
+%1 & \dots & 1\\
+%-c_1 & \dots & -c_m
+%\end{bmatrix}^\T
+%\begin{bmatrix}
+%v\\
+%d^\T\\
+%e_1^\T
+%\end{bmatrix}
+%=[\tilde{u}_1,\dots,\tilde{u}_m]^\T \triangleq \tilde{U}
+%\end{equation}
+%The RHS of \eqref{eq:SVD} is a $m\times n$ matrix, as can be seen, if SVD of $\tilde{U}$ has one left eigenvector and one right eigenvector whose elements are all unit. Then we can get rank $k+2$ approximation to $\tilde{U}$, such minimize \eqref{eq:joint_opt}.
+
+%Difficulties:
+%1. $\tilde{U}$ not necessarily has the required eigenvector.
+%2. Frobinious nearest is not propotional to measure induced by $\diag[P_X(1)\bm{W}_1,\dots,P_X(m)\bm{W}_m]$
+\end{document}
+
+
+
+
+
