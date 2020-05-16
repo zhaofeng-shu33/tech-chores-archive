@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{soul}
+\usepackage{fontspec}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{todonotes}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[citecolor=blue]{hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\DeclareMathOperator{\sgn}{sgn}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\usepackage{makecell}
+\usepackage[lofdepth,lotdepth]{subfig}
+\setCJKmainfont[BoldFont={SimHei}]{SimSun}
+\setCJKmonofont{SimSun}
+\setmainfont{Times New Roman}
+\newCJKfontfamily[hei]\heiti{SimHei}
+\setlength{\extrarowheight}{4pt}
+\setlength{\parindent}{1cm}
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{讨论}}} 
+\date{2017/3/1}
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰}}
+\maketitle
+\large
+已知一个节点的先验分布是二维高斯分布$(X,Y)$，X,Y方向的均值均为0，方差为$\sigma^2$,相关系数r=0,如果用极坐标表示，那么该节点到原点的距离为参数为$\sigma$的Rayleigh分布，而幅角为均匀分布。
+考虑在x轴上较远的一点$(l_0,0)$上有一个观测站，求节点到观测站的距离的分布。
+
+距离$L=\sqrt{(X-l_0)^2+Y^2},Y^2/\sigma^2$是自由度为1的卡方分布,$(X-L_0)^2$的分布由定义可求出为：
+\begin{equation}
+f(t)=\frac{1}{\sqrt{2\pi t\sigma^2}}exp(-\frac{t+l_0^2}{2\sigma^2})\cosh(\frac{l_0\sqrt{t}}{\sigma^2})
+\end{equation}
+注意$(X-L_0)^2$和$(X+L_0)^2$有相同的分布，由于反函数不存在，不可以直接对pdf做变量替换求出上式。
+因为$(X-l_0)^2$与$Y^2$独立，所以$L^2$的pdf为$(X-l_0)^2$与$Y^2$pdf的卷积。
+化简有:
+\begin{equation}
+f_{L^2}(y)=\frac{exp(-\frac{y+l_0^2}{2\sigma^2})}{2\pi\sigma^2}\int_0^y \frac{\cosh(\frac{l_0\sqrt{t}}{\sigma^2})}{\sqrt{t}\sqrt{y-t}}dt
+\end{equation}
+对上式做$u=\sqrt{t/y}$的变量替换：
+\begin{equation}\label{eq:Int}
+f_{L^2}(y)=\frac{exp(-\frac{y+l_0^2}{2\sigma^2})}{\pi\sigma^2}\int_0^1 \frac{\cosh(\frac{l_0\sqrt{y}u}{\sigma^2})}{\sqrt{1-u^2}}du
+\end{equation}
+设$k=\frac{l_0\sqrt{y}}{\sigma^2}$因为
+\begin{equation}
+\cosh(ku)=\sum_{n=0}^{+\infty} \frac{(ku)^{2n}}{(2n)!}
+\end{equation}
+代入(\ref{eq:Int}),注意到:
+\begin{equation}
+\int_0^1 \frac{u^{2n}}{\sqrt{1-u^2}}du=\int_0^{\frac{\pi}{2}} \sin^{2n} \theta d\theta=\frac{\pi}{2}\frac{(2n-1)!!}{(2n)!!} 
+\end{equation}
+因此
+\begin{equation}
+f_{L^2}(y)=\frac{exp(-\frac{y+l_0^2}{2\sigma^2})}{2\sigma^2}\sum_{n=0}^{+\infty}\frac{(l_0^2 y/\sigma^2)^n}{((2n)!!)^2}
+\end{equation}
+进一步求出
+\begin{equation}
+f_{L}(y)=\frac{yexp(-\frac{y^2+l_0^2}{2\sigma^2})}{\sigma^2}\sum_{n=0}^{+\infty}\frac{(l_0^2 y^2/\sigma^2)^n}{((2n)!!)^2}
+\end{equation}
+与$R=\sqrt{X^2+Y^2}$的分布函数为$f_{R}(y)=\frac{y}{\sigma^2}exp(-\frac{y^2}{2\sigma^2})$进行对比
+\end{document}
