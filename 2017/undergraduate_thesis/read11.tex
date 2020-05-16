@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{fontspec}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{todonotes}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[citecolor=blue]{hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\DeclareMathOperator{\sgn}{sgn}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\DeclareMathOperator{\K}{K}
+\usepackage{makecell}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+
+
+\setlength{\extrarowheight}{4pt}
+\setlength{\parindent}{1cm}
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{讨论}}}
+
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰}}
+\maketitle
+\large
+单节点多锚点时间协作网络模型描述:
+考虑一个定位场景中有多个锚点，一个移动节点，假如每隔一个固定的时间$\Delta t$各个锚点对移动节点做一次测距，则可以得到在时刻
+$t_1,t_2,...t_n$移动节点的位置信息估计，如果对移动节点的速度的大小有一定的认识（比如移动节点可以测量自身的速度），并且假设在一个时间间隔内移动节点的速度方向不变。那么
+我们可以利用上移动节点的速度的大小的信息提高各个时刻对移动节点位置估计的精度。设由于移动节点自身测速得到的自身当前时刻和前一时刻的距离也服从一个高斯分布，那么这样的定位场景下协作矩阵就是一个2分块三对角矩阵。若将测量时限$T=\Delta t\times n$放宽，即让$n\to \infty,$那么得到的性能平均就是之前讨论的$\lim f(n)$
+
+正方形网络性能平均为$\frac{1}{\sqrt{a^2+4ab}}+\frac{1}{\sqrt{a^2+4ab}}$最小
+
+链状网络性能平均为$\frac{1}{a}+\frac{1}{\sqrt{a^2+4ab}}$中间
+
+纯锚点定位网络$\frac{1}{a}+\frac{1}{a}$最大
+在蜂窝状网络中，每个节点周围有三个节点与之协作，推导网络规模$n\to \infty$时对于中心节点误差下界的性态，需要下面的引理:
+\begin{lem}
+  设$u$是模长为1的平面向量，那么有:
+\begin{equation}\label{eq:equiv}
+  u^T((\lambda+\frac{3}{2})I_2-\frac{1}{\lambda+\frac{3}{2}}(\frac{3}{2}I_2-uu^T))^{-1}u
+  =((\lambda+\frac{3}{2})-\frac{1/2}{\lambda+\frac{3}{2}})^{-1}
+\end{equation}
+\end{lem}
+\begin{proof}
+  设上面等式左边为B,$A=\lambda+\frac{3}{2}$,那么由Woodbury矩阵求逆公式有
+  \[
+  (A+\frac{1}{\lambda+3/2-\frac{3/2}{\lambda+3/2}})^{-1}=A^{-1}-A^{-1}BA^{-1}
+  \]
+  整理得:
+  \[
+  B=A-\frac{A^2}{A+\frac{1}{\lambda+3/2-\frac{3/2}{\lambda+3/2}}}
+  \]
+  通分化简得证。
+  \end{proof}
+  上面的引理能够把连分式中与$u$相关的项化为与$u$无关的项，由此推出度为3的协作网络中心节点SPEB为:
+  \[
+\lambda+\frac{3}{2}-\cfrac{3/2}{\lambda+\frac{3}{2}-\cfrac{1/2}{\lambda+3/2-\dots}}
+  \]
+  注意到除了第一层的协作外，后面每层协作由于前一层的削弱系数由3/2变为1/2.
+  用同样的方法可求出极限值为:
+  \[
+  \sqrt{\lambda^2+3\lambda+\frac{1}{4}}-\frac{1}{\lambda+\frac{3}{2}+\sqrt{\lambda^2+3\lambda+\frac{1}{4}}}
+  \]
+  取倒数即为某方向的误差下界，由于网络的各向同性，x方向和y方向的误差下界都是这个数。
+该误差下界总是比正方形网格大，但当b一样，$\lambda=a/b$,如果$\lambda$接近0，正方形协作网络的误差下界接近正六边形网络，说明如果锚点定位信息量太少，增加节点间协作的增益会被削弱。
+
+对于每个节点周围有六个节点与之协作的三角形网络，由于同层节点有协作，讨论起来会比较复杂，因此我们先讨论对于\textcolor{blue}{同层节点没有协作}的一般情形，这时同层节点的矩阵是一个对角阵$aI$，$EFIM$定义中$-BC^{_1}B^T$可以交换得:$-BB^TC^{_1}$，其中$C^{-1}$与数$a^{-1}$等同，我们把$BB^T$看成一个整体记为$B_n$，则EFIM的表达式为:
+$a_0I+B_1(a_1I+B_2(a_2I+\dots)^{-1})^{-1}$(注意各个单位阵维数
+记部分和$X_n$为对第n项截断的convergent,则有$X_0=a_0I,X_1=(A_0A_1+B_1)A_1^{-1}$,$X_2=(A_0(A_1A_2+B_2)+B_1A_2)(A_1A_2+B_2)^{-1}$
+记$X_n=H_nK_n^{-1}$则有递推公式$H_n=H_{n-1}A_n+H_{n-2}B_n$,$K_n=K_{n-1}A_n+K_{n-2}B_n$
+$A_n$刻划了第n层节点的定位强度信息，分为三部分，锚点贡献+前一层节点+后一层节点，
+$B_n$刻划了第n层节点和第n-1层节点的信息耦合。
+为保证矩阵维数按一定规律增长，我们考虑的一般协作网络除同层节点（第n层节点定义为那些与目标节点的跳数最小值为n)没有协作外还要加上每个节点的度是一个常数t,(比如t=2,3,4)，(需要对环的个数有一个刻划!),第k层节点最大的数目是$t*(t-1)^{k-1}$,但如果网络中有环，第k层节点数会减少。
+
+这时可以推出
+
+如果对A的谱分解有认识，求$A^{-1}x$的复杂度是$O(1)$,
+
+关于形如$aI+bJ$的三对角对称矩阵的一个结论是它的逆矩阵的表达式可以解析地写出来，I是L-1维单位阵，J是L-1维次对角为1其余位置为0的对称矩阵，在中心差分离散二阶差商$\frac{\partial^2 u}{\partial x^2}$时用隐式格式求解扩散方程$u_t=u_{xx}$得到的差分格式为:
+\begin{equation}\label{eq:difference_scheme}
+  -\lambda u^{n+1}_{j+1}+(1+2\lambda)u^{n+1}_j-\lambda u^{n+1}_{j-1}=u^n_j
+\end{equation}
+空间离散的第n层格点记为
+$U^n=\{u_1^n,u_2^n,\dots,u_{L-1}^n\}^T$
+考虑边值条件为$u(0,t)=u(1,t)=0,Lh=1$，则有$u^n_L\equiv 0,u_0^n\equiv 0$
+于是可以得到$AU^{n+1}=U^n$
+\[A=\begin{pmatrix}
+  1+2\lambda & -\lambda & 0 & \cdots & 0 \\
+  -\lambda & 1+2\lambda & -\lambda & \cdots & 0 \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  0 & \cdots & -\lambda & 1+2\lambda & -\lambda\\
+  0 & \cdots & 0 &-\lambda& 1+2\lambda
+ \end{pmatrix}
+ \]研究A的性质（用直接法判断差分格式的稳定性）可以得到扩散方程的上述差分格式是无条件稳定的（$A^{-1}$的所有特征值都严格小于1）
+也可以用能量不等式的方法，考虑离散能量$E^n=\sum_{j=1}^{L-1} hu_j^n$
+由(\ref{eq:difference_scheme})两边乘以$u_j^{n+1}$可得
+\begin{equation}
+(1+2\lambda)(u_j^{n+1})^2=\lambda(u_j^{n+1}u_{j+1}^{n+1}+u_j^{n+1}u_{j-1}^{n+1})+u_j^nu_j^{n+1}
+\end{equation}
+用基本不等式放缩可得:
+\[
+(1+2\lambda)(u_j^{n+1})^2\leq \lambda((u_{j+1}^{n+1})^2+(u_{j-1}^{n+1})^2)+(u_j^n)^2
+\]
+将上式两边乘以h从1加到L-1可得
+\[
+E^{n+1}+h\lambda((u_1^{n+1})^2+(u_{L-1}^{n+1})^2)\leq E^{n}
+\]
+所以$E^{n+1}\leq E^n$即离散能量是衰减的。
+$dim(A)=L-1$可以求出A有如下的正交分解:
+\[
+A=Q\text{diag}\{1+2\lambda(1-\cos\theta_1),1+2\lambda(1-\cos\theta_2),\dots,1+2\lambda(1-\cos\theta_{L-1})\}Q^{-1}
+\]
+其中$\theta_j=\frac{\pi j}{L}$,而$Q_{i,j}=\frac{\sin(ij\pi/L)}{\sqrt{L/2}}$
+利用将$e_k=\{0,\dots,1,\dots,0\}$先沿Q的列向量分解再用A作用的方法可以写出$A^{-1}$的每一列的解析表达式。
+研究度为2,3,4的特殊网络协作信息的衰减情况，第j层网络的协作信息量定义为只考虑前j层网络时全网络对目标节点的定位信息(由EFIM的方法求出)与
+只考虑前j-1层网络时的定位信息之差(仍为一个2乘2的矩阵)。
+对于之前已经写成连分式的特殊网络模型,
+就是部分积$x_n-x_{n-1}$(代表某一方向的信息量)
+对于以下一般的连分式
+一般连分式的形式\[
+x_n=a_0+\cfrac{b_1}{a_1+\cfrac{b_2}{a_2+\cfrac{b_3}{a_3+\cdots+b_n/a_n}}}
+\]
+为记号简便，采用Kettenbruch记号可将$lim_{n\to\infty}x_n$写成
+\[
+a_0+\operatorname*{K}_{i=1}^{\infty}\frac{b_i}{a_i}
+\]
+我们有如下结论
+\begin{thm}
+设$x_n=B_n/A_n$
+则\[
+B_{n-1}A_n-A_n A_{n-1}=(-1)^n b_1b_2\dots b_n
+\]
+\end{thm}
+证明见\href{https://en.wikipedia.org/wiki/Generalized_continued_fraction#Partial\_numerators\_and\_denominators}{维基百科连分式}
+对于度为2和4的情形，其中一个方向上第j层节点贡献的信息为$x_{j-1}-x_j=\frac{2}{k_n k_{n-1}}$
+注意到部分和$x_j-x_{j-1}$其实恒为负数，这是因为把最外层节点视为锚点的效应，使得序列$x_n$递减，这实际是一个误差传播的过程，也即准确确定越外层节点的位置对目标节点的定位效应会下降，那么这中间的差值可看作误差的传播量，由于$k_n$的主项是$\frac{\lambda+2+\sqrt{\lambda^2+4\lambda}}{2}$的n次方，可以看到误差具有指数衰减效应。同理可求出度为3时的误差衰减指数因子为:
+$\lambda+2/3+ \sqrt{\lambda^2+3\lambda+1/4}$
+可以明显的看到度为3时误差衰减速率要比正方形网格快
+\end{document} 

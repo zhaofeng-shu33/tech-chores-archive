@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL read2.tex       Wed May 17 19:16:54 2017
+%DIF ADD read2diff.tex   Wed May 17 20:04:34 2017
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{fontspec}
+\usepackage{gensymb}
+\usepackage{todonotes}
+\usepackage{amsmath}
+\usepackage[citecolor=blue]{hyperref}
+
+\usepackage{makecell}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+
+
+\setlength{\extrarowheight}{4pt}
+\setlength{\parindent}{1cm}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{讨论}}} 
+
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰}}
+\maketitle
+\large
+\DIFaddbegin \DIFadd{add some new line here
+}\DIFaddend 在协作定位中，关于$N_a$个移动节点的FIM是一个对称的主对角占优矩阵，由这种矩阵的性质可以得到FIM是半正定的。
+关于矩阵求逆在做差的化简问题，我只能硬算，不知道有什么好的方法。
+从J(0)-J(1)归纳出J(1)-J(2)的步骤：
+\[
+J(1)=(\Sigma_0+B_0B_0^H-B_0F_1^H
+(\Sigma_1+F_1F_1^H)^{-1}F_1B_0^H)^{-1}
+\]
+设
+\[
+\tilde{\Sigma_1}=\Sigma_1+B_1B_1^H-B_1F_2^H
+(\Sigma_2+F_2F_2^H)^{-1}F_2B_1^H
+\]
+则
+\[
+J(2)=(\Sigma_0+B_0B_0^H-B_0F_1^H
+(\tilde{\Sigma_1}+F_1F_1^H)^{-1}F_1B_0^H)^{-1}
+\]
+推导J(1)-J(2)表达式如下:
+\[
+J(1)-J(2)=(J(0)-J(2))-(J(0)-J(1))
+\]
+由J(0)-J(1)的表达式的一般形式可得:
+\[
+=(\Sigma_0^{-1}B_0)((I+B_0^H\Sigma_0^{-1}B_0+F_1^H\tilde{\Sigma_1}^{-1}F_1)^{-1}-
+\]
+\[
+(I+B_0^H\Sigma_0^{-1}B_0+F_1^H\Sigma_1^{-1}F_1)^{-1})B_0^H\Sigma_0^{-1}
+\]
+记$T=I+B_0^H\Sigma_0^{-1}B_0$
+则有
+\[
+J(1)-J(2)=(\Sigma_0^{-1}B_0)((T+F_1^H\tilde{\Sigma_1}^{-1}F_1)^{-1}-(T+F_1^H\Sigma_1^{-1}F_1)^{-1})B_0^H\Sigma_0^{-1}
+\]
+下面化简
+\[
+(T+F_1^H\tilde{\Sigma_1}^{-1}F_1)^{-1}-(T+F_1^H\tilde{\Sigma_1}^{-1}F_1)^{-1}
+\]
+\[
+=(T+F_1^H\Sigma_1^{-1}F_1)^{-1}((T+F_1^H\Sigma_1^{-1}F_1)(T+F_1^H\tilde{\Sigma_1}^{-1}F_1)^{-1}
+(T+F_1^H\Sigma_1^{-1}F_1)-
+\]
+\[
+(T+F_1^H\Sigma_1^{-1}F_1))(T+F_1^H\Sigma_1^{-1}F_1)^{-1}
+\]
+进一步化简
+\[
+(T+F_1^H\Sigma_1^{-1}F_1)(T+F_1^H\tilde{\Sigma_1}^{-1}F_1)^{-1}
+(T+F_1^H\Sigma_1^{-1}F_1)-(T+F_1^H\Sigma_1^{-1}F_1)
+\]
+\[
+=F_1^H(\Sigma_1^{-1}-\tilde{\Sigma_1}^{-1})F_1(T+F_1^H\tilde{\Sigma_1}^{-1}F_1)^{-1}(T+F_1^H\Sigma_1^{-1}F_1)
+\]
+\[
+=F_1^H(\Sigma_1^{-1}-\tilde{\Sigma_1}^{-1})F_1(T+F_1^H\tilde{\Sigma_1}^{-1}F_1)^{-1}T(F_1^{-1}\Sigma_1F_1^{-H}+T^{-1})F_1^H\Sigma_1^{-1}F_1
+\]
+记$\Lambda=\Sigma_1+F_1T^{-1}F_1^H$,则
+\[
+=F_1^H(\Sigma_1^{-1}-\tilde{\Sigma_1}^{-1})F_1(T+F_1^H\tilde{\Sigma_1}^{-1}F_1)^{-1}TF_1^{-1}\Lambda\Sigma_1^{-1}F_1
+\]
+\[
+=F_1^H\Sigma_1^{-1}(\tilde{\Sigma_1}-\Sigma_1)(\tilde{\Sigma_1}+F_1T^{-1}F_1^H))^{-1}\Lambda\Sigma_1^{-1}F_1
+\]
+设$\lambda=\tilde{\Sigma_1}-\Sigma_1$，则上式化为
+\[
+=F_1^H\Sigma_1^{-1}\Lambda(\Lambda^{-1}\lambda(\Lambda+\lambda)^{-1})\Lambda\Sigma_1^{-1}F_1
+\]
+\[
+=F_1^H\Sigma_1^{-1}\Lambda(\Lambda^{-1}-(\Lambda+\lambda)^{-1})\Lambda\Sigma_1^{-1}F_1
+\]
+由J(1)-J(0)的表达式的一般形式，推出
+\[
+\Lambda^{-1}-(\Lambda+\lambda)^{-1}=\Lambda^{-1}B_1(I+B_1\Lambda^{-1}B_1^H+F_2^H\Sigma_2F_2)^{-1}B_1^H\Lambda^{-1}
+\]
+整理中间结果得到$J(1)-J(2)$为
+\[
+(\Sigma_0^{-1}B_0)(T+F_1^H\Sigma_1^{-1}F_1)^{-1}F_1^H\Sigma_1^{-1}B_1(I+B_1\Lambda^{-1}B_1^H+F_2^H\Sigma_2F_2)^{-1}B_1^H
+\]
+\[
+\Sigma_1^{-1}F_1(T+F_1^H\Sigma_1^{-1}F_1)^{-1}B_0^H\Sigma_0^{-1}
+\]
+上述归纳具有一般性，第k层的FIM具有迭代的特点，可以通过反复使用EFIM数值求解，从而大幅降低了计算量。
+\end{document}

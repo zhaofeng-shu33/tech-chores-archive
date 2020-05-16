@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{fontspec}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{todonotes}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[citecolor=blue]{hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{lem}[theorem]{Lemma}
+\DeclareMathOperator{\sgn}{sgn}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\DeclareMathOperator{\K}{K}
+\usepackage{makecell}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+
+
+\setlength{\extrarowheight}{4pt}
+\setlength{\parindent}{1cm}
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{讨论}}}
+
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰}}
+\maketitle
+\large
+\begin{equation}\label{eq:4_characteristic_polynomial}
+\begin{split}
+P(\lambda)= &(\lambda-a_1)(\lambda-a_2)(\lambda-a_3)(\lambda-a_4)(1+\epsilon(\frac{\cos^2(\theta)}{\lambda-a_1}+\\
+ &\frac{\sin^2(\theta)}{\lambda-a_2}+\frac{\cos^2(\phi)}{\lambda-a_3}+\frac{\sin^2(\phi)}{\lambda-a_4}))
+\end{split}
+\end{equation}
+\begin{equation}\label{eq:recursive_efim}
+\begin{split}
+T_{i-1}(N_a)& =\lambda+\frac{1}{1+\frac{\sin^2\theta_i}{\lambda}+\frac{\cos^2\theta_i}{T_i}},2\leq i\leq N_a-1\\
+T_{N_a-1}(N_a)& = \lambda+\frac{1}{1+1/\lambda}
+\end{split}
+\end{equation}
+其中$\theta_i=\angle <\bm{p}(t_i)-\bm{p}(t_{i-1}),\bm{p}(t_i)-\bm{p}(t_{i+1})>$
+\begin{equation}\label{eq:starting_or_ending}
+M^*=\lambda+\cfrac{1}{1+\cfrac{1}{\lambda+\cfrac{1}{1+\cfrac{1}{\lambda+\dots}}}}
+=\frac{\lambda+\sqrt{4\lambda+\lambda^2}}{2}
+\end{equation}
+
+\begin{theorem}\label{theorem:arbitrary_curve}
+若平面轨迹曲线参数化形式为$t\in[0,1]\rightarrow \bm{p}(t)=(x(t),y(t))$,满足
+\begin{itemize}
+\item $\bm{p}(t_1)\neq \bm{p}(t_2),\forall t_1\neq t_2$
+\item $\bm{p}'(t)$存在且连续
+\end{itemize}
+对[0,1]区间有分割$0=t_1<t_2<\dots<t_{N_a-1}<t_{N_a}=1$,
+记$\Delta t=\max_{1\leq i\leq N_a-1}|t_{i+1}-t_i|$
+则式(\ref{eq:recursive_efim})给出的$T_1(N_a)$满足:
+\begin{equation}\label{eq:limiting_cf}
+\lim_{\Delta t\to 0}T_1(N_a)=M^*
+\end{equation}
+\end{theorem}
+\begin{proof}
+式(\ref{eq:starting_or_ending})给出了式(\ref{eq:limiting_cf})右端是$\bm{p}(t)$为直线的情形。由于对于任意的平面曲线和角度序列$\{\theta_i\}$,$T_1(N_a)$是关于$N_a$的增函数且小于$\lambda+1$，因此式(\ref{eq:limiting_cf})左端的极限总是存在的。
+考虑由$\bm{p}(t)$确定的角度序列$\{\theta_i\}$以如下的方式趋近于直线对应的直线序列:
+\[
+\{\theta_1,\theta_2,\theta_3,\dots\}\rightarrow\{0,\theta_2,\theta_3,\dots\}\rightarrow
+\{0,0,\theta_3,\dots\}\rightarrow\dots
+\]
+记将前n个角度置零后由式(\ref{eq:recursive_efim})确定的连分式为$K_n$，我们首先给出:
+\begin{equation}\label{eq:arbitrary_curve_1}
+\lim_{n\to\infty}K_n=\frac{\lambda+\sqrt{4\lambda+\lambda^2}}{2}
+\end{equation}
+为证式(\ref{eq:arbitrary_curve_1}),记角度序列$\{0,0,\dots,\theta_{n+1},\dots,\}$去掉前r项后对应的连分式为$K^r_n$
+\[
+|K_n-M^*|=\frac{|\frac{1}{M^*}-\frac{1}{K^2_n}|}{(1+\frac{1}{M^*})(1+\frac{1}{K^2_n})}\leq |\frac{1}{M^*}-\frac{1}{K^2_n}|
+\]
+\[
+|\frac{1}{M^*}-\frac{1}{K^2_n}|= \frac{|\frac{1}{M^*}-\frac{1}{K^3_n}|}{K^2_n(M^*+1)(1+\frac{1}{K^3_n})}=
+ \frac{|\frac{1}{M^*}-\frac{1}{K^3_n}|}{(M^*+1)(\lambda+1+\frac{1}{K^3_n+1})}\leq \frac{|\frac{1}{M^*}-\frac{1}{K^3_n}|}{(\lambda+1)^2}
+\]
+当$r<n$ 时，
+\[
+|\frac{1}{M^*}-\frac{1}{K^r_n}|\leq \frac{|\frac{1}{M^*}-\frac{1}{K^{r+1}_n}|}{(\lambda+1)^2}
+\]
+因此:
+\[
+|K_n-M^*|\leq \frac{|\frac{1}{M^*}-\frac{1}{K^{n}_n}|}{(\lambda+1)^{2(n-2)}}
+\]
+故式(\ref{eq:arbitrary_curve_1})成立。
+补充$K_0=\lim_{\Delta t\to 0}T_1(N_a)$这样式(\ref{eq:limiting_cf})即等价为
+\begin{equation}\label{eq:equivalent_limiting_cf}
+\sum_{i=1}^{\infty}(K_{i-1}-K_{i})=0
+\end{equation}
+先考虑$K_0-K_1$，二者的差别是$\theta_1$是否为0，
+\[
+K_0-K_1=\frac{1}{1+\frac{1}{K_1^1}}-\frac{1}{1+\frac{1}{K_1^1}+\sin^2\theta_1(\frac{1}{\lambda}-\frac{1}{K_1^1})}\leq
+\sin^2\theta_1(\frac{1}{\lambda}-\frac{1}{K_1^1})
+\]
+类似式(\ref{eq:arbitrary_curve_1})的推导:
+\[
+K_r-K_{r+1}\leq \sin^2\theta_{r+1}(\frac{1}{\lambda}-\frac{1}{K_{r+1}^{r+1}})\frac{1}{(\lambda+1)^{2r}}
+\]
+\end{proof}
+由条件$\bm{p}'(t)$存在且连续可得切向量是连续变化的，由微分中值定理在闭区间内存在常数c使得角度变化量$\theta_i\leq c\Delta t$
+由正弦函数的单调性推出:
+\[
+K_r-K_{r+1}\leq \sin^2 (c\Delta t) \frac{1}{\lambda}\frac{1}{(\lambda+1)^{2r}}
+\]
+因此\[
+0\leq \sum_{i=1}^{N_a}(K_{i-1}-K_{i})\leq \sin^2 (c\Delta t) \frac{1}{\lambda}\sum_{i=1}^{\infty}\frac{1}{(\lambda+1)^{2i}}
+\]
+无穷级数$\sum_{i=1}^{\infty}\frac{1}{(\lambda+1)^{2i}}$收敛，所以当$\Delta t\to 0$时$N_a\to \infty$,式(\ref{eq:equivalent_limiting_cf})成立。
+\end{document}

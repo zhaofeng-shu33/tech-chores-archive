@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{fontspec}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{todonotes}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[citecolor=blue]{hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\DeclareMathOperator{\sgn}{sgn}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\usepackage{makecell}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+
+
+\setlength{\extrarowheight}{4pt}
+\setlength{\parindent}{1cm}
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{讨论}}} 
+
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰}}
+\maketitle
+\large
+文献阅读结果:
+\begin{thm}
+设$n\le m,\alpha_i$是m维列向量，
+$U_0=(\alpha_1,...,\alpha_n)$是$m\times n$的矩阵，则有:
+\[
+\text{dim}(U_0U_0^T)_{m\times m}=\text{dim}(U_0^TU_0)_{n\times n}=n
+\]
+\end{thm}
+因为当讨论特殊网络中，直接处理FIM矩阵会非常困难，因此我尝试变换思路，讨论某种无偏定位算法来获得对定位误差的洞见。
+本着由简单到复杂的思路，先讨论场景中只有N个锚点的情况，对于移动节点的估计量$(\hat{x},\hat{y})$适合下面的方程组:
+\[
+(\hat{x}-x_i)^2+(\hat{y}-x_i)^2=u_i^2,i=1,2,...N
+\]
+其中$u_i=\sqrt{(x-x_i)^2+(y-y_i)^2}+\text{noise},(x,y)$是节点的真实位置
+上面的方程组超定且非线性，但可通过相减得到N-1个关于$(x,y)$的线性
+方程,由于有对于噪声项方差已知且全部相等的假设，取哪一项作为被减项无关紧要，不妨取关于$(x_1,y_1)$的方程作为被减项，可得到:
+\[
+2(x_i-x_1)\hat{x}+2(y_i-y_1)\hat{y}=u_1^2-u_i^2+x_i^2-x_1^2+y_i^2-y_1^2,i=2,...N
+\]
+由于我们假设$N\geq 3$,上面的方程至少是有唯一解的，设
+\[
+A=2\left(
+\begin{array}{cc}
+x_2-x_1&y_2-y_1\\
+\vdots&\vdots\\
+x_n-x_1&y_n-y_1\\
+\end{array}
+\right),b=\left(
+\begin{array}{c}
+u_1^2-u_2^2+x_2^2-x_1^2+y_2^2-y_1^2\\
+\vdots\\
+u_1^2-u_n^2+x_n^2-x_1^2+y_n^2-y_1^2\\
+\end{array}
+\right)
+\]
+最小二乘求解$A\binom{\hat{x}}{\hat{y}}=b$的结果为:
+$\bm{\hat{p}}=(A^TA)^{-1}A^Tb$
+我们注意到只有$u_i$是高斯型随机变量，直接计算可知$\mathbb{E}(u_i^2)=(x-x_i)^2+(y-y_i)^2+\sigma^2$
+所以$\mathbb{E}(b)=A\bm{p}$
+\begin{thm}
+$\bm{\hat{p}}=(A^TA)^{-1}A^Tb$是关于未知节点位置估计的无偏估计
+\end{thm}
+$\bm{\hat{p}}$均值为$\bm{p}$,下面我们求估计量$\bm{\hat{p}}$的协方差矩阵。
+\begin{thm}
+设X是一个n维随机向量，A是$m\times n$的矩阵，$Y=AX$,那么$\text{Cov}(Y)=A\text{Cov}(X)A^T$,Cov表示随机向量的协方差矩阵。
+\end{thm}
+\begin{proof}
+因为$Y=AX$，有
+\[
+\begin{cases}
+Y_i&=\sum_{k=1}^n a_{ik}X_k\\
+Y_j&=\sum_{t=1}^n a_{jt}X_t\\
+\end{cases}
+\]
+$1\leq i\leq j\leq m$
+Cov(Y)的第i行第j列为$\text{Cov}(Y_i,Y_j)$
+由Cov的线性性质，得
+\[
+\text{Cov}(Y_i,Y_j)=\sum_{k=1}^n\sum_{t=1}^n a_{ik}a_{jt}\text{Cov}(X_k,X_t)
+\]
+另一方面矩阵$A\text{Cov}(X)A^T$的第i行第j列为
+\[
+\sum_{t=1}^n(A\text{Cov}(X))_{it}a^t_{tj}
+=\sum_{t=1}^n(\sum_{k=1}a_{ik}\text{Cov}(X_k,X_t))_{it}a_{jt}
+\]
+所以原命题成立。
+\end{proof}
+由上面的定理，我们只需先求Cov(b)
+\begin{thm}
+\[
+Cov(b)=\xi_1 \bm{e}\bm{e}^T+\text{diag}\{\xi_2,...\xi_n\}
+\],其中
+\[
+\xi_i=\mathbb{D}(u_i^2)=\mathbb{E}(u_i^4)-(\mathbb{E}(u_i^2))^2=4\sigma^2((x-x_i)^2+(y-y_i)^2)+2\sigma^4
+\]
+\end{thm}
+\begin{proof}
+取$b_i$和$b_j$作协方差，分$i\neq j$和$i = j$两种情况讨论，
+首先可将$b_i$写成如下形式:
+\[
+b_i=u_1^2-u_i^2+\mathbb{E}(u_i^2)-\mathbb{E}(u_1^2)
+\]
+$i\neq j$即协方差阵的非对角元化简可得$\xi_1$,$i=j$即对角元为$\xi_1+\xi_i$,为求$\xi_i$，考虑求正态分布的四阶原点矩。
+设$X\sim N(\mu,\sigma)$,则
+\[
+\mathbb{E}(X^4)=\mathbb{E}(X-\mu)^4+6\mu^2\mathbb{E}(X-\mu)^2+\mu^4
+\]
+通过Gamma函数可以求出$\mathbb{E}(\frac{X-\mu}{\sigma})^4=3$
+所以
+\[
+\mathbb{E}(X^4)=3\sigma^4+6\sigma^2\mu^2+\mu^4
+\]
+从而定理得证。
+\end{proof}
+\end{document}

@@ -1,0 +1,297 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{fontspec}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{todonotes}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[citecolor=blue]{hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{remark}[thm]{Remark}
+\DeclareMathOperator{\sgn}{sgn}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\usepackage{makecell}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+
+
+\setlength{\extrarowheight}{4pt}
+\setlength{\parindent}{1cm}
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{讨论}}} 
+
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰}}
+\maketitle
+\large
+本次讨论学习沈老师用信息椭圆对FIM最小单位的结构进行刻划的方法。
+在上次讨论的(3)式中，
+\begin{equation}\label{eq:1}
+FIM=\displaystyle\sum_{i=1}^{N_b}\frac{f'^2}{2\sigma^2 ||\bm{p}^b_i-\bm{p}||^2}\bm{u}^T\bm{u}
+\end{equation}•
+
+FIM最小单位$\bm{J}$可以正交相似到一个对角阵，这个对角阵是由$\bm{J}$的特征值组成的。
+设
+\[
+\bm{J}=\bm{U}\left(\begin{array}{cc}
+\mu & 0 \\
+0 & \eta \\
+\end{array}
+\right) \bm{U}^T,\mu \geq \eta
+\]
+沈老师在“无线定位的理论误差界第二部分”IV Proposition 2 中给出了SPEB=$\frac{1}{\mu}+\frac{1}{\eta}$,接下来定义了information ellipse为二维平面上的曲线方程
+\begin{equation}\label{eq:ie}
+\bm{x}\bm{J}^{-1}\bm{x}^T=1
+\end{equation}
+这个椭圆经过适当的坐标变换实际上是:
+\begin{equation}
+\frac{x^2}{\mu}+\frac{y^2}{\eta}=1
+\end{equation}
+长半轴为$\sqrt{\mu}$,短半轴为$\sqrt{\eta}$.
+$\sqrt{\mu}$和$\sqrt{\eta}$可以看成是移动节点沿着$\theta$方向和$\theta+\pi/2$方向位置的不确定度。这里
+$\theta$是旋转矩阵$\bm{U}_{\theta}$的参数。
+信息椭圆的面积$S=\pi\sqrt{\mu\eta}$,椭圆离心率$e=\sqrt{(\mu-\eta)/\mu}$, 原有的SPEB->0并不能反映出两个方向的误差的衰减速率，比如$\mu=x^2,\eta=x,x->\infty$,长半轴的误差衰减速率要快一倍。
+对于一般的定位场景我们希望两个方向的误差衰减是同一个量阶的，因此可以用离心率来衡量，考虑非协作单移动节点的定位问题，当定位的噪声$\sigma->0$时，如果$S->\infty,e->C$,我们称这种情形为正则的。
+\begin{definition}
+We call the FIM is normal if $ 
+\displaystyle\lim_{\sigma->0}\sqrt{(\mu-\eta)/\mu}$ exists and smaller than 1.
+\end{definition}
+我们可以证明下面的定理
+\begin{thm}FIM given by (\ref{eq:1}) is normal.\end{thm}
+\begin{proof}
+注意到(\ref{eq:1})式中$f'$和$\bm{p}^b_i-\bm{p}$为常数，因此(1)可以写成
+\begin{equation}
+FIM=\frac{1}{\sigma^2}\sum_{i=1}^{N_b}\lambda_i \bm{u}\bm{u}^T
+\end{equation}
+其中$\bm{u}$和$\lambda_i$不依赖于$\sigma$.
+$\sum_{i=1}^{N_b}\lambda_i \bm{u}\bm{u}^T$经过正交变换两个特征值为$\mu'$和$\eta'$,所以$\mu=\mu'/sigma^2,\eta=\eta'/sigma^2,\sqrt{(\mu-\eta)/\mu}=\sqrt{(\mu'-\eta')/\mu'}$，所以离心率始终为不依赖于$\sigma$的常数。
+\end{proof}
+\begin{thm} If FIM is normal, then SPEB->0 iff the area of the information ellipse tends to infinity.\end{thm}
+\begin{proof}
+必要性:SPEB->0时，长短半轴都趋向于无穷大，故面积趋向于0.
+
+充分性，因为信息椭圆面积趋于正无穷，它们的乘积趋于正无穷。因为$\mu>\eta$,反设$\eta$有界，则$\mu->\infty$.由FIM 是正则的定义，此时离心率趋于1，矛盾。\end{proof}
+
+从上面的讨论可以看出，信息椭圆在$\sigma$减小时，形状不变而面积在膨胀，在FIM是正则的情形下，信息椭圆的面积也可以作为衡量定位精度的一个指标。
+
+信息椭圆的长短半轴给出了两个极端的方向，在这两个方向上的定位误差分别最小和最大，对于其他方向，沈老师定义了DPEB，即directional position error bound为
+\begin{equation}
+DPEB(\bm{v})=\bm{v}\text{FIM}^{-1}_{\bm{p}}\bm{v}
+\end{equation}
+
+沈老师考虑了增加一个锚点的RI($\lambda \bm{u}\bm{u}^T$)对信息椭圆形状的影响，但表达式比较复杂，缺少几何直观，下面我们从二维平面投影的角度对FIM进行刻划：
+考虑FIM=$\sum \lambda_i \bm{u}_i \bm{u}_i^T$,作用于
+$\bm{x}$,相当于$\bm{x}$在$\bm{u}_i$方向上的投影乘以伸缩因子$\lambda_i$后再矢量相加。用复数表示比较简洁，设$\bm{x}=e^{j\theta},\bm{u}_i=e^{j\phi_i},\lambda$是$\bm{x}$的特征值，则有:
+\begin{equation}
+\sum \lambda_i \cos(\theta-\phi_i)e^{j\phi_i}=\lambda e^{i\theta}
+\end{equation}
+从而得到:
+\begin{equation}
+\lambda=\sum \lambda_i \cos(\theta-\phi_i)e^{j\phi_i-\theta}
+\end{equation}•
+$\lambda$为实数，因此虚部为0，即$\theta$满足方程
+\begin{equation}\label{eq:fim_eq}
+\sum \lambda_i \sin(2(\theta-\phi_i))=0
+\end{equation}
+且$\lambda=\sum \lambda_i \cos^2(\theta-\phi_i)$,由于$\lambda_i$为正数，特征值$\lambda>0$。考虑到旋转矩阵$\bm{U}_{\theta}=\left(\begin{array}{cc}
+\cos(\theta) & \cos(\theta+\pi/2) \\
+\sin(\theta) & \sin(\theta+\pi/2) \\
+\end{array}\right)$中$\theta$可以取0到$\pi$(因为$\theta$取$\pi$到$2\pi$整体多出一个符号，和后面的$\bm{U}^T$的负号抵消。
+且$\bm{U}^T$的第一列对应着FIM的一个特征向量（不一定是最大的那个），另一个特征向量是第一个特征向量逆时针转90度得到的，因此我们有如下定理：
+\begin{thm} Suppose $\sum \sin(2\phi_i)\lambda_i \neq 0$
+then
+there exists one and only one solution for equation(\ref{eq:fim_eq}) for $\theta$ in range(0,$\pi/2$),
+and if $\theta_0$ in (0,$\pi/2$) is a solution for equation(\ref{eq:fim_eq}), then $\theta_0+\pi/2$ is also a solution.\end{thm}
+\begin{proof}
+由方程(\ref{eq:fim_eq})的形式很容易说明如果$\theta_0$是一个解，那么$\theta_0+\pi/2$也是一个解。由于$\lambda$和方程(\ref{eq:fim_eq})仅依赖于$2\phi_i$,因此我们不妨假设$\phi_i \in [0,\pi]$($\phi_i$是移动节点与锚点连线的方位角)。
+考察等式左边关于$\theta$的函数由条件可以看出其在$\theta=0$时为负，在$\theta=\pi$时为正，因此由介值定理可以得到方程(\ref{eq:fim_eq})在$(0,\pi)$内至少有一个根，由条件可知$\theta=\frac{\pi}{2}$不是方程的根。如果根在$(\pi/2,\pi)$内，因为$\theta-\pi/2$也是方程一个根，所以方程在$(0,\pi/2)$内至少有一个根。反设方程在$(0,\pi/2)$内有两个根$\theta_1,\theta_2(\theta_1<\theta_2)$，将两根分别代入方程(\ref{eq:fim_eq})作和得:
+\begin{equation}
+\sum 2\lambda_i \sin(\theta_1+\theta_2-2\phi_i)\cos(\theta_1-\theta_2)=0
+\end{equation}
+因此$\frac{\theta_1+\theta_2}{2}$也是(0,$\pi/2$)上的一个根。
+由此推出等式左边关于$\theta$的函数在$(\theta_1,\theta_2)$区间内有无数个根，这对初等函数（不恒为0）来说是不可能的，矛盾。
+\end{proof}
+\begin{remark}
+当条件$\sum \sin(2\phi_i)\lambda_i \neq 0$不满足时，方程至少有两个根是$\theta=0$和$\theta=\frac{\pi}{2}$,这种情况下如果
+$\sum \cos(2\phi_i)\lambda_i \neq 0$,则关于$\theta$的方程在$[0,\pi)$上也仅有两个根，而如果$\sum \cos(2\phi_i)\lambda_i= 0$，则
+(\ref{eq:fim_eq})式对任意的$\theta$恒成立。
+\end{remark}
+从方程零点的角度的结论推出矩阵有两个特征值是吻合的。
+由$\lambda$的表达式用倍角公式可以看出$\lambda$含有各个RII之和的一半$\frac{\sum \lambda_i}{2}$,这和沈老师在推导新增RI对原有椭圆的影响时的结构是一样的。
+方程(8)可以由万能公式给出闭式解：首先将正弦展开，然后用$t=\tan(\theta)$(t>0)换元，可整理为关于t的二次方程:
+\begin{equation}\label{eq:Quad}
+(\sum sin(2\phi_i)\lambda_i)t^2+2(\sum \cos(2\phi_i)\lambda_i)t=(\sum \sin(2\phi_i)\lambda_i)
+\end{equation}
+如果$\sum \sin(2\phi_i)\lambda_i = 0$
+由(8)式可得：
+\begin{equation}
+(\sum \lambda_i \cos(2\phi_i))\sin 2\theta=0
+\end{equation}
+由于我们（见下面）可以推出:
+\[
+\lambda=(\sum \lambda_i)/2 \pm \sqrt{(\sum \cos(2\phi_i)\lambda_i)^2+(\sum \sin(2\phi_i)\lambda_i)^2}/2
+\]
+
+如果$\sum \cos(2\phi_i)\lambda_i = 0$,两个特征值相等，这时信息椭圆退化为圆。
+如果$\sum \cos(2\phi_i)\lambda_i \neq 0$,此时$\sin 2\theta=0$,
+推出$\theta=\frac{\pi}{2}$。
+
+如果$\sum \sin(2\phi_i)\lambda_i \neq 0$
+我们记$K=\frac{\sum \cos(2\phi_i)\lambda_i}{\sum \sin(2\phi_i)\lambda_i}$ 
+取正数解为:$t=-K+\sqrt{1+K^2}$(另一个负数解$t=-K-\sqrt{1+K^2}$对应$\theta$是钝角。)
+$t=\frac{1}{K+\sqrt{1+K^2}}$,所以t是K的单调减函数，其中K$\in (-\infty,+\infty)$。
+注意到($t^2+2Kt=1$)
+\begin{equation}\label{eq:Con}
+\tan(2\theta)=\frac{2t}{1-t^2}=1/K
+\end{equation}•
+同样由万能公式可以求出$\lambda$的闭式解:
+\begin{equation}
+\lambda=(\sum \lambda_i)/2+J\frac{(1-t^2)K/2+t}{1+t^2}
+\end{equation}
+其中$J=\sum \lambda_i \sin(2\phi_i)$
+将$t=-K \pm \sqrt{1+K^2}$的值代入得：
+$\lambda=(\sum \lambda_i)/2 \pm J\sqrt{K^2+1}/2$
+推到这一步，特征值和角度与沈老师的讨论中推导的关系式的相似性更加明朗。如果$J>0$那么正数t对应着椭圆的长半轴（较大的特征值），如果$J<0$那么正数t对应着短半轴，负数解对应着长半轴。
+我们可以进一步得到
+\begin{equation}\label{eq:SPEB}
+\text{SPEB}=\frac{2\sum \lambda_i}{(\sum \lambda_i)^2-J^2(K^2+1)}
+\end{equation}
+如果考虑到$\theta=\frac{\pi}{2}$的情形，此时K的分母为0，但如果
+调整上面SPEB的写法，则有下面统一的形式：
+\begin{equation}
+\label{eq:SPEB}
+\text{SPEB}=\frac{2\sum \lambda_i}{(\sum \lambda_i)^2-(\sum \cos(2\phi_i)\lambda_i)^2-(\sum \sin(2\phi_i)\lambda_i)^2}
+\end{equation}
+
+
+在非协作定位场景中，一般很难降低$\sigma$,如果要考虑增加锚点的部署对定位精度的提升作用，则上面推导的闭式解将为这种考虑提供非常好的分析的起点。
+
+在场景中已经存在$N_b$个锚点的情形下，信息椭圆的三个参数可由上面的方程给出，增加一个锚点后椭圆的离心率和面积都会发生变化。
+
+沈老师的文章中讨论了在$\lambda_i$不变的情况下锚点的最优部署问题，$\lambda_i$不变可近似看成锚点和移动节点的距离不变。假设前$N_b$个锚点的部署方式已经确定($\phi_i,i=1,..N_b$确定),现在考虑新加进的第$N_b+1$个锚点如何部署可以使SPEB达到最小,由(\ref{eq:SPEB})可以得到应极小化$J^2(K^2+1)$。
+为记号简便，设新加入的锚点的RII为$\lambda_n$,与待测移动节点的距离为$\phi_n,\phi_n$是可调参数，对前$N_b$个锚点的参数，记$J_1=\sum \lambda_i \sin(2\phi_i),
+J_2=\sum \lambda_i \cos(2\phi_i)$，假设前$N_b$个锚点$J_1>0$,即正数t对应长半轴。(此处需要更详细的说明)
+则我们有
+\begin{equation}
+\begin{split}
+J^2(K^2+1)=(\lambda_n\sin(2\phi_n)+J_1)^2+(\lambda_n\cos(2\phi_n)+J_2)^2\\
+=\lambda_n^2+J_1^2+J_2^2 + 2\lambda_n\sqrt{J_1^2+J_2^2}\sin(2\phi_n+\arctan(J_2/J_1))
+\end{split}
+\end{equation}
+\rem{注意到$a\sin(\theta)+b\cos(\theta)=\sqrt{a^2+b^2}\sin(\theta+\arctan(b/a))$仅在a>0时成立，如果a<0,$a\sin(\theta)+b\cos(\theta)=-\sqrt{a^2+b^2}\sin(\theta+\arctan(b/a))$
+}
+
+注意到$J_2/J_1$是只考虑前$N_b$个锚点时的K。
+由式(\ref{eq:Con})，$2\theta=\arctan(1/K)$,又因为
+$\arctan(K)+\arctan(1/K)=\pi/2$,所以
+\begin{equation}
+\sin(2\phi_n+\arctan(J_2/J_1))=\sin(2\phi_n-2\theta+\pi/2)
+\end{equation}
+欲使上式最小，应该取$\phi_n=\theta+\pi/2$,也就是新的锚点沿原信息椭圆的短半轴部署，如果$J_1<0$,类似的分析也表明新的锚点沿原信息椭圆的短半轴部署，这和沈老师的结果一致。
+
+于是我们得到结论：只考虑单步优化时锚点部署使得信息椭圆的长短轴不断加长而方向不变，在这种情况下随着锚点部署密度的增加，椭圆基本上以圆的姿态（离心率接近0）把自身的面积拓展到无穷。然而直观告诉我们单步优化造成锚点只在两条正交直线上部署，并是全局最优的。
+
+场景中有两个移动节点，彼此之间协作，FIM是4维矩阵，信息椭圆在4维空间中有定义，我们已经分析了$\Sigma_i$的结构，如果取第一个移动节点为目标节点，两个移动节点之间的方向向量为$\bm{u}$,RII为$\lambda_{1,2}$,锚点对目标节点FIM贡献为$\Sigma_0$则移动节点的EFIM为(这个应该可以从4维椭圆降维到2维解释)
+\begin{equation}
+\text{FIM}=\bm{\Sigma}_0+\lambda_{1,2}\bm{u}\bm{u}^T-\lambda_{1,2}^2\bm{u}\bm{u}^T(\bm{\Sigma}_1+\lambda_{1,2}\bm{u}\bm{u}^T)^{-1}\bm{u}\bm{u}^T
+\end{equation}
+进一步化简有
+\begin{equation}\label{eq:FIM_2}
+\text{FIM}=\bm{\Sigma}_0+\lambda_{1,2}(1-\lambda_{1,2}\bm{u}^T(\bm{\Sigma}_1+\lambda_{1,2}\bm{u}\bm{u}^T)^{-1}\bm{u})\bm{u}\bm{u}^T\end{equation}•
+根据Woodbury 矩阵求逆公式
+\begin{equation}
+(A+UCV)^{-1}=A^{-1}-A^{-1}U(C^{-1}+VA^{-1}U)^{-1}VA^{-1}
+\end{equation}
+将式(\ref{eq:FIM_2})代入上式，化简得:
+\begin{equation}\label{eq:FIM_2_Final}
+\text{FIM}=\bm{\Sigma}_0+\xi_{1,2}\lambda_{1,2}\bm{u}\bm{u}^T
+\end{equation}
+其中$\xi_{1,2}=\frac{1}{1+\lambda_{1,2}\bm{u}\bm{\Sigma}_1^{-1}\bm{u}}$
+表达式(\ref{eq:FIM_2_Final})和沈老师讨论两个节点协作时的FIM完全相同，沈老师定义$\xi_{1,2}\lambda_{1,2}$为有效的RII(ERII),可以看到衰减因子$\xi_{1,2}$介于0和1之间，因此协作节点的贡献相对锚点来说要少一些。
+
+下面我们考虑之前提到的全局优化问题，要极小化的目标是$J^2(K^2+1)$，即:
+\begin{equation}
+\min f(\bm{\phi})=(\sum \lambda_i \sin(2\phi_i))^2
++(\sum \lambda_i \cos(2\phi_i))^2
+\end{equation}
+其中$\bm{\phi}=(\phi_1,...\phi_{N_b})$，求和号也是从$i=1$加到$i=N_b$。
+
+上式中若每个角度偏移$\psi$,很容易验证$f_{\psi}'(\bm(\phi)+\psi)\equiv 0$,所以$\psi$对f没有影响，这从几何的角度也很容易理解（锚点部署的旋转不变性）。因此如果直接用全局优化算法求解上式，可不妨取定$\phi_1=0$。
+
+单步优化产生的锚点部署只能在两条正交的直线上，由旋转不变性不妨设两条直线与坐标轴重合，那么上式中
+$f(\bm(\phi))=(\sum \lambda_i)^2$,实际最小值可以取到0，因此单步优化与全局优化相差甚远。
+
+由f的结构我们不难发现，如果令两个平方项分别为0，那么f取得最小值，而求解
+\begin{equation}\label{eq:2new}
+\begin{split}
+\sum \lambda_i \sin(2\phi_i)=0\\
+\sum \lambda_i \cos(2\phi_i)=0
+\end{split}
+\end{equation}
+上面的方程相当于$\sum \lambda_i e^{2i\phi_i}=0$
+只需待定两个角度，为此我们设想，在RII已知的情况下，如果每次向场景中加入2个节点，即可以达到全局最优部署。
+沿用之前的记号$J_1,J_2$,设向场景中投放的第$N_{b+1}$个节点，参数为$\lambda_n,\phi_n$,投放的第$N_{b+2}$个节点，参数为$\lambda_m,\phi_m$.则(\ref{eq:2new})化为
+\begin{equation}
+\begin{split}
+J_1+\lambda_n \sin(2\phi_n)+\lambda_m \sin(2\phi_m)=0\\
+J_2+\lambda_n \sin(2\phi_n)+\lambda_m \sin(2\phi_m)=0
+\end{split}
+\end{equation}
+通过消元可得$\phi_n$满足的方程为
+\begin{equation}\label{eq:nm}
+(J_1+\lambda_n \sin(2\phi_n))^2+(J_2+\lambda_n \sin(2\phi_n))^2=\lambda_m^2
+\end{equation}
+由此可解出
+\begin{equation}
+2\phi_n=-\arctan(J_2/J_1)+\arcsin(\frac{(-1)\sgn{J_1}(J_1^2+J_2^2+\lambda_n^2-\lambda_m^2)}{2\lambda_n \sqrt{J_1^2+J_2^2}})
+\end{equation}
+由于反正弦函数值域的约束，上面等式成立的充要条件是\[|J_1^2+J_2^2+\lambda_n^2-\lambda_m^2|\leq 2\lambda_n\sqrt{J_1^2+J_2^2}\]
+考虑到反正弦函数的对称性，用$\pi-\arcsin(..)$代替上式的$\arcsin(..)$也是方程的解，将两组解分别代会到原方程中，可以解出对应的$\phi_m$,一般情况下有两组$\phi_n,\phi_m$满足方程组(\ref{eq:nm}).
+%可考虑用 U_{\lambda_n,\phi_n}表示
+如果(\ref{eq:nm})成立，在(\ref{eq:SPEB})中SPEB化为
+\begin{equation}
+\text{SPEB}_{op}=\frac{2}{\sum \lambda_i}
+\end{equation}
+\begin{definition}
+We call the SPEB is optimised if it's the minimum with respect to directional angle.
+\end{definition}
+
+通过上面的分析我们得出了如下重要结论，在锚点RII已知的情况下，只需调整两个锚点的方位角布局即可达到全局最优。
+
+在锚点布局总是全局最优的情况下，如果$\lambda_i$有下界的话，我们看到锚点的部署对误差衰减的影响是成反比例的。
+
+在调整两个锚点的方位角布局达到全局最优的情况下，式(\ref{eq:Quad})对任何t成立，这时信息椭圆变成一个圆，原来两个不相等的特征值均变成相等，任意方向都是特征向量的方向。
+
+下面考虑$N_a$个移动节点协作场景下SPEB的结构，information ellipse是$2N_a$维空间的椭球，其在$x_1,x_2$张成的平面内的投影椭圆是我们关心的目标节点的定位误差椭圆。FIM通过正交分解可以写成
+FIM$=Q\text{ diag}\{\mu_1,...\mu_{N_{2a}}\}Q^{-1}$
+其在$x_1,x_2$张成的平面内的投影椭圆对应的矩阵为:
+\begin{equation}
+J^{-1}_{2,2}=\sum \frac{q_iq_i^T}{\lambda_i}
+\end{equation}
+其中$q_i$为Q每一列的前两个元素，即FIM的特征向量在$x_1,x_2$张成的平面内的投影。
+从而得到SPEB为:
+\begin{equation}
+\text{SPEB}=\sum \frac{||q_i||^2}{\lambda_i}
+\end{equation}
+这里$q_i$的贡献可以类比非协作场景中的方位角但不同之处在于$q_i$作为投影向量不一定是归一化的。为了使SPEB尽量小，我们希望FIM较大的特征值对应的特征向量尽可能垂直于$x_1,x_2$张成的平面。
+
+因为特征向量都是归一化的，$||q_i||^2 \leq 1$,所以
+上式中的误差下界可以被$\sum \frac{1}{\lambda_i}$控制住。在特征值的估计理论中，Gerschgorin圆盘定理指出FIM的特征值全都落在以对角元为圆心，非对角元的绝对值之和为半径的圆盘内，在FIM非对角元相比对角元是小量的情况下(协作成分若于非协作成分)，特征值的波动比较小,这种情况下SPEB被非协作成分控制住。通过简单的不等式运算可以进一步证明SPEB一个非常粗糙的上界:
+\begin{equation}
+\text{SPEB}<\sum \frac{\text{tr}J^A(\bm{p}_{i})}{|J^A(\bm{p}_{i})|}
+\end{equation}
+
+上面的考虑忽略了耦合项产生的$q_i$的贡献，因此给出的SPEB的上界过于宽松，为研究SPEB更紧的上界，我们需要对FIM的特征值和特征向量的结构有进一步的认识。
+
+首先考虑将各非协作定位的信息椭圆正交化，为此，只需对$N_a$个移动节点的FIM做拓展的正交变换，旋转矩阵中只有第i个移动节点对应的分块为2乘2的旋转矩阵，其他对角分块为$\bm{I}$,可以证明当我们把$\Sigma_i$变成2乘2的对角阵时，耦合项变化为各个$\bm{u}_i$相应被旋转了非协作信息椭圆的偏转角$\theta_i$，这样FIM非对角元的形式为$-\lambda_{i,j}\bm{Q}(\theta_i)\bm{u}_{i,j}(\bm{Q}(\theta_j)\bm{u}_{i,j})^T$
+\end{document}

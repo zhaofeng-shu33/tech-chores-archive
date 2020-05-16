@@ -1,0 +1,264 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{fontspec}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{todonotes}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[citecolor=blue]{hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\DeclareMathOperator{\sgn}{sgn}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\usepackage{makecell}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+
+
+\setlength{\extrarowheight}{4pt}
+\setlength{\parindent}{1cm}
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{讨论}}} 
+
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰}}
+\maketitle
+\large
+本次讨论推广沈老师在信息耦合一文中提出的行列式恒等式并用这个恒等式求出高维矩阵特征值的一阶扰动，从而为之后的分析打下基础。
+首先证明如下两个引理：
+\begin{lem}如果方阵$\bm{M}$可以写成分块的形式$\left(\begin{array}{cc}
+A&B\\
+C&D\\
+\end{array}\right)$，而且A是可逆的对角阵，那么$\bm{M}$的行列式$|\bm{M}|=|A||D-CA^{-1}B|$
+\end{lem}
+\begin{proof}
+通过第三类初等变换方阵我们有\[
+\left(\begin{array}{cc}
+I&0\\
+-CA^{-1}&I\\
+\end{array}\right) \bm{M}=\left(\begin{array}{cc}
+A&B\\
+0&D-CA^{-1}B\\
+\end{array}\right)\]
+两边同时取行列式即得要证明的式子。
+\end{proof}
+\begin{lem}
+如果$\bm{u}$是一个n维的列向量,$\bm{I}$是n维方阵，则我们有行列式恒等式:
+\begin{equation}\label{eq:con_eq}
+|(1+\bm{u}^T\bm{u})\bm{I}-\bm{u}\bm{u}^T|=(1+\bm{u}^T\bm{u})^{n-1}
+\end{equation}
+\end{lem}
+\begin{proof}
+用数学归纳法证明，首先我们对$n=2$的情形直接验证可得(\ref{eq:con_eq})成立。
+假设结论对n-1维的情形成立，设$\bm{u}=(\bm{v}^T,u_n)^T$,其中$\bm{v}$是n-1维的列向量，那么对$\bm{v}/\sqrt{1+u_n^2}$用归纳假设有:
+\begin{equation}
+|(1+\frac{||\bm{v}||^2}{1+u_n^2})\bm{I}_{n-1}-\frac{\bm{v}\bm{v}^T}{1+u_n^2}|=(1+\frac{||\bm{v}||^2}{1+u_n^2})^{n-2}
+\end{equation}
+其中,$||\bm{v}||^2=\bm{v}^T\bm{v},||\cdot||$表示欧式空间的2范数。
+由上式可得
+\begin{equation}
+A:=(1+u_n^2+||\bm{v}||^2)\bm{I}_{n-1}-\bm{v}\bm{v}^T,\text{with }|A|=(1+u_n^2)(1+u_n^2+||\bm{v}||)^{n-2}
+\end{equation}
+对n维的情形,$(1+\bm{u}^T\bm{u})\bm{I}-\bm{u}\bm{u}^T$可以写成分块矩阵的形式$\left(\begin{array}{cc}
+A&-u_n\bm{v}\\
+-u_n\bm{v}^T&||\bm{v}||^2+1\\
+\end{array}\right)$
+由引理(0.1)得:
+\begin{equation}\label{eq:LMidd}
+|(1+\bm{u}^T\bm{u})\bm{I}-\bm{u}\bm{u}^T|=|A|(||\bm{v}||^2+1-u_n^2 \bm{v}^TA^{-1}\bm{v})
+\end{equation}
+由Woodbury矩阵恒等式：
+\begin{equation}\label{eq:AInv}
+A^{-1}=\frac{1}{1+||\bm{v}||^2+u_n^2}-\frac{\bm{v}(-1+||\bm{v}||^2/(1+||\bm{v}||^2+u_n^2))^{-1}\bm{v}^T}{(1+||\bm{v}||^2+u_n^2)^2}
+\end{equation}
+将(\ref{eq:AInv})代入(\ref{eq:LMidd})中，化简即可得对n的情形要证的恒等式成立。
+\end{proof}
+有了上面的引理(0.2),我们可以将沈老师的式子加以推广，得到如下定理:
+\begin{thm}\label{thm:ShenIden}
+设$J$是对称正定的矩阵(对于FIM这一点成立)，那么下式成立：
+\begin{equation}\label{eq:ShenIden}
+|J+\epsilon \bm{u}\bm{u}^T|=|J|+\epsilon \bm{u}^TJ^*\bm{u}
+\end{equation}
+其中$J^*$表示J的伴随矩阵，满足等式$JJ^*=|J|\bm{I}$
+\end{thm}
+沈老师的文献中只说明上式对2维情形成立，下面给出$J$是任意维数的情形。
+(\ref{eq:ShenIden})等价于:
+\begin{equation}\label{eq:ShenIden_1}
+|J+\epsilon \bm{u}\bm{u}^T|=|J|(1+\epsilon \bm{u}^TJ^{-1}\bm{u})
+\end{equation}
+因为J是对称正定的矩阵,存在正交矩阵Q,使得$J=QDQ^{-1}$,D是对角阵,代入(\ref{eq:ShenIden_1})中得:
+\begin{equation}
+|D+\epsilon \bm{y}\bm{y}^T|=|D|(1+\epsilon \bm{y}^TD^{-1}\bm{y})
+\end{equation}
+其中$\bm{y}=Q^{-1}\bm{u}$,因此我们只需对对角矩阵证明定理成立。
+设J是n维对角阵,由Woodbury矩阵恒等式可得:
+\begin{equation}
+(J+\epsilon \bm{u}\bm{u}^T)^{-1}=J^{-1}-J^{-1}\bm{u}\bm{u}^TJ^{-1}/(\epsilon^{-1}+\bm{u}^TJ^{-1}\bm{u})
+\end{equation}
+整理得:
+\begin{equation}\label{eq:ShenIden_2}
+(J+\epsilon \bm{u}\bm{u}^T)^{-1}=J^{-1}\frac{(1+\epsilon\bm{u}^TJ^{-1}\bm{u})\bm{I}-\epsilon \bm{u}\bm{u}^TJ^{-1}}{1+\epsilon\bm{u}^TJ^{-1}\bm{u}}
+\end{equation}
+如果我们能证明:
+\begin{equation}
+|(1+\epsilon\bm{u}^TJ^{-1}\bm{u})\bm{I}-\epsilon \bm{u}\bm{u}^TJ^{-1}|=(1+\epsilon\bm{u}^TJ^{-1}\bm{u})^{n-1}
+\end{equation}
+则通过对(\ref{eq:ShenIden_2})两边取行列式即可得到要证的式子，这里设$J=\text{diag}(\lambda_1,...\lambda_n)$,取$y=\sqrt{\epsilon}(u_1/\sqrt{\lambda_1},...u_n/\sqrt{\lambda_n})$,那么上式和(\ref{eq:con_eq})具有相同的形式，因此定理结论成立。
+
+之前的讨论中指出将FIM对角块归一化后非对角块以$\bm{u}\bm{v}^T$的形式出现，因此我们可以进一步推广(\ref{eq:ShenIden}),有:
+\begin{cor}
+\begin{equation}
+|J+\epsilon \bm{u}\bm{v}^T|=|J|+\epsilon \bm{u}^TJ^*\bm{v}
+\end{equation}
+\end{cor}
+\begin{proof}
+为证这个推论，首先推广(\ref{eq:con_eq})为:
+\begin{equation}
+|(1+\bm{u}^T\bm{v})\bm{I}-\bm{u}\bm{v}^T|=(1+\bm{u}^T\bm{v})^{n-1}
+\end{equation}
+仿照之前的思路即可。
+\end{proof}
+\begin{cor}
+\begin{equation}
+|J+\epsilon \bm{L}\bm{L}^T|=|J||\bm{I}_n+\epsilon \bm{L}^TJ^{-1}\bm{L}|
+\end{equation}
+其中L是和L同阶的矩阵。
+\end{cor}
+
+下面考虑两个节点协作的情形:
+原4维FIM结构为:
+\begin{equation}
+A=\left(\begin{array}{cc}
+\bm{\Sigma}_0+\epsilon \bm{u}\bm{u}^T &-\epsilon \bm{u}\bm{u}^T \\
+-\epsilon \bm{u}\bm{u}^T & \bm{\Sigma}_1+\epsilon \bm{u}\bm{u}^T
+\end{array}
+\right)
+\end{equation}
+通过坐标变换将$\bm{\Sigma}_0,\bm{\Sigma}_0$对角化可以得到等价的形式:
+\begin{equation}
+A=J+\epsilon\binom{\bm{u}}{-\bm{v}}(\bm{u}^T,-\bm{v}^T)
+\end{equation}•
+其中$u,v$为单位方向向量，方向角为$\theta$和$\phi$，分别表示两个移动节点连线的方向和两个信息椭圆(只考虑锚点定位时)主轴的夹角。为进行定量计算A的特征值和特征向量的渐进展开式，设$J=\text{diag}\{\lambda_1,\lambda_2,\lambda_3,\lambda_4\}$.
+由定理(\ref{thm:ShenIden}),A的特征多项式$P(\lambda)=|\lambda \bm{I}-A|$为:
+\begin{equation}
+\begin{split}
+P(\lambda)= &(\lambda-\lambda_1)(\lambda-\lambda_2)(\lambda-\lambda_3)(\lambda-\lambda_4)(1+\epsilon(\frac{\cos^2(\theta)}{\lambda-\lambda_1}+\\
+ &\frac{\sin^2(\theta)}{\lambda-\lambda_2}+\frac{\cos^2(\phi)}{\lambda-\lambda_3}+\frac{\sin^2(\phi)}{\lambda-\lambda_4}))
+\end{split}
+\end{equation}
+当$\epsilon ->0$时$P(\lambda)=0$的解为$\lambda_i$,因此在$\epsilon$是小量时，考虑形如$\lambda=\lambda_1+a_1 \epsilon+a_2 \epsilon^2+...$的解，通过匹配系数的方法（令$\lambda$的系数为0）可以求出:
+$a_1=\cos^2(\theta)$
+同理$\sin^2(\theta)\epsilon$,$\cos^2(\phi)\epsilon$,$\sin^2(\phi)\epsilon$分别是其他三个根的一阶近似。
+从上面的一阶近似可以看出，所有的特征值都增大了，由于整体的SPEB=$\sum \frac{1}{\lambda_i}$,从全局考虑定位误差下界减小。
+通过将$\lambda_1$的一阶近似代入方程$Ax=\lambda x$，设特征向量$x=(1,0,0,0)^T+(\alpha_1,\alpha_2,\alpha_3,\alpha_4)\epsilon+...$,通过匹配等式两边$\epsilon$的系数可以求出特征向量的一阶扰动为:
+\[
+\alpha_2=\frac{-\sin(\theta)\cos(\theta)}{\lambda_2-\lambda_1},\alpha_3=\frac{\cos(\phi)\cos(\theta)}{\lambda_3-\lambda_1},\alpha_4=\frac{\sin(\phi)\cos(\theta)}{\lambda_4-\lambda_1}
+\]
+$\alpha_1$的取值不影响$\epsilon$系数配平，但由于我们求的是归一化的特征向量，因此有:
+\begin{equation}
+\sum_{i=1}^4(1+\alpha_i \epsilon)^2=1
+\end{equation}
+取一阶近似有$\alpha_1=0$,用同样的方法可以求出其他三个特征向量的近似为:
+\[
+\bm{x}_2=(\frac{-\sin(\theta)\cos(\theta)\epsilon}{\lambda_1-\lambda_2},1,\frac{\cos(\phi)\sin(\theta)\epsilon}{\lambda_3-\lambda_2},\frac{\sin(\phi)\sin(\theta)\epsilon}{\lambda_4-\lambda_2})^T
+\]
+\[
+\bm{x}_3=(\frac{-\cos(\theta)\cos(\phi)\epsilon}{\lambda_1-\lambda_3},\frac{-\sin(\theta)\cos(\phi)\epsilon}{\lambda_2-\lambda_3},1,\frac{\sin(\phi)\cos(\phi)\epsilon}{\lambda_4-\lambda_3})^T
+\]
+\[
+\bm{x}_4=(\frac{-\cos(\theta)\sin(\phi)\epsilon}{\lambda_1-\lambda_4},\frac{-\sin(\theta)\sin(\phi)\epsilon}{\lambda_2-\lambda_4},\frac{\sin(\phi)\cos(\phi)\epsilon}{\lambda_3-\lambda_4},1)^T
+\]
+由上次讨论的结论:
+\begin{equation}
+\text{SPEB}=\sum \frac{||q_i||^2}{\lambda_i}
+\end{equation}
+可以看出，含$\epsilon$项的贡献为$\epsilon^2$项，可忽略，因此实际上SPEB$\approx \frac{1}{\lambda_1}+\frac{1}{\lambda_2}$,协作退化为非协作。
+
+SPEB可以用最小特征值和最大特征值刻划它的一个上下界，即
+\begin{equation}
+\frac{2N}{\lambda_{\text{max}}} \leq \text{SPEB} 
+\leq \frac{2N}{\lambda_{\text{min}}}
+\end{equation}
+其中2N是FIM矩阵的维数，一般可以用Rayleigh商来刻划，即$\lambda_{\text{max}}$和$\lambda_{\text{min}}$分别是函数$\bm{x}^T\{\text{FIM}\}\bm{x}$的条件极大值和极小值(条件是$||\bm{x}||=1$)
+设$\bm{x}=\{\bm{x}_1,...,\bm{x}_n\}$其中$\bm{x}_i \in \mathbb{R}^2,x_i$的范数是欧式范数。则Rayleigh 商可以展开为:
+\begin{equation}\label{eq:MaxMin}
+R(\bm{x})=\sum_{i\leq j\leq N} \lambda_{ij}(\bm{u}_{ij}^T(\bm{x}_i-\bm{x}_j))^2+\sum_{i=1}^N \bm{x}_i^T\bm{J}_i\bm{x}_i
+\end{equation}
+如果把每个$x_i$写成极坐标的形式，即$x_i=r_i(\cos \theta_i,\sin \theta_i)$那么约束条件变为:
+\begin{equation}
+\sum_{i=1}^{N} r_i^2=1
+\end{equation}
+不含角度，因此在$r_i$已知的情况下对$\theta_i$作无约束优化即可。
+此时目标函数为:
+\begin{equation}
+R(\bm{r},\bm{\theta})=\sum_{i\leq j\leq N} \lambda_{ij}(\bm{u}_{ij}^T\binom{r_i \cos \theta_i-r_j \cos \theta_j}{r_i \sin \theta_i-r_j \sin \theta_j})^2+\sum_{i=1}^N r_i^2\bm{v}_i^T\bm{J}_i\bm{v}_i
+\end{equation}
+其中$\bm{v}_i=(\cos \theta_i,\sin \theta_i)^T$
+
+我们考虑两个极端的情形，所有的$r_i$均相等，为$\frac{1}{\sqrt{N}}$，一种情形是$\bm{v}_i$取为$\bm{u}_i$,另一种情形是$\bm{v}_i$取$\bm{u}_i$逆时针旋转90度后的方向向量。
+
+为能够继续推导高阶的情形，我们对模型做出如下简化：
+\begin{enumerate}
+\item{锚点定位贡献的$J_i$为强度(RII)为a的单位矩阵}
+\item{所有移动节点协作的RII强度均为b}
+\end{enumerate}
+通过之前的讨论，改变锚点的部署使得对每个移动节点非协作信息椭圆是圆时有最小的SPEB,根据之前的模型RII等于$\frac{f'^2}{4\sigma^2}$，如果认为f'是常数（对直接测距的情形成立）而$\sigma$对于协作和非协作不一样。上面的假设2实际上认为场景中N个节点两两均会发生协作，这是最好的估计（完全图），因此上面a和b的假设有一定道理。
+在如上两个假设下：式({eq:MaxMin})可以化为:
+\begin{equation}
+R(\bm{x})=b\sum_{i\leq j\leq N} (\bm{u}_{ij}^T(\bm{x}_i-\bm{x}_j))^2+a
+\end{equation}
+在前面的极端情况下，因为$\bm{u}_{ij}=\frac{\bm{p}^i-\bm{p}^j}{||\bm{p}_i-\bm{p}_j||}$,
+取$\bm{x}_i=r_i\bm{\mathring{p}}_i$,其中$r_i=1/\sum ||\bm{\mathring{p}}_i||^2$,$\bm{\mathring{p}}_i$表示$\bm{p}_i$逆时针转90度得到的结果。代入上面的$R(\bm{x})$表达式，得到$a$,这是
+$R(\bm{x})$的最小值(最小特征值)，因此对应的$\bm{x}$就是特征向量。这也可以从FIM特征值的角度直接说明，即我们求$\text{FIM}\cdot \bm{x}$的结果可以得到$a\bm{x}$，另一方面，我们可以证明$a+Nb$是FIM最大的特征值。即证明$R(\bm{x})$取到最大值。$\forall \bm{y}$,由Cauchy不等式:
+\begin{equation}
+R(\bm{y})\leq b\sum_{i\leq j\leq N} ||\bm{u}_{ij}||^2||\bm{y}_i-\bm{y}_j||^2+a=b\sum_{i\leq j\leq N}||\bm{y}_i-\bm{y}_j||^2+a
+\end{equation}
+取等条件是$\forall i,j\in \{1,2,...N\},i\neq j$,有$\bm{y}_i-\bm{y}_j$与$\bm{u}_{ij}$均平行。
+
+考虑条件极值
+\begin{equation}
+f(\bm{y})=\sum_{i\leq j\leq N} ||\bm{y}_i-\bm{y}_j||^2,\text{s.t } ||\bm{y}||=1
+\end{equation}
+设矩阵T为:
+\[
+\bm{T}=\left(
+\begin{array}{cccc}
+(N-1)\bm{I}_2&-\bm{I}_2&\dots&-\bm{I}_2\\
+-\bm{I}_2&(N-1)\bm{I}_2&\dots&-\bm{I}_2\\
+\vdots & \vdots & \ddots & \vdots\\
+-\bm{I}_2& -\bm{I}_2 & \dots & (N-1)\bm{I}_2
+\end{array}
+\right)
+\]
+$\bm{T}$可以写成$\bm{T}=N\bm{I}-\bm{e}\bm{e}^T$,其中$\bm{e}=(\bm{I}_2,\dots,\bm{I}_2)^T$。而$f(\bm{y})=\bm{y}^T\bm{T}\bm{y}=N-(\bm{e}^T\bm{y})^T(\bm{e}^T\bm{y})\leq N$取等条件是$\bm{e}^T\bm{y}=\bm{0}$。
+所以$R(\bm{y})\leq Nb+a$如果我们能进一步证明两次取等条件下关于$\bm{y}$的方程有解，那么$Nb+a$是Rayleigh商的最大值。
+
+事实上，我们取$\bm{y}_1-\bm{y}_j=k(\bm{p}_1-\bm{p}_j),j=2,...N$,很自然的$\bm{y}_1-\bm{y}_j\parallel \bm{u}_{1j}$
+由于
+\[
+\bm{y}_i-\bm{y}_j=(\bm{y}_1-\bm{y}_j)-(\bm{y}_1-\bm{y}_i)
+=k(\bm{p}_i-\bm{p}_j)\parallel \bm{u}_{ij}
+\]
+所以第一个等号可以取到，这时原来2N个自由度的y只剩下$\bm{y}_1$和k三个自由度，而第二个等号限制住了两个自由度，再加上$\bm{y}$模长为1的约束，所以$\bm{y}$可以唯一取到。
+
+具体求解可得:
+\[
+\bm{y}_1=\frac{k}{N}\sum_{j=2}^N (\bm{p}_1-\bm{p}_j)
+\]
+将$\bm{y}_i$的表达式代入$||\bm{y}||=1$中，可以解出唯一的$k^2=M$
+其中
+\[
+M\sum_{i=1}^N||\sum_{j=1,j\neq i}^N(\bm{p}_1-\bm{p}_j)||^2=1
+\]
+这表明最大特征向量的方向是唯一的。
+
+\end{document}

@@ -1,0 +1,287 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{fontspec}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{todonotes}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[citecolor=blue]{hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\DeclareMathOperator{\sgn}{sgn}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\usepackage{makecell}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+
+
+\setlength{\extrarowheight}{4pt}
+\setlength{\parindent}{1cm}
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{讨论}}}
+
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰}}
+\maketitle
+\large
+考虑稀疏情况下节点协作的问题，假设每个节点周围只有两个移动节点可以和自身协作，对于边缘的情况可以分别考虑有环和链型的结构。
+
+有环的结构是指所有节点都可以和周围的两个节点协作；链型的结构是指
+边缘有两个节点的协作节点只有一个。
+
+我们先考虑链型的结构，沿用全连接的假设，我们考虑的FIM有下面的形式
+\begin{equation}\label{eq:begin}
+\text{FIM}=a\bm{I}+bJ
+\end{equation}
+其中\[
+J=\left(
+\begin{array}{ccccc}
+\bm{u}_1\bm{u}_1^T&-\bm{u}_1\bm{u}_1^T&\dots&&0\\
+-\bm{u}_1\bm{u}_1^T&\bm{u}_1\bm{u}_1^T+\bm{u}_2\bm{u}_2^T&-\bm{u}_2\bm{u}_2^T&\dots&0\\
+\vdots &\vdots&&\ddots &\vdots\\
+0&&\dots&-\bm{u}_{N-1}\bm{u}_{N-1}^T&\bm{u}_{N-1}\bm{u}_{N-1}^T\\
+\end{array}
+\right)
+\]
+J可以分解为$J=LL^T$,其中:
+\[
+L=\left(
+\begin{array}{ccccc}
+\bm{u}_1&0&\dots&&0\\
+-\bm{u}_1&\bm{u}_2&0&\dots&0\\
+0&-\bm{u}_2&\bm{u}_3&\dots&0\\
+\vdots &\vdots&&\ddots &\vdots\\
+0&\dots&0&-\bm{u}_{N-1}&0\\
+\end{array}
+\right)
+\]
+L是2n行n列的矩阵,L的最后一列均为0，
+为得到行列式$|(\lambda-a)\bm{I}-bLL^T|$,我们首先证明下面的定理:
+\begin{thm}
+设L是$m\times n$的矩阵，则
+\begin{equation}
+|a\bm{I}_m+\epsilon \bm{L}\bm{L}^T|=a^m|\bm{I}_n+\frac{\epsilon}{a} \bm{L}^T\bm{L}|
+\end{equation}
+\end{thm}
+\begin{proof}
+通过提取a可不妨设a=1,同时可以把$\sqrt{\epsilon}L$视为整体，故$\epsilon$也不妨设为1;
+为证明$|\bm{I}_m+\bm{L}\bm{L}^T|=|\bm{I}_n+\bm{L}^T\bm{L}|$
+考虑到
+\[
+\left(\begin{array}{cc}
+\bm{I}_n+\bm{L}^T\bm{L}&\bm{0}\\
+\bm{L}&\bm{I}_m\\
+\end{array}\right)\sim\left(\begin{array}{cc}
+\bm{I}_n&-\bm{L}^T\\
+\bm{L}&\bm{I}_m\\
+\end{array}\right)\sim\left(\begin{array}{cc}
+\bm{I}_n&-\bm{L}^T\\
+0&\bm{I}_m+\bm{L}\bm{L}^T\\
+\end{array}\right)
+\]
+其中$\sim$表示矩阵相抵，两边取行列式即得要证的式子。
+\end{proof}
+对$|(\lambda-a)\bm{I}-bLL^T|$应用上面的定理我们得到
+\begin{equation}
+|(\lambda-a)\bm{I}-bLL^T|=(\lambda-a)^{2n}|\bm{I}_n-\frac{b}{\lambda-a}L^TL|
+\end{equation}
+计算$L^TL$有
+\[
+L^TL=\left(
+\begin{array}{ccccc}
+2\bm{u}^T_1\bm{u}_1&-\bm{u}_1^T\bm{u}_2&\dots&&0\\
+-\bm{u}_2\bm{u}_1^T&2\bm{u}_2^T\bm{u}_2&-\bm{u}_2^T\bm{u}_3&\dots&0\\
+0&-\bm{u}_3^T\bm{u}_2&2\bm{u}_3^T\bm{u}_3&\dots&0\\
+\vdots &\vdots&&\ddots &\vdots\\
+0&\dots&&0&0\\
+\end{array}
+\right)
+\]
+注意到$\bm{u}_i^T\bm{u}_i=1$,且$L^TL$是一个$n \times n$的对称矩阵，最后一行和最后一列均为0，
+从而有:
+\begin{equation}{eq:2S}
+|(\lambda-a)\bm{I}-bLL^T|=(\lambda-a)^{n+1}|(\lambda-a)\bm{I}_{n-1}-b\bm{K}_{n-1}|
+\end{equation}
+其中$\bm{K}_{n-1}$为$L^TL$第n-1阶主子式。
+和全连接的思路相同，当$K_{n-1}$是对角阵时($\bm{u}_i$和$\bm{u}_{i+1}$,$\bm{u}_{i-1}$垂直),$|(\lambda-a)\bm{I}_{n-1}-b\bm{K}_{n-1}|$所有特征值的倒数和最小。
+此时原FIM有两个特征值a和a+b+2,其对应的特征子空间的维数分别为n+1和n-1,每个节点的平均定位误差下界随n趋向正无穷趋近常数$\frac{1}{a}+\frac{1}{a+b+2}$
+下面考虑有环的情形：
+此时
+其中\[
+\scriptsize{
+J=\left(
+\begin{array}{ccccc}
+\bm{u}_1\bm{u}_1^T+\bm{u}_{N}\bm{u}_{N}^T&-\bm{u}_1\bm{u}_1^T&\dots&&-\bm{u}_{N}\bm{u}_{N}^T\\
+-\bm{u}_1\bm{u}_1^T&\bm{u}_1\bm{u}_1^T+\bm{u}_2\bm{u}_2^T&-\bm{u}_2\bm{u}_2^T&\dots&0\\
+\vdots &\vdots&&\ddots &\vdots\\
+-\bm{u}_N\bm{u}_N^T&&\dots&-\bm{u}_{N-1}\bm{u}_{N-1}^T&\bm{u}_{N-1}\bm{u}_{N-1}^T+\bm{u}_N\bm{u}_N^T\\
+\end{array}
+\right)}
+\]
+$\bm{u}_N$表示第N个节点到第1个节点连线的方向向量。
+J可以分解为$J=LL^T$,
+其中:
+\[
+L=\left(
+\begin{array}{ccccc}
+\bm{u}_1&0&\dots&0&-\bm{u}_{N}\\
+-\bm{u}_1&\bm{u}_2&0&\dots&0\\
+0&-\bm{u}_2&\bm{u}_3&\dots&0\\
+\vdots &\vdots&&\ddots &\vdots\\
+0&\dots&0&-\bm{u}_{N-1}&\bm{u}_N\\
+\end{array}
+\right)
+\]
+\begin{equation}
+|(\lambda-a)\bm{I}-bLL^T|=(\lambda-a)^{n}|(\lambda-a)\bm{I}_n-b\bm{K}_n|
+\end{equation}
+
+
+计算$\bm{K}_n=L^TL$得
+\[
+L^TL=\left(
+\begin{array}{ccccc}
+2\bm{u}^T_1\bm{u}_1&-\bm{u}_1^T\bm{u}_2&\dots&0&-\bm{u}_1^T\bm{u}_N\\
+-\bm{u}_2\bm{u}_1^T&2\bm{u}_2^T\bm{u}_2&-\bm{u}_2^T\bm{u}_3&\dots&0\\
+0&-\bm{u}_3^T\bm{u}_2&2\bm{u}_3^T\bm{u}_3&\dots&0\\
+\vdots &\vdots&&\ddots &\vdots\\
+-\bm{u}_N^T\bm{u}_1&\dots&0&-\bm{u}_{N-1}^T\bm{u}_N&2\bm{u}_N^T\bm{u}_N\\
+\end{array}
+\right)
+\]
+如果考虑非对角元全为0，结论是FIM有两个特征值a和a+b+2,其对应的特征子空间的维数均为n,在极限情形下每个节点的平均定位误差下界与无环的情形相等。
+
+我们下面考虑特殊网络中定位误差下界和网络规模与相邻节点协作数目的关系，所谓特殊网路是对于平面中任意节点$\bm{p}_i$,其周围协作的节点数目为常数r,集合记为$\mathcal{S}_i$,$\forall \bm{p}_j \in \mathcal{S}_i,\exists t \in \{1,2,\dots,r\},s.t.\bm{p}_j-\bm{p}_i=(\cos(\frac{2t\pi}{r}),\sin(\frac{2t\pi}{r})) $，由于是平面网络，对于处于网络边缘的节点，其协作节点的数目少于r,但当网络规模很大时，可以忽略边缘效应。
+
+我们先考虑r=2的情形，此时网络拓扑是一条线段，等距分布着节点。由($\label{eq:2S}$)式，此时$\bm{K}_{n-1}=2\bm{I}_{n-1}-\bm{S}$，其中
+\[
+\bm{S}=\left(
+\begin{array}{cccc}
+0&1&\dots&0\\
+1&0&\dots&0\\
+\vdots&\vdots&\ddots&\vdots\\
+0&\dots&1&0\\
+\end{array}\right)
+\]
+可以求出$\bm{S}$的n-1个特征值为:
+$\lambda_j=2\cos(\frac{\pi j}{n}),j=1,2,...,n-1$
+\begin{proof}
+首先可以用数学归纳法证明S的特征多项式有如下的递推公式成立:
+\begin{equation}
+P_n(\lambda)=\lambda P_{n-1}(\lambda)-P_{n-2}(\lambda)
+\end{equation}
+上面$P_n(\lambda)$对应n维的S。
+其次证明
+\[U_n(\lambda)=\frac{1}{\sqrt{1-(\frac{\lambda}{2})^2}}\sin((n+1)\arccos(\frac{\lambda}{2}))
+\]
+适合上面的递推关系式。
+令$\theta=\arccos\frac{\lambda}{2}$,则$\lambda=2\cos\theta$
+那么:$U_n(\lambda)=\sin(n+1)\theta$
+同理可得:$U_{n-2}(\lambda)=\sin(n-1)\theta$
+上面两式相加有:
+\[
+U_n(\lambda)+U_{n-2}(\lambda)=2\sin n\theta \cos \theta=\lambda U_{n-1}(\lambda)
+\]
+最后证明$U_n(\lambda)$是一个多项式。首先
+$U_1(\lambda)=\frac{1}{\sqrt{1-(\frac{\lambda}{2})^2}}\sin2\theta=\lambda$
+即为S=0的特征值，$U_2(\lambda)=\frac{1}{\sqrt{1-(\frac{\lambda}{2})^2}}\sin3\theta=\lambda^2-1$,与$S=\left(\begin{array}{cc}0&1\\1&0\end{array}\right)$的特征多项式一致，最后由递推公式可知我们构造的$U_n(\lambda)$是关于$\lambda$的n次多项式。
+\end{proof}
+我们首先考虑函数
+\[
+f(n)=\frac{1}{n}(\frac{n+1}{a}+\sum_{j=1}^{n-1}\frac{1}{a+2b(1-\cos(\frac{\pi j}{n}))})
+\]
+随n的衰减情况。
+
+首先考虑极限\[
+\lim_{n\rightarrow \infty}f(n)
+\]
+根据Riemann积分的定义:
+\[
+\lim_{n\rightarrow \infty}f(n)=\frac{1}{a}+\int_0^1 \frac{1}{a+2b(1-cos(\pi x))}dx
+\]
+其中
+\[
+\int_0^1 \frac{1}{a+2b(1-cos(\pi x))}dx=\frac{1}{2\pi i}\oint_{|z|=1} \frac{1}{a+2b(1-\frac{z+z^{-1}}{2})}\frac{dz}{z}
+\]
+由于$az+2bz(1-\frac{z+z^{-1}}{2})=0$的两根之积为1,其中一个大于零的根表达式为:
+\[
+z_1=1+\frac{a}{2b}+\sqrt{\frac{a^2}{4b^2}+\frac{a}{b}}
+\]
+所以被积函数在单位圆内有一个极点
+\[
+z_2=1+\frac{a}{2b}-\sqrt{\frac{a^2}{4b^2}+\frac{a}{b}}
+\]
+由留数定理可以求出上面的积分为被积函数部分分式展开中$\frac{1}{z-z_2}$的系数：
+\[
+\int_0^1 \frac{1}{a+2b(1-cos(\pi x))}dx=\frac{1}{\sqrt{a^2+4ab}}
+\]
+所以极限
+\begin{equation}\label{eq:method1}
+\lim_{n\rightarrow \infty}f(n)=\frac{1}{a}+\frac{1}{\sqrt{a^2+4ab}}
+\end{equation}
+比较非协作的$\frac{1}{2a}$的情形，节点的平均定位误差下界下降的成分为:
+\[
+\Delta=\frac{1}{a}(1-\frac{1}{\sqrt{1+\frac{4b}{a}}})
+\]
+若$b\ll a$,则上面下降的成分主项为：
+\[
+\Delta=\frac{2b}{a^2}
+\]
+上面是从积分的角度推导了极限情形，考虑到节点的对称性也可以
+从EFIM的角度来求解，但这首先要对原来的FIM做适当变形，即节点重排：
+原来是从链的一端开始对节点进行计数，现在考虑从链的中间往两边进行计数，可以得到FIM中奇异矩阵J的形式为:
+\[
+J=\left(
+\begin{array}{ccccccc}
+2K_1&-K_1&-K_1&0&\dots&&\\
+-K_1&2K_1&0&-K_1&0\dots&\\
+-K_1&0&2K_1&0&-K_1&0&\dots\\
+0&-K_1&0&2K_1&0&\dots&\\
+\vdots&\vdots&&\ddots&\dots&\\
+\end{array}
+\right)
+\]
+其中$K_1=\text{diag}\{1,0\}$
+为简化计算,对$a\bm{I}+b\bm{J}$提取b,记$\lambda=\frac{a}{b}$,很容易看出，有下面的关系成立:
+\[
+\lim_{n\rightarrow \infty}f(n)=\frac{1}{b}\text{tr}((\lambda\bm{I}+\bm{J})^{-1}_{2,2})
+\]
+通过可以EFIM的公式可以推导出2$\times$2的矩阵$(\lambda\bm{I}+\bm{J})$实际是个对角阵，其中一个对角元为$\lambda$,另一个对角元为可以写成如下连分式的形式:
+\[
+\lambda+2-\cfrac{2}{\lambda+2-\cfrac{1}{\lambda+2-\cfrac{1}{\lambda+2-\dots}}}
+\]
+对比一般连分式的形式\[
+a_0+\cfrac{b_1}{a_1+\cfrac{b_2}{a_2+\cfrac{b_3}{a_3+\cdots}}}
+\]
+可以发现$b_n,a_n$均为常数，根据同余定理，在连分式理论中，下面的递推关系成立:
+\begin{eqnarray}
+h_n=a_nh_{n-1}+b_nh_{n-2}\\
+k_n=a_nk_{n-1}+b_nk_{n-2}
+\end{eqnarray}
+其中$\frac{h_n}{k_n}$表示连分式在前n项截断的值，递推公式的初始条件是
+\[
+h_0=\lambda+2,k_0=1
+\]
+\[
+h_1=\lambda+2-\frac{2}{\lambda+2},k_1=\lambda+2
+\]
+而$a_n=\lambda+2,b_n=-1$,解上面的常系数差分方程可得通解为
+\[
+\frac{h_n}{k_n}=\frac{A_1x_1^n+B_1x_2^n}{A_2x_1^n+B_2x_2^n}
+\]
+其中$x_{1,2}=\frac{\lambda+2\pm \sqrt{\lambda^2+4\lambda}}{2}$
+由于$|\frac{x_1}{x_2}|>1$,所以极限
+\[
+\lim_{n\to \infty}\frac{h_n}{k_n}=\frac{A_1}{A_2}
+\]
+$A_1,A_2$可由初始条件求出，它们的比值是$\sqrt{\lambda^2+4\lambda}$,对比(\ref{eq:method1})的结果，可以发现完全一样。
+\end{document} 

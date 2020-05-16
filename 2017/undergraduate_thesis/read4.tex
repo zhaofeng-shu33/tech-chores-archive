@@ -1,0 +1,165 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{fontspec}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{todonotes}
+\usepackage{amsmath}
+\usepackage[citecolor=blue]{hyperref}
+
+\usepackage{makecell}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+
+
+\setlength{\extrarowheight}{4pt}
+\setlength{\parindent}{1cm}
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{讨论}}} 
+
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰}}
+\maketitle
+\large
+连长虽然指出杨思怡的文章虽然以最小跳数定义了分层结构，但她默认了
+同层移动节点不协作且相对目标节点，分层实际上是一个tree structure,每个移动节点有且仅能属于某一层，否则FIM无法按层重排分解。这是一种近似方法，下面在这些假定下整理她文中的一些观点:
+
+
+在之前的讨论中，有时假定$B_k,F_k$是最小单元即2乘2的矩阵，这次分析它们的精细结构，为简便假定Range Information Intensity均为1，
+设第k层移动节点集合$V_k={p_1^k,p_2^k,...p_{n_k}^k}$,第k+1层移动节点集合$V_{k+1}$类似的定义。假设这两层节点不是所有的节点都能彼此通信，而且同层的节点不协作，来自第k层的移动节点i和来自第k+1层的移动节点j+1组成了一条通信链路$e^k_{i,j}$,上标k表明这条链路是第k+1层链路集合，仿此，第k+1层链路集合$\varepsilon$记为$\{
+e^k_{i_1,j_1},e^k_{i_2,j_2},...e^k_{i_{m_k},j_{m_k}}\}$
+集合的势$|\varepsilon|$小于$\frac{n_k n_{k+1}}{2}$,且假定至少有一条链路存在，
+每一条链路对信息量的贡献是一个2乘2的矩阵$\bm{r}*\bm{r}^T$,这里$\bm{r}$是该链路的单位方向向量。两层节点协作的耦合矩阵$\bm{C}$是一个$n_k \times n_{k+1}$维的（最小单位是2乘2矩阵）。假定通信链路$e^k_{i,j}$存在，那么$\bm{C}$的第i行第j列的元素就是$\bm{r}*\bm{r}^T$。杨思怡的文章指出$\bm{C}$可以拆成维数是$n_k \times |\varepsilon|$的矩阵$\bm{B}_k$和$|\varepsilon| \times n_{k+1}$的矩阵$\bm{F}_{k+1}^T$，$\bm{B}_k$矩阵每一列对应一条通信链路，每一列只有1个非零元，且非零元所在的行数等于第k层节点的序号；同理$\bm{F}_{k+1}^T$矩阵每一行对应一条通信链路，每一行只有1个非零元，且非零元所在的列数等于第k+1层节点的序号。$\bm{B}_k,\bm{F}_{k+1}$具有好的性质是其各行相互正交。杨思怡还指出方阵$\bm{B}\bm{B}^T$
+是对FIM中第k层节点对应的对角元的贡献，由于$\bm{B}_k$的正交性质(也就是同层节点不协作),使得方阵$\bm{B}\bm{B}^T$是一个对角阵，对角元为$\bm{B}$各行2范数的平方，当然，以上的讨论都是把2乘2的矩阵当成数来处理的，2范数的平方这种表述应该适当的修改。FIM中第k层节点对应的对角元还有来自第k-1层节点的协作贡献，分析思路是一样的。
+
+基于如上分析，可以考虑去掉第k层链路集合$\varepsilon$某条链路对目标节点定位精度的影响。矩阵维数不变但$\bm{B}_k,\bm{F}_{k+1}$的列数减少1。
+杨思怡的思路是沿用求J(k)的思路把某条链路的影响用代数表达式写出来，一方面她的附录证明太简洁我看不太懂她的式子是怎么推的，另一方面正如连长所说给出的表达式缺少启发性。我继续沿用之前的思路，在镜像杨思怡的矩阵基础上，可以把有没有$e^k_{i,j}$转化成在一个k步迭代运算中研究初值有误差矩阵$\bm{E}$的情况下对计算结果的最终影响：
+初始矩阵$A_1$的误差项是$-(\bm{r}_{i,j}\bm{r}_{i,j}^T)\bm{e_j}\bm{e_j}^T$,这里$(\bm{r}_{i,j}\bm{r}_{i,j}^T)$应该看成$n_{k+1}$维的方阵第j行第j列的元素,$\bm{e_j}$是维数为$n_{k+1}$的单位向量，只在第j维取1。
+$A_2$的误差项是$-(\bm{r}_{i,j}\bm{r}_{i,j}^T)\bm{e_i}\bm{e_i}^T$
+$\bm{e_i}$是维数为$n_{k}$的单位向量。
+$D_1$的误差项是$-(\bm{r}_{i,j}\bm{r}_{i,j}^T)\bm{e_i}\bm{e_j}^T$
+而上次讨论(1)式可以从右下角很自然地拓展成k+1维矩阵，所以我们在接下来的工作中应重点研究$A_1,A_2,D_1$的误差在数列递推公式(非线性)中的误差传播问题。
+递推公式中$A_k,D_k$和具体网络结构有关，我们下面先对棋盘网络给出$B_{k-1},
+F_k$的表达式。
+对于棋盘网络，选定一个移动节点为目标节点，第一层移动节点有4个,
+第二层移动节点有3*4-4=8个，第k层移动节点有(k+1)*4-4=4k个。所以
+只考虑前k层节点，FIM在层分块意义上是k+1维的，左上角的块是目标节点，是2*2的方阵，主对角线上依次是8*8的方阵，...8k*8k的方阵。
+以下讨论以2*2的方阵为最小元，
+我们考虑的$\bm{B}_{k},\bm{F}_{k}$的行数为4k。
+对于每一层的节点，我们遵循从x轴正半轴逆时针转1圈的顺序从小到大给
+节点排序，第一层链路集合为$\varepsilon_1=\{e^1_{1,1},e^1_{1,2},e^1_{1,3},e^1_{1,4}\},|\varepsilon_1|=4$第二层链路集为
+$\varepsilon=\{e^2_{1,1},e^2_{1,2},e^2_{2,2},
+e^2_{2,3},e^2_{2,4},e^2_{3,4},e^2_{3,5},
+e^2_{3,6},e^2_{4,6},e^2_{4,7},e^2_{4,8},e^2_{1,8}\},|\varepsilon_2|=3\times 4,|\varepsilon_k|=3\times 4(k-1)$
+
+对于棋盘阵，不同层的节点协作只产生两种类型的链路单位向量$\bm{i}=(1,0)^T$和$\bm{j}=(0,1)^T$,对于我们假定的
+节点顺序$\bm{i}$和$\bm{j}$是交错出现的，
+\[
+B_0=(\bm{i},\bm{j},\bm{i},\bm{j})
+\]
+\[
+F_1=\left(
+\begin{array}{cccc}
+\bm{i} & 0 & 0 & 0 \\
+0 &\bm{j}& 0 & 0 \\
+0 & 0 & \bm{i} & 0\\
+0 & 0 & 0 & \bm{j}\\
+\end{array}
+\right),
+\bm{I}_i:=\bm{i}\bm{i}^T=\left(
+\begin{array}{cc}
+1 & 0\\
+0 & 0 \\
+\end{array}
+\right),
+\bm{I}_j:=\bm{j}\bm{j}^T=\left(
+\begin{array}{cc}
+0 & 0\\
+0 & 1 \\
+\end{array}
+\right)
+\]
+\[
+\bm{i}\bm{j}^T=\left(
+\begin{array}{cc}
+0 & 1\\
+0 & 0 \\
+\end{array}
+\right),
+\bm{j}\bm{i}^T=\left(
+\begin{array}{cc}
+0 & 0\\
+1 & 0 \\
+\end{array}
+\right),B_1=\left(
+\begin{array}{cccc}
+\bm{i}\: \bm{j} &  &  & \bm{j}  \\
+ &\bm{i}\: \bm{j} \: \bm{i}&  &  \\
+ &  & \bm{j}\: \bm{i} \: \bm{j} & \\
+ &  &  & \bm{i}\: \bm{j} \: \bm{i}\\
+\end{array}
+\right)_{4 \times 12}\]
+\[
+F_2=\left(
+\begin{array}{cccccccc}
+\bm{i}&&&&&&&  \\
+&\bm{j} \: \bm{i}&&&&&&\\
+&&\bm{j}&&&&&\\
+&&&\bm{i}\: \bm{j}&&&&\\
+&&&&\bm{i}&&&\\
+&&&&&\bm{j} \: \bm{i}&&\\
+&&&&&&\bm{j}&\\
+&&&&&&&\bm{i}\: \bm{j}\\
+\end{array}
+\right)_{8 \times 12}
+\]
+\[
+\bm{B}_1\bm{F}_2^T=\left(
+\begin{array}{cccccccc}
+\bm{i}\bm{i}^T&\bm{j}\bm{j}^T&&&&&&\bm{j}\bm{j}^T\\
+&\bm{i}\bm{i}^T&\bm{j}\bm{j}^T&\bm{i}\bm{i}^T&&&&\\
+&&&\bm{j}\bm{j}^T&\bm{i}\bm{i}^T&\bm{j}\bm{j}^T&&\\
+&&&&&\bm{i}\bm{i}^T&\bm{j}\bm{j}^T&\bm{i}\bm{i}^T\\
+\end{array}
+\right)_{4\times 8}
+\]
+以此类推，$\bm{B}_k,k \geq 1$的结构应该是4k行乘以12k列的矩阵，每行有3个非零元，每列有一个非零元,而且$\bm{i},\bm{j}$交替出现。$\bm{F}_k$的结构应该是4k行乘以12(k-1)列的矩阵，每行有1个或2个非零元，非零元的数量交替出现，每列有一个非零元,而且$\bm{i},\bm{j}$交替出现。$\bm{B}_{k-1}\bm{F}_k^T$是4(k-1)行4k列的矩阵，每行有3个非零元，每列有1个或2个非零元，非零元的数量交替出现，非零元只能是$\bm{i}\bm{i}^T$或$\bm{j}\bm{j}^T$。$\bm{F}_k\bm{F}_k^T$是对角阵，对角元为$\bm{I}_i,\bm{I},\bm{I}_j,\bm{I},\bm{I}_i...$,
+而$\bm{B_k}\bm{B_k}^T+\bm{F_k}\bm{F_k}^T$
+
+
+在杨思怡的论文中将锚点的贡献简化为$x\bm{I}$的矩阵，x可以衡量贡献的大小，
+在此基础上结合镜像后的FIM，我们先讨论第一步迭代计算:
+\begin{equation}\label{eq:F1}
+L_{2,2}^2=A_2-D_1^TA_1^{-1}D_1
+\end{equation}•
+这里$A_2=(x+2)\bm{I}$,是4(k-1)维的方阵，
+$D_1=-\bm{F}_k\bm{B}_{k-1}^T$,是4k行4(k-1)列的矩阵，而且矩阵的每行相互正交，这反应了连接各个节点的链路集之间的局部独立性。因此$D_1^TD_1$是对角阵，等于$I+\bm{\epsilon}_{k-1}$
+
+$A_1=(x+1)\bm{I}-\bm{\epsilon}_k$,是4k维矩阵，其中
+$\bm{\epsilon}_k$只有主对角线上第1,k+1,2k+1,3k+1位置非零，分别为$\bm{I_i},\bm{I_j},\bm{I_i},\bm{I_j}$,在近似计算中，我们将首先考虑忽略$\bm{\epsilon}_k$对计算结果的影响。
+代入计算(\ref{eq:F1})得
+\begin{equation}
+(x+2)\bm{I}-D_1^T((x+1)I-\bm{\epsilon}_k)^{-1}D_1
+\end{equation}
+忽略$\bm{\epsilon}_k$化简得
+\begin{equation}
+L_{2,2}^2 \approx ((x+2)-\frac{1}{x+1})\bm{I}-\frac{\bm{\epsilon_{k-1}}}{x+1}
+\end{equation}•
+进一步将$L_{2,2}^2$代入$A_3-D_2^TL^{-2}_{2,2}D_2$,考虑到对所有的中间$A_r=(x+2)\bm{I}$，在进一步忽略
+$\bm{\epsilon}_{k-1}$后可以得到两步迭代的结果为：
+\begin{equation}
+L_{3,3}^2=((x+2)-\frac{1}{((x+2)-1/(x+1))})\bm{I}
+\end{equation}
+注意到$L_{3,3}^2$的维数已经降低到4(k-2),这样一直近似下去可以将$L_{k,k}^2$写成连分式的形式。
+在最后一次计算中$A_{k+1}$实际上是$\bm{\Sigma}_0+\bm{B}_0\bm{B}_0^T=(x+2)\bm{I}$,为2乘2的矩阵，如果最后一次不做近似$D_{k+1}^TD_{k+1}=2\bm{I}$,从而得到
+\begin{equation}
+L_{k+1,k+1}^2=((x+2)-\frac{2}{x+2-\frac{1}{x+2-...\frac{1}{x+2-1/(x+1)}}})\bm{I}
+\end{equation}
+这是杨思怡的定理2.10的结果，从上面的推导可以看出，这个结果是在忽略了$\bm{\epsilon}_r,r=2,3,...k$的情况下推导出来的，直观上x比较大时近似程度很好(x很大时后面的分式都可以忽略掉），k步迭代从FIM的Chlosky Decomposition的左上角走到右下角，其中前k-1步做了近似，只有最后一步按准确解求的，因此分子会出现2.
+\end{document}

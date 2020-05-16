@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}%preamble part
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=1cm]{geometry}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{soul}
+\usepackage{fontspec}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{todonotes}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[citecolor=blue]{hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\DeclareMathOperator{\sgn}{sgn}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\usepackage{makecell}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+
+
+\setlength{\extrarowheight}{4pt}
+\setlength{\parindent}{1cm}
+\begin{document}
+\title{\textbf{\fontsize{15.75pt}{\baselineskip}{讨论}}} 
+
+\author{\fontsize{12pt}{\baselineskip}{数33 赵丰}}
+\maketitle
+\large
+行人从数轴上的0出发，地图是已知L处有一堵墙，行人不能
+越过墙，假设行人每一步的步长$S_k \approx U[a,b],a>0$
+行人前进用离散的随机过程来描述，我们利用均值对行人第k步的位置进行预测，想研究的问题是如果知道L处有墙，那么在行人实际撞墙前对其位置的预测误差能提高多少。
+
+设行人前进k步的位置为$X_K,X_K=S_1+S_2+...+S_K$,$S_k$独立同分布，所以$X_K$的特征函数可以写成$S_i$特征函数乘积的形式。
+
+$S_i$的特征函数为:
+\begin{equation}
+\phi_i(t)=\frac{e^{itb}-e^{ita}}{it(b-a)}
+\end{equation}
+$X_k$的特征函数为
+\begin{equation}
+\phi(t)=(\frac{e^{itb}-e^{ita}}{it(b-a)})^K
+\end{equation}
+再对特征函数做逆变换可得$X_k$的概率密度函数(\hl{how to derive?}):
+\begin{equation}
+P_k(x)=\frac{1}{(K-1)!(b-a)^K}\sum_{i=0}^{\tilde{K}(K,x)}(-1)^i C^i_K (x-Ka-i(b-a))^{K-1},Ka \leq x \leq Kb
+\end{equation}
+其中$\tilde{K}(K,x)$表示不大于$\frac{x-Ka}{b-a}$最大的整数。
+
+这个K个均匀分布的随机变量的独立和服从Irwin–Hall 分布(\url{https://en.wikipedia.org/wiki/Irwin–Hall\_distribution})，是$Kb \leq L$的情形.
+下面考虑$(K-1)b\leq L <Kb$，即第K步时有可能撞墙。
+
+在有地图的情况下，对行人位置估计要比没有地图时要减小一点，相应的误差也要减小一点。
+
+有地图情况下第K步分布的概率密度函数为:
+\begin{equation}
+P^*_K(x)=\frac{P_K(x)}{\int_0^L P_K(x)dx}
+\end{equation}
+$P^*_K(x)$形式比较复杂:
+赵涵颖在$P_K(x)$的基础上尝试推导$P^*_{K+1}(x)$的表达式。她假设第K步还没有撞墙，而且$P^K(x)$可用均值为$(a+b)K/2$，方差为$(b-a)^2K/12$的正态分布密度函数进行近似。
+赵涵颖认为$P^*_{K+1}$的密度函数比较复杂，不容易写出行人位置的参数估计和方差估计。
+
+\end{document}

@@ -1,0 +1,242 @@
+\documentclass[12pt]{article}
+\usepackage{bm}
+\usepackage{amsmath}
+\begin{document}
+\section{Conclusion}
+the FIM of the ending point with loop has the following form:
+\[
+\bm{J}_n=\lambda\bm{I}_2+T_1\bm{u}_{n-1}\bm{u}_{n-1}^T+T_n\bm{u}_n\bm{u}_n^T+q(\bm{u}_{n-1}\bm{u}_{n}^T+\bm{u}_{n}\bm{u}_{n-1}^T)
+\]
+$T_1$ and $T_n$ have the continous fraction form and converges exponentially to some fixed value less than 1;
+$q$ has continous product form show in this article and converges to zero exponentially:
+\begin{equation}
+q\leq \left(\cfrac{1}{1+\cfrac{\sqrt{\lambda^2+4\lambda}+\lambda}{2}}\right)^{n-1}
+\end{equation}
+\section{Content}
+We consider the cyclic decomposition of special matrix (FIM) as follows:
+\begin{equation}
+\bm{J}=\begin{pmatrix}
+                 \bm{B}_1 & \bm{A}_2 & \bm{0} & \dots & \bm{A}_1 \\
+                 \bm{A}_2 & \bm{B}_2 & \bm{A}_3 & \dots & \bm{0} \\
+                 \vdots & \vdots & \vdots & \ddots & \vdots \\
+                 \bm{A}_1 & \dots & \bm{0} & \bm{A}_{n} & \bm{B}_{n}
+               \end{pmatrix}.
+\end{equation}
+We still consider 
+\begin{equation}\label{eq:t}
+\bm{e}_{n}^{T}\bm{J}^{-1}\bm{e}_{n}
+\end{equation}
+We have already known the above 2 times 2 matrix equals $U_{n}^{-1}$ when $\bm{A}_1$ vanishes.
+Now we will derive the general algebric form of (\ref{eq:t}) and compare it with the above special case.
+We will also derive the closed from for $n\to \infty$ and each angle tends to zero, which corresponds to a closed circle
+path with infinite small time sampling interval.
+
+First we UL decompose $\bm{I}$ when $\bm{A}_1$ vanishes as follows:
+\begin{equation}\label{eq:UL}
+  \bm{J}=\begin{pmatrix}
+                 \bm{I}_2 & \bm{L'}_2 & \bm{0} & \dots & \bm{0} \\
+                 \bm{0} & \bm{I}_2 & \bm{0} & \dots & \bm{0} \\
+                 \vdots & \vdots & \vdots & \ddots & \bm{L'}_{n} \\
+                 \bm{0} & \dots & \bm{0} & \dots & \bm{I}_{2}
+               \end{pmatrix}
+               \begin{pmatrix}
+                 \bm{U'}_1 & \bm{0} & \bm{0} & \dots & \bm{0} \\
+                 \bm{A}_2 & \bm{U'}_2 & \bm{0} & \dots & \bm{0} \\
+                 \vdots & \bm{A}_3 & \vdots & \ddots & \vdots \\
+                 \bm{0} & \dots & \bm{0} & \bm{A}_n & \bm{U'}_{n}
+               \end{pmatrix}.
+\end{equation}
+where $\bm{U'}_i$ satisfies：
+\begin{equation}
+\begin{cases}
+  \bm{U'}_n &= \bm{B}_1 \\
+  \bm{U'}_i &= \bm{B}_i-\bm{A}_{i+1}\bm{U}_{i+1}^{\bm{'}-1}\bm{A}_{i+1},i< n.
+\end{cases}
+\end{equation}
+This form is dual to what we have derived in thesis. However, to make it appliable in this article, we should also have some knowledge on $\bm{L'}_i$. Therefore we rewrite the above equation as follows:
+\begin{equation}
+\begin{cases}
+  \bm{L'}_i &= \bm{A}_i\bm{U}_i^{\bm{'}-1} \\
+  \bm{U'}_i &= \bm{B}_i-\bm{L'}_{i+1}\bm{A}_{i+1}
+\end{cases},i< n.
+\end{equation}
+We add prime to each UL to distinguish it from canonical LU form.
+
+When $\bm{A}_1 \neq \bm{0}$, we first extract the (n-1) times (n-1) upper diagnal block from $\bm{J}$,denoted as $\bar{\bm{A}}$,
+$\alpha=\begin{pmatrix}
+\bm{A}_1\\ \vdots\\ \bm{A}_n
+\end{pmatrix}
+$,and $\bm{\bar{x}}$ is the first n-1 elements of $\bm{x}$,
+then the equation \[
+\bm{J}\bm{x}=\bm{e}_{n}
+\]
+can be expanded in block form:
+\begin{equation}
+\begin{pmatrix}
+\bar{\bm{A}}&\bm{\alpha}\\
+\bm{\alpha}^T&\bm{B}_n
+\end{pmatrix}\begin{pmatrix}
+\bm{\bar{x}}\\ \bm{x}_n
+\end{pmatrix}=\begin{pmatrix}
+\bm{0}\\ \bm{I}_2
+\end{pmatrix}
+\end{equation}
+Therefore if $\bm{x}_n$ is known, we can solve 
+\[
+\bm{\bar{A}}\bm{\bar{x}}=-\bm{\alpha} \bm{x}_n
+\]
+We can find solution to $\bm{\bar{A}}\bm{\bar{\xi}}=\bm{\alpha}$,then $\bm{x}_1=-\bm{\xi}_1 \bm{x}_n$,
+$\bm{x}_{n-1}=-\bm{\xi}_{n-1}\bm{x}_n$.
+Taking $\bm{x}_1,\bm{x}_{n-1}$into the following equation we can solve $\bm{x}_n$ out:
+\[
+\bm{A}_1 \bm{x}_1+\bm{A}_{n}\bm{x}_{n-1}+\bm{B}_n \bm{x}_n=\bm{I}_2.
+\]
+It follows that:
+\[
+\bm{x}_n=(\bm{B}_n-\bm{A}_1\bm{\xi}_1-\bm{A}_n\bm{\xi}_{n-1})^{-1}
+\]
+$\bm{B}_n-\bm{A}_1\bm{\xi}_1-\bm{A}_n\bm{\xi}_{n-1}$ is the FIM of one node.
+
+The first observation is that $A_1$introduces a non-trival term in the FIM with loop topology.
+
+Then we investigate the structure of $\bm{\xi}_1$ and $\bm{\xi}_{n-1}$.
+
+$\bm{\xi}_{n-1}$ can be solved with LU decomposition of $\bm{\bar{A}}$ as usual. However, the non-trival $\bm{A}_1$ in the first element of right hand side $\bm{\alpha}$ contributes to $\bm{\xi}_{n-1}$ non-trivally. 
+
+First we solve the outer:
+\begin{equation}
+  \begin{pmatrix}
+                 \bm{I}_2 & \bm{0} & \bm{0} & \dots & \bm{0} \\
+                 \bm{L}_2 & \bm{I}_2 & \bm{0} & \dots & \bm{0} \\
+                 \vdots & \vdots & \vdots & \ddots & \vdots \\
+                 \bm{0} & \dots & \bm{0} & \bm{L}_{n-1} & \bm{I}_{2}
+               \end{pmatrix}\begin{pmatrix}
+                \bm{k}_1\\ \vdots \\ \bm{k}_{n-1}
+               \end{pmatrix}=\begin{pmatrix}
+\bm{A}_1 \\ \vdots \\ \bm{A}_n
+\end{pmatrix}.
+\end{equation}
+It follows that:
+\begin{equation}
+\bm{k}_{n-1}=\bm{A}_n+(-1)^{n}\bm{L}_{n-1}\dots\bm{L}_3\bm{L}_2\bm{A}_1
+\end{equation}
+And the inner equation system:
+\begin{equation}
+\bm{\xi}_{n-1}=\bm{U}_{n-1}^{-1}\bm{k}_{n-1}
+\end{equation}
+The relationship between $\bm{L}_i$ and $\bm{U}_i$ is:
+\begin{equation}
+\bm{L}_i=\bm{A}_i\bm{U}^{-1}_{i-1}
+\end{equation}
+Therefore: 
+\begin{equation}
+-\bm{A}_n\bm{\xi}_{n-1}=-\bm{A}_n\bm{U}^{-1}_{n-1}\bm{A}_n+(-1)^{n-1}\bm{A}_n \prod_{i=n-1}^1 (\bm{U}_i^{-1}\bm{A}_i)
+\end{equation}
+The expression for $\bm{\xi}_1$ is similar, with UL decomposition instead.
+\begin{equation}
+  \begin{pmatrix}
+                 \bm{I}_2 & \bm{L'}_2 & \bm{0} & \dots & \bm{0} \\
+                 \bm{0} & \bm{I}_2 & \bm{0} & \dots & \bm{0} \\
+                 \vdots & \vdots & \vdots & \ddots & \bm{L'}_{n} \\
+                 \bm{0} & \dots & \bm{0} & \dots & \bm{I}_{2}
+               \end{pmatrix}\begin{pmatrix}
+                \bm{k'}_1\\ \vdots \\ \bm{k'}_{n-1}
+               \end{pmatrix}=\begin{pmatrix}
+\bm{A}_1 \\ \vdots \\ \bm{A}_n
+\end{pmatrix}.
+\end{equation}
+it follows: 
+\begin{equation}
+\bm{k'}_{1}=\bm{A}_1+(-1)^n\bm{L}'_2\dots \bm{L}'_{n-1}\bm{A}_n
+\end{equation}
+And the inner equation system:
+\begin{equation}
+\xi_1=\bm{U}_1^{\bm{'}-1}\bm{k'}_1
+\end{equation}
+Therefore
+\begin{equation}
+-\bm{A}_1\bm{\xi}_1=-\bm{A}_1\bm{U}_1^{\bm{'}-1}\bm{A}_1+(-1)^{n-1}(\prod_{i=1}^{n-1}\bm{A}_i\bm{U}_i^{\bm{'}-1})\bm{A}_n
+\end{equation}
+FIM has the following form:
+\begin{eqnarray*}
+\bm{B}_n-\bm{A}_1\bm{\xi}_1-\bm{A}_n\bm{\xi}_{n-1}&=\\
+\bm{B}_n-\bm{A}_n\bm{U}^{-1}_{n-1}\bm{A}_n-\bm{A}_1\bm{U}_1^{\bm{'}-1}\bm{A}_1&+
+(-1)^{n-1}\bm{A}_n \prod_{i=n-1}^1 (\bm{U}_i^{-1}\bm{A}_i)+(-1)^{n-1}(\prod_{i=1}^{n-1}\bm{A}_i\bm{U}_i^{\bm{'}-1})\bm{A}_n
+\end{eqnarray*}
+$\bm{B}_n-\bm{A}_n\bm{U}^{-1}_{n-1}\bm{A}_n-\bm{A}_1\bm{U}_1^{\bm{'}-1}\bm{A}_1$ is the first order term which has continous fraction expansion and has been studied in detail in my paper.
+
+In this article, we focus on the remaining continous product term.
+
+%Firstly, we consider the limiting property, in the paper, we
+%have deduced that 
+%\begin{equation}
+%\bm{U}_n=\bm{\hat{U}}_n \begin{pmatrix}
+%T_1(i)&0\\0&\lambda
+%\end{pmatrix}\bm{\hat{U}}_n^{-1}
+%\end{equation}
+%where 
+%\begin{equation}
+%\bm{\hat{U}}_n=\begin{pmatrix}
+%\cos(\phi_n)&-\sin(\phi_n)\\
+%\sin(\phi_n)&\cos(\phi_n)
+%\end{pmatrix}
+%\end{equation}
+$\phi_n$ is the directional vector between the (n-1)th and n- th node.
+We denote $\bm{A_i}=-\bm{u}_{i-1}\bm{u}_{i-1}^T$, and $\bm{u}_0=\bm{u}_n$ then
+\begin{equation}
+\bm{A}_n \prod_{i=n-1}^1 (\bm{U}_i^{-1}\bm{A}_i)=\left(\prod_{i=n-1}^{1} \bm{u}_{i}^T\bm{U}_i^{-1}\bm{u}_{i-1}\right)\bm{u}_n\bm{u}_1^T
+\end{equation}
+For each term $\bm{u}_i^T\bm{U}_i^{-1}\bm{u}_{i-1}$ (a real number), we have
+\begin{align}
+\bm{u}_i^T\bm{U}_i^{-1}\bm{u}_{i-1}=&\bm{u}_i^T(\lambda\bm{I}_2+k\bm{u}_{i-1}\bm{u}_{i-1}^T+\bm{u}_{i}\bm{u}_{i}^T)^{-1}\bm{u}_{i-1}\\
+=&\frac{\lambda\cos(\Delta\phi)}{k \lambda+\lambda(1+\lambda)+k\sin^2(\Delta\phi)}
+\end{align}
+In the above formula,$\Delta\phi$ is the angle between $\bm{u}_{i-1}$ and $\bm{u}_{i}$, and
+\[
+k=1-\bm{u}_{i-1}^T\bm{U}_{i-1}^{-1}\bm{u}_{i-1}
+\],
+which is smaller than 1 and larger than zero.
+Therefore, we get:
+\begin{align}
+\bm{u}_i^T\bm{U}_i^{-1}\bm{u}_{i+1}\leq&
+\frac{\lambda}{k \lambda+\lambda(1+\lambda)}\\
+=&\frac{1}{1+\lambda+k}
+\end{align}
+$k$ has continuous form expression, and its upper limit is(wrong!)
+\begin{align}
+k\leq & [1,\lambda,1,\lambda,\dots]\\
+=&\frac{\sqrt{\lambda^2+4\lambda}-\lambda}{2}
+\end{align}
+Therefore
+\begin{equation}
+\bm{u}_i^T\bm{U}_i^{-1}\bm{u}_{i+1}\leq\cfrac{1}{1+\cfrac{\sqrt{\lambda^2+4\lambda}+\lambda}{2}}
+\end{equation}•
+We know that as n is very large,$\bm{B}_n-\bm{A}_n\bm{U}^{-1}_{n-1}\bm{A}_n-\bm{A}_1\bm{U}_1^{\bm{'}-1}\bm{A}_1$ is stable. 
+And the product term decreases exponentially, the larger $\lambda$ is, the faster the decreasing speed is.
+
+If the loop has many nodes, then the coupling term $\prod_{i=n-1}^1 (\bm{U}_i^{-1}\bm{A}_i)$ can be neglected.
+
+Also it ccan be noticed for orthognal angle, $\cos(\Delta \phi)$ vanishes, therefore the coupling disapears.
+
+Since $(-1)^n$ changes signs, we can treat $\prod_{i=n-1}^1 (\bm{U}_i^{-1}\bm{A}_i)$ as the oscillating term damping to zero exponentially.
+
+In conclusion, for the FIM of the ending point, we have
+\[
+\bm{J}_n=\lambda\bm{I}_2+T_1\bm{u}_{n-1}^T\bm{u}_{n-1}^T+T_n\bm{u}_n^T\bm{u}_n^T+q(\bm{u}_{n-1}^T\bm{u}_{n}^T+\bm{u}_{n}^T\bm{u}_{n-1}^T)
+\]
+$T_1$ and $T_n$ have the continous fraction form and converges exponentially to some fixed value less than 1;
+$q$ has continous product form show in this article and converges to zero exponentially.
+%However, $\left(\prod_{i=1}^{n-1} \bm{u}_i^T\bm{U}_i^{-1}\bm{u}_{i+1}\right)$ may not stable even with non-zero $\lambda$. 
+%
+%We know that 
+%\[
+%T_1\leq \frac{\lambda+\sqrt{\lambda^2+4\lambda}}{2}
+%\]
+%If $\lambda<\frac{1}{2}$ and $\cos(\Delta \phi_i)$ is near 1, then it is possible that \[
+%\bm{u}_i^T\bm{U}_i^{-1}\bm{u}_{i+1}>1
+%\]
+%As n is very large,$\left(\prod_{i=1}^{n-1} \bm{u}_i^T\bm{U}_i^{-1}\bm{u}_{i+1}\right)$,which is the coefficient of $\bm{u}_n\bm{u}_1^T$ dominates the 2 times 2 matrix.
+
+
+
+\end{document}
