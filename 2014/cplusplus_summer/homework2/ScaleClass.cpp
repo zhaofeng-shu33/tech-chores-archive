@@ -106,7 +106,6 @@ int main(){
   my_scale=(my_scale+your_scale);
   cout<<endl<<my_scale.toDec();
   cout<<endl;
-  system("pause");
   return 0;
 }
  
