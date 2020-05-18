@@ -157,6 +157,5 @@ int main(){
   }  
  my_bookmanager.Output();
  cout<<count(my_bookmanager)<<endl;
- system("pause");
  return 0;
 }   

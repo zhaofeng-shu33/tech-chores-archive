@@ -57,7 +57,7 @@ class SafePtr{
 }
 
 int main(){
-    SafePtr<ComicBook> p(new ComicBook("Diplomat",2));
+    THU::SafePtr<ComicBook> p(new ComicBook("Diplomat",2));
     cout<<(*p).getName(); // fragen!
     char ch;
     cin>>ch;
