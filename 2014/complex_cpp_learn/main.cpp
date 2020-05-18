@@ -17,7 +17,6 @@ int main(){
     delete b2; delete a2;
     delete b; delete a;
 
-system("pause"); 
  return 0;
 }
 

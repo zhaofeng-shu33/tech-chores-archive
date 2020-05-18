@@ -31,7 +31,6 @@ int main(){
  int c=++a;
  int d=b++;
  cout<<c<<' '<<d;  
- system("pause");
  return 0;
 }
 

@@ -90,7 +90,6 @@ int main(){
   Display(head);
   cout<<"\n\n\n";
   }  
-  system("pause");
   return 0;
 }
  

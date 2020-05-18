@@ -81,7 +81,6 @@ for(int i=0;i<SIZE+1;i++)
   cout<<sum[i];
 }  
 
- system("pause");
 	return 0;
 }
 
