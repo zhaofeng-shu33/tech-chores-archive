@@ -79,7 +79,7 @@ int main(){
        if(output[i])cout<<1<<endl;
        else cout<<0<<endl;
       
-   system("pause");
+   
    return 0;
 }
 

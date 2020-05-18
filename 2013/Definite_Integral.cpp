@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 #include <time.h>
-#include <windows.h> 
 using namespace std;
 double f(double x)
 {
@@ -18,7 +17,6 @@ double S(double a, double b, int m){
 void selectSort(int* a, const int n){
  long start,stop;
      time(&start);
- Sleep(1000);
  for(int i=0;i<n-1;i++){
      int k=i;
      for(int j=i+1;j<n;j++)
@@ -62,7 +60,7 @@ int main(){
      cout<<a[i]<<' ';
   
    
-  system("pause");
+  
   return 0;
 }
 

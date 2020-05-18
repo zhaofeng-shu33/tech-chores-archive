@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 class Complex{
@@ -33,7 +34,7 @@ int main(int argc,char *argv[]){
     cout<<a<<' ';
     cout<<setprecision(2)<<a<<' ';
     cout<<setiosflags(ios::fixed)<<setprecision(1)<<a<<' ';
-    system("pause"); 
+     
     return 0;
 }
 Complex operator +(Complex & a, Complex & b) {

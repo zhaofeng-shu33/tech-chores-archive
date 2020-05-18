@@ -5,7 +5,6 @@
 #define HASH_LEN 60
 #define M  60
 #define FLAG -1
-#pragma  message("消息文本")
 typedef struct word
 {
     char *entry;
@@ -119,7 +118,7 @@ int h(int k)
 int main(int argc, char* argv[]){
   Init_Word();
 
-  system("pause");
+  
   return 0;
 }
 

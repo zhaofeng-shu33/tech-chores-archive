@@ -25,7 +25,7 @@ int main(){
   string target("ababbaabaa");
   string pattern("aab");
   cout<<"Find? "<<fastFind(pattern,target,0,next);
-  system("pause");
+  
   return 0;
 }
  

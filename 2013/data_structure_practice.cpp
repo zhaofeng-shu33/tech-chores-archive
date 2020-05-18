@@ -28,7 +28,7 @@ class Graph
 {
   public:
     Graph( ) { }
-    ~Graph( );
+    ~Graph( ){};
     void addEdge( const string & sourceName, const string & destName );
     void printPath( const string & destName ) const;
     void unweighted( const string & startName );
@@ -68,7 +68,7 @@ int main( int argc, char *argv[ ] )
     g.addEdge("C1","C3");
     g.addEdge("C2","C3");
     
-    system("pause");
+    
     return 0;
 }
 

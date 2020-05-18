@@ -82,7 +82,7 @@ int main(){
       for(int i=0;i<m-1;i++)
           avr+=score[i]*GPA[i]/sum;  
       cout<<setiosflags(ios::fixed)<<setprecision(1)<<ceil(avr*10)/10.0<<endl;
-      system("pause");
+      
       return 0;
    }  
       
@@ -115,7 +115,7 @@ int main(){
      }    
      
     myoutput.Print();   
-   system("pause");
+   
    return 0;
 }
 
