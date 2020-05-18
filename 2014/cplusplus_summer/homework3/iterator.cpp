@@ -41,9 +41,6 @@ class iIterator{
            return true;
         return false;
       }
-      operator T*(){
-           return alist;
-         }
       T& operator *(){
         return *_iterator;
       }      
