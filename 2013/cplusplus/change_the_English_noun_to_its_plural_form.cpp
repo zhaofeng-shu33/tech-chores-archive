@@ -1,9 +1,11 @@
 #include<iostream>
 #include<fstream>
+#include<cstdlib>
+#include<cstring>
 using namespace std;
 int get_number_product_root(int n){   
   char a[6];
-  itoa(n,a,10);
+  sprintf(a, "%d", n);
   int tem=1;
  // cout<<a<<endl;
   for(int i=0;i<6&&a[i]!='\0';i++)
