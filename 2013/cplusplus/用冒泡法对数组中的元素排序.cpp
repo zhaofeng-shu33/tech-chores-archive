@@ -26,15 +26,16 @@ int main(){
 }  
 void arraySort_usingRecursion(int a[],int length_of_array){
      int min=a[0],index=0;
-     for(int i=1;i<length_of_array;i++)
+     for(int i=1;i<length_of_array;i++) {
         if(a[i]<min){
             min=a[i];
             index=i;
         }
-     swap(a[i],a[0]);
+        swap(a[i],a[0]);
+     }
      if(length_of_array>1)       
-     arraySort_usingRecursion( a[], length_of_array-1);
- }    
+     arraySort_usingRecursion(a, length_of_array-1);
+ }
      
  
      

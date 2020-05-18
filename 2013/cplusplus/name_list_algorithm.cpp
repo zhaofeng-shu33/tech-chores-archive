@@ -8,7 +8,7 @@ void swap(int& a, int& b){
     a=b;
     b=t;
 }
-Thid program links with a name list and devotes to sort all names in alphebatical order and calculate the total sum of name order multipied by alphebatical sum of every name.   
+//Thid program links with a name list and devotes to sort all names in alphebatical order and calculate the total sum of name order multipied by alphebatical sum of every name.   
 //design a program to sort the name list; total number is 5163
 int alphabetical_sum(char a[]){
     int sum=0;

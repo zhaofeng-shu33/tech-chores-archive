@@ -1,4 +1,7 @@
 #include<iostream>
+#include<fstream>
+#include<cstdlib>
+#include<cstring>
 using namespace std;
 void process(char* str,int l,int r){//写好的程序代码已过提交期限。 
     int n1;

@@ -17,10 +17,7 @@ class Complex{
   
 int main(int argc,char* argv[]) {
   Complex a(2,3);
-  cout<<a;
-  system("pause");
-
-    return 0;
+  return 0;
 }
 Complex::Complex(double a,double b){
   real=a;
