@@ -34,7 +34,6 @@ int main(){
   Variance my_variance;
   double a[]={1,2,3,4};
   cout<<my_variance(a,4);
-  system("pause");
   return 0;
 }
  
