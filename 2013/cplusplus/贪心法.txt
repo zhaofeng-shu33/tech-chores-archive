@@ -1,0 +1,53 @@
+贪心法
+struct goods{
+double weight;
+double value;
+int index;
+};
+
+double shipment(int n, double m, goods *p){
+
+  sort(n,p);
+  
+  double total_weight=0.0;total_value=0.0;
+  for(int i=0;i<n;i++){
+  if(total_weight+p[i].weight>m)
+    total_value+=p[i].value*(m-total_weight)/p[i].weight;
+    break;
+  total_weight+=p[i].weight;
+  total_value+=p[i].value;
+  }
+  return total_value;
+}
+0-1背包问题 装船问题 
+
+struct show{
+int begin;
+int end;
+int index;
+}
+
+int schedule(int n,show* p){
+    sort(n,p);
+    int cnt=0,end=0;
+    for(int i=0;i<n;i++){
+         if(p[i].begin>=end){
+            end=p[i].end;
+            cnt++;
+          }
+    }    
+    return cnt;
+}
+void delete_num(){
+  for(int i=id;num[i]!='\0';i++)
+     num[i]=num[i+1];
+}
+void delete_digits(char * num,int m){
+   //if(m>1){
+       for(int){
+           for(int j=0;num[j]!='0';)
+               if(num[j]>num[j+1]
+		  delete_num(num,j);
+       }
+}
+

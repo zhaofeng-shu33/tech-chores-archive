@@ -1,0 +1,32 @@
+数学归纳法的应用 将一个问题的解决归结为解决一个或多个更小规模的问题。
+一定要写好初始条件。
+设置全局变量的数组。（增加存储）
+汉诺塔和快速排序。
+下楼问题与皇后问题
+计数easy 输出 difficult。全局变量也在变。
+思考题
+实现
+p m+qn=gcd(m,n);
+print p 与 q.   怎么求二元一次方程的特解。 
+函数声明的方法。
+int p=0,q=0;
+int gcd(int m,int n,int* p,int* q){
+   if(m==0||n==0){
+      *p=1;
+      *q=1; 
+     return n+m;
+   }
+   if(m>n){
+      int d=gcd(m%n,n,*p,*q);
+      *q==*q-m/n *(*p);
+      return d;
+   }
+   else{
+      int d=gcd(m%n,n,p,q);
+      *p=*p-n/m * (*q);
+      return d;
+   }
+}
+
+}
+gcd(10,25,&p,&q);

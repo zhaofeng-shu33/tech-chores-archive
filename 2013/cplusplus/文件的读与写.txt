@@ -1,0 +1,82 @@
+文件 （数据的组织与处理）
+
+使用文件来保留输出结果
+什么是文件？ 一堆数据 是长时间存储数据的一种方式
+Windows系统通过扩展名判断文件类型。
+
+先做一道会的题 输出100万以内的素数
+打开文件 #include<fstream> (file stream>
+ofstream(变量类型） fout（变量名称）("prime.txt")（文件路径名）      output file stream
+
+或ofstream fout;
+fout.open("prime.txt");
+
+可以替你创建一个文件。txt doc ppt cpp类型 都可以。
+int n=100万；
+bool isPrime[n+1];
+for(int i=1;i<=n;i++)
+    isPrime[i]=true;
+
+for(int i=2;i*i<n;i++)
+  if(isPrime[i])
+    for(int j=i+i;j<=n;j+=i)
+        isPrime[j]=false;
+for(int i=2;i<=n;i++)
+   if(isPrime[i])
+      fin>>i;
+关闭文件
+fout.close();
+fout<<i<<endl;(fin是变量名）
+
+
+
+UltraEdit 二进制编辑工具
+
+若事先有了一个存素数表的文件，输入一个数判断它是否是素数。
+ifstream(输入文件类，是一个文件类型） fin（变量名称）(("prime.txt"))； 文件必须存在。    if(!fin) 用来判断文件是否存在。
+（读取文件）
+int p=-1;
+cin>>n;
+while(n>p && !fin.eof()   ){   end of file 该函数返回 一个bool 值 true 表示文件结束
+   fin>>p;
+}
+if(n==p)
+  cout<<"是素数"<<endl;
+else
+  cout<<"不是素数”<<endl;
+fin.close();
+return 0;
+
+使用折半查找法，利用素数表；写入与读出
+用二进制方法   以二进制方式打开与关闭文件 ofstream fout ("文件名", ios::binary) 默认的写入文件的方式是什么？
+用二进制写入文件的代码：
+fout.write( (char*) &i , sizeof(i) ) i是一个int类型的，占4字节，相当于循环4次。 
+对文件中的i取地址转成char*  
+ifstream fin("文件名 ",ios::binary)
+fin.read( );
+fin.seekg(10,ios::beg); begin从文件头开始搜  -10往前搜10个单位，+10往后搜10个单位   ios::end 从文件尾开始  ios::cur  current 从当前位置开始 游标 open 时在开头 seekg(10,beg)做完后，从第10个开始读， （ a<=>&a[0]
+没有获得文件字节长度的函数
+fin.seekg(0,ios::end);
+int pos=fin.tellg();从当前位置到文件头的长度（字节长度） 还要除以4，//fin.tellg() 是获得游标位置的函数。
+
+同时操作多个文件
+从两个文件读东西然后写入两个文件。
+内存放不下的数据要放到文件里存放。
+
+清橙的系统是怎么运行的，文件输入与输出
+text008.exe>1.txt 输出方式，到文件     0>2.txt 输入方式
+stdin 0  
+stdout 1 
+stderr 2
+
+操作系统就是让你随时可以操作
+主函数 return 0给 manage 这个程序
+
+
+
+
+
+
+
+
+

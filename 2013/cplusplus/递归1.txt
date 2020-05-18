@@ -1,0 +1,159 @@
+递归思想与相应算法
+本科学习经验
+书上的东西与听到的东西是不一样的，上课迟到对老师很严重。
+哪些岗位是绝对不能迟到的？
+时间观念很重要。日本人非常守时。
+100多年前中国败给日本。
+定义函数时结束处花括号后不要加分号。
+一般要处理函数的返回值。
+The position of the function in a source program is arbitary.
+自定义的函数可以调用自己。
+例子很重要。
+数学归纳法
+输入一个integer n,求 its factorial
+int factorial(int n){
+int mul=1;
+for(int i=1;i<=n;i++)
+   mul*=i;
+   return mul;
+}
+
+
+int main(){
+   int n=0;
+   cin>>n;
+   cout<<fac(n)<<endl;
+   return 0;
+}
+
+
+
+int factoria;(int n){
+int *fac=new int[n+1];
+fac[0]=1;
+for(int i=1;i<=n;i++)
+   fac[i]=fac[i-1]*i;
+int res=fac[n];
+delete [] fac;
+return res;
+}
+
+int factorial(int n){
+if(n==0)
+  return 1;
+  return n*factorial(n-1);
+}
+    
+int fib[100];//main function fib[i]=-1;  i=1,2……99；
+int fibonacci(int n){
+   if(n==1||n==2)
+   return 1;
+   if(fib[n]>0)
+     return fib[n];
+   fib[n]=fibonacci(n);
+   return fibonacci(n-1)+fibonacci(n-2);
+}
+存储增强的递归法：用辅助数组 复杂度变为n ,不用辅助数组复杂度为 1.6^n;
+
+求C（m,n)
+=n/1 * (n-1)/2 *(n-2)/3 ... (n-m+1)/m;都是能除尽的整数除法。
+int choose(int m,int n)
+if(m==0||m==n)
+   return 1;
+return choose(m-1,n-1)+choose(m,n-1);
+
+int ch[10][10];//
+int choose(int m;int n){
+   if(m==0||m==n)
+      return 1;
+   if(ch[n][m]>=0)
+     return ch[n][m];
+   ch[n][m]=choose(n-1,m-1)+choose(n,m-1);每做一次加法存一项 复杂度 O（m*n)  m=n?
+   return ch[n][m];
+}
+
+递归是将一个大问题归结为解决一个或多个更小规模的问题。
+递归的结束条件是递推的初始条件。
+递归的结束条件写不对后果很严重。
+求两个整数的最大公约数，
+方法1：拿数一个一个试。（试验法）
+方法2：辗转相除法。
+int gcd(int m,int n)
+ while(m>0 && n>0)  
+ if(m>=n) m=m%n;
+ else  n=n&m;
+return m+n;
+
+if(m==0||n==0)
+  return m+n; 
+if(m>n)
+  return gcd(n,m);
+return gcd(m,n%m);
+
+生兔子的程序，第0个月有一公有母小兔子。第一个月只有一公一母大兔子。
+smallmale(n)=bigfemalejust(n-1);//sf(n)=bf(n-2);
+smallfemalemale(n)=bigfemaleother(n-1);//sm(n)=bf(n-1)-bf(n-2);
+bigmale(n)=bigmale(n-1)+smallmale(n-1);
+bfm(n)=bf(n-1)+sf(n-1);
+要写函数声明！4个函数，有两个函数有两个结束条件。
+母兔子比公兔子有无极限。
+递归：一组函数互相调用。
+
+书上的第二个例题：
+大梵天：汉诺塔问题。挪动金盘
+递归思想，在假定n-1个盘子已经可以用一定的步骤挪到另一根柱子上，1 实现f(n-1),
+2把下面最大的那个盘子挪到第三根柱子上
+3再用f(n-1)步把第二根柱子上的n-1盘子挪到第三根柱子上
+编程计算步数
+a(n+1)=2a(n)+1; a1=1;
+可求出a(n)=2^n -1，也就是说挪动n个盘子要用a(n)步。
+但具体步骤的实现比较困难。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
