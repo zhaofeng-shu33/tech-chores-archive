@@ -67,7 +67,7 @@ int main(){
   my_double_linklist.print();
   
  
- system("pause");
+ 
   return 0;
 }
  

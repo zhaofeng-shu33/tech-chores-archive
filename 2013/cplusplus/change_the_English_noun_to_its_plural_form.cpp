@@ -46,7 +46,7 @@ int main(){
   cout<<endl<<word;    
   
   }  
-  system("pause");
+  
   return 0;
 }
  

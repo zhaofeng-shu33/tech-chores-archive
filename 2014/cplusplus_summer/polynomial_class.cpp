@@ -26,7 +26,7 @@ int main(){
   polynomial f;
   f.set_poly(3);
   cout<<f(1);
-  system("pause");
+  
   return 0;
 }
  

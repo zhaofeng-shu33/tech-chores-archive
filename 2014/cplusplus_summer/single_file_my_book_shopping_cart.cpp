@@ -56,6 +56,6 @@ vector<Book*> BookStore(3);
  sc.RemoveBook(1);
  sc.Print();
 
- system("pause");
+ 
  return 0;
 }  

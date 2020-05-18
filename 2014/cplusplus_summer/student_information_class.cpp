@@ -60,7 +60,7 @@ int main(){
   
   cout<<my.Search_AccordingTo_Name("Paula");
  // Add(2013012177
-  system("pause");
+  
   return 0;
 }
  

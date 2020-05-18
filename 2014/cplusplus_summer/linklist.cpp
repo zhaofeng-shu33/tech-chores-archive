@@ -107,7 +107,7 @@ int main(){
         my_linklist.Next_current_ptr();
   }  
   //using recurrence to output;
-  system("pause");
+  
   return 0;
 }
  

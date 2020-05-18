@@ -124,7 +124,7 @@ int main(){
   my_linklist.print();
   //using recurrence to output;
   //here->DisplayCurrentData();  
-  system("pause");
+  
   return 0;
 }
  

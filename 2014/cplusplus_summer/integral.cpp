@@ -35,7 +35,7 @@ int main(){
   
   cout<<my_integral(0,1,1e-7);
   cout<<endl;
-  system("pause");
+  
   return 0;
 }
  

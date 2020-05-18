@@ -97,7 +97,7 @@ int main(){
   a=b;
   cout<<a;  
   //cout << a-b;// why can not directly output a-b;???
-  system("pause");
+  
   return 0;
 }
  
