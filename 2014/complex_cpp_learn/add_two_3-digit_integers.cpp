@@ -108,7 +108,7 @@ int main(){
       sum+=i;
   cout<<sum;
   
-  system("pause");
+  
   return 0;
 }
  */

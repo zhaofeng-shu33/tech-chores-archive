@@ -27,6 +27,6 @@ int main(int argc, char *argv[])
       sc.Print();
     } 
   }   
-  system("PAUSE");	
+  	
   return 0;
 }

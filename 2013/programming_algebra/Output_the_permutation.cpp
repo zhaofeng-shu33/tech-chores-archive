@@ -48,7 +48,7 @@ void Perm(int k,int n,int a[]){//code of experts. arrange numbers whose subscrip
 }
 int cnt=0;  
 void Perm(int k,int n,int r,int a[]){
-    fsteam fout("permu.txt");
+    fstream fout("permu.txt");
     if(r==0){
        for(int i=0;i<k;i++)
            fout<<a[i]<<' ';

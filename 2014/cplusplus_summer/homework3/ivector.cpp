@@ -72,7 +72,7 @@ int main(){
   }catch(string a){
     cout<<a<<endl;
   }    
-  system("pause");// can not finish properly?
+  // can not finish properly?
   return 0;
 }
  

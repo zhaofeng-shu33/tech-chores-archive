@@ -110,7 +110,7 @@ int main(){
   //cout<<(*my);
   a.isort(a.begin(),a.end());
   cout<<endl;
-  system("pause");// can not finish properly?
+  // can not finish properly?
   return 0;
 }
  

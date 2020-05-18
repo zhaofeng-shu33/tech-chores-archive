@@ -85,6 +85,6 @@ int main()                                          //主函数
             break;
     }
     cout << "所求结果为" << endl << det << endl;
-    system("pause");
+    
     return 0;
 }
