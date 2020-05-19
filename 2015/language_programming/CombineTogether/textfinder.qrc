@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>words1.txt</file>
+        <file>words.txt</file>
+        <file>Conjugaison.txt</file>
+        <file>ConjugaisonAnswer.txt</file>
+        <file>ConjugaisonPasse.txt</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,11 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+   <file>images/behaviour.png</file>
+   <file>images/25mode.png</file>
+   <file>images/appearance.png</file>
+   <file>images/lt_main_icon.png</file>
+   <file>images/red_apple.png</file>
+   <file>images/green_apple.png</file>
+   <file>images/grey_apple.png</file>
+</qresource>
+</RCC>

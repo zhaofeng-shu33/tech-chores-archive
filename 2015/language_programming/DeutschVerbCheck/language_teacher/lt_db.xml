@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <set name="fruits">
+        <wordgroup priority="5">
+            <language name="en">
+                <word>apple</word>
+            </language>
+            <language name="es">
+                <word>manzana</word>
+            </language>
+            <language name="de">
+                <word>apfel</word>
+            </language>
+        </wordgroup>
+        <wordgroup priority="5">
+            <language name="en">
+                <word>berry</word>
+            </language>
+            <language name="es">
+                <word>baya</word>
+            </language>
+            <language name="de">
+                <word>beere</word>
+            </language>
+        </wordgroup>
+    </set>
+    <set name="transport">
+        <wordgroup priority="5">
+            <language name="en">
+                <word>car</word>
+            </language>
+            <language name="es">
+                <word>coche</word>
+            </language>
+            <language name="de">
+                <word>auto</word>
+            </language>
+        </wordgroup>
+        <wordgroup priority="5">
+            <language name="en">
+                <word>bus</word>
+            </language>
+            <language name="es">
+                <word>autobús</word>
+            </language>
+            <language name="de">
+                <word>bus</word>
+            </language>
+        </wordgroup>
+    </set>
+</root>

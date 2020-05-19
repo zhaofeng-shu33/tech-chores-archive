@@ -1,0 +1,5 @@
+1. Make checking better (ignore odd spaces, cases and word explanations in brackets)
+2. Make switching languages automatically in popup window when you are switching benween original and translated line edits
+3. add possibility to set priority for set
+4. Implement drawing text on screen for 25 screen mode
+5. Open task by clicking system tray icon and task for specific word by clicking tooltip message

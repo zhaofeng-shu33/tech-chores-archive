@@ -1,0 +1,141 @@
+lundi
+mardi
+mercredi
+jeudi
+vendredi
+samedi
+dimanche
+
+un
+deux
+trois
+quatre
+cinq
+six
+sept
+huit
+neuf
+dix
+onze
+douze
+treize
+quatorze
+quinze
+seize
+dix-sept
+dix-huit
+dix-neuf
+vingt
+vingt et une
+vingt-deux
+vingt-trois
+vingt-quatre
+vingt-cinq
+vingt-six
+vingt-sept
+vingt-huit
+vingt-neuf
+trente
+trente et un
+trente-deux
+trente-trois
+trente-quatre
+trente-cinq
+trente-six
+trente-sept
+trente-huit
+trente-neuf
+quarante
+quarante et un
+quarante-deux
+quarante-trois
+quarante-quatre
+quarante-cinq
+quarante-six
+quarante-sept
+quarante-huit
+quarante-neuf
+cinquante
+cinquante et un
+cinquante-deux
+cinquante-trois
+cinquante-quatre
+cinquante-cinq
+cinquante-six
+cinquante-seqt
+cinquante-huit
+cinquante-neuf
+soixante
+soixante et un
+soixante-deux
+soixante-trois
+soixante-quatre
+soixante-cinq
+soixante-six
+soixante-seqt
+soixante-huit
+soixante-neuf
+soixante-dix
+soixante-onze
+soixante-douze
+soixante-treize
+soixante-quatorze
+soixante-quinze
+soixante-seize
+soixante-sept
+soixante-huit
+soixante-neuf
+quatre-vingts
+quatre-vingts-un
+quatre-vingts-deux
+quatre-vingts-trois
+quatre-vingts-quatre
+quatre-vingts-cinq
+quatre-vingts-six
+quatre-vingts-sept
+quatre-vingts-huit
+quatre-vingts-neuf
+quatre-vingts-dix
+quatre-vingts-onze
+quatre-vingts-douze
+quatre-vingts-treize
+quatre-vingts-quatorze
+quatre-vingts-quinze
+quatre-vingts-seize
+quatre-vingts-dix-sept
+quatre-vingts-dix-huit
+quatre-vingts-dix-neuf
+cent
+cent un
+cent deux
+cent trois
+cent quatre
+cent cinq
+cent six
+cent sept
+cent huit
+cent neuf
+cent dix
+cent onze
+cent douze
+cent treize
+cent quatorze
+cent quinze
+cent seize
+cent dix-sept
+cent dix-huit
+cent dix-neuf
+cent vingt
+cent vingt-et-un
+cent vingt-deux
+cent vingt-trois
+cent vingt-quatre
+cent vingt-cinq
+cent vingt-six
+cent vingt-sept
+cent vingt-huit
+cent vingt-neuf
+cent trente
+cent trente-et-un
+cent trente-deux
+cent trente-trois

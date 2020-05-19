@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ConjugaisonFuturSimple.txt</file>
+        <file>ConjugaisonInfinitive.txt</file>
+        <file>ConjugaisonPasse.txt</file>
+        <file>ConjugaisonPresent.txt</file>
+        <file>ConjugaisonImparfait.txt</file>
+    </qresource>
+</RCC>

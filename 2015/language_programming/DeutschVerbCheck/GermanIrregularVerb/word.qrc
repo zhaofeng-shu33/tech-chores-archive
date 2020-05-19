@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>verbInfinitive2.txt</file>
+        <file>verbParticiple.txt</file>
+        <file>verbPastTense.txt</file>
+        <file>verbPresentTense.txt</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>words.txt</file>
+        <file>words1.txt</file>
+        <file>hiragana.txt</file>
+        <file>katakana.txt</file>
+        <file>o.wma</file>
+        <file>e.wma</file>
+        <file>u.wma</file>
+        <file>i.wma</file>
+        <file>a.wma</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>appearance.png</file>
+    </qresource>
+</RCC>
