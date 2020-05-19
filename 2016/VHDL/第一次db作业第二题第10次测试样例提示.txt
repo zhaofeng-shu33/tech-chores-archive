@@ -1,0 +1,3 @@
+使用getchar读入一个字符，
+aa*10+{ch-0}
+scanf

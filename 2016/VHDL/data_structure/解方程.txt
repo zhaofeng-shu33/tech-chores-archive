@@ -1,0 +1,9 @@
+解方程说明文档：
+用Gauss Elimination Method:
+从矩阵第一行到第order-1行进行 高斯消去
+做到第k行时，使用选主元的Gauss 消去法使得a[k][k]为所在列绝对值最大的元素
+将矩阵化为上三角阵U，
+从最后一行开始求解。
+具体实现：建一个Matrix 类，用Linear_Equation类继承它，Linear_Equation有Print,Solve等函数。Solve实现上述算法。
+用动态的一维n*n数组存储Matrix各行各列的元素，用i*n+j访问第i行第j列的元素。
+     

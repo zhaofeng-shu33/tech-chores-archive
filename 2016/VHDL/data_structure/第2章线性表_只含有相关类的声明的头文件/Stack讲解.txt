@@ -1,0 +1,8 @@
+只允许在表的一端进行插入和删除的线性表：Stack
+LIFO:Last in first out
+儿童玩具手枪
+SeqStack
+栈溢出处理 overflowProcess
+作动态分配检查
+DualStack
+LinkedStack
