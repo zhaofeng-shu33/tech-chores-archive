@@ -1,0 +1,5 @@
+XDXF a kind of dictionary format based on XML
+Lexical Markup Framework LMF
+Text Encoding Initiative TEI Chapter 9
+Machine Readable Dictionary
+

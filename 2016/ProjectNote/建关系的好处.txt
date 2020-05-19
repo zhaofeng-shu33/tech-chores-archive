@@ -1,0 +1,54 @@
+*   与任何个数的字符匹配
+?   与任何单个字母的字符匹配
+//复合
+通过建立表的关系，如动词表关联现在时变位表，可以减轻用户的查询负担（否则要显示声明inner join,即写sql 代码）将动词的信息和变位的信息展示出来。
+//当for one record 数据量过多时（如现在时各人称动词变位，可考虑用form(窗体）做数据的可视化。（动词三大变位含人称共18种拼的不是算法而是可视化的效果和交互的convenience!)
+一词多义和one-to-many-relationship
+
+class List;//List类的前视声明
+class LinkNode{
+friend class List;
+private:
+ int data;
+ LinkNode *link;
+};
+class List{
+private:
+  LinkNode *first;
+};
+//嵌套
+class List{
+private:
+  class LinkNode{
+  public:
+    int data;
+    LinkNode *link;
+};
+
+  LinkNode *first;
+};
+//继承
+class LinkNode{
+  protected:
+    int data;
+    LinkNode *link;
+};
+//class List: public class LinkNode..
+//结构
+struct LinkNode{
+  int data;
+  LinkNode *link;
+};
+class List{
+private:
+  LinkNode *first;
+};
+//不带表头结点的单链表在最前端插入
+newnode->link=first;
+first=newnode;
+//非常重要，在表中间插入
+newnode->link=current->link;
+current->link=newnode;
+//在表末尾插入
+newnode->link=current->link;//比如current->link is null
+current->link=newnode;

@@ -1,0 +1,10 @@
+Match 2的code: 
+  QRegExp r("[2]");
+    int ct = 0;
+    QString st("1+2+2+2=4+2+2,2+1");
+    int p=r.indexIn(st);
+    while (p>=0) {
+        ui->textEdit->append(QString("%1").arg(p));
+        p=r.indexIn(st,p+1);
+        ++ct;
+    }

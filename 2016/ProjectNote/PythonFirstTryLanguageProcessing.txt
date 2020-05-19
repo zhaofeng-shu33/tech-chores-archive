@@ -1,0 +1,11 @@
+字符串的模式匹配算法KMP Algorithm
+子串叫模式
+主串叫目标
+使用Python nltk库给出的一些基本统计结果，以Lernen,lernen, immer lernen 为例：
+以en结尾的单词：Hausaufgaben Leben Lernen Trinken lernen machen schreiben zusammen 
+token数（含重复单词与标点）：302
+word type数（不含重复单词与标点）：151
+Unterricht出现次数：3
+
+
+

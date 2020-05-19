@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Eintrag category="Verben">
+	<Stichwort>hängen</Stichwort>
+	<Einheit></Einheit><!--不一定需要-->
+	<Anteil></Anteil><!--不一定需要-->
+	<Bedeutungen>
+		<Bedeutung>  <!--Vi的条目-->
+			<Konjugation>
+				<Infinitiv>hängen</Infinitiv>
+				<Präsen>
+					<ich>hänge</ich>
+					<du>hängst</du>
+					<er_sie_es>hängt</er_sie_es>
+					<wir>hängen</wir>
+					<ihr>hängt</ihr>
+					<sie_Sie>hängen</sie_Sie>
+				</Präsen>
+				<Imperfekt>
+					<ich>hing</ich>
+					<du>hingst</du>
+					<er_sie_es>hing</er_sie_es>
+					<wir>hingen</wir>
+					<ihr>hingt</ihr>
+					<sie_Sie>hingen</sie_Sie>
+				</Imperfekt>
+				<Partizip hilfsverb="hat/ist">gehangen</Partizip>
+			</Konjugation>
+		</Bedeutung>
+		<Bedeutung><!--Vt的条目-->
+			<Konjugation>
+				<Infinitiv>hängen</Infinitiv>
+				<Präsen>
+					<ich>hänge</ich>
+					<du>hängst</du>
+					<er_sie_es>hängt</er_sie_es>
+					<wir>hängen</wir>
+					<ihr>hängt</ihr>
+					<sie_Sie>hängen</sie_Sie>
+				</Präsen>
+				<Imperfekt>
+					<ich>hangte</ich>
+					<du>hangtest</du>
+					<er_sie_es>hangte</er_sie_es>
+					<wir>hangten</wir>
+					<ihr>hangtet</ihr>
+					<sie_Sie>hangten</sie_Sie>
+				</Imperfekt>
+				<Partizip hilfsverb="hat">gehängt</Partizip>
+			</Konjugation>
+		</Bedeutung>
+	</Bedeutungen>
+</Eintrag>

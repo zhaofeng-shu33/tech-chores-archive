@@ -1,0 +1,13 @@
+这是标准C++配置boost的regex库的测试程序，需要自己compile 文件
+bjam --toolset=gcc
+ 
+--stagedir=G:\boost\regex
+ 
+--with-regex link=shared  threading=multi variant=release runtime-link=shared  stage
+在G:\boost\regex可找到.a和.dll文件，用gcc compiler compile 测试程序
+g++ -I G:\boost\include\boost-1_61 test.cpp libboost_regex-mgw44-mt-1_61.dll.a -o test
+测试代码
+test example.txt
+
+使用boost的单元测试功能
+g++ -I G:\boost\include\boost-1_61 test3.cpp libboost_unit_test_framework-mgw49-mt-1_61.a -o test3

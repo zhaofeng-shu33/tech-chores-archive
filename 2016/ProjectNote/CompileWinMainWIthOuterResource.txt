@@ -1,0 +1,3 @@
+在.c文件中load相应的标识名（在.rc中定义）
+先用windres 生成.coff的文件，再用gcc生成 main.o
+最后用gcc 将.o与.coff一并生成exe,要指定-mwindows

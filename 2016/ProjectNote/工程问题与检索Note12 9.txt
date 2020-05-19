@@ -1,0 +1,21 @@
+﻿使用Qt Prompt 生成.exe的方法
+Step 1 建一个含.cpp的文件夹，同名
+在 Qt Prompt 依次输入命令 
+qmake -project
+qmake
+mingw32-make
+然后在debug文件夹下可找到.exe
+g++ test.cpp -o test.exe可直接将cpp文件编译成对应的exe文件（-o后面的为编译后的文件名）
+之后输入对应的exe文件名可直接运行exe文件。
+关于Qt编译报错：Qmake does not support build directories below the source directory可以打开Qt Creator 的Project设置
+调整Build Directory 到预编译文件所在的目录
+
+关于Qt无法打印德语特殊字符的解决方案：
+1用txt文件输入要打印的字符
+2用unicode代码 如QString str = QString::fromUtf8("Test \u00E4");
+即可打印出ä
+Qt中用qDebug()<<word[0]可直接将QString的对象输出到console上。
+Qt常用debug的代码：   
+QMessageBox(QMessageBox::Information,"Info","Change current State").exec();
+拆开键盘来修理下，查看是不是shift的开关触电被贴在一起了。具体操作方法如下：
+先用小十字螺丝刀将键盘上面的后盖拆开，打开键盘的后盖，然后准备一个万能表，用万能表来测XT／AT开关电阻，时候有异常现象，没有到话然后去测量shift键的两个角之间的电阻是否为零，是零的话就将键盘的键帽撬下来，取下弹簧开关，仔细查看开关的两个触点是不是挨在一起了。我们将上面的弹簧片弯曲一点，加大弹簧片的弹力，是两个触点分开，然后在安装好键帽和键盘，最后查看shift键就好了。

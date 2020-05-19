@@ -1,0 +1,5 @@
+此外，处理一个句子含两个形容词的问题没有解决。
+Qt正则表达式提取括号用
+\\(对括号进行转义，这一点在句法标注提取文档中非常有用！
+update Wort set phonetic_path ='%1' where Word ='%2'
+update 数据库语法

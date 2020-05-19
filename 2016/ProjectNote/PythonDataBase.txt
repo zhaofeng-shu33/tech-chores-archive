@@ -1,0 +1,162 @@
+PythonWin 2.7.11 (v2.7.11:6d1b6a68f775, Dec  5 2015, 20:32:19) [MSC v.1500 32 bit (Intel)] on win32.
+Portions Copyright 1994-2008 Mark Hammond - see 'Help/About PythonWin' for further copyright information.
+
+>>> str=['Montag','Donnerstag']
+
+>>> str
+['Montag', 'Donnerstag']
+
+>>> Generating to G:\Python2.7\lib\site-packages\win32com\gen_py\00000205-0000-0010-8000-00AA006D2EA4x0x2x5.py
+Building definitions from type library...
+Generating...
+Importing module
+
+
+import win32com.client
+
+conn=win32com.client.Dispatch('ADODB.Connection')
+
+DSN='PROVIDER=Microsoft.Jet.OLEDB.4.0;DATASOURCE=D:/QtTest/ODBC/germanWord.mdb;'
+
+>>> conn.Open(DSN)
+
+>>> rs=win32com.client.Dispatch(r'ADODB.Recordset')
+
+>>> rs.Open('nom',conn,1,3)
+>>> rx.MoveNext()
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+NameError: name 'rx' is not defined
+>>> rs.MoveNext()
+>>> rs.Fields.Item(1).Value
+u'die'
+>>> rs.Fields.Item(1).Value
+u'die'
+>>> rs.MoveNext()
+>>> rs.Fields.Item(1).Value
+u'der'
+>>> rs.Fields.Item(0).Value
+u'Wang Hongliang'
+>>> rs.MovePrevious()
+>>> rs.Fields.Item(0).Value
+u'Liu Ling'
+>>> rs.RecordCount
+3
+>>> rs.Fields.Count
+2
+>>> cnt=conn.Execute("select * from homeland")
+>>> cnt.count()
+<built-in method count of tuple object at 0x047FFA30>
+>>> cnt.index(1)
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+TypeError: count() takes exactly one argument (0 given)
+>>>
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+ValueError: tuple.index(x): x not in tuple
+>>> rs.Open('select * from homeland',conn)
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+  File "<COMObject ADODB.Recordset>", line 4, in Open
+com_error: (-2147352567, '\xb7\xa2\xc9\xfa\xd2\xe2\xcd\xe2\xa1\xa3', (0, u'ADODB.Recordset', u'\u5bf9\u8c61\u6253\u5f00\u65f6\uff0c\u4e0d\u5141\u8bb8\u64cd\u4f5c\u3002', u'C:\\Windows\\HELP\\ADO270.CHM', 1240654, -2146824583), None)
+>>> rs.close()
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+  File "G:\Python2.7\lib\site-packages\win32com\client\dynamic.py", line 501, in __getattr__
+    ret = self._oleobj_.Invoke(retEntry.dispid,0,invoke_type,1)
+com_error: (-2147352567, '\xb7\xa2\xc9\xfa\xd2\xe2\xcd\xe2\xa1\xa3', (0, u'ADODB.Recordset', u'\u5bf9\u8c61\u5173\u95ed\u65f6\uff0c\u4e0d\u5141\u8bb8\u64cd\u4f5c\u3002', u'C:\\Windows\\HELP\\ADO270.CHM', 1240653, -2146824584), None)
+>>>  rs = win32com.client.Dispatch(r'ADODB.Recordset')
+>>> rs.Open('select * from homeland',conn,1,3)
+>>> rs.Fields.Item(0).Value
+u'Beijing'
+>>> rs.RecordCount
+9
+>>> for x in range(9):
+... 	print rs.Fields.Item(0).Value
+... 	rs.MoveNext()
+... 	
+Beijing
+Berlin
+China
+Deutschland
+Hamburg
+Japan
+K鰈n
+London
+Shanghai
+>>> rs.Open("select * from homeland where property ='Stadt'",conn,1,3)
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+  File "<COMObject ADODB.Recordset>", line 4, in Open
+com_error: (-2147352567, '\xb7\xa2\xc9\xfa\xd2\xe2\xcd\xe2\xa1\xa3', (0, u'ADODB.Recordset', u'\u5bf9\u8c61\u6253\u5f00\u65f6\uff0c\u4e0d\u5141\u8bb8\u64cd\u4f5c\u3002', u'C:\\Windows\\HELP\\ADO270.CHM', 1240654, -2146824583), None)
+>>> rs.Close()
+>>>rs.Open("select * from homeland where property ='Stadt'",conn,1,3)
+>>> rs.RecordCount
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+  File "G:\Python2.7\lib\site-packages\win32com\client\dynamic.py", line 501, in __getattr__
+    ret = self._oleobj_.Invoke(retEntry.dispid,0,invoke_type,1)
+com_error: (-2147352567, '\xb7\xa2\xc9\xfa\xd2\xe2\xcd\xe2\xa1\xa3', (0, u'ADODB.Recordset', u'\u5bf9\u8c61\u5173\u95ed\u65f6\uff0c\u4e0d\u5141\u8bb8\u64cd\u4f5c\u3002', u'C:\\Windows\\HELP\\ADO270.CHM', 1240653, -2146824584), None)
+>>> rs.Open('select * from homeland',conn,1,3)
+>>> rs.RecordCount
+9
+>>> rs.Open("select * from homeland",conn,1,3)
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+  File "<COMObject ADODB.Recordset>", line 4, in Open
+com_error: (-2147352567, '\xb7\xa2\xc9\xfa\xd2\xe2\xcd\xe2\xa1\xa3', (0, u'ADODB.Recordset', u'\u5bf9\u8c61\u6253\u5f00\u65f6\uff0c\u4e0d\u5141\u8bb8\u64cd\u4f5c\u3002', u'C:\\Windows\\HELP\\ADO270.CHM', 1240654, -2146824583), None)
+>>> rs.Open('select * from homeland',conn,1,3)
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+  File "<COMObject ADODB.Recordset>", line 4, in Open
+com_error: (-2147352567, '\xb7\xa2\xc9\xfa\xd2\xe2\xcd\xe2\xa1\xa3', (0, u'ADODB.Recordset', u'\u5bf9\u8c61\u6253\u5f00\u65f6\uff0c\u4e0d\u5141\u8bb8\u64cd\u4f5c\u3002', u'C:\\Windows\\HELP\\ADO270.CHM', 1240654, -2146824583), None)
+>>> rs.Close
+<bound method CDispatch.Close of <COMObject ADODB.Recordset>>
+>>> rs.Close()
+>>>rs.Open('select * from homeland',conn,1,3)
+>>>rs.Close()
+>>>rs.Open("select * from homeland",conn,1,3)
+>>> rs.RecordCount
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+  File "G:\Python2.7\lib\site-packages\win32com\client\dynamic.py", line 501, in __getattr__
+    ret = self._oleobj_.Invoke(retEntry.dispid,0,invoke_type,1)
+com_error: (-2147352567, '\xb7\xa2\xc9\xfa\xd2\xe2\xcd\xe2\xa1\xa3', (0, u'ADODB.Recordset', u'\u5bf9\u8c61\u5173\u95ed\u65f6\uff0c\u4e0d\u5141\u8bb8\u64cd\u4f5c\u3002', u'C:\\Windows\\HELP\\ADO270.CHM', 1240653, -2146824584), None)
+>>> rs.Close()
+Traceback (most recent call last):
+  File "<interactive input>", line 1, in <module>
+  File "<COMObject ADODB.Recordset>", line 2, in Close
+com_error: (-2147352567, '\xb7\xa2\xc9\xfa\xd2\xe2\xcd\xe2\xa1\xa3', (0, u'ADODB.Recordset', u'\u5bf9\u8c61\u5173\u95ed\u65f6\uff0c\u4e0d\u5141\u8bb8\u64cd\u4f5c\u3002', u'C:\\Windows\\HELP\\ADO270.CHM', 1240653, -2146824584), None)
+>>> rs.Open('select * from homeland where property=\'Stadt\'',conn,1,3)
+>>> rs.RecordCount
+6
+>>> for x in range(6):
+... 	print rs.Fields.Item(0).Value
+... 	rs.MoveNext
+... 	
+Beijing
+<bound method CDispatch.MoveNext of <COMObject ADODB.Recordset>>
+Beijing
+<bound method CDispatch.MoveNext of <COMObject ADODB.Recordset>>
+Beijing
+<bound method CDispatch.MoveNext of <COMObject ADODB.Recordset>>
+Beijing
+<bound method CDispatch.MoveNext of <COMObject ADODB.Recordset>>
+Beijing
+<bound method CDispatch.MoveNext of <COMObject ADODB.Recordset>>
+Beijing
+<bound method CDispatch.MoveNext of <COMObject ADODB.Recordset>>
+>>> rs.Fields.Item(0).Value
+u'Beijing'
+>>> for x in range(6):
+... 	print rs.Fields.Item(0).Value
+... 	rs.MoveNext()
+... 	
+Beijing
+Shanghai
+Hamburg
+Berlin
+K鰈n
+London
+>>> 

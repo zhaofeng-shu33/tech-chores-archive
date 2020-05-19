@@ -1,0 +1,9 @@
+使用Eigen库时可以直接在头文件中包含如#include "Dense"
+g++ -I G:\eigen\Eigen\ test.cpp -o
+即可生成指定的exe文件.
+Qt Creator IDE下pro文件指定包含的头文件路径。
+INCLUDEPATH += G:\eigen
+#include "Eigen\Dense"
+Boost 库同样配置
+INCLUDEPATH += G:\boost\include\boost-1_61
+#include <boost/lambda/lambda.hpp>  

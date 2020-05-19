@@ -1,0 +1,2 @@
+verbOutData.open(QFile::Text|QFile::WriteOnly)
+QFile::Text 一定要有

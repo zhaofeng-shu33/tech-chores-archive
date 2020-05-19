@@ -1,0 +1,17 @@
+Qt写dll尝试：
+写好dll放到build-desktop下
+测试程序需包含所写的类的头文件。
+pro中需指定LIBS的包含路径。
+LIBS +=-L./ libHellowAdd
+LIBS +=-L D:/QtTest/consoleApp/ libHellowAdd
+去掉上面的代码则报LinkError,上面的两句等价，可见
+./指当前工程目录而不是输出目录
+libHellowAdd不能加.a
+/ libHellowAdd中间必须有空格
+.dll .a 与 .h文件均不可少。
+写非类的成员函数需加上类似
+HELLOWADDSHARED_EXPORT 的限制，否则无法输出。
+如果将libHellowAdd.a直接放到qt主目录下的lib文件夹则无须包含-L D:/QtTest/consoleApp/指定路径。但仍需包含
+LIBS +=libHellowAdd
+从Qt配置third party plugin glut 可以看出.dll,.lib和.h文件均不可少。
+

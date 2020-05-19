@@ -1,0 +1,19 @@
+﻿1
+Ihr macht Übungen.
+macht singular_3_person
+因为没有语境，仅仅传词判断： POS_tagger(query,strList[i]);
+2
+只能给带一个标点符号的句子进行词性标注。  3 动词sein和物主代词sein相同，复数第二人称代词ihr和物主代词ihr相同，而ihr作为物主代本身又有歧义。
+4 zu 作为ADJ和PREP引起的歧义。  
+    QString str="Er lernt Deutsch.";
+    while(str!="End"){
+      str=str.left(str.size()-1);
+      QStringList strList=str.split(" ");
+      for(int i=0;i<strList.size();i++){
+        cout<<strList[i]<<' '<<flush;
+           POS_tagger(query,strList[i]);
+        cout<<endl;
+        }
+      cout<<"Input a sentence:"<<flush;
+      str=cin.readLine();
+  

@@ -1,0 +1,5 @@
+使用批处理设置环境变量：
+set Path=%Path%;D:\QtTest\consoleApp
+使用echo %Path%查看环境变量，发现上面的设置被添加到已经有的一长串后面。
+这样在当前console下运行consoleApp.exe（在D:\QtTest\consoleApp-build-desktop\debug目录下)可以顺利找到D:\QtTest\consoleApp\Hellowadd.dll
+从而运行正常，否则则失败。这种设置不对console之外程序起作用，直接打开consoleApp.exe还是提示找不到dll.关掉cmd重新打开原来设的environment variable消失。

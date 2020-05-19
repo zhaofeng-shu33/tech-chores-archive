@@ -1,0 +1,6 @@
+Qt切词技术，重要！
+对一篇文本，如Jane Eyre Chapter 23 Paragraph 1, scenery descrption.
+导入txt后用Qt 文件流按stringlist<<input.readline().split(QRegExp("\\W+"));即将去标点和空格之后的词语导入到stringlist中，如此循环直到input.atEnd().
+这样stringlist中即含有该段的全部word,可用
+for(int i=0;i<=stringlist.count();i++)
+打印stringlist[i]查看。

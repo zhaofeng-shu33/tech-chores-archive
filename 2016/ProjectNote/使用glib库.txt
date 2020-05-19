@@ -1,0 +1,4 @@
+INCLUDEPATH += G:\GLib\include\glib-2.0
+INCLUDEPATH += G:\GLib\lib\glib-2.0\include
+LIBS +=G:\GLib\lib\glib-2.0.lib
+main函数#include "glib.h"

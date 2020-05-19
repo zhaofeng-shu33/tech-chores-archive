@@ -1,0 +1,17 @@
+import os
+os.chdir("H:/") #改变当前的工作目录
+os.getcwd() # print the current directory
+import dictionary #import one module at the current directory.
+reload(dictionary)#reload the module at the current directory
+myDic=[Word()]
+for i in range(10007):
+	myDic.append(Word())
+for i in range(561):
+	if(myDic[WordID(entryList[i][0])].spell!=''):
+		myDic[WordID(entryList[i][0])].Revise(entryList[i][0],entryList[i][1],entryList[i][2])
+	else:
+		j=1
+		while(myDic[(j+WordID(entryList[i][0]))%10007].spell!=''):
+			j=j+1
+		myDic[(j+WordID(entryList[i][0]))%10007].Revise(entryList[i][0],entryList[i][1],entryList[i][2])
+    

@@ -1,0 +1,23 @@
+从R中导出数据的代码，参考书为Hands-On Programming with R （electric book)  
+wb <- loadWorkbook("file.xlsx", create = TRUE)
+createSheet(wb, "Sheet 1")
+writeWorksheet(wb, data =list1,sheet="Sheet 1")
+saveWorkbook(wb)
+上面即在R当前的工作目录(查询代码:getwd())创建了一个excel document并将list1中的数据输入到file.xlsx中.
+关于利用（R Console，DevC++， Excel）制成所需数据格式的心得：
+比如对于11周统推大作业第一题，将模拟实验数据放到表格里涉及大量数据的Copy，会让人做疯掉。
+为此，可以利用（R Console，DevC++， Excel）进行数据格式的预处理,方法如下。首先将某个sigma值对应的36组数据在R中用一维数组存储，比如下面三行代码即实现此功能
+list1=t(cbind(mean1,MSE1));
+list1=c(list1,t(cbind(mean2,MSE2)));
+c(list1,t(cbind(mean3,MSE3)))；
+得到的list1含有要处理的36组数据，将其导入某txt（plain text file):
+write(list1,"coursework.txt")
+使有Dev-C++文件传输流获取“coursework.txt”中的数据，对诸如e-003这样的数据进行字符串处理，并在必要的位置添加括号，最后把数据按一定的格式（比如6行3列）输入到"coursework2.txt"中。（Remark:字符串处理比较繁琐，我认为这里面的一些技巧可以用来处理自然语言）
+在R Console 中读取"coursework2.txt"中的内容
+read.csv("coursework2.txt",header=F)->list1
+list1[1:3]->list1
+下面四行代码将list1中的内容导入到R当前的工作目录(查询代码为:getwd())下一个新建的名为file.xlsx Excel文档中。
+打开此文档直接Copy 到Word 表格中即可。 
+
+
+

@@ -1,0 +1,13 @@
+﻿把heißen词尾检查判断对的方法：
+用（QString(stem[stem.length()-1])==QString::fromUtf8("\u00DF")来做判断。
+这一步在heißen第二人称单数能否正确变位十分重要。
+ü	\u00FC
+ß	\u00DF
+ä	\u00E4
+ö	\u00F6
+A 10
+B 11
+C 12
+D 13
+E 14
+14*16+11=225+10=235

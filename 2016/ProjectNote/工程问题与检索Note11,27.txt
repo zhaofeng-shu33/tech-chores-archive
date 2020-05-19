@@ -1,0 +1,6 @@
+解决txt数据输入R Console 中格式不对的代码：
+list1=read.table("coursework2.txt")#以输入"coursework2.txt"中数据为例
+list4=c()
+ for(i in 1:length(list1)){
+list4=c(list4,list1[,i]);}
+list4

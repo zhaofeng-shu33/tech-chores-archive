@@ -1,0 +1,25 @@
+﻿void print_Satz(int ID){
+    if(!query.exec(QString("select * from Satz where ID = %1").arg(ID))){
+        qDebug()<<query.lastError();
+       // return 1;
+    }
+    query.next();
+    QSqlRecord rec=query.record();
+    if(query.value(rec.indexOf("Left_Child_ID")).toInt()==0){
+        cout<<query.value(rec.indexOf("Word")).toString()<<' ';
+        return;
+    }
+    else print_Satz(query.value(rec.indexOf("Left_Child_ID")).toInt());
+
+    if(!query.exec(QString("select * from Satz where ID = %1").arg(ID))){
+        qDebug()<<query.lastError();
+       // return 1;
+    }
+    query.next();
+    rec=query.record();
+
+    if(query.value(rec.indexOf("Right_Child_ID")).toInt()==0)
+       cout<<query.value(rec.indexOf("Word")).toString()<<' '<<flush;
+    else print_Satz(query.value(rec.indexOf("Right_Child_ID")).toInt());
+
+}

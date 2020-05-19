@@ -1,0 +1,42 @@
+MAXSCRIPT 常用命令
+file= openfile "D:/out.txt"
+str1=readLine file
+str1 as integer
+myA = filterString str1 "	"
+上面是按照Tab键把Str分开。
+sphere pos:[10,10,10]
+Construct a ball with initial position: [10,10,10]
+MAXSCRIPT for loop
+for i = 1 to 10
+do print i
+a=#()
+append a 1
+deleteItem a 1
+球的名字.wirecolor=(color 154 215 229)青色
+(color 0 0 255)blue
+从Mathematica生成的xyz文件读原子的三维坐标点在3dsMax建立
+点的位置的脚本：
+for j=1 to 6 do(
+str1 = readLine file
+myA = filterString str1 "	"
+a=#()
+for i=2 to 4 do append a (myA[i] as float)
+append sphereGroup (sphere radius: 0.05 pos:[a[1],a[2],a[3]])
+sphereGroup[j+4].wirecolor=color 0 0 255
+)
+建立棍的脚本
+myP=SphereGroup[3].pos-SphereGroup[2].pos
+Cy = (cylinder radius:0.1 height: 1 wirecolor:(color 86 86 86))
+rot = eulerangles 0 90 0
+rotate Cy rot
+num=atan(sqrt(myP[2]^2+myP[3]^2)/myP[1])
+rot = eulerangles 0 0 num
+rotate Cy rot
+num=atan(myP[3]/myP[2])
+rot = eulerangles num 0 0
+rotate Cy rot
+Cy.height=(length myP)
+Cy.pos=SphereGroup[2].pos
+关键要解决由atan多值性带来的4种旋转不确定性，为此可考虑
+通过distance Cy SphereGroup[3]是否与pos相等来检验结果的正确性。
+Cy.height+Cy.dir

@@ -1,0 +1,7 @@
+gcc编绎时应使用-g
+gcc -g test.c -o test
+
+gdb test
+break 4 
+在第四行设置断点
+ 

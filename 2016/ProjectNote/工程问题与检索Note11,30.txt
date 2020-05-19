@@ -1,0 +1,8 @@
+Qt 中同时使用 Console 和GUI 的方法：
+在.pro文件中TARGET下面一行加上
+CONFIG   += console
+在左侧Project栏 Run Settings 选项卡勾选run terminals
+環境
+考える
+地球
+全体

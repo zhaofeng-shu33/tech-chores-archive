@@ -1,0 +1,45 @@
+关于导师对WordNet介绍的Practice Guide with Python 
+from nltk.corpus import wordnet
+wordnet.synsets('history')#history的同义词集
+wordnet.synsets('history')[1].lemmas()#显示用于解释history的同义词条
+wordnet.synsets('history')[0].pos()#history的词性
+wordnet.synsets('history')[0].definition()
+st=wordnet.synsets('history')#st为长度为5的数组
+WordData(st[1].hypernyms()[0])#wordData 为自定义的显示某Lemma基本信息的
+函数。
+[i for i in range(5)]#循环的简写
+st1[0].hypernym_paths()
+st1[0].root_hypernyms()#return "entity"
+st2=st[1].hyponyms() #history某个含义的下位词
+for i in range(len(st2))：
+	WordData(st2[i])
+st[1].hypernyms().hyponyms()#找到与{history,account..}有相同上位词
+record的	单词
+st[0].part_meronyms() #找其部分
+st3=wordnet.synsets('womanhood')
+st3[1].member_holonyms()#取其第二义的成员上位词
+#访问派生词需要用到Lemma的方法
+myLemma=st[1].lemmas()[0] 
+myLemma.derivationally_related_forms()#返回historic
+import codecs
+ for line in codecs.open('D:/Text4-1.txt','r','utf-8'):
+	print line
+
+st=[]
+for line in codecs.open('D:/Translation.txt','r','utf-8'):
+    st.append(line.strip('\r\n'))
+
+st1=[]
+for line in codecs.open('D:/germanWord.txt','r','utf-8'):
+    st1.append(line.strip('\r\n'))
+
+import random
+n=random.randint(1,18)-1    
+a=raw_input(u'请输入'+st[n]+u'对应的德语词: ')
+if a!=st1[n]:
+    print 'wrong Input'
+else:
+    print 'right Input'
+    
+
+

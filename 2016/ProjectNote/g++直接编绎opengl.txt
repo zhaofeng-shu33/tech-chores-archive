@@ -1,0 +1,2 @@
+在当前的工作目录下执行：
+g++ main.cpp libopengl32.a libglu32.a libglut32.a -o main2

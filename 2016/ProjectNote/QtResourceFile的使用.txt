@@ -1,0 +1,1 @@
+根据某书的讲法，用qt resource file 存要读入的文件不会丢失，.qrc文件用XML格式写成，When we refer to resources, use the path prefix :/ 加上文件名,如 :/images/icon.png

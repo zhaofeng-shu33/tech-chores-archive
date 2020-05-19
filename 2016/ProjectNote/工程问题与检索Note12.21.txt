@@ -1,0 +1,8 @@
+﻿法语特殊字符输入的解决方案：
+for laptop, 启动数字键，NumLk;
+按Alt+0199 可输入 Ç 
+Alt+0231 可输入 ç
+关于Qt 法语特殊字符用QString 输出到窗口的解决方案：以下三行代码非常关键，使非英文字符（中，法等）正常显示！
+ QTextCodec::setCodecForCStrings(QTextCodec::codecForName("GBK"));
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("GBK"));
+    QTextCodec::setCodecForTr(QTextCodec::codecForName("GBK"));

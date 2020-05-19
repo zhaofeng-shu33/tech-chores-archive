@@ -1,0 +1,35 @@
+  QRegExp rx("(\\s+\\w)");
+    QFile data("D:/QtTest/ODBC/SentenceInput.txt");
+    data.open(QFile::ReadOnly|QFile::Text);
+    QTextStream output(&data);
+    QString str=output.readLine(25);
+    while(!output.atEnd()){
+        if(str=="S"){
+               Tree SimpleTree;
+               SimpleTree.add_data("S");
+            str=output.readLine(25);
+               while(str!="S"){
+                   if(str.length()==1) {
+                       SimpleTree.set_punctuation(str[0]);
+                       str=output.readLine(25);
+                       break;
+                   }
+                  // cout<<"DEBUG"<<' '<<SimpleTree.get_num()-1<<' '<<SimpleTree.treeNode[0].level<<endl<<flush;
+                   for(int i=SimpleTree.get_num()-1;i>=0;i--){
+                       int pos=rx.indexIn(str);
+                    //   cout<<"DEBUG"<<' '<<str<<' '<<rx.cap(1).length()-1<<endl<<flush;
+                       if(SimpleTree.treeNode[i].level==rx.cap(1).length()-2){
+                           SimpleTree.add_data(SimpleTree.treeNode[i].data,str.remove(0,rx.cap(1).length()-1),rx.cap(1).length()-1);
+                        //   cout<<SimpleTree.treeNode[i].data<<' '<<str<<' '<<rx.cap(1).length()-1<<endl<<flush;
+                       break;
+                       }
+                   }
+               str=output.readLine(25);
+
+              }
+           SimpleTree.print_sentence();
+           }
+
+    }
+    data.close();
+  

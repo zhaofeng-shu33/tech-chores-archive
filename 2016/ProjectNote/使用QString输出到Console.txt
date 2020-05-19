@@ -1,0 +1,25 @@
+先定义
+QTextStream cout(stdout);
+QTextStream cin(stdin);
+再有：
+   QString s1("Input:");
+    QString s2;
+    cout<<s1<<endl;
+    s2=cin.readLine();
+    cout<<"Your input: "<<s2<<endl;
+ 
+数值处理基本操作
+  cout<<12<<endl;
+  cout<<showpos<<12<<endl; 
+  cout.precision(8);
+  cout<<showpoint<<12.2<<endl; 
+使用string buffer从不同的数据类型中弄出一个string.
+#include<sstream>
+
+ ostringstream strbuf;
+  int n;
+  cin>>n;
+  strbuf<<"2 times "<<n<<" equals "<<2*n<<endl;
+  string str=strbuf.str();
+  cout<<str;
+ 

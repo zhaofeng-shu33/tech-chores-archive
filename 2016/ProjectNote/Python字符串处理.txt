@@ -1,0 +1,13 @@
+用户调查问卷设计Module
+虚词输入Module:Excel 字段按照已有的标准进行。
+
+（小条）收据（发票）
+
+中英释义填加Modlue: Excel 调用;
+了解Python的数据结构
+Python 中String format 函数：
+str2=u'Vorstellungsgespr\xe4ch'
+print u'Das ist ein Wort{0}'.format(str2)
+{0}代表内容可被format中的替换。
+format 多个的情况：
+ 'The team includes {0},{1}'.format('free_wind','Denny')
