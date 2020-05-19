@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Web-Calculator</title>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<script src="function.js"></script>
+</head>
+<body>
+	<div class="outcontainer">
+	<table width="60%" align="center">
+		<tr><th colspan="5">Calculator</th>
+		</tr>
+		<tr>
+        <td class="input" colspan="5" ><span id="output"></span></td>
+		</tr>
+        <tr>
+            <td>MC</td>
+            <td>MR</td>
+            <td>MS</td>
+            <td>M+</td>
+            <td>M-</td>            
+        </tr>
+		<tr><td onclick="delnum()">&larr;</td>
+        <td onclick="allclear()">AC</td>
+			<td onclick="answers()">Ans</td>
+            <td>&plusmn;</td> 
+            <td>&radic;</td>
+		</tr>
+		<tr><td onclick="addnum(7)">7</td>
+			<td onclick="addnum(8)">8</td>
+			<td onclick="addnum(9)">9</td>
+			<td onclick="operator(4)">&divide;</td>
+            <td>%</td>
+		</tr>
+		<tr><td onclick="addnum(4)">4</td>
+			<td onclick="addnum(5)">5</td>
+			<td onclick="addnum(6)">6</td>
+			<td onclick="operator(3)">&times;</td>
+            <td>1/x</td>
+		</tr>
+		<tr><td onclick="addnum(1)">1</td>
+			<td onclick="addnum(2)">2</td>
+			<td onclick="addnum(3)">3</td>
+			<td onclick="operator(2)">-</td>
+			<td rowspan="2" onclick="answers()">=</td>            
+		</tr>
+		<tr><td colspan="2" onclick="addnum(0)">0</td>
+			<td onclick="addpoint()">.</td>
+			<td onclick="operator(1)">+</td>            
+		</tr>
+	</table>
+	</div>
+</body>
+</html>
