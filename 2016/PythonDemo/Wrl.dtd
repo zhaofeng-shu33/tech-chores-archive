@@ -1,0 +1,134 @@
+
+  <!-- The dictionary is a series of entries -->
+  <!ELEMENT DICTIONARY (ENTRY*)>
+  <!-- The 3 main recursive structures are ENTRY, SENSE, and PDX
+       (paradigm examples - see Laughren and Nash (1983, Pac Ling)) -->
+  <!ELEMENT ENTRY (HW,IMAGE?,SOUND?,FREQ?,POS?,POS?,(DIALECTS|REGISTERS)*,
+		  DERIV?,CRITERION?,
+		  (DOMAIN|DEF|GL|EXAMPLES|PDX|SENSE|
+                   CM|CSL|CMP|LAT|XS|REF|REFA|RUL|REM|SRC|
+		   SYN|ANT|CF|XME|ALT|PVL|CME|SE)*)>
+  <!ELEMENT SENSE (POS?,(DIALECTS|REGISTERS)*,CRITERION?,
+		  (DOMAIN|DEF|GL|EXAMPLES|PDX|
+                   CM|CSL|CMP|LAT|XS|REF|REFA|RUL|
+		   SYN|ANT|CF|XME|ALT|PVL)*)>
+  <!ELEMENT PDX ((DIALECTS|REGISTERS)*,CRITERION?,
+		 (DOMAIN|DEF|GL|EXAMPLES|SENSE|
+                 CM|CSL|CMP|
+                 SYN|ANT|CF|XME|ALT|PVL)*)>
+  <!-- Dictionary headword (which can have a homonym number - together
+       the headword and homonym number give uniqueness - and it may be
+       a subentry -->
+  <!ELEMENT HW (#PCDATA)>
+    <!ATTLIST HW HNUM CDATA #IMPLIED
+	         TYPE (SUB) #IMPLIED>
+  <!-- Pictures -->
+  <!ELEMENT IMAGE (IMGI+)>
+  <!ELEMENT IMGI (#PCDATA)>
+    <!ATTLIST IMGI CREDITS CDATA #IMPLIED>
+  <!-- Sound files -->
+  <!ELEMENT SOUND (SNDI+)>
+  <!ELEMENT SNDI (#PCDATA)>
+  <!-- Word frequency -->
+  <!ELEMENT FREQ (#PCDATA)>
+  <!-- Part of speech -->
+  <!ELEMENT POS (#PCDATA)>
+  <!-- Definition -->
+  <!ELEMENT DEF (#PCDATA|CT|SRC|LATIN|REM)*>
+  <!-- Glosses -->
+  <!ELEMENT GL (#PCDATA|GLI)*>
+  <!ELEMENT GLI (#PCDATA|CT|SRC|LATIN|REM)*>
+  <!-- Comments -->
+  <!ELEMENT CM (#PCDATA|CT|SRC|LATIN|REM)*>
+  <!-- Derivation -->
+  <!ELEMENT DERIV (#PCDATA|CT)*>
+  <!-- References (to other works) -->
+  <!ELEMENT REF (#PCDATA|CT|SRC)*>
+  <!-- References (to the appendix) -->
+  <!ELEMENT REFA (#PCDATA)>
+  <!-- (Grammatical) Rules -->
+  <!ELEMENT RUL (#PCDATA)>
+  <!-- Remarks -->
+  <!ELEMENT REM (#PCDATA|CT|SRC)*>
+  <!-- Comparative linguistic notes -->
+  <!ELEMENT CMP (#PCDATA|CT|SRC|REM)*>
+  <!-- Extra sources -->
+  <!ELEMENT XS (#PCDATA|SRC)*>
+  <!-- Sign language crossreferences -->
+  <!ELEMENT CSL (#PCDATA)>
+  <!-- Criterion (for sense/paradigm examples) -->
+  <!ELEMENT CRITERION (#PCDATA|CT|SRC|REM)*>
+  <!-- Example blocks consist of a series of examples (and comments),
+       each example containing warlpiri sentences and translations -->
+  <!ELEMENT EXAMPLES (EXAMPLE|CM)*>
+  <!ELEMENT EXAMPLE (WE?, ET?)>
+  <!ELEMENT WE (#PCDATA|CT|SRC|BF|REM)*>
+    <!ATTLIST WE TYPE (DEFN) #IMPLIED>
+  <!ELEMENT ET (#PCDATA|CT|SRC|LATIN|REM)*>
+  <!-- Source of something -->
+  <!ELEMENT SRC (#PCDATA)>
+  <!-- Latin name for flora/fauna -->
+  <!ELEMENT LAT (#PCDATA|SRC|REM)*>
+  <!-- Bold face for emphasis -->
+  <!ELEMENT BF (#PCDATA)>
+  <!-- Semantic domains -->
+  <!ELEMENT DOMAIN (#PCDATA|DMI)*>
+  <!ELEMENT DMI (#PCDATA)>
+    <!ATTLIST DMI HENTRY CDATA #IMPLIED
+                   HNUM CDATA #IMPLIED>
+  <!-- Dialects -->
+  <!ELEMENT DIALECTS (#PCDATA|DLI)*>
+  <!ELEMENT DLI (#PCDATA)>
+  <!-- Special registers -->
+  <!ELEMENT REGISTERS (#PCDATA|RGI)*>
+  <!ELEMENT RGI (#PCDATA)>
+  <!-- Latin embedded in another field -->
+  <!ELEMENT LATIN (#PCDATA)>
+  <!-- Citation of Warlpiri in an English field -->
+  <!ELEMENT CT (#PCDATA|CTI)*>
+  <!ELEMENT CTI (#PCDATA|BF)*>
+    <!ATTLIST CTI HENTRY CDATA #REQUIRED
+                   HNUM CDATA #IMPLIED
+                   SNUM CDATA #IMPLIED>
+  <!-- these are all the standard crossreference types, which are 
+       structured identically: SYN=synonym, ANT=antonym,
+       XME=crossreference to main entry, CF=see also, ALT=alternate form
+       PVL=preverb list, SE=subentry, CME=crossreference to main entry
+  --> 
+  <!ELEMENT SYN (#PCDATA|SYNI)*>
+  <!ELEMENT SYNI (#PCDATA|DIALECTS|REGISTERS|SRC)*>
+    <!ATTLIST SYNI HENTRY CDATA #REQUIRED
+                   HNUM CDATA #IMPLIED
+                   SNUM CDATA #IMPLIED>
+  <!ELEMENT XME (#PCDATA|XMEI)*>
+  <!ELEMENT XMEI (#PCDATA|DIALECTS|REGISTERS|SRC)*>
+    <!ATTLIST XMEI HENTRY CDATA #REQUIRED
+                   HNUM CDATA #IMPLIED
+                   SNUM CDATA #IMPLIED>
+  <!ELEMENT ANT (#PCDATA|ANTI)*>
+  <!ELEMENT ANTI (#PCDATA|DIALECTS|REGISTERS|SRC)*>
+    <!ATTLIST ANTI HENTRY CDATA #REQUIRED
+                   HNUM CDATA #IMPLIED
+                   SNUM CDATA #IMPLIED>
+  <!ELEMENT CF (#PCDATA|CFI)*>
+  <!ELEMENT CFI (#PCDATA|DIALECTS|REGISTERS|SRC)*>
+    <!ATTLIST CFI HENTRY CDATA #REQUIRED
+                   HNUM CDATA #IMPLIED
+                   SNUM CDATA #IMPLIED>
+  <!ELEMENT ALT (#PCDATA|ALTI)*>
+  <!ELEMENT ALTI (#PCDATA|DIALECTS|REGISTERS|SRC)*>
+    <!ATTLIST ALTI HENTRY CDATA #REQUIRED
+                   HNUM CDATA #IMPLIED>
+  <!ELEMENT PVL (#PCDATA|PVLI)*>
+  <!ELEMENT PVLI (#PCDATA|DIALECTS|REGISTERS|SRC)*>
+    <!ATTLIST PVLI HENTRY CDATA #REQUIRED
+                   HNUM CDATA #IMPLIED>
+  <!ELEMENT SE (#PCDATA|SEI)*>
+  <!ELEMENT SEI (#PCDATA)>
+    <!ATTLIST SEI HENTRY CDATA #REQUIRED
+                   HNUM CDATA #IMPLIED>
+  <!ELEMENT CME (#PCDATA|CMEI)*>
+  <!ELEMENT CMEI (#PCDATA)>
+    <!ATTLIST CMEI HENTRY CDATA #REQUIRED
+                   HNUM CDATA #IMPLIED>
+

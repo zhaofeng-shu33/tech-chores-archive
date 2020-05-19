@@ -1,0 +1,1459 @@
+	<!--VerbDic-->
+	<Entry>
+		<ID>1</ID>
+		<wordform>heißen</wordform>
+		<example>Wie heißen Sie?</example>
+		<例句数量>1</例句数量>
+		<单元>1</单元>
+		<部分>2</部分>
+		<中文翻译>名叫</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>2</ID>
+		<wordform>kommen</wordform>
+		<example>Woher kommen Sie?</example>
+		<例句数量>1</例句数量>
+		<单元>1</单元>
+		<部分>2</部分>
+		<中文翻译>来</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>3</ID>
+		<wordform>gehen</wordform>
+		<example>Mir geht es gut.</example>
+		<例句数量>1</例句数量>
+		<单元>1</单元>
+		<部分>3</部分>
+		<中文翻译>走</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>4</ID>
+		<wordform>begrüßen</wordform>
+		<example>Frau Lu begrüßt die Studenten.</example>
+		<例句数量>1</例句数量>
+		<单元>1</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>欢迎，向……问候</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>5</ID>
+		<wordform>verabschieden</wordform>
+		<example>Dann verabschieden sie sich.</example>
+		<例句数量>1</例句数量>
+		<单元>1</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>告别，告辞</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>6</ID>
+		<wordform>arbeiten</wordform>
+		<example>Wo arbeitest du denn?</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>工作，学习，劳动</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>7</ID>
+		<wordform>sprechen</wordform>
+		<example>Sprechen Sie Deutsch?</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>说话，谈话</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>8</ID>
+		<wordform>öffnen</wordform>
+		<example>Jetzt öffnen Sie bitte die Bücher auf Seite 4.</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>打开</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>9</ID>
+		<wordform>lesen</wordform>
+		<example>Bitte lesen Sie.</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>阅读，读，朗读</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>10</ID>
+		<wordform>machen</wordform>
+		<example>Das macht zusammen 28,50 Euro.</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Text</部分>
+		<中文翻译>总计；干，做</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>11</ID>
+		<wordform>machen</wordform>
+		<example>Karin macht alles.</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>做，制作，干，从事</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>12</ID>
+		<wordform>fragen</wordform>
+		<example>Der Lehrer fragt Wang Hongliang.</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>问，打听</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>13</ID>
+		<wordform>antworten</wordform>
+		<example>Er antwortet schnell.</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>回答，回复，回信</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>14</ID>
+		<wordform>schließen</wordform>
+		<example>Die Studenten schließen die Bücher.</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>合，关，闭，锁</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>15</ID>
+		<wordform>hören</wordform>
+		<example>Wur hören zurest Text 2.</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>听，听到</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>16</ID>
+		<wordform>studieren</wordform>
+		<example>Was studieren Sie?</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>（在大学）学习，研究</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>17</ID>
+		<wordform>lernen</wordform>
+		<example>Lernst du Deutsch?</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>学习，学</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>18</ID>
+		<wordform>wohnen</wordform>
+		<example>Wir wohnen im Studentenwohnheim.</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>居住</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>19</ID>
+		<wordform>schreiben</wordform>
+		<example>Wie schreibt man das?</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Text</部分>
+		<中文翻译>写，写信，写作</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>20</ID>
+		<wordform>spielen</wordform>
+		<example>Was spielen wir jetzt?</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Öbungen</部分>
+		<中文翻译>玩，比赛</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>21</ID>
+		<wordform>suchen</wordform>
+		<example>Sie sucht Brieffreunde aus aller Welt.</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>寻找</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>22</ID>
+		<wordform>chatten</wordform>
+		<example>Chattest du gern?</example>
+		<例句数量>1</例句数量>
+		<单元>2</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>聊天</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>23</ID>
+		<wordform>früstücken</wordform>
+		<example>Die Studentin frühstückt gut.</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>吃早餐</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>24</ID>
+		<wordform>aufstehen</wordform>
+		<example>Stehen Sie bitte auf!</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>起床；起立，站起来</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>25</ID>
+		<wordform>essen</wordform>
+		<example>Martin isst gern Eis.</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>吃</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>26</ID>
+		<wordform>treiben</wordform>
+		<example>Treibst du gern Sport?</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>从事，进行</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>27</ID>
+		<wordform>besuchen</wordform>
+		<example>Wir besuchen am Vormittag Vorlesungen.</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>访问；探望；上学；参观</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>28</ID>
+		<wordform>fahren</wordform>
+		<example>Ich fahre gern Rad.</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>搭，乘，坐（车）；行驶</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>29</ID>
+		<wordform>trinken</wordform>
+		<example>Trinken Sie Kaffee oder Tee?</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>喝，饮</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>30</ID>
+		<wordform>gehen</wordform>
+		<example>Er geht langsam.</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>步行，走，前往</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>31</ID>
+		<wordform>haben</wordform>
+		<example>Hast du am Nachmittag auch Unterricht?</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Text</部分>
+		<中文翻译>有，得到</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>32</ID>
+		<wordform>laufen</wordform>
+		<example>Ich laufe schnell.</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Text</部分>
+		<中文翻译>跑，跑步</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>33</ID>
+		<wordform>verstehen</wordform>
+		<example>Verstehen Sie Frau Beckmann?</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Text</部分>
+		<中文翻译>理解，懂得</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>34</ID>
+		<wordform>geben</wordform>
+		<example>Thomas gibt heute Abend eine Party.</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Text</部分>
+		<中文翻译>给予</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>35</ID>
+		<wordform>kennen</wordform>
+		<example>Kennst du ihn nicht?</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Text</部分>
+		<中文翻译>认识，了解</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>36</ID>
+		<wordform>schlafen</wordform>
+		<example>Schläfst du eigentlich noch?</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Text</部分>
+		<中文翻译>睡觉 </中文翻译>
+	</Entry>
+	<Entry>
+		<ID>37</ID>
+		<wordform>beginnen</wordform>
+		<example>Der Unterricht beginnt.</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Text</部分>
+		<中文翻译>开始</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>38</ID>
+		<wordform>sehen</wordform>
+		<example>Was siehst du denn gerade?</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Übungen</部分>
+		<中文翻译>看，看见</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>39</ID>
+		<wordform>abfahren</wordform>
+		<example>Wann fährt der Zug von Berlin ab?</example>
+		<例句数量>1</例句数量>
+		<单元>3</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>开出</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>40</ID>
+		<wordform>klingeln</wordform>
+		<example>Es klingelt.</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>按铃，铃响</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>41</ID>
+		<wordform>vorhaben</wordform>
+		<example>Wir planen eine Feier für sie.</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>打算，意图，计划</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>42</ID>
+		<wordform>finden</wordform>
+		<example>Das finde ich gut!</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>觉得，认为；找到，发现</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>43</ID>
+		<wordform>meinen</wordform>
+		<example>Meinst du die blaue?</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>认为，觉得，指</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>44</ID>
+		<wordform>meinen</wordform>
+		<example>Machen wir eine Pause? Was meinst du dazu?</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>认为，观点，看法</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>45</ID>
+		<wordform>einladen</wordform>
+		<example>Wir laden andere Verwandte auch ein.</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>邀请</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>46</ID>
+		<wordform>einkaufen</wordform>
+		<example>Ich gehe gern einkaufen.</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>购物；买进</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>47</ID>
+		<wordform>vorschlagen</wordform>
+		<example>Was schlägst du noch vor?</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>建议，提议</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>48</ID>
+		<wordform>kochen</wordform>
+		<example>Was kochst du da?</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>做菜饭；煮，烧，烹调</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>49</ID>
+		<wordform>mitmachen</wordform>
+		<example>Machen Sie mit!</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>一起干，参与做</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>50</ID>
+		<wordform>aussehen</wordform>
+		<example>Deine Oma sieht immer so fit aus.</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>看上去，显得</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>51</ID>
+		<wordform>rauchen</wordform>
+		<example>Sie raucht nicht und trinkt auch keinen Alkohol.</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>抽烟，吸烟</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>52</ID>
+		<wordform>anrufen</wordform>
+		<example>Rufen Sie mich bitte an!</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Übungen</部分>
+		<中文翻译>打电话</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>53</ID>
+		<wordform>mitkommen</wordform>
+		<example>Kommst du mit?</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Übungen</部分>
+		<中文翻译>一起来，一同去</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>54</ID>
+		<wordform>annehmen</wordform>
+		<example>Nimmst du den Vorschlag an oder lehnst du ihn lieber ab?</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>接受，接收；假设</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>55</ID>
+		<wordform>ablehnen</wordform>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>拒绝</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>56</ID>
+		<wordform>leidtun</wordform>
+		<example>Es tut mir leid.</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>遗憾，抱歉</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>57</ID>
+		<wordform>abholen</wordform>
+		<example>Bobby holt mich täglich ab.</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>接，取</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>58</ID>
+		<wordform>reisen</wordform>
+		<example>Er reist viel</example>
+		<例句数量>1</例句数量>
+		<单元>4</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>旅行</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>59</ID>
+		<wordform>hineinschauen</wordform>
+		<example>Schauen wir mal in die Speisekarte hinein.</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Text</部分>
+		<中文翻译>向里看，向里瞧</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>60</ID>
+		<wordform>bestellen</wordform>
+		<example>Li Xiaoming bestellt Schnitzel mit Kartoffeln. Ich bestelle gleich eine Torte.</example>
+		<例句数量>2</例句数量>
+		<单元>4</单元>
+		<部分>Text</部分>
+		<中文翻译>点菜，订购</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>61</ID>
+		<wordform>wünschen</wordform>
+		<example>Was wünschen Sie sonst noch?</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Text</部分>
+		<中文翻译>想要，祝愿</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>62</ID>
+		<wordform>schmecken</wordform>
+		<example>Mir schmeckt das Rindersteak auch sehr gut.</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Text</部分>
+		<中文翻译>有滋味，有（好）味道</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>63</ID>
+		<wordform>probieren</wordform>
+		<example>Probier mal!</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Text</部分>
+		<中文翻译>尝味，尝试，试穿</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>64</ID>
+		<wordform>hierherkommen</wordform>
+		<example>Ich komme oft hierher.</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Text</部分>
+		<中文翻译>到这儿来</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>65</ID>
+		<wordform>gefallen</wordform>
+		<example>Das Restaurant hier gefällt mir sehr.</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Text</部分>
+		<中文翻译>使……喜欢</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>66</ID>
+		<wordform>zahlen</wordform>
+		<example>Zahlen,bitte!</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Text</部分>
+		<中文翻译>付钱</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>67</ID>
+		<wordform>danken</wordform>
+		<example>Ich danke dir für das Essen.</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Text</部分>
+		<中文翻译>感谢</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>68</ID>
+		<wordform>helfen</wordform>
+		<example>Wem hilft unser Lehrer?</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Übungen</部分>
+		<中文翻译>帮助</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>69</ID>
+		<wordform>gehören</wordform>
+		<example>Wem gehört die Schultasche?</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Übungen</部分>
+		<中文翻译>属于</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>70</ID>
+		<wordform>zumachen</wordform>
+		<example>Mach bitte die Tür zu!</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Übungen</部分>
+		<中文翻译>关闭，封闭</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>71</ID>
+		<wordform>kaufen</wordform>
+		<example>Was möchten Sie denn kaufen? Die Studenten kaufen gern Bücher.</example>
+		<例句数量>2</例句数量>
+		<单元>5</单元>
+		<部分>Übungen</部分>
+		<中文翻译>买，购买</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>72</ID>
+		<wordform>vergessen</wordform>
+		<example>Bitte vergessen Sie das nicht.</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>忘掉，忘记</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>73</ID>
+		<wordform>kosten</wordform>
+		<example>Wie viel kostet das?</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>花费，值</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>74</ID>
+		<wordform>empfehlen</wordform>
+		<example>Was empfehlen Sie uns?</example>
+		<例句数量>1</例句数量>
+		<单元>5</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>推荐</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>75</ID>
+		<wordform>mieten</wordform>
+		<example>Er möchte eine Wohnung mieten.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>租用，租借，租赁</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>76</ID>
+		<wordform>besichtigen</wordform>
+		<example>Er besichtigt eine Mietwohung.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>参观</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>77</ID>
+		<wordform>zeigen</wordform>
+		<example>Sie zeigt ihm die Wohnung.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>给……看</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>78</ID>
+		<wordform>ausziehen</wordform>
+		<example>Der Sohn zieht aus dem Elternhaus aus.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>脱衣服，搬出</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>79</ID>
+		<wordform>nehmen</wordform>
+		<example>Ich nehme die Wohnung.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>接受，选，购，乘，坐</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>80</ID>
+		<wordform>einhalten</wordform>
+		<example>Alle Studenten müssen die Hausordnung einhalten.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>遵守 </中文翻译>
+	</Entry>
+	<Entry>
+		<ID>81</ID>
+		<wordform>halten</wordform>
+		<example>Was hältst du von dem Handy hier?</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>认为</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>82</ID>
+		<wordform>halten</wordform>
+		<example>Das Auto hält vor dem Haus.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>养着，饲养；拿着，停着</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>83</ID>
+		<wordform>umziehen</wordform>
+		<example>Heute zieht er um.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>搬家</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>84</ID>
+		<wordform>betrachten</wordform>
+		<example>Er betrachtet das Zimmer genau.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>细看，打量</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>85</ID>
+		<wordform>hängen</wordform>
+		<example>Die Wanduhr hängt gegenüber dem Bild.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>挂着，悬着，吊着</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>86</ID>
+		<wordform>stehen</wordform>
+		<example>Das Fahrrad steht vor den Studentenwohnheim.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>站立，竖直，竖放着</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>87</ID>
+		<wordform>stecken</wordform>
+		<example>Die Blumen stecken in der Vase.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>插入，插着</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>88</ID>
+		<wordform>stellen</wordform>
+		<example>Er stellt den Laptop auf den Tisch.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>竖放，直立</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>89</ID>
+		<wordform>legen</wordform>
+		<example>Er legt die Zeitung auf den Tisch.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Text</部分>
+		<中文翻译>平放，摆；躺，卧</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>90</ID>
+		<wordform>surfen</wordform>
+		<example>Er surft gern im Internet.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Übungen</部分>
+		<中文翻译>冲浪运动，网络漫游</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>91</ID>
+		<wordform>sitzen</wordform>
+		<example>Du sitzt immer vor den Fernseher.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Übungen</部分>
+		<中文翻译>坐，坐着</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>92</ID>
+		<wordform>tippen</wordform>
+		<example>Sie tippt stundenlang.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Übungen</部分>
+		<中文翻译>打字</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>93</ID>
+		<wordform>warten</wordform>
+		<example>Er soll noch ein Jahr warten.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Übungen</部分>
+		<中文翻译>等，等待</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>94</ID>
+		<wordform>liegen</wordform>
+		<example>Er ist krank und liegt im Bett.</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Übungen</部分>
+		<中文翻译>平放，躺，卧</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>95</ID>
+		<wordform>parken</wordform>
+		<example>Kann man da parken?</example>
+		<例句数量>1</例句数量>
+		<单元>6</单元>
+		<部分>Übungen</部分>
+		<中文翻译>停放</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>96</ID>
+		<wordform>grüßen</wordform>
+		<example>Grüß dich,Lea.</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>问候，打招呼</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>97</ID>
+		<wordform>wollen</wordform>
+		<example>Was willst du ihr denn schenken?</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>愿意，打算，希望</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>98</ID>
+		<wordform>schenken</wordform>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>赠送</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>99</ID>
+		<wordform>können</wordform>
+		<example>Was kann ich ihr blop schenken?</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>能够，会，可能</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>100</ID>
+		<wordform>wissen</wordform>
+		<example>Das weiß ich nicht.</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>知道，了解</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>101</ID>
+		<wordform>tragen</wordform>
+		<example>Er trägt eine Brille.</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>穿，戴</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>102</ID>
+		<wordform>hingehen</wordform>
+		<example>Wo gehen Sie hin?</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>去（某处或某人处）</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>103</ID>
+		<wordform>gucken</wordform>
+		<example>Guck mal,hier sind Mützen.</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>瞧，张望</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>104</ID>
+		<wordform>stehen</wordform>
+		<example>Die Farbe steht mir nicht besonders.</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>适合于</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>105</ID>
+		<wordform>nachsehen</wordform>
+		<example>Sehen Sie mal nach, wie viel sie kostet!</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>查看，审阅</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>106</ID>
+		<wordform>wünschen</wordform>
+		<example>Ich wünsche dir viel Glück!</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Text</部分>
+		<中文翻译>希望，祝愿，想要</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>107</ID>
+		<wordform>gratulieren</wordform>
+		<example>Ich gratuliere Ihnen herzlich zum Geburtstag!</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>祝贺，庆贺</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>108</ID>
+		<wordform>auspacken</wordform>
+		<example>Er packt das Geschenk sofort aus.</example>
+		<例句数量>1</例句数量>
+		<单元>7</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>打开（包装），取出</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>109</ID>
+		<wordform>springen</wordform>
+		<example>Das Wasser springt aus der Quelle.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>跳，跳跃</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>110</ID>
+		<wordform>wandern</wordform>
+		<example>Die Familie Schmidt wandert gern.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>独步旅行，漫游</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>111</ID>
+		<wordform>baden</wordform>
+		<example>Er badet im Fluss.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>洗澡，游泳</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>112</ID>
+		<wordform>fotografieren</wordform>
+		<example>Ich habe viel fotografiert.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>拍照，摄影</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>113</ID>
+		<wordform>dauern</wordform>
+		<example>Die Fahrt dauert drei Stunden.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>续，延续</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>114</ID>
+		<wordform>berichten</wordform>
+		<example>Was hat sie berichtet?</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>报告，告知</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>115</ID>
+		<wordform>verbringen</wordform>
+		<example>Er hat einen Monat auf dem Land verbracht und viel erlebt.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>度过（时间，假期）</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>116</ID>
+		<wordform>erleben</wordform>
+		<example>Er hat einen Monat auf dem Land verbracht und viel erlebt.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>体验，经历</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>117</ID>
+		<wordform>verdienen</wordform>
+		<example>Er hat wenig verdient.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>挣得，赚得</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>118</ID>
+		<wordform>absolvieren</wordform>
+		<example>Ich habe ein Praktikum bei der Firma absolviert.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>完成，结束</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>119</ID>
+		<wordform>übersetzen</wordform>
+		<example>Können Sie den Prospekt übersetzen?</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>翻译，笔译</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>120</ID>
+		<wordform>jobben</wordform>
+		<example>Ich jobbe zweimal in der Woche.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Text</部分>
+		<中文翻译>（做临时性）工作，打工</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>121</ID>
+		<wordform>bleiben</wordform>
+		<example>Ich bin zu Hause geblieben.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Übungen</部分>
+		<中文翻译>待，停留</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>122</ID>
+		<wordform>mailen</wordform>
+		<example>Wir mailen uns oft.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Übungen</部分>
+		<中文翻译>发电子邮件</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>123</ID>
+		<wordform>bekommen</wordform>
+		<example>Was bekommen Sie denn?</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Übungen</部分>
+		<中文翻译>得到，获得</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>124</ID>
+		<wordform>zeichnen</wordform>
+		<example>Er kann gut zeichnen.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Hörverstehen</部分>
+		<中文翻译>素描，画画，画图</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>125</ID>
+		<wordform>genießen</wordform>
+		<example>Ich liege auf der Wiese und genieße die Sonne.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>享受</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>126</ID>
+		<wordform>tauschen</wordform>
+		<example>Er hat mit ihr das Zimmer getauscht.</example>
+		<例句数量>1</例句数量>
+		<单元>8</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>交换</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>127</ID>
+		<wordform>riechen</wordform>
+		<example>Es riecht nach Zwiebeln.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Einfürung</部分>
+		<中文翻译>闻，嗅</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>128</ID>
+		<wordform>fühlen</wordform>
+		<example>Ich fühle mich gut.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>感觉，感到</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>129</ID>
+		<wordform>ansehen</wordform>
+		<example>Letztes Jahr hat sie sich eine Wohung bei mir angesehen.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>仔细看</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>130</ID>
+		<wordform>stimmen</wordform>
+		<example>Das stimmt.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<中文翻译>对，正确，相符</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>131</ID>
+		<wordform>unterhalten</wordform>
+		<example>Karl unterhält sich mit Maria über die Geburtstagsfeier.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>聊天，谈天，说话</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>132</ID>
+		<wordform>kümmern</wordform>
+		<example>Wer kümmert sich denn um sie?</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>关心，照料</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>133</ID>
+		<wordform>anziehen</wordform>
+		<example>Das Kind kann sich schon selber anziehen.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>给……穿衣，穿</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>134</ID>
+		<wordform>putzen</wordform>
+		<example>Das Kind putzt sich die Zähne.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<中文翻译>擦，刷</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>135</ID>
+		<wordform>watschen</wordform>
+		<example>Können sich deine Kinder selber waschen?</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>给……洗脸，洗澡，洗</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>136</ID>
+		<wordform>streiten</wordform>
+		<example>Die Kinder streiten sich oft.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>争吵，争执</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>137</ID>
+		<wordform>treffen</wordform>
+		<example>Sie treffen sich im Sprechzimmer.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>碰面，碰头</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>138</ID>
+		<wordform>erkälten</wordform>
+		<example>Ich habe mich erkältet.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>感冒，着凉</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>139</ID>
+		<wordform>wehtun</wordform>
+		<example>Mein Kopf tut mir schrecklich weh.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<中文翻译>疼痛，痛苦</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>140</ID>
+		<wordform>untersuchen</wordform>
+		<example>Der Arzt untersucht Frau Müller.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<中文翻译>检查，调查</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>141</ID>
+		<wordform>freuen</wordform>
+		<example>Ich freue mich auf meinen Urlaub.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>感到高兴</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>142</ID>
+		<wordform>fliegen</wordform>
+		<example>Er ist ins Ausland geflogen.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<中文翻译>飞，飞翔</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>143</ID>
+		<wordform>ausruhen</wordform>
+		<example>Sie haben den ganzen Tag gearbeitet und sollen sich jetzt ausruhen.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>（劳动后）休息</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>144</ID>
+		<wordform>abhorchen</wordform>
+		<example>Der Arzt horcht den Kranken gerade ab.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<中文翻译>对……听诊</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>145</ID>
+		<wordform>einatmen</wordform>
+		<example>Atmen Sie bitte tief ein!</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<中文翻译>吸气</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>146</ID>
+		<wordform>ausatmen</wordform>
+		<example>Atmen Sie bitte aus!</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<中文翻译>呼气</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>147</ID>
+		<wordform>verschreiben</wordform>
+		<example>Der Arzt verschreibt ihr Kranken ein Medikament.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<中文翻译>开（药）</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>148</ID>
+		<wordform>vorbeikommen</wordform>
+		<example>Kommen Sie in drei Tagen noch einmal vorbei.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Text</部分>
+		<中文翻译>来一下，从……旁边过</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>149</ID>
+		<wordform>lieben</wordform>
+		<example>Sie sehen sich an und lieben sich wieder.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Übungen</部分>
+		<中文翻译>爱</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>150</ID>
+		<wordform>krankschreiben</wordform>
+		<example>Ich schreibe Sie krank.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Übungen</部分>
+		<中文翻译>开病假证明</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>151</ID>
+		<wordform>zustimmen</wordform>
+		<example>Ich stimme Ihnen zu.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Intentionen</部分>
+		<中文翻译>同意，赞成</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>152</ID>
+		<wordform>beantworten</wordform>
+		<example>Beantworten Sie bitte die Fragen zum Text.</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>回答，回复</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>153</ID>
+		<wordform>tun</wordform>
+		<example>Was soll ich tun?</example>
+		<例句数量>1</例句数量>
+		<单元>9</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>做，干</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>154</ID>
+		<wordform>erklären</wordform>
+		<example>Der Lehrer kann die deutsche Grammatik gut erklären.</example>
+		<单元>10</单元>
+		<部分>Text</部分>
+		<中文翻译>解释，说明</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>155</ID>
+		<wordform>einsteigen</wordform>
+		<example>Bitte,alle einsteigen!Der Zug fährt in drei Minuten ab.</example>
+		<单元>10</单元>
+		<部分>Text</部分>
+		<中文翻译>上（车，船等）</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>156</ID>
+		<wordform>umsteigen</wordform>
+		<example>Dort steigen Sie in die U2 um und fahren bis zum Karlsplatz.</example>
+		<单元>10</单元>
+		<部分>Text</部分>
+		<中文翻译>（火）车（小）站换车</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>157</ID>
+		<wordform>abbiegen</wordform>
+		<example>Dort an der Kreuzung biegen Sie links in die Goethestraße ab.</example>
+		<单元>10</单元>
+		<部分>Text</部分>
+		<中文翻译>拐弯</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>158</ID>
+		<wordform>begleiten</wordform>
+		<example>Ich kann Sie ein Stück begleiten.</example>
+		<单元>10</单元>
+		<部分>Text</部分>
+		<中文翻译>伴随，陪同</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>159</ID>
+		<wordform>beeilen</wordform>
+		<example>Oh,es ist schon fünf vor sechs.Ich muss mich beeilen.</example>
+		<单元>10</单元>
+		<部分>Text</部分>
+		<IsReflexive>1</IsReflexive>
+		<中文翻译>赶快</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>160</ID>
+		<wordform>bemerken</wordform>
+		<example>Erst an der Kasse im Supermarkt habe ich bemerkt,dass ich unterwegs mein Geld verloren habe.</example>
+		<单元>10</单元>
+		<部分>Hörverstehen</部分>
+		<中文翻译>看到，察觉</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>161</ID>
+		<wordform>erzählen</wordform>
+		<example>Die Mutter erzählt dem Sohn eine Geschichte.</example>
+		<单元>10</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>叙述，讲述</中文翻译>
+	</Entry>
+	<Entry>
+		<ID>162</ID>
+		<wordform>steigen</wordform>
+		<example>Sie können auf den Berg steigen und den alten Tempel besichtigen.</example>
+		<单元>10</单元>
+		<部分>Leseverstehen</部分>
+		<中文翻译>登上，攀登</中文翻译>
+	</Entry>

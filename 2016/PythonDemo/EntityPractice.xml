@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--comment-->
+<!DOCTYPE bookList SYSTEM "EntityDTD.dtd">
+<bookList>
+	<book isbn="123">
+		<name>&myPress;</name>
+		<author>Denny</author>
+		<content>&myFile;</content>
+	</book>
+	&out;
+</bookList>

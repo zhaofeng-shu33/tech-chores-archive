@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT dictionary (Part+)>
+<!ELEMENT Part (Entry+)>
+<!ATTLIST Part type (Noun|Verb) "Noun">
+<!ELEMENT Entry ((ID,wordform,wordclass,Plural,meaning*,example*,中文翻译,例句数量*,单元,部分)|(ID,wordform,example*,例句数量*,单元,部分,IsReflexive*,中文翻译))>
+<!ELEMENT ID (#PCDATA)>
+<!ELEMENT wordform (#PCDATA)>
+<!ELEMENT wordclass (#PCDATA)>
+<!ELEMENT Plural (#PCDATA)>
+<!ELEMENT meaning (#PCDATA)>
+<!ELEMENT example (#PCDATA)>
+<!ELEMENT 中文翻译 (#PCDATA)>
+<!ELEMENT 例句数量 (#PCDATA)>
+<!ELEMENT 单元 (#PCDATA)>
+<!ELEMENT 部分 (#PCDATA)>
+<!ELEMENT IsReflexive (#PCDATA)>
+<!ENTITY NounRef SYSTEM "NounPart.xml">
+<!ENTITY VerbRef SYSTEM "VerbPart.xml">
