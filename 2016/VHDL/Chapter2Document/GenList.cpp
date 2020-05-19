@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ostream>
 #include <fstream>
+#include<cstring>
 #include <cmath>
 #include<cstdlib>
 #include<ctime>
@@ -8,6 +9,7 @@
 #include<string> 
 #include<queue>
 #include<deque> 
+
 #include "seqList.h"
 using namespace std;
 template <class T>

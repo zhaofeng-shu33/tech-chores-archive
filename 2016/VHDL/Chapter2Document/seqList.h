@@ -5,6 +5,8 @@
 */
 #include "linearList.h"
 #include <cstdio>
+#include <iostream>
+using namespace std;
 const int defaultSize=100;
 template <class T>
 class SeqList: public LinearList<T>
