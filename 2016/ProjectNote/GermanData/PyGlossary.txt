@@ -1,0 +1,1 @@
+PyGlossary 词典格式转换tool

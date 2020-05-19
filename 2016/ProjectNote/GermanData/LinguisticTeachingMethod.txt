@@ -1,0 +1,8 @@
+Design features for a self-contained teaching program:
+Information: must introduce syntactic and morphological rules explicitly
+syntactic forms
+Goal: must be supplied in order to motivate performance and reflection on performance
+Integration: the information and performance exercises must be seqenced in a way that introduces new linguistic items only in the context of known items
+Performance: is required to allow matching against the target from the take place; it must be elicited in a sequence that allows progressive decontextualisation to occur;
+Feedback: must deal explicitly with any diagnosed misconception or mal-rules; must provide help with
+analysing the gap between learner performance and target form

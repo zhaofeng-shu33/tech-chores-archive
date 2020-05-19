@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="NounFormatting.css"?>
+<Entry category="Substantiv">
+<Stichwort>Arzt</Stichwort>
+<Einheit>5</Einheit>
+<Anteil>Übungen</Anteil>
+<Genus>der</Genus>
+<Pluralform>Ärzte</Pluralform>
+<GenitivSingular>Arztes</GenitivSingular>
+
+<CompoundWord>
+	<KompositaCollection>
+		<_K>Augenarzt</_K>
+		<_K>Hausarzt</_K>
+		<_K>Kinderarzt</_K>
+		<_K>Zahnarzt</_K>
+		<_K>Tierarzt</_K>
+		<_K>Schularzt</_K>
+		<K_>Arztberuf</K_>
+		<_K>Arzttermin</_K>
+	</KompositaCollection>
+	<derivative>
+		<hierzu category="Substantiv">Ärztin</hierzu>
+		<hierzu category="Adjektiv">ärztlich</hierzu>
+	</derivative>
+</CompoundWord>
+
+<Synonymegruppe>
+	<Sym>Mediziner</Sym>
+	<Sym>Doktor</Sym>
+</Synonymegruppe>
+<Antonymegruppe>
+	<Anm>Kranker</Anm>
+</Antonymegruppe>
+<Kollokationen>
+<!--comment-->
+<K>der praktische Arzt</K>
+<K>der bekannte Arzt</K>
+<K>den Arzt rufen</K>
+<K>zum Arzt gehen</K>
+
+</Kollokationen>
+
+<Explanation>
+	<Eintrag>
+		<Chinesisch>医生,大夫</Chinesisch>
+		<BeispielSammlung>
+			<Beispiel>
+				<Satz>Der Arzt hat ihm eine Medizin verschrieben.</Satz>
+				<Übersetzung>医生给他开了一剂药。</Übersetzung>
+			</Beispiel>
+			<Beispiel>
+				<Satz>Hoffnung und Freude sind die besten Ärzte.</Satz>
+				<Übersetzung>希望和快乐是最好的医生。</Übersetzung>
+			</Beispiel>
+			<Beispiel>
+				<Satz>Er hat vor,Arzt zu sein.</Satz>
+				<Übersetzung>他打算成为医生。</Übersetzung>
+			</Beispiel>
+			<Beispiel>
+				<Satz>Gegen Sie mit ihm zum Arzt.</Satz>
+				<Übersetzung>请您和他一起去看医生。</Übersetzung>
+			</Beispiel>
+		</BeispielSammlung>
+	</Eintrag>
+</Explanation>
+</Entry>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Eintrag category="Verben">
+<Stichwort>einatmen</Stichwort>
+<Einheit>9</Einheit><Anteil>Text</Anteil> <!--Note:IDREFS-->
+<Klassifizierung Typen="transitiv intransitiv trennbar"/>
+<Präsens type="regelmäßig">
+	<erste_Person_Singular>atme ein</erste_Person_Singular>
+	<zweite_Person_Singular>atmest ein</zweite_Person_Singular>
+	<dritte_Person_Singular>atmet ein</dritte_Person_Singular>
+	<erste_Person_Plural>atmen ein</erste_Person_Plural>
+	<zweite_Person_Plural>atmet ein</zweite_Person_Plural>
+	<dritte_Person_Plural>atmen ein</dritte_Person_Plural>
+</Präsens>
+<Perfekt type="regelmäßig" Hilfsverben="haben">
+	<erste_Person_Singular>habe eingeatmet</erste_Person_Singular>
+	<zweite_Person_Singular>hast eingeatmet</zweite_Person_Singular>
+	<dritte_Person_Singular>hat eingeatmet</dritte_Person_Singular>
+	<erste_Person_Plural>haben eingeatmet</erste_Person_Plural>
+	<zweite_Person_Plural>habt eingeatmet</zweite_Person_Plural>
+	<dritte_Person_Plural>haben eingeatmet</dritte_Person_Plural>
+</Perfekt>
+
+<zusammengesetzteWörter>
+	<abgeleiteteWörter>
+		<hierzu category=""></hierzu>
+	</abgeleiteteWörter>
+</zusammengesetzteWörter>
+
+<Synonymegruppe>
+	<Sym></Sym>
+</Synonymegruppe>
+<Antonymegruppe>
+	<Anm>ausatmen</Anm>
+</Antonymegruppe>
+
+<Kollokationen>
+<K></K>
+</Kollokationen>
+
+<AllgemeineErläuterungen>
+	<Eintrag>
+		<Chinesisch></Chinesisch>
+		<BeispielSammlung>
+			<Beispiel>
+				<Satz>Atmen sie bitte tief ein!</Satz>
+				<Übersetzung>请您深吸一口气。</Übersetzung>
+			</Beispiel>
+		</BeispielSammlung>
+	</Eintrag>
+</AllgemeineErläuterungen>
+
+</Eintrag>

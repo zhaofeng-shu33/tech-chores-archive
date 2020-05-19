@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Dictionary (Language+)>
+<!ELEMENT Language (Lemma*)>
+<!ELEMENT Lemma (Stichwort,References*, zusammengesetzteWörter,Synonymegruppe,Antonymegruppe,Kollokationen,AllgemeineErläuterungen)>
+  <!ELEMENT zusammengesetzteWörter (KompositaCollection,abgeleiteteWörter)>
+  <!ELEMENT KompositaCollection (_K|K_)*>
+  <!ELEMENT abgeleiteteWörter (hierzu*)>
+  <!ELEMENT _K EMPTY>
+  <!ELEMENT K_ EMPTY>
+  <!ELEMENT hierzu EMPTY>
+  <!ELEMENT AllgemeineErläuterungen (Eintrag+)>
+  <!ELEMENT Eintrag (Chinesisch,BeispielSammlung)>
+  <!ELEMENT Chinesisch EMPTY>
+  <!ELEMENT BeispielSammlung (Beispiel*)>
+  <!ELEMENT Beispiel (Satz,Übersetzung)>
+  <!ELEMENT Satz EMPTY>
+  <!ELEMENT Übersetzung EMPTY>
+  <!ELEMENT Stichwort EMPTY>
+  <!ELEMENT References (reftypegroup*)>
+<!ELEMENT reftypegroup (reference*)>
+<!ELEMENT reference EMPTY>
+
+  <!ELEMENT Synonymegruppe (Sym*)>  
+  <!ELEMENT Sym EMPTY>  
+  <!ELEMENT Antonymegruppe (Anm*)>  
+  <!ELEMENT Anm EMPTY>  
+  <!ELEMENT Kollokationen (K*)>  
+  <!ELEMENT K EMPTY>  
+  <!ATTLIST Stichwort Einheit CDATA #REQUIRED>
+  <!ATTLIST Stichwort Anteil CDATA #REQUIRED>
+  <!ATTLIST Stichwort Genus (der|die|das|Plural) #REQUIRED>
+  <!ATTLIST Stichwort Pluralform CDATA #REQUIRED>
+  <!ATTLIST Stichwort GenitivSingular CDATA #REQUIRED>
+  <!ATTLIST _K Wort CDATA #IMPLIED>
+  <!ATTLIST K_ Wort CDATA  #IMPLIED>
+  <!ATTLIST hierzu category (Substantiv | Adjektiv | Verben) "Substantiv"> <?Substantiv is the default value?>
+  <!ATTLIST hierzu hierzu CDATA #IMPLIED>
+  <!ATTLIST Sym Synonym CDATA #IMPLIED>
+  <!ATTLIST Anm Antonym CDATA #IMPLIED>
+  <!ATTLIST K Wort CDATA #IMPLIED>
+  <!ATTLIST Chinesisch TE CDATA #IMPLIED>
+  <!ATTLIST Satz Satz CDATA #IMPLIED>
+  <!ATTLIST Übersetzung TE CDATA #IMPLIED>
+  <!ATTLIST Lemma LemmaSign CDATA #REQUIRED>
+  <!ATTLIST Dictionary Name CDATA #IMPLIED>
+  <!ATTLIST Stichwort category CDATA #REQUIRED>
+<!ATTLIST Dictionary Description CDATA #IMPLIED>
+<!ATTLIST Dictionary URL CDATA #IMPLIED>
+<!ATTLIST Dictionary SoundPath CDATA #IMPLIED>
+<!ATTLIST Dictionary id CDATA #IMPLIED>
+<!ATTLIST Language Name CDATA #IMPLIED>
+<!ATTLIST References id CDATA #IMPLIED>

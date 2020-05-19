@@ -1,0 +1,2 @@
+﻿ListView中查询最好不要user clicked 词出现在首项。
+ListView要支持用上下键切换。

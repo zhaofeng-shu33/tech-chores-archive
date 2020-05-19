@@ -1,0 +1,44 @@
+<Dictionary id="1">
+	<Language id="0" Name="German">
+		<Lemma id="3" LemmaSign="Abend">
+			<Stichwort id="4" category="Substantiv" Einheit="1" Anteil="Intentionen" Genus="2" Pluralform="Abende" GenitivSingular=" "/>
+			<zusammengesetzteWörter id="5">
+				<KompositaCollection id="6">
+					<_K id="7" Wort="MontagAbend"/>
+					<K_ id="8" Wort="SommerAbend"/>
+					<K_ id="9" Wort="Abendessen"/>
+					<K_ id="10" Wort="Festabend"/>
+				</KompositaCollection>
+				<abgeleiteteWörter id="11">
+					<hierzu id="12" category="7"/>
+				</abgeleiteteWörter>
+			</zusammengesetzteWörter>
+			<Synonymegruppe id="13">
+				<Sym id="14"/>
+			</Synonymegruppe>
+			<Antonymegruppe id="15">
+				<Anm id="16" Antonym="Morgen"/>
+			</Antonymegruppe>
+			<Kollokationen id="17">
+				<K id="18" Wort="am Abend"/>
+				<K id="19" Wort="zu Abend essen"/>
+				<K id="20" Wort="vom Morgen bis zum Abend"/>
+			</Kollokationen>
+			<AllgemeineErläuterungen id="21">
+				<Eintrag id="22">
+					<Chinesisch id="23" TE="晚上"/>
+					<BeispielSammlung id="24">
+						<Beispiel id="25">
+							<Satz id="26" Satz="Ich wünsche dir guten Abend!"/>
+							<Übersetzung id="27" TE="晚上好！"/>
+						</Beispiel>
+						<Beispiel id="28">
+							<Satz id="29" Satz="Wo treffen wir heute Abend?"/>
+							<Übersetzung id="30" TE="今天晚上我们在哪碰面？"/>
+						</Beispiel>
+					</BeispielSammlung>
+				</Eintrag>
+			</AllgemeineErläuterungen>
+		</Lemma>
+</Language>
+</Dictionary>

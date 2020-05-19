@@ -1,0 +1,5 @@
+从Mathematica中导出xyz文件的代码：
+pos=ChemicalData["Acetone", "AtomPositions"]
+pos=QuantityMagnitude /@ pos
+Export["Acetone.xyz", {ChemicalData["Acetone", "VertexTypes"], pos}, {{"VertexTypes", 
+   "VertexCoordinates"}}]

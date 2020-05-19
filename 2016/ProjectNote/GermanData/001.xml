@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<text id='1' type='dialog' source='德语综合教程'>
+<title>Das hängt vom Wetter ab</title>
+<figure num='2'>
+<person name='Helga'></person>
+<person name='Bernd'></person>
+</figure>
+<body>
+<Helga>Hast du die Wettervorhersage für morgen schon gehört?</Helga>
+<Bernd>Nein, noch nicht. Warum?</Bernd>
+<Helga>Es wird morgen wohl nichts mit unserer Wanderung.</Helga>
+<Bernd>Was sagt denn die Wettervorhersage?</Bernd>
+<Helga>Sie haben für den ganzen Tag Regen gemeldet und vielleicht zieht sogar noch
+ein Gewitter auf Die Temperaturen sinken bis auf circa 8 Grad Celsius.</Helga>
+<Bernd>Ja, du hast Recht, Dann sollen wir das Wandern lieber verschieben.</Bernd>
+<Helga>Am Wochenende klappt es vielleicht. Sie haben Sonnenschein und
+Temperaturen bis 18 Grad Celsius vorausgesagt.</Helga>
+<Bernd>Super. Bei klarem Himmel haben wir von den Weinbergen aus bestimmt
+eine tolle Aussicht auf die Mosel.</Bernd>
+<Helga>Hoffen wir das Beste!</Helga>
+</body>
+</text>
+

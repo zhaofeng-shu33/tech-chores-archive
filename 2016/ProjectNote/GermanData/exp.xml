@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="GerDicStyleSheet.xsl"?>
+<!DOCTYPE Dictionary SYSTEM "WordModel.dtd">
+<Dictionary>
+<Language Name="German">
+<Lemma LemmaSign="Arzt">
+<Stichwort category="Substantiv" Einheit="5" Anteil="Übungen" Genus="der" Pluralform="Ärzte" GenitivSingular="Arztes"/>
+
+<zusammengesetzteWörter>
+	<KompositaCollection>
+		<_K Wort="Augenarzt"/>
+		<_K Wort="Hausarzt"/>
+		<_K Wort="Kinderarzt"/>
+		<_K Wort="Zahnarzt"/>
+		<_K Wort="Tierarzt"/>
+		<_K Wort="Schularzt"/>
+		<K_ Wort="Arztberuf"/>
+		<_K Wort="Arzttermin"/>
+	</KompositaCollection>
+	<abgeleiteteWörter>
+		<hierzu hierzu="Ärztin"/>
+		<hierzu hierzu="ärztlich" category="Adjektiv"/>
+	</abgeleiteteWörter>
+</zusammengesetzteWörter>
+
+<Synonymegruppe>
+	<Sym Synonym="Mediziner"/>
+	<Sym Synonym="Doktor"/>
+</Synonymegruppe>
+<Antonymegruppe>
+	<Anm Antonym="Kranker"/>
+</Antonymegruppe>
+<Kollokationen>
+
+<K Wort="der praktische Arzt"/>
+<K Wort="der bekannte Arzt"/>
+<K Wort="den Arzt rufen"/>
+<K Wort="zum Arzt gehen"/>
+
+</Kollokationen>
+<AllgemeineErläuterungen>
+	<Eintrag>
+		<Chinesisch TE="医生，大夫"/>
+		<BeispielSammlung>
+			<Beispiel>
+				<Satz Satz="Der Arzt hat ihm eine Medizin verschrieben."/>
+				<Übersetzung TE="医生给他开了一剂药。"/>
+			</Beispiel>
+			<Beispiel>
+				<Satz Satz="Hoffnung und Freude sind die besten Ärzte."/>
+				<Übersetzung TE="希望和快乐是最好的医生。"/>
+			</Beispiel>
+			<Beispiel>
+				<Satz Satz="Er hat vor,Arzt zu sein."/>
+				<Übersetzung TE="他打算成为医生"/>
+			</Beispiel>
+			<Beispiel>
+				<Satz Satz="Gegen Sie mit ihm zum Arzt."/>
+				<Übersetzung TE="请您和他一起去看医生。"/>
+			</Beispiel>
+		</BeispielSammlung>
+	</Eintrag>
+</AllgemeineErläuterungen>
+</Lemma>
+</Language>
+</Dictionary>
