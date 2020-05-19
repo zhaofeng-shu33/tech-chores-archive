@@ -1,5 +1,5 @@
 #include <GL/glu.h>
-#include <glut.h>
+#include <GL/glut.h>
 
 #include <cmath>
 GLsizei winWidth=400,winHeight=400;

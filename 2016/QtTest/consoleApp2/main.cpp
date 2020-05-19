@@ -1,6 +1,6 @@
 #include <QtGui>
 #include <QString>
-#include<windows.h>
+
 #include<QDebug>
 #include<QTextCodec>
 #include<QFile>

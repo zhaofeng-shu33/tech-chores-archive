@@ -7,8 +7,7 @@
 QT       += core gui
 CONFIG += console
 QT       += opengl
-LIBS += -lglut32
-LIBS += -LC:\glut
+LIBS += -lGL -lGLU -lglut
 
 TARGET = NounCheck
 TEMPLATE = app

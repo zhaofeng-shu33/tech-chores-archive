@@ -29,11 +29,11 @@ private:
     void ChoiceOfAudioResource(int rand);
     double distribution_function(int n);
     int generate_random_number(int n);
-    QString word[4][num];//ËÄ¸öÎ¬¶È·Ö±ğ´¢´æ²»¹æÔò±äÎ»¶¯´ÊµÄÔ­ĞÍ£¬ÏÖÔÚÊ±£¬¹ıÈ¥Ê±ºÍÍê³ÉÊ±¡£
+    QString word[4][num];//å››ä¸ªç»´åº¦åˆ†åˆ«å‚¨å­˜ä¸è§„åˆ™å˜ä½åŠ¨è¯çš„åŸå‹ï¼Œç°åœ¨æ—¶ï¼Œè¿‡å»æ—¶å’Œå®Œæˆæ—¶ã€‚
     int total;
     int word_weight[num];
     int cnt;
-    int randN[2][3];//2 random producing processes with Ëæ»ú²»¹æÔò¶¯´Ê£¬Ëæ»úÊ±Ì¬ºÍËæ»úÈË³Æ.
+    int randN[2][3];//2 random producing processes with éšæœºä¸è§„åˆ™åŠ¨è¯ï¼Œéšæœºæ—¶æ€å’Œéšæœºäººç§°.
     QString wordWithAudio[audioNum];
     QString wordAudioAddress[audioNum];
 private slots:

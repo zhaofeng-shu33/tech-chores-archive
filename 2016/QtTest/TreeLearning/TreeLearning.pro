@@ -1,4 +1,4 @@
-LIBS += -lglut32
+LIBS += -lGL -lGLU -lglut
 QT       += opengl
 CONFIG += warn_on release console
 SOURCES += \

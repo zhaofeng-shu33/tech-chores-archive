@@ -1,5 +1,5 @@
-#include<windows.h>
-#include<glut.h>
+
+#include<GL/glut.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include<cmath>

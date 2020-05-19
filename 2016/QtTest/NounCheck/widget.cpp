@@ -8,7 +8,7 @@
 #include<GL/glu.h>
 #include<GL/glu.h>
 #include<glut.h>
-#include<windows.h>
+
 #include<QDebug>
 #include <QTextStream>
 QTextStream cout1(stdout);

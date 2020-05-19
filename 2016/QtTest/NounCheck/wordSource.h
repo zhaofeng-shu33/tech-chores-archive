@@ -32,7 +32,7 @@ class Word{
       QString get_example_sentence_randomly(){
          return example_sentence[rand()%example_sentence.size()];
       }
-      friend ostream operator << (ostream& o,const Word& word);
+      friend ostream& operator << (ostream& o,const Word& word);
 };
 class Noun: public Word{
      private:
@@ -45,7 +45,7 @@ class Noun: public Word{
        QString get_plural(){return plural;}
 };
 ostream& operator<< (ostream& o,const Word& word){
-    return o<<"<Class Word,"<<word.spell<<'>\n';
+    return o<<"<Class Word,"<<word.spell<<'\n';
 }
 
 #endif // WORDSOURCE_H

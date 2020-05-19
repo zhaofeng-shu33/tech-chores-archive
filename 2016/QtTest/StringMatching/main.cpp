@@ -1,5 +1,5 @@
 #include <QTextStream>
-#include <QString.h> 
+#include <QString> 
 
 QTextStream cout(stdout);
 int q=104729;

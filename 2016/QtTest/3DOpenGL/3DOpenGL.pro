@@ -1,4 +1,4 @@
-LIBS += -lglut32
+LIBS += -lGL -lGLU -lglut
 QT       += opengl
 
 SOURCES += \
