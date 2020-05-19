@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Eintrag>
+<Stichwort>einatmen</Stichwort>
+<Präsens type="regelmäßig">
+	<erste_Person_Singular>atme ein</erste_Person_Singular>
+	<zweite_Person_Singular>atmest ein</zweite_Person_Singular>
+	<dritte_Person_Singular>atmet ein</dritte_Person_Singular>
+	<erste_Person_Plural>atmen ein</erste_Person_Plural>
+	<zweite_Person_Plural>atmet ein</zweite_Person_Plural>
+	<dritte_Person_Plural>atmen ein</dritte_Person_Plural>
+</Präsens>
+<Perfekt type="regelmäßig" Hilfsverben="haben">
+	<erste_Person_Singular>habe eingeatmet</erste_Person_Singular>
+	<zweite_Person_Singular>hast eingeatmet</zweite_Person_Singular>
+	<dritte_Person_Singular>hat eingeatmet</dritte_Person_Singular>
+	<erste_Person_Plural>haben eingeatmet</erste_Person_Plural>
+	<zweite_Person_Plural>habt eingeatmet</zweite_Person_Plural>
+	<dritte_Person_Plural>haben eingeatmet</dritte_Person_Plural>
+</Perfekt>
+</Eintrag>

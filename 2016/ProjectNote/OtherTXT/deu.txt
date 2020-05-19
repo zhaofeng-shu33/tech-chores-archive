@@ -1,0 +1,13 @@
+ Volume in drive D has no label.
+ Volume Serial Number is 0007-33F8
+
+ Directory of D:\
+
+2016/09/02  17:22             3,057 Apfel[2].txt
+2016/05/27  17:45           391,538 ceiling_lamp.txt
+2016/08/22  23:50             1,365 compressed.txt
+2016/10/06  22:25                 0 deu.txt
+2016/07/23  16:38                17 out1.txt
+2016/05/13  22:22             1,677 新世纪师说.txt
+               6 File(s)        397,654 bytes
+               0 Dir(s)  86,537,265,152 bytes free

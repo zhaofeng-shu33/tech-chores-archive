@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<word category="Adjectiv">
+<wordform>mal</wordform>
+<zusammengesetzteWörter>
+	<KompositaCollection>
+		<_K></_K>
+		<K_></K_>
+	</KompositaCollection>
+	<abgeleiteteWörter>
+		<hierzu category=""></hierzu>
+	</abgeleiteteWörter>
+</zusammengesetzteWörter>
+
+<Synonymegruppe>
+	<Sym></Sym>
+</Synonymegruppe>
+<Antonymegruppe>
+	<Anm></Anm>
+</Antonymegruppe>
+
+<Kollokationen>
+<K></K>
+</Kollokationen>
+
+<AllgemeineErläuterungen>
+	<Eintrag>
+		<Chinesisch>（表示请求语气）啊</Chinesisch>
+		<BeispielSammlung>
+			<Beispiel>
+				<Satz>Sag mal, hast du täglich Unterricht?</Satz>
+				<Übersetzung>请问你是不是天天有课？</Übersetzung>
+			</Beispiel>
+		</BeispielSammlung>
+	</Eintrag>
+	<Eintrag>
+		<Chinesisch>吧；一次</Chinesisch>
+		<BeispielSammlung>
+			<Beispiel>
+				<Satz>Lesen Sie mal den Text laut!</Satz>
+				<Übersetzung>大声读一遍课文！</Übersetzung>
+			</Beispiel>
+		</BeispielSammlung>
+	</Eintrag>
+	<Eintrag>
+		<Chinesisch>（算术）乘</Chinesisch>
+		<BeispielSammlung>
+			<Beispiel>
+				<Satz>Drei mal drei ist neun.</Satz>
+				<Übersetzung>三乘三等于九。</Übersetzung>
+			</Beispiel>
+		</BeispielSammlung>
+	</Eintrag>
+
+
+</AllgemeineErläuterungen>
+
+</word>

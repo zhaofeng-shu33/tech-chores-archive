@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="XSLLearn.xsl"?>
+<!DOCTYPE dictionary [
+	<!ELEMENT dictionary (Entry1+, Entry2, picture)>
+	<!ELEMENT Entry1 (#PCDATA)>
+	<!ATTLIST Entry1 id ID #IMPLIED>
+	<!ATTLIST Entry1 POS CDATA #FIXED "NOUN">
+	<!ELEMENT Entry2 EMPTY>
+	<!ELEMENT picture ANY>
+	<!NOTATION JPG SYSTEM "jpg">	
+	<!ENTITY image SYSTEM "test.jpg" NDATA JPG>
+
+]>
+<dictionary>
+<Entry1>test.jpg</Entry1>
+<Entry1>D:/testSound.wav</Entry1>
+<Entry2/>
+<picture></picture>
+</dictionary>

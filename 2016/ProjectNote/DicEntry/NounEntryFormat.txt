@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wörterbuch>
+<Sprache category="Deutsch"> 
+<Eintrag LemmaSign="Abend">
+<WortArt>Substantive</WortArt>
+<Stichwort>Abend</Stichwort>
+<Einheit>1</Einheit>
+<Anteil>Intentionen</Anteil>
+<Genus>der</Genus>
+<Pluralform>Abende</Pluralform>
+<GenitivSingular>Abends</GenitivSingular>
+
+<zusammengesetzteWörter>
+	<KompositaCollection>
+		<_K></_K>
+		<K_></K_>
+	</KompositaCollection>
+	<abgeleiteteWörter>
+		<hierzu category=""></hierzu>
+	</abgeleiteteWörter>
+</zusammengesetzteWörter>
+
+<Synonymegruppe>
+	<Sym></Sym>
+</Synonymegruppe>
+<Antonymegruppe>
+	<Anm></Anm>
+</Antonymegruppe>
+
+<Kollokationen>
+<K></K>
+</Kollokationen>
+
+<AllgemeineErläuterungen>
+	<Bedeutung>
+		<Chinesisch>晚上</Chinesisch>
+		<BeispielSammlung>
+			<Beispiel>
+				<Satz>Guten Abend!</Satz>
+				<Übersetzung></Übersetzung>
+			</Beispiel>
+		</BeispielSammlung>
+	</Bedeutung>
+</AllgemeineErläuterungen>
+</Eintrag>
+</Sprache>
+</Wörterbuch>

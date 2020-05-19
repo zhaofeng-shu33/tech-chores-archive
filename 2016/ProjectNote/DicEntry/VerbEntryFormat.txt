@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Eintrag category="Verben">
+<Stichwort>einatmen</Stichwort>
+<Einheit>9</Einheit>
+<Anteil>Text</Anteil>
+<Klassifizierung></Klassifizierung>

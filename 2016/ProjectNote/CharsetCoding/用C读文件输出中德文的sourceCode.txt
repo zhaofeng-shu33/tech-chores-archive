@@ -1,0 +1,1 @@
+出于统一编码的考虑，一般采用unicode（实指utf-16),而utf-8可变字长，表示Kanji用3个字节，Latin用1个，utf-16统一用两个。一般用utf-8.用C-Language 读文件时为绕开charset-encoding,直接读二进制数据，由于输出终端为utf-8的console,故中德均可正常显示。读binary data 用到1个Byte的unsigned char数据类型，
