@@ -22,8 +22,8 @@ private:
     QDirModel *dirModel;
     Ui::File_Dialog *ui;
 protected slots:
-    void switchToDir(const QModelIndex& index);
-    void switchView();
+    void switchToDir(const QModelIndex& index){};
+    void switchView(){};
 };
 
 #endif // FILE_DIALOG_H

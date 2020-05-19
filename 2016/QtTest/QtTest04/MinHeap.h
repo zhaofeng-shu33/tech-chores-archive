@@ -8,8 +8,9 @@
 #ifndef MINHEAP_H_
 #define MINHEAP_H_
 #include <iostream>
+#include <cstdlib>
 using namespace std;
-const int MINHEAP_H_DefaultSize = 100;												//Ä¬ÈÏµÄ¶Ñ´óĞ¡Îª1000
+const int MINHEAP_H_DefaultSize = 100;												//é»˜è®¤çš„å †å¤§å°ä¸º1000
 //const int maxHeapSize = 10000;
 
 struct student{
@@ -66,78 +67,78 @@ template<class E>
 class MinHeap//:public MinPQ<T,E>
 {
 public:
-	MinHeap(int sz = MINHEAP_H_DefaultSize);										//¹¹Ôìº¯Êı£º½¨Á¢¿Õ¶Ñ
-	MinHeap(E arr[], int n);														//¹¹Ôìº¯Êı£ºÍ¨¹ıÊı×é½¨Á¢¶Ñ
-	~MinHeap() { delete[] heap; }													//Îö¹¹º¯Êı
-        bool Insert(const E x);														//½«x²åÈëµ½×îĞ¡¶ÑÖĞ
-	bool RemoveMin(E& x);															//É¾³ı¶Ñ¶¥µÄ×îĞ¡ÔªËØ
-	bool IsEmpty() const { return (currentSize == 0) ? true : false;}				//ÅĞ¶Ï¶ÑÊÇ·ñÎª¿Õ
-	bool IsFull() const { return (currentSize == maxHeapSize) ? true : false;}		//ÅĞ¶Ï¶ÑÊÇ·ñÒÑÂú
-	void MakeEmpty() { currentSize = 0; }											//½«¶ÑÖÃ¿Õ
-	E getMin();																		//»ñÈ¡×îĞ¡ÔªËØ,µ«²»¸Ä±ä¶Ñ
+	MinHeap(int sz = MINHEAP_H_DefaultSize);										//æ„é€ å‡½æ•°ï¼šå»ºç«‹ç©ºå †
+	MinHeap(E arr[], int n);														//æ„é€ å‡½æ•°ï¼šé€šè¿‡æ•°ç»„å»ºç«‹å †
+	~MinHeap() { delete[] heap; }													//ææ„å‡½æ•°
+        bool Insert(const E x);														//å°†xæ’å…¥åˆ°æœ€å°å †ä¸­
+	bool RemoveMin(E& x);															//åˆ é™¤å †é¡¶çš„æœ€å°å…ƒç´ 
+	bool IsEmpty() const { return (currentSize == 0) ? true : false;}				//åˆ¤æ–­å †æ˜¯å¦ä¸ºç©º
+	bool IsFull() const { return (currentSize == maxHeapSize) ? true : false;}		//åˆ¤æ–­å †æ˜¯å¦å·²æ»¡
+	void MakeEmpty() { currentSize = 0; }											//å°†å †ç½®ç©º
+	E getMin();																		//è·å–æœ€å°å…ƒç´ ,ä½†ä¸æ”¹å˜å †
 private:
-	E *heap;																		//´æ·Å×îĞ¡¶ÑÖĞÔªËØµÄÊı×é
-	int currentSize;																//µ±Ç°ÔªËØ×Ü¸öÊı
-	int maxHeapSize;																//×î¶àÔÊĞíÔªËØ¸öÊı
-	void siftDown(int start, int m);												//´Óstartµ½mÏÂ»¬µ÷Õû³É×îĞ¡¶Ñ
-	void siftUp(int start);															//´Óstartµ½0ÉÏ»¬µ÷Õû³É×îĞ¡¶Ñ
+	E *heap;																		//å­˜æ”¾æœ€å°å †ä¸­å…ƒç´ çš„æ•°ç»„
+	int currentSize;																//å½“å‰å…ƒç´ æ€»ä¸ªæ•°
+	int maxHeapSize;																//æœ€å¤šå…è®¸å…ƒç´ ä¸ªæ•°
+	void siftDown(int start, int m);												//ä»startåˆ°mä¸‹æ»‘è°ƒæ•´æˆæœ€å°å †
+	void siftUp(int start);															//ä»startåˆ°0ä¸Šæ»‘è°ƒæ•´æˆæœ€å°å †
 };
 
 /*
- * ¹¹Ôìº¯Êı,ÔÚÈ±Ê¡·¶Î§ÄÚ,¹¹ÔìÈİÁ¿ÎªszµÄ¶Ñ
+ * æ„é€ å‡½æ•°,åœ¨ç¼ºçœèŒƒå›´å†…,æ„é€ å®¹é‡ä¸ºszçš„å †
  */
 template<class E>
 MinHeap<E>::MinHeap(int sz) {
 	maxHeapSize = (MINHEAP_H_DefaultSize < sz) ? sz : MINHEAP_H_DefaultSize;
-	heap = new E[maxHeapSize];														//Îª¶Ñ·ÖÅä´æ´¢¿Õ¼ä
-	if (heap == NULL) {std::cerr << "¶Ñ´æ´¢·ÖÅäÊ§°Ü£¡" << std::endl; exit(1); }
-	currentSize = 0;																//Éè¶¨µ±Ç°¶Ñ´óĞ¡
+	heap = new E[maxHeapSize];														//ä¸ºå †åˆ†é…å­˜å‚¨ç©ºé—´
+	if (heap == NULL) {std::cerr << "å †å­˜å‚¨åˆ†é…å¤±è´¥ï¼" << std::endl; exit(1); }
+	currentSize = 0;																//è®¾å®šå½“å‰å †å¤§å°
 };
 
 /*
- * ¹¹Ôìº¯Êı£¬¸ù¾İarr[]ÖĞµÄÄÚÈİ£¬¹¹½¨Ò»¸ö×îĞ¡¶Ñ¡£
- * ÁíÍâ£¬nÎªÔªËØ¸öÊı
+ * æ„é€ å‡½æ•°ï¼Œæ ¹æ®arr[]ä¸­çš„å†…å®¹ï¼Œæ„å»ºä¸€ä¸ªæœ€å°å †ã€‚
+ * å¦å¤–ï¼Œnä¸ºå…ƒç´ ä¸ªæ•°
  */
 template<class E>
 MinHeap<E>::MinHeap(E arr[], int n)
 {
 	maxHeapSize = (MINHEAP_H_DefaultSize < n) ? n : MINHEAP_H_DefaultSize;
 	heap = new E[maxHeapSize];
-	if (heap == NULL) {std::cerr << "¶Ñ´æ´¢·ÖÅäÊ§°Ü£¡" << std::endl; exit(1); }
+	if (heap == NULL) {std::cerr << "å †å­˜å‚¨åˆ†é…å¤±è´¥ï¼" << std::endl; exit(1); }
 	for (int i = 0; i < n; i++) heap[i] = arr[i];
-	currentSize = n;																//¸´ÖÆ¶ÑÊı×é£¬²¢Éè¶¨¶Ñ´óĞ¡
-	int currentPos = (currentSize - 2) / 2;											//×î³õµ÷ÕûÎ»ÖÃ£º×îºóµÄ·ÖÖ§½áµã
-	while (currentPos >= 0)															//´Óµ×ÏòÉÏÖğ²½À©´óĞÎ³É¶Ñ
+	currentSize = n;																//å¤åˆ¶å †æ•°ç»„ï¼Œå¹¶è®¾å®šå †å¤§å°
+	int currentPos = (currentSize - 2) / 2;											//æœ€åˆè°ƒæ•´ä½ç½®ï¼šæœ€åçš„åˆ†æ”¯ç»“ç‚¹
+	while (currentPos >= 0)															//ä»åº•å‘ä¸Šé€æ­¥æ‰©å¤§å½¢æˆå †
 	{
-		siftDown(currentPos, currentSize - 1);										//¾Ö²¿×ÔÉÏ¶øÏÂÎ¬»¤×îĞ¡¶ÑĞÔÖÊ
-		currentPos--;																//ÔÙÏòÇ°»»Ò»¸ö·ÖÖ§½áµã
+		siftDown(currentPos, currentSize - 1);										//å±€éƒ¨è‡ªä¸Šè€Œä¸‹ç»´æŠ¤æœ€å°å †æ€§è´¨
+		currentPos--;																//å†å‘å‰æ¢ä¸€ä¸ªåˆ†æ”¯ç»“ç‚¹
 	}
 }
 
 /*
- * Ë½ÓĞº¯Êı£º´Ó½áµãstart¿ªÊ¼µ½mÎªÖ¹£¬×ÔÉÏÏòÏÂ±È½Ï£¬Èç¹û×ÓÅ®µÄÖµĞ¡ÓÚfather½áµãµÄÖµ£¬
- * Ôò¹Ø¼üÂëĞ¡ÕßÉÏ¸¡£¬¼ÌĞøÏòÏÂ²ã±È½Ï£¬ÕâÑù½«Ò»¸ö¼¯ºÏ¾Ö²¿µ÷ÕûÎª×îĞ¡¶Ñ¡£¹Ø¼üÂë±È½Ï·û"<="ÔÚEÖĞ¶¨Òå
+ * ç§æœ‰å‡½æ•°ï¼šä»ç»“ç‚¹startå¼€å§‹åˆ°mä¸ºæ­¢ï¼Œè‡ªä¸Šå‘ä¸‹æ¯”è¾ƒï¼Œå¦‚æœå­å¥³çš„å€¼å°äºfatherç»“ç‚¹çš„å€¼ï¼Œ
+ * åˆ™å…³é”®ç å°è€…ä¸Šæµ®ï¼Œç»§ç»­å‘ä¸‹å±‚æ¯”è¾ƒï¼Œè¿™æ ·å°†ä¸€ä¸ªé›†åˆå±€éƒ¨è°ƒæ•´ä¸ºæœ€å°å †ã€‚å…³é”®ç æ¯”è¾ƒç¬¦"<="åœ¨Eä¸­å®šä¹‰
  */
 template<class E>
 void MinHeap<E>::siftDown(int start, int m)
 {
 	int i = start;
-	int j = 2 * i + 1;																//jÊÇiµÄ×ó×ÓÅ®Î»ÖÃ
+	int j = 2 * i + 1;																//jæ˜¯içš„å·¦å­å¥³ä½ç½®
 	E temp = heap[i];
-	while (j <= m)																	//¼ì²éÊÇ·ñµ½´ï×îºóÎ»ÖÃ
+	while (j <= m)																	//æ£€æŸ¥æ˜¯å¦åˆ°è¾¾æœ€åä½ç½®
 	{
-		if ((j < m) && (heap[j+1] <= heap[j])) j++;									//ÈÃjÖ¸ÏòÁ½×ÓÅ®ÖĞ½ÏĞ¡Õß
-		if (temp <= heap[j]) break;													//¸ùĞ¡²»ĞèÒªµ÷Õû
-		heap[i] = heap[j];															//·ñÔòĞ¡ÕßÉÏÒÆ£¬i,jÏàÓ¦ÏÂ½µ
+		if ((j < m) && (heap[j+1] <= heap[j])) j++;									//è®©jæŒ‡å‘ä¸¤å­å¥³ä¸­è¾ƒå°è€…
+		if (temp <= heap[j]) break;													//æ ¹å°ä¸éœ€è¦è°ƒæ•´
+		heap[i] = heap[j];															//å¦åˆ™å°è€…ä¸Šç§»ï¼Œi,jç›¸åº”ä¸‹é™
 		i = j;
 		j = 2 * j + 1;
 	}
-	heap[i] = temp;																	//»Ø·ÅtempÖĞÔİ´æÔªËØ
+	heap[i] = temp;																	//å›æ”¾tempä¸­æš‚å­˜å…ƒç´ 
 }
 
 /*
- * Ë½ÓĞº¯Êı£º´Ó½áµãstart¿ªÊ¼µ½½áµã0½áÊø£¬×ÔÏÂÏòÉÏ±È½Ï£¬Èç¹û×ÓÅ®µÄÖµĞ¡ÓÚ¸¸½áµãµÄÖµ
- * Ôò»¥Ïà½»»»£¬ÕâÑù½«¼¯ºÏÖØĞÂµ÷ÕûÎª×îĞ¡¶Ñ¡£¹Ø¼üÂë±È½Ï·û"<="ÔÚEÖĞ¶¨Òå
+ * ç§æœ‰å‡½æ•°ï¼šä»ç»“ç‚¹startå¼€å§‹åˆ°ç»“ç‚¹0ç»“æŸï¼Œè‡ªä¸‹å‘ä¸Šæ¯”è¾ƒï¼Œå¦‚æœå­å¥³çš„å€¼å°äºçˆ¶ç»“ç‚¹çš„å€¼
+ * åˆ™äº’ç›¸äº¤æ¢ï¼Œè¿™æ ·å°†é›†åˆé‡æ–°è°ƒæ•´ä¸ºæœ€å°å †ã€‚å…³é”®ç æ¯”è¾ƒç¬¦"<="åœ¨Eä¸­å®šä¹‰
  */
 template<class E>
 void MinHeap<E>::siftUp(int start)
@@ -145,53 +146,53 @@ void MinHeap<E>::siftUp(int start)
 	int j = start;
 	int i = (j - 1) / 2;
 	E temp = heap[j];
-	while (j > 0)																	//ÑØ¸¸½áµãÂ·¾¶ÏòÉÏÖ±´ï¸ù
+	while (j > 0)																	//æ²¿çˆ¶ç»“ç‚¹è·¯å¾„å‘ä¸Šç›´è¾¾æ ¹
 	{
-		if (heap[i] <= temp) break;													//²»ĞèÒªÔÙµ÷Õû,Ìø³ö
-		heap[j] = heap[i];															//µ÷Õû
+		if (heap[i] <= temp) break;													//ä¸éœ€è¦å†è°ƒæ•´,è·³å‡º
+		heap[j] = heap[i];															//è°ƒæ•´
 		j = i;
 		i = (j - 1) / 2;
 	}
-	heap[j] = temp;																	//»ØËÍtmepÖĞÔİ´æÔªËØ
+	heap[j] = temp;																	//å›é€tmepä¸­æš‚å­˜å…ƒç´ 
 }
 
 /*
- * ¹«¹²º¯Êı£¬ ½«x²åÈëµ½×îĞ¡¶ÑÖĞ
+ * å…¬å…±å‡½æ•°ï¼Œ å°†xæ’å…¥åˆ°æœ€å°å †ä¸­
  */
 template<class E>
 bool MinHeap<E>::Insert(const E x)
 {
-	if (currentSize == maxHeapSize)													//¶ÑÒÑ¾­ÂúÁË
+	if (currentSize == maxHeapSize)													//å †å·²ç»æ»¡äº†
 	{
 		std::cerr << "HeapFull" << std::endl;
 		return false;
 	}
-	heap[currentSize] = x;															//²åÈëÔªËØ
+	heap[currentSize] = x;															//æ’å…¥å…ƒç´ 
 
-	siftUp(currentSize);															//ÏòÉÏµ÷Õû
-	currentSize++;																	//¶Ñ¼ÆÊıÆ÷¼Ó1
+	siftUp(currentSize);															//å‘ä¸Šè°ƒæ•´
+	currentSize++;																	//å †è®¡æ•°å™¨åŠ 1
 	return true;
 }
 
 /*
- * É¾³ı×îĞ¡Öµ
+ * åˆ é™¤æœ€å°å€¼
  */
 template<class E>
 bool MinHeap<E>::RemoveMin(E& x)
 {
-	if (!currentSize) {																//¶ÑÒÑ¿Õ£¬ÎŞ·¨ÔÙÉ¾³ı£¬·µ»Øfalse
+	if (!currentSize) {																//å †å·²ç©ºï¼Œæ— æ³•å†åˆ é™¤ï¼Œè¿”å›false
 		std::cout << "Heap empty" << std::endl;
 		return false;
 	}
 
-	x = heap[0];																	//¼ÇÂ¼ÏÂ×îĞ¡ÔªËØ
-	heap[0] = heap[--currentSize];													//×îºóÔªËØÌî²¹µ½¸ù½áµã
-	siftDown(0, currentSize - 1);													//×ÔÉÏÏòÏÂµ÷ÕûÎª¶Ñ
-	return true;																	//·µ»ØÉ¾³ı³É¹¦
+	x = heap[0];																	//è®°å½•ä¸‹æœ€å°å…ƒç´ 
+	heap[0] = heap[--currentSize];													//æœ€åå…ƒç´ å¡«è¡¥åˆ°æ ¹ç»“ç‚¹
+	siftDown(0, currentSize - 1);													//è‡ªä¸Šå‘ä¸‹è°ƒæ•´ä¸ºå †
+	return true;																	//è¿”å›åˆ é™¤æˆåŠŸ
 }
 
 /*
- * ·µ»Ø×îĞ¡Öµ
+ * è¿”å›æœ€å°å€¼
  */
 template<class E>
 E MinHeap<E>::getMin()

@@ -2,7 +2,7 @@
 #define ADDRESSBOOK_H
 
 #include <QWidget>
-#include "zlib-1.2.8/zlib.h"
+#include <zlib.h>
 #include <QDebug>
 #include <QFile>
 #include <QFileInfo>

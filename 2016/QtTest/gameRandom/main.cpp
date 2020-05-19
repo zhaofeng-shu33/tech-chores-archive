@@ -4,6 +4,7 @@
 #include <ctime>
 #include <time.h>
 #include <string>
+#include <cstdlib>
 using namespace std;
 class Player{
   public:
