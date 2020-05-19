@@ -52,7 +52,6 @@ int main(int argc, char* argv[]){
  for(i;i<word_num;i++)
      printf("%s\n",wordlist[i].translation);
 // printf("%0x\n",wordlist[1].entry[0]);
-  system("pause");
   return 0;
 }
 

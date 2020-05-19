@@ -101,7 +101,6 @@ int main(int argc, char* argv[]){
      printf("%s -> %s\n",wordlist[i].entry,wordlist[i].translation);
 //  Search("Abend");
   
-  system("pause");
   return 0;
 }
 
