@@ -4,6 +4,7 @@
 #include<GL/gl.h>
 #include<GL/glu.h>
 #include<GL/glut.h>
+#include<cstring>
 using namespace std;
 GLsizei ww=500,wh=500;
 struct wcPt2D{

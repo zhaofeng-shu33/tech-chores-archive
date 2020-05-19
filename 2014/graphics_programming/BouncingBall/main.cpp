@@ -7,7 +7,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<cmath>
-
+#include<chrono>
+#include<thread>
 const double Pi=3.1415926;
 using namespace std;
 int ww=100,wh=400;
@@ -187,7 +188,8 @@ void display1(void){
 }
 
 void idle(){
-  Sleep(100); 
+  std::chrono::milliseconds timespan(100);
+  std::this_thread::sleep_for(timespan);
   if(timeOfCollision<=3&&enabled){ 
   glutPostRedisplay();
   }  

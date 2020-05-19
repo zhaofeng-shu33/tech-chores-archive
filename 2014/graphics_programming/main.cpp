@@ -25,7 +25,7 @@ double CalFrequency()
      cnt = 100;
      current = clock();
      cout<<endl<<current<<endl;
-     timegap = (current-first)/(double)CLK_TCK;
+     timegap = (current-first)/(double)CLOCKS_PER_SEC;
      save = 50.0/timegap;
      return save;
 }

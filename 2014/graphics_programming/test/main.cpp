@@ -1,13 +1,13 @@
 #include<iostream>
-#include "D:/C++/Dev-Cpp/include/GL/gl.h"
-#include "D:/C++/Dev-Cpp/include/GL/glu.h"
-#include "D:/C++/Dev-Cpp/include/GL/glut.h"
+#include<GL/gl.h>
+#include<GL/glu.h>
+#include<GL/glut.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include<cmath>
 #include<fstream>
-#include <ctime>
-#include <windows.h>
+#include<ctime>
+
 const double Pi=3.14159, R = 8.314;
 using namespace std;
 int ww=400,wh=400;

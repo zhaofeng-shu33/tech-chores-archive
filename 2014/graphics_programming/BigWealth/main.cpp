@@ -8,10 +8,12 @@
 #include<stdlib.h>
 #include<cmath>
 #include <ctime>
+#include<chrono>
+#include<thread>
 
 bool barrier[20][20];
 using namespace std;
-bool end=0;
+bool is_end=0;
 const double PI=3.14159;
 int ww=400,wh=400;
 class Player{
@@ -82,7 +84,8 @@ class MapGrid{
 };
 vector<MapGrid> mapGrid;
 void draw_figure(Player player){
-  Sleep(200);
+  std::chrono::milliseconds timespan(200);
+  std::this_thread::sleep_for(timespan);  
   int x=mapGrid[player.get_position()].get_location_x();
   int y=mapGrid[player.get_position()].get_location_y();
   if(player.get_figure()=="circle"){
@@ -183,7 +186,7 @@ void display1(void){
       cout<<"player "<<i+1<<" should move forward "<<a<<" step(s)"<<endl;
       if(player[i].get_position()+a>mapGrid.size()){
       cout<<"player "<<i+1<<" wins the game!"<<endl;
-      end=1;
+      is_end=1;
       break;
       }
            
@@ -201,10 +204,11 @@ void display1(void){
   glFlush();
 } 
 void idle(){
-  if(!end){
+  if(!is_end){
   glutPostRedisplay();
   }
-  Sleep(800);
+  std::chrono::milliseconds timespan(800);
+  std::this_thread::sleep_for(timespan);  
 }  
 void key(unsigned char k,int x,int y){
   if(k=='p'||k=='P') cout<<"you press the pause";

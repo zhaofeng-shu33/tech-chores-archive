@@ -4,6 +4,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<iostream>
+#include<cmath>
 #include<GL/glut.h>
 using namespace std;
 GLsizei ww=500,wh=500;

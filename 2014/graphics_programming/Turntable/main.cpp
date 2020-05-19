@@ -6,7 +6,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<cmath>
-
+#include<chrono>
+#include<thread>
 
 const double Pi=3.1415926;
 using namespace std;
@@ -100,7 +101,8 @@ void display1(void){
   glEnd();
   glFlush();
   object.update(0.1);
-  Sleep(100); 
+  std::chrono::milliseconds timespan(100);
+  std::this_thread::sleep_for(timespan); 
   glClear(GL_COLOR_BUFFER_BIT);  
 }
 
