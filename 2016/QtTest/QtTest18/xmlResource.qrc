@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/xml">
+        <file>Text6-2_a.xml</file>
+    </qresource>
+</RCC>

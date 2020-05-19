@@ -1,0 +1,5 @@
+D:/QtTest/50Phonetic/a.wma
+D:/QtTest/50Phonetic/e.wma
+D:/QtTest/50Phonetic/u.wma
+D:/QtTest/50Phonetic/e.wma
+D:/QtTest/50Phonetic/o.wma

@@ -1,0 +1,8 @@
+Was machst du hier?
+ Ich studiere hier Informatik.
+Was macht er hier?
+ Er macht hier Informatik.
+Was macht Sie hier?
+ Sie macht hier Informatik.
+Was macht ihr hier?
+ Ihr macht hier Informatik.

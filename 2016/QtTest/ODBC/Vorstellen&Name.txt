@@ -1,0 +1,8 @@
+﻿Ich bin/heiße Liu Ling oder mein Name ist Liu Ling.
+Du bist/heißt Liu Ling oder dein Name Liu Ling.
+Sie ist/heißt Liu Ling oder ihr Name ist Liu Ling.
+Ich bin/heiße Brigitte Schulz oder mein Name ist Brigitte Schulz.
+Du bist/heißt Brigitte Schulz oder dein Name Brigitte Schulz.
+Ich bin/heiße Wang HongLiang oder mein Name ist Wang HongLiang.
+Du bist/heißt Wang HongLiang oder dein Name Wang HongLiang.
+Er ist/heißt Wang HongLiang oder sein Name ist Wang HongLiang.

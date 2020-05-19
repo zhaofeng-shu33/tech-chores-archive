@@ -1,0 +1,11 @@
+D:/QtTest/QtTest17/V_Bett(s).mp3
+D:/QtTest/QtTest17/V_Boot(s).mp3
+D:/QtTest/QtTest17/V_Fahne(s).mp3
+D:/QtTest/QtTest17/V_foot(s).mp3
+D:/QtTest/QtTest17/V_Hemd(s).mp3
+D:/QtTest/QtTest17/V_Huhn(s).mp3
+D:/QtTest/QtTest17/V_Kind(s).mp3
+D:/QtTest/QtTest17/V_Mappe(s).mp3
+D:/QtTest/QtTest17/V_Obst(s).mp3
+D:/QtTest/QtTest17/V_Sonne(s).mp3
+D:/QtTest/QtTest17/V_Wagge(s).mp3

@@ -1,0 +1,78 @@
+Ich komme/bin aus China.
+Du kommst/bist aus China.
+Er/Sie kommt/ist aus China.
+Wir kommen/sind aus China.
+Ihr kommt/seid aus China.
+Sie kommen/sind aus China.
+Ich komme/bin aus Deutschland.
+Du kommst/bist aus Deutschland.
+Er/Sie kommt/ist aus Deutschland.
+Wir kommen/sind aus Deutschland.
+Ihr kommt/seid aus Deutschland.
+Sie kommen/sind aus Deutschland.
+Ich komme/bin aus Japan.
+Du kommst/bist aus Japan.
+Er/Sie kommt/ist aus Japan.
+Wir kommen/sind aus Japan.
+Ihr kommt/seid aus Japan.
+Sie kommen/sind aus Japan.
+Ich komme/bin aus China, aus Beijing.
+Du kommst/bist aus China, aus Beijing.
+Er/Sie kommt/ist China, aus China, aus Beijing.
+Wir kommen/sind aus China, aus Beijing.
+Ihr kommt/seid aus China, aus Beijing.
+Sie kommen/sind aus China, aus Beijing.
+Ich komme/bin aus China, aus Shanghai.
+Du kommst/bist aus China, aus Shanghai.
+Er/Sie kommt/ist China, aus China, aus Shanghai.
+Wir kommen/sind aus China, aus Shanghai.
+Ihr kommt/seid aus China, aus Shanghai.
+Sie kommen/sind aus China, aus Shanghai.
+Ich komme/bin aus Hamburg, aus Deutschland.
+Du kommst/bist aus Hamburg, aus Deutschland.
+Er/Sie kommt/ist Hamburg, aus Hamburg, aus Deutschland.
+Wir kommen/sind aus Hamburg, aus Deutschland.
+Ihr kommt/seid aus Hamburg, aus Deutschland.
+Sie kommen/sind aus Hamburg, aus Deutschland.
+Ich komme/bin aus Köln, aus Deutschland.
+Du kommst/bist aus Köln, aus Deutschland.
+Er/Sie kommt/ist Köln, aus Köln, aus Deutschland.
+Wir kommen/sind aus Köln, aus Deutschland.
+Ihr kommt/seid aus Köln, aus Deutschland.
+Sie kommen/sind aus Köln, aus Deutschland.
+Ich komme/bin aus Berlin, aus Deutschland.
+Du kommst/bist aus Berlin, aus Deutschland.
+Er/Sie kommt/ist Berlin, aus Berlin, aus Deutschland.
+Wir kommen/sind aus Berlin, aus Deutschland.
+Ihr kommt/seid aus Berlin, aus Deutschland.
+Sie kommen/sind aus Berlin, aus Deutschland.
+Ich arbeite in Beijing.
+Du arbeitest in Beijing.
+Er/Sie arbeitet in Beijing.
+Wir arbeiten in Beijing.
+Ihr arbeitet in Beijing.
+Sie arbeiten in Beijing.
+Ich arbeite in Berlin.
+Du arbeitest in Berlin.
+Er/Sie arbeitet in Berlin.
+Wir arbeiten in Berlin.
+Ihr arbeitet in Berlin.
+Sie arbeiten in Berlin.
+Ich arbeite in Shanghai.
+Du arbeitest in Shanghai.
+Er/Sie arbeitet in Shanghai.
+Wir arbeiten in Shanghai.
+Ihr arbeitet in Shanghai.
+Sie arbeiten in Shanghai.
+Ich arbeite in Köln.
+Du arbeitest in Köln.
+Er/Sie arbeitet in Köln.
+Wir arbeiten in Köln.
+Ihr arbeitet in Köln.
+Sie arbeiten in Köln.
+Ich arbeite in Hamburg.
+Du arbeitest in Hamburg.
+Er/Sie arbeitet in Hamburg.
+Wir arbeiten in Hamburg.
+Ihr arbeitet in Hamburg.
+Sie arbeiten in Hamburg.

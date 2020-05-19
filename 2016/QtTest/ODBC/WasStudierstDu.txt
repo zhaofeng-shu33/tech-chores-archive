@@ -1,0 +1,9 @@
+Was studierst du?
+Was studiert er?
+Was studiert sie?
+Was studiert ihr?
+Wo wohnst du?
+Wo wohnt er?
+Wo wohnt sie?
+Wo wohnt ihr?
+

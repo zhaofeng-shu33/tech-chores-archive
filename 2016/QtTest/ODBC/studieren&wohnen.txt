@@ -1,0 +1,20 @@
+Ich studiere Informatik.
+Du studierst Informatik.
+Er/Sie studiert Informatik.
+Wir/Sie studieren Informatik.
+Ihr studiert Informatik.
+Ich studiere Chemie.
+Du studierst Chemie.
+Er/Sie studiert Chemie.
+Wir/Sie studieren Chemie.
+Ihr studiert Chemie.
+Ich studiere Elektrotechnik.
+Du studierst Elektrotechnik.
+Er/Sie studiert Elektrotechnik.
+Wir/Sie studieren Elektrotechnik.
+Ihr studiert Elektrotechnik.
+Ich wohne im Studentenwohnheim.
+Du wohnst im Studentenwohnheim.
+Er/Sie wohnt im Studentenwohnheim.
+Wir/Sie wohnen im Studentenwohnheim.
+Ihr wohnt im Studentenwohnheim.

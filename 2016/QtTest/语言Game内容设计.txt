@@ -1,0 +1,86 @@
+Test:
+Destiny: Thesaurus Dictionary;
+Chance: 10000 frequent word.
+Tax: word-matching from 140,000 word database.
+Utility Center: English Book 9 and 10.
+Ordinary Center: printed English resources containing middle school knowledge.
+Literature Park: Literary Book Word Recognation.
+需要做的记录以备事后研究需要：
+照片和摄影
+Players 心情记录 
+Players对 Game 实体和 训练架构的评价与意见
+Players 回答单词与正确情况详细记录
+三个financial assisted function:
+get_rent=function(s){
+s/10-4}
+get_rent=function(s,l){
+ if(l==0) s/10-4 else (s/10-4)*5*3^(l-1)
+}
+get_house_cost=function(s){
+if(s<140)50 else
+if(s<220)100 else
+if(s<300)150 else
+200}
+
+for each pass of the starting line: unconditional help card is given for the participator.
+
+help card design(2 kinds of): give the English explanation or an example sentence for the tested word. 
+pass privilege card
+
+pass privilege design: the participant can choose to pass the question and answer an alternative question with the use-up of one pass privilege card.pass privilege card is different from protection card, for in the former case, the participant has to give answer to one question in the same genre.
+
+English test exam design: reading comprehension test. If the player had bad performance in the test, then its vocabulary will be lowered. However, if the player had good performance, then the player got a lot of help card. For the middle level, the player got nothing but lose nothing.
+
+for chance design, it should include bonus or punish based on test result.
+test type: say the meaning of word selected from "frequent 10000"
+bonus type: increase the amount of vocabulary. 
+free of taking part of higher English test exam.
+double the point thrown out by the player.
+
+punishment type: decrease the amount of vocabulary. 
+forced to take part in the English test exam.
+stay static for a turn.
+for two utility center design:
+They are seperated based on Book 9 and Book 10, sentence reorganization.
+
+player upgrade design:
+player begins with 0 level and can upgrade at most to third level. When passing the starting line, the player can choose to upgrade with the sacrifice of some help cards.
+A higher level can get more help card when passing the starting point. Further, it can upgrade owned domain with less loss of help card.
+domain upgrade design:
+Each domain is related to a specific language usage;there are four kinds of domain in total:
+math,natural science,English, and social science.
+Each domain is further subdivided into subdomain.
+math into compulsory and elective;natural science into physics&natural geography, chemistry and biology;English into compulsory and elective;social science into culture(culture dictionary) and social geography.
+each subdomain has 2 or 3 realization.
+Each domain is initialized with 0 level and has maximized level with 3. The owner can upgrade the domain if he arrives at the corresponding domain with some loss of help card. When the non-owner arrives at the bought domain, he is required to answer a pre-set question.The higher the level of domain is, the broader the pre-set question can be.
+If the non-owner answered the question correctly, nothing happens to the owner except that the owner has to reset his question.For the passer-by, he can increase his vocabulary if he answered correctly. If the answer is wrong, then the passer-by sacrificed the vocabulary and the owner get some percertage of the sacrificed vocabulary.The percertage cannot be 100% because the system "tax"
+on it. 
+In addition, there are four places with the characteristic of literature word library.(e.g. bioprospecting).The more such domain the owner has, the more reward he can get if the passer-by gave wrong answer.
+for domain-owner question design:
+   the domain owner can select from a wide-range of words from the corresponding word library. However, he must memorize the answer first, for after his choice, the word and its meaning disappear from the word library. If the owner is unable to give the right answer at release time(i.e. the passer-by answered the question), then the vocabulary of the owner is decreased while the arrangement for the passer-by is the same, according to the rightness of his answer. In this case, the right answer is given by the system.
+   Often, the domain owner kept all the question-answer pairs he set in a electronic device or paper. There is timing-effect, starting from the answer of the passer-by. The longer time the domain owner takes to retrive the answer, the less benefit he can get. Usually, it is not so easy to retrieve the answer because the owner has to constanly set up new items to provide against the privilege card. And after each upgrade of the domain, the owner usually has to reset all items.Things is further complicated with other timing-mechanism.
+   Turn-Timing-mechanism design:
+   random number 1 to 6 is produced with electronic calculator.The former player generates the number for the latter player.Often, the player has to move his proxy while managing his word-test arrangement.
+Since the game uses the turn-mechanism. Each player can not spend too much time in his time.The longer time he takes, the lower his lucky index is.After a certain barrier of time, all his set thereafter is in vain.This timing-mechanism is independent with question-answer timing-mechanism and onwer retrival timing-mechanism. For question-answer timing-mechanism, only a time barrier exists.But in general,the quicker the answer is given, the higher the bonus would be. 
+
+for question-answer system design: in all the question-answer turn of the game, the reference answer is shown after the question is answered, regardless of its correctness.
+
+for destiny design, it requires the player to react to thesaurus multiple-choice question.
+bonus type: get protection card
+get answer again cards
+get domain upgrade card
+answer again card design:
+
+it allows the passer-by to reanswer another question from the same genre without other loss.
+domain upgrade card design:
+it allows the owner to upgrade one of his domain without loss of help card.
+Same subdomain double design:
+if the player owns all the certain kind of subdomain, then his reward is doubled if the passer-by gave the wrong answer. It also means that the loss of vocabulary for the passer-by is also doubled if he answered wrongly.
+Renting domain mechanism design 
+If the vocabulary of the player is too low, he can rent his domain to get help card.It is a principle in this game that vocaburary of player can only be increased from right answer to question and be lowered from wrong answer to question.Selling domain  mechanims design
+If the vocabulary of the player is too low, he can also sold his domain to other player in exchange for help cards(the price is stipulated in advance).
+If he sold to the system, then the price is lower.
+The level is removed when the domain is sold. Level must be sold back to system and the owner can get corresponding help cards.The owner can also degrade his domain level to get help cards.
+small test design:
+There are two places on the map marker small test:
+which requires the passer-by to give answer to word-matching question.(word selected from science English course)Bonus and Punishment mechanism is restricted to vocabulary change.

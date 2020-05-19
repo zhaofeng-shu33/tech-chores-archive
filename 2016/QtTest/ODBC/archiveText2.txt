@@ -1,0 +1,23 @@
+ model.setQuery("select wordform, Audio_Path from Noun");
+    int rowNum=model.rowCount();
+    qDebug()<<rowNum<<' '<<model.record(3).value(0).toString();
+    QStringList path,word;
+    QStringList splitStr;
+    for(int i=0;i<rowNum;i++){
+        //D:/QtTest/consoleApp2/Alkohol.mp3
+        splitStr=model.record(i).value(1).toString().split("/");
+        cout<<splitStr.last()<<endl;
+        path.append(splitStr.last());
+        word.append(model.record(i).value(0).toString());
+    }
+    db.close();
+    dsn=QString("DRIVER={Microsoft Access Driver (*.mdb)};FIL={MS Access};DBQ=D:/QtTest/NounDicWithDb/NounLib.mdb");
+    db.setDatabaseName(dsn);
+    if(!db.open()){
+        qDebug()<<"Error: "<<db.lastError();
+        return 1;
+    }
+    for(int i=0;i<rowNum;i++){
+    if(!query.exec(QString("update Noun set Audio_Path ='%1' where wordform ='%2'").arg(path[i]).arg(word[i])))
+       qDebug()<<query.lastError();
+    }

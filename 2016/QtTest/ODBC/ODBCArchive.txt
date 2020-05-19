@@ -1,0 +1,239 @@
+QString Subject_Replacement_Required_Verb(Tree sentence,QString Intended_Subject,QString Intended_Verb=""){ //Intended_Subject is in lower-case nominative pronoun
+
+    QString Verb;
+    if(Intended_Verb=="")
+       Verb=sentence.treeNode[sentence.Predicate].data;
+    else Verb=Intended_Verb;
+    model.setQuery("select * from Verben");
+    int row_count=model.rowCount();
+    int rec_count=model.record().count();
+    int row_of_verb;
+    for(int i=0;i<row_count;i++)
+       for(int j=0;j<rec_count;j++){
+        if(model.data(model.index(i,j))==Verb){
+               row_of_verb=i;
+               break;//outer cycle does not exit.
+         }
+     }
+    int person=0;
+    if(Intended_Subject=="ich") person=1;
+    if(Intended_Subject=="du") person=2;
+    if(Intended_Subject=="er") person=3;
+    if(Intended_Subject=="ihr") person=4;
+    if(Intended_Subject=="wir"||Intended_Subject=="sie") person=5;
+    return model.data(model.index(row_of_verb,person)).toString();
+    }
+QString POS_tagger(QString str){
+    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
+    cout.setCodec("ISO 8859-1");
+    if(!query.exec(QString("select * from Wort where Word = '%1'").arg(str)))
+        qDebug()<<"Error!";
+    else{
+       query.next();
+       if(query.isValid()){
+          return query.value(1).toString();
+       }
+    }
+    if(!query.exec(QString("select * from Wort where reflectiveChange = '%1'").arg(str)))
+        qDebug()<<"Error!";
+    else{
+       query.next();
+       if(query.isValid()){
+           //return query.value(1).toString();
+          if(query.value(1).toString()=="V")
+                return "V";
+              // return "Singular_3_Person";
+          else if(query.value(1).toString()=="ADJ")
+              return "ADJ";
+          else
+           return "PL";
+        }
+    }
+    if(str[0].isUpper()){
+        return "PN";
+        cout<<"PN"<<' '; //proper noun
+    }
+    if(!query.exec("select Singular_1_Person, Singular_2_Person, Plural_2_Person from Verben"))
+       qDebug()<<query.lastError();
+     else{
+        QSqlRecord rec=query.record();
+        int fieldCount=rec.count();
+        QString fieldName[fieldCount];
+        for(int i=0;i<fieldCount;i++)
+            fieldName[i]=rec.fieldName(i);
+        while(query.next())
+            for(int j=0;j<fieldCount;j++)
+                if(query.value(j).toString()==str){
+                    return "V";
+                    cout<<fieldName[j]<<' '<<'V'<<' ';
+
+                }
+    }
+    return "";
+}
+void sentence_manipulation(Tree given_tree,int ID){
+    srand(time(0));
+    cout.setCodec("ISO 8859-1");
+    model.setQuery(QString("select * from SatzSummary where ID =%1").arg(ID));
+    if(model.lastError().isValid()){cout<<"EROOR!"; return;}
+    int column=model.record(0).count();
+    QString information[column];
+    for(int i=0;i<column;i++)
+        information[i]=model.data(model.index(0,i)).toString();
+    Tree newTree0=given_tree;
+    QString Predicate[6];
+   // cout<<information[1]<<' '<<flush;
+    model.setQuery(QString("select * from Verben where Verb ='%1'").arg(information[1]));
+    for(int i=1;i<4;i++)Predicate[i-1]=model.data(model.index(0,i)).toString();
+    Predicate[3]=information[1];
+    Predicate[4]=model.data(model.index(0,4)).toString();
+    Predicate[5]=model.data(model.index(0,5)).toString();
+    if(!information[3].isNull()){
+    QString Verb=information[2];
+    QString Subject=information[4];
+    int random=rand()%6;
+    //cout<<' '<<Subject<<' '<<Verb<<' '<<random<<' '<<flush;
+    switch(random){
+    case 0: {
+            newTree0=replace(given_tree,Subject,"Ich");
+            newTree0=replace(newTree0,Verb,Predicate[0]);
+            newTree0.print_sentence();
+            break;
+        }
+    case 1:  {
+            newTree0=replace(given_tree,Subject,"Du");
+            newTree0=replace(newTree0,Verb,Predicate[1]);
+            newTree0.print_sentence();
+            break;
+        }
+    case 2:  {
+            newTree0=replace(given_tree,Subject,"Er");
+            newTree0=replace(newTree0,Verb,Predicate[2]);
+            newTree0.print_sentence();
+            break;
+        }
+    case 3:  {
+            newTree0=replace(given_tree,Subject,"Wir");
+            newTree0=replace(newTree0,Verb,Predicate[3]);
+            newTree0.print_sentence();
+            break;
+        }
+    case 4:  {
+            newTree0=replace(given_tree,Subject,"Ihr");
+            newTree0=replace(newTree0,Verb,Predicate[4]);
+            newTree0.print_sentence();
+            break;
+        }
+    case 5:  {
+            newTree0=replace(given_tree,Subject,"Sie");
+            newTree0=replace(newTree0,Verb,Predicate[5]);
+            newTree0.print_sentence();
+            break;
+        }
+    }
+    }
+    if(!information[5].isNull()){
+      if(information[5].split(',').count()==1){
+          QString type=information[5];
+          model.setQuery(QString("select %1 from %1").arg(type));
+          column=model.rowCount();
+          //cout<<'*'<<column<<'*'<<endl;
+          int random=rand()%column;
+          newTree0=replace(newTree0,information[6],model.data(model.index(random,0)).toString());
+          newTree0.print_sentence();
+
+      }
+      else {QStringList strList=information[5].split(',');
+          newTree0=replace(newTree0,information[6],strList[rand()%3]);
+          newTree0.print_sentence();
+      }
+    }
+    Tree newTree=given_tree;
+    if(information[7].toInt()==1) newTree.print_general_question_sentence();
+    if(!information[9].isNull()){
+      if(information[9].split('/').count()==1){
+          if(information[8].toInt()==1)
+          newTree.replace_by_address("S,VP",1,information[9]);
+          newTree.print_interrogative_question_sentence(information[9]);
+      }
+      else {QStringList strList=information[9].split('/');
+         // cout<<information[9]<<flush;
+          QString Person=newTree.treeNode[newTree.starting_word].data.toLower();
+         // cout<<'*'<<Person<<' '<<flush;
+         // cout<<'*'<<Subject_Replacement_Required_Verb(newTree,Person,strList[1])<<'*'<<flush;
+          newTree.replace_by_address("S,VP",0,Subject_Replacement_Required_Verb(newTree,Person,strList[1]));
+          newTree.replace_by_address("S,VP",1,strList[0]);
+          newTree.print_interrogative_question_sentence(strList[0]);
+      }
+    }
+    if(information[10].toInt()==1) {
+        if(given_tree.treeNode[given_tree.starting_word].data=="Sie")
+           add_ADJ_after_verb(given_tree,"bitte").print_imperative_question_sentence();
+        else given_tree.print_imperative_question_sentence();
+    }
+    if(!information[11].isNull()){
+        if(information[11].split(',').count()==1){
+           newTree=add_ADJ_after_verb(given_tree,information[11]);
+           newTree.print_sentence();
+       }
+        else{
+            QStringList strList=information[11].split(',');
+            for(int i=0;i<strList.size();i++)
+                add_ADJ_after_verb(given_tree,strList[i]).print_sentence();;
+        }
+    }
+    if(information[12].toInt()!=0){
+            conjunction_of_two_sentences(given_tree,newTree0).print_sentence();;
+    }
+}
+
+class RegelVerben {
+      public:
+             QString inf;
+             QString stem;
+             QString get_stem_of_verb(QString verb){
+                 if(verb.lastIndexOf("en")==verb.size()-2)//then it is the infinitive form of the verb
+                    return verb.left(verb.size()-2);
+                 if(verb.lastIndexOf("e")==verb.size()-1)//then it is the first person singular form of the verb
+                     return verb.left(verb.size()-1);
+                 if(verb.lastIndexOf("st")==verb.size()-2){//then it is the second person singular form of the verb
+                    if(verb.lastIndexOf("est")!=verb.size()-3)
+                     return verb.left(verb.size()-2);
+                    else
+                     return verb.left(verb.size()-3);
+                 }
+                 if(verb.lastIndexOf("t")==verb.size()-1){//then it is the third person singular form of the verb
+                     if(verb.lastIndexOf("et")!=verb.size()-2)//or the second person plural form of the verb
+                      return verb.left(verb.size()-1);
+                     else
+                      return verb.left(verb.size()-2);
+                 }
+                 return "";
+             }
+             RegelVerben(){}
+             RegelVerben(QString s)
+             {inf=s; stem=get_stem_of_verb(s);
+             }
+             QString getInf(){return inf;}
+             QString getIch_prasens(){return stem+'e';}
+             QString getDu_prasens(){if ((stem[stem.length()-1]=='t')||(stem[stem.length()-1]=='d')||((stem[stem.length()-3]=='f')&&(stem[stem.length()-2]=='f')&&(stem[stem.length()-1]=='n'))
+                                       ||((stem[stem.length()-3]=='c')&&(stem[stem.length()-2]=='h')&&(stem[stem.length()-1]=='n'))
+                                       ||((stem[stem.length()-2]=='g')&&(stem[stem.length()-1]=='n'))) return stem+"est";
+                                   if ((stem[stem.length()-1]=='s')||(stem[stem.length()-1]=='-')||((stem[stem.length()-2]=='s')&&(stem[stem.length()-1]=='s'))
+                                       ||(stem[stem.length()-1]=='z')||((stem[stem.length()-2]=='t')&&(stem[stem.length()-1]=='z'))) return stem+'t';
+                                    return stem+"st";}
+             QString getEr_prasens(){if ((stem[stem.length()-1]=='t')||(stem[stem.length()-1]=='d')||((stem[stem.length()-3]=='f')&&(stem[stem.length()-2]=='f')&&(stem[stem.length()-1]=='n'))
+                                       ||((stem[stem.length()-3]=='c')&&(stem[stem.length()-2]=='h')&&(stem[stem.length()-1]=='n'))
+                                       ||((stem[stem.length()-2]=='g')&&(stem[stem.length()-1]=='n'))) return stem+"et";
+                                    return stem+'t';}
+             QString getWir_prasens(){return inf;}
+             QString getIhr_prasens(){return getEr_prasens();}
+             QString getSie_prasens(){return inf;}
+             void print_prasens(){ cout<<"ich " <<getIch_prasens() <<endl;
+                                   cout<<"du " <<getDu_prasens() <<endl;
+                                   cout<<"er/sie/es "<<getEr_prasens() <<endl;
+                                   cout<<"wir "<<getWir_prasens() <<endl;
+                                   cout<<"ihr "<<getIhr_prasens() <<endl;
+                                   cout<<"sie/Sie " <<getSie_prasens() <<endl;
+                                   return;}
+             };
