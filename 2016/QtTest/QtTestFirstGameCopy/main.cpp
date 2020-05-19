@@ -6,8 +6,7 @@
 #include<cmath>
 #include<ctime>
 #include<GL/glu.h>
-#include<glut.h>
-#include<windows.h>
+#include<GL/glut.h>
 using namespace std;
 GLsizei winWidth=400,winHeight=400;
 bool state=false,condition=true; //If state turns true, the game is over. If condition is true, you

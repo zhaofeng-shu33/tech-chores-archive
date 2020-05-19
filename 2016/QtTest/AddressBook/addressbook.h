@@ -11,7 +11,7 @@
 #include <QString>
 #include <QMap>
 #include <QPair>
-#include <windows.h>
+
 #include <QTextStream>
 #include <QBuffer>
 namespace Ui {

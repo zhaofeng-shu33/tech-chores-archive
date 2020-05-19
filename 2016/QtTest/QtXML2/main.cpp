@@ -2,7 +2,7 @@
 #include <QFile>
 #include <QDir>
 #include <QTextStream>
-#include <windows.h>
+
 #include <QtXmlPatterns>
 #include <QStringList>
 #include <QCoreApplication>

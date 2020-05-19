@@ -12,6 +12,7 @@ CONFIG += qt
 TARGET = NounDicWithDb
 TEMPLATE = app
 
+LIBS += -lz
 
 SOURCES += main.cpp\
         mainwindow.cpp \

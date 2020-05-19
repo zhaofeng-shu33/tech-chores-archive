@@ -8,7 +8,6 @@ QT       += core gui
 CONFIG += console
 TARGET = GraphicsTry
 TEMPLATE = app
-DESTDIR += D:/QtTest/GraphicsTry
 
 TEMP_SOURCES += main.cpp\
         widget.cpp

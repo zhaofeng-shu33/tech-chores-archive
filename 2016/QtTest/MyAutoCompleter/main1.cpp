@@ -3,7 +3,7 @@
 #include <sstream>
 #include <string>
 #include <locale>
-#include <windows.h>
+
 #include <locale>
 using namespace std;
 int main()
@@ -13,14 +13,14 @@ int main()
   b->top=100;
  	printf("%d",b->top);
 */
-  wchar_t a=L'ÖÐ';
+  wchar_t a=L'ï¿½ï¿½';
   wchar_t *str = L"hello";
   //basic_string<wchar_t> s(L"hello");
   //wcout.imbue(locale("chs"));
 //	wcout <<"size is: " << sizeof(s[1]) << endl << s << endl; 
   printf("%#x\n",a); //C means wide character 
   printf("%#x\n",str[0]);//S means wide character string
-  system("pause");
+  
 	return 0;
 
 }

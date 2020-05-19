@@ -1,4 +1,4 @@
-#include <windows.h>
+
 #include <iostream>
 #include <stdio.h>
 #include <ctime>
@@ -65,6 +65,6 @@ int main(int argc,char* argv[]) {
       cout<<i+1<<' '<<player[i].get_position()<<endl;
       }
   }
-  system("pause");
+  
   return 0;
 }

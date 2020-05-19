@@ -39,6 +39,6 @@ int main()
 	typedef int * arrayType[100];
 	TypeInfo< arrayType >::bottomT  y = 200;
 	cout << x << " " << y << endl;
-	system("pause");
+	
 	return 0;
 }

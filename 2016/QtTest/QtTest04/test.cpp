@@ -2,7 +2,7 @@
 #include "MinHeap.h"
 #include "pqueue.h"
 using namespace std;
-int main()                                          //Ö÷º¯Êý 
+int main()                                          //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 {
     int n=2;
     student studentGroup[n];
@@ -47,7 +47,7 @@ int main()                                          //Ö÷º¯Êý
     for(int i=0;i<n;i++)
     studentGroup[i].printTeacher();
 */
-    system("pause");
+    
   
     return 0;
 }

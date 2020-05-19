@@ -21,7 +21,7 @@ int main( )
   cout.imbue(loc);
 	cout << fixed<<x;
   cout<<endl<<loc.name();
-  system("pause");
+  
 	return 0;
 }
 

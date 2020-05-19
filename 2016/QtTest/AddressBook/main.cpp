@@ -27,6 +27,6 @@ int main(int argc, char *argv[])
    // qDebug()<<"The length of compressed data is "<<len_compress;
    // buffer_uncompress[len_uncompress]='\0';
  //   qDebug()<<"The length of the uncompressed data is "<<len_uncompress;
-    system("pause");
+    
     return a.exec();
 }

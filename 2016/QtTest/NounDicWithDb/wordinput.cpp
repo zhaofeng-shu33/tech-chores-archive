@@ -3,9 +3,9 @@
 #include <QDir>
 #include <QWebFrame>
 #include <QWebView>
-#include "D:/QtTest/AddressBook/zlib-1.2.8/zlib.h"
 #include <QDebug>
 #include <QFile>
+#include <zlib.h>
 #include "wordinput.h"
 #include "ui_wordinput.h" 
 wordInput::wordInput(QWidget *parent) :

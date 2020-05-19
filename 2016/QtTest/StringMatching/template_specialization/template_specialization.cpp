@@ -75,5 +75,5 @@ int main( )
   a1.push(b);
   std::cout<<*a1.top();
 
-  system("pause");
+  
 }

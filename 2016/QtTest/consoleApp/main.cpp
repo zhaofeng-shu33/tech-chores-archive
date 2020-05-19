@@ -1,6 +1,6 @@
 #include <QTextStream>
 #include <QString>
-#include <windows.h>
+
 #include "hellowadd.h"
 #include "QCoreApplication"
 #include "QStringList"
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     int n=h->Add(7,6);
    // int m=Sub(6,13);
     cout<<QLocale::system().name()<<n<<flush<<endl;
-    system("pause");
+    
     return 0;
 }
 

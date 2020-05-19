@@ -28,7 +28,7 @@ int main()
     for(i;i<10;i++)
       printf("%0x\n",c[i]);
     printf("%s\n",c);
-   */ system("pause");
+   */ 
     return 0;
 }
 

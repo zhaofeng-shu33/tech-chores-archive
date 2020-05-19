@@ -1,6 +1,6 @@
 #include <QChar>
 #include <stdio.h>
-#include <windows.h>
+
 
 int main()
 {
@@ -13,7 +13,7 @@ int main()
     printf("%p \n",pf);
     printf("%x \n",i);
     printf("%p \n",*pd);
-    system("pause");
+    
     return 0;
 }
 

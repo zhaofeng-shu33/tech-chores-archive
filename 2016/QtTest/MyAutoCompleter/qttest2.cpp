@@ -1,6 +1,6 @@
 #include <QChar>
 #include <stdio.h>
-#include <windows.h>
+
 int main()
 {
     short i=0b0111111111111111;
@@ -8,7 +8,7 @@ int main()
     QChar a1(i);
     printf("%d/n",i);
     printf("%x/n",-32767);
-    system("pause");
+    
     return 0;
 }
 

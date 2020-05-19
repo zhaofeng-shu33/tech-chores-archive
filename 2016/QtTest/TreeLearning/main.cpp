@@ -1,7 +1,7 @@
 #include<QCoreApplication>
 #include <GL/glu.h>
 #include <glut.h>
-#include <windows.h>
+
 #include "MinHeap.h"
 void drawString(const char* str) {
     static int isFirstCall = 1;

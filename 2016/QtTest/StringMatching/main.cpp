@@ -1,6 +1,6 @@
 #include <QTextStream>
 #include <QString.h> 
-#include <windows.h>
+
 QTextStream cout(stdout);
 int q=104729;
 int Fra(int m,int d=128){
@@ -34,6 +34,6 @@ int main()
            cout<<"Match Pos at "<<i<<' '<<T.mid(i,30)<<"\n"<<flush;
         t=(d*(t-T[i].toAscii()*digit1)+T[i+m].toAscii())%q;
     }
-    system("pause");
+    
     return 0;
 }

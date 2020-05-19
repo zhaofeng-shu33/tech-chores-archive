@@ -46,5 +46,5 @@ int main()
 	matrix <double> dm;
 	cout << "float  matrix: " << fm.max_exponent() << endl;
 	cout << "double matrix: " << dm.max_exponent() << endl;
-	system("pause");
+	
 }

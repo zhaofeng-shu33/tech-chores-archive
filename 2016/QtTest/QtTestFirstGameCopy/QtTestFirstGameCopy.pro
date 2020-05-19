@@ -1,5 +1,5 @@
 QT       += opengl
-LIBS += -lglut32
+LIBS += -lGL -lGLU -lglut
 
 SOURCES += \
     main.cpp \

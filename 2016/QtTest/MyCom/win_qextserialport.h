@@ -2,7 +2,7 @@
 #define _WIN_QEXTSERIALPORT_H_
 
 #include "qextserialbase.h"
-#include <windows.h>
+
 #include <QThread>
 
 

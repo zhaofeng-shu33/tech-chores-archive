@@ -54,6 +54,6 @@ int main(){
             yourImage.setPixel(i,j,255);
   */
       qDebug()<<"SAVE: "<<myImage1.save("D:\\ProjectNote\\PythonImage\\standard008.bmp","BMP");
-    system("pause");
+    
     return 0;
 }
