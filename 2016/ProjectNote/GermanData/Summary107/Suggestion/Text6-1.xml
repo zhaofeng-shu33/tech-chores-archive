@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<text id="2" type="dialog" source="新编大学德语">
+<head>Teil 1</head>
+<title>Wohnungssuche</title>
+<body>
+
+<castList>
+
+<castItem type="role">
+<role>Wang HongLiang</role>
+<roleDesc>Informatiker bei der Firma Bosch in Hamburg</roleDesc>
+</castItem>
+
+<castItem type="role">
+<role>Frau Schmidt</role>
+<roleDesc>Mieterin der Wohnung</roleDesc>
+</castItem>
+</castList>
+
+<div type='text' n='1'>
+<p>
+  <s>
+    <or>Wang Hongliang aus Beijing arbeitet als Informatiker bei der Firma Bosch in Hamburg.</or>
+    <te>王宏亮来自北京，在汉堡的博世公司工作，是计算机专业人员。</te>
+  </s></p>
+  <p>
+  <s>
+    <or> Seit Wochen sucht er eine Wohnung.</or>
+    <te>他找一套住房已有几个星期了。</te>
+  </s>
+  <s>
+    <or>Er kauft Zeitungen und sucht auch im Internet Wohnungsanzeigen.</or>
+    <te>他买了报纸并上网查找各种住房广告。</te>
+  </s>
+  <s>
+    <or> Endlich findet er etwas.</or>
+    <te>终于，他找到了一个合适的。</te>
+  </s>
+  <s>
+    <or>Sofort ruft er die Vermieterin an.</or>
+    <te>于是，他立即给房东打电话。</te>
+  </s>
+  </p>
+</div>
+<div type="dialog" n="2">
+	<sp who="Frau Schmidt"><s><or>Schmidt</or><te>这里是史密特家。</te><or/><te/></s></sp>
+	<sp who="Wang Hongliang"><s><or>Guten Tag, Frau Schmidt.</or><te>史密特女士，您好。</te></s><s><or>Darf ich mich vorstellen?</or><te>我可以先自我介绍一下吗？</te></s><s><or>Mein Name ist Hongliang Wang.</or><te>我叫王宏亮。</te></s><s><or>Ihre Telefonnummer habe ich von Ihrer Wohnungsanzeige aus dem Internet.</or><te>我是在网上的住房广告上得到您的电话号码的。</te></s><s><or>Ich muss dringend eine Wohung mieten.</or><te>我急需租一套住房。</te></s></sp>
+	<sp who="Frau Schmidt"><s><or>Ah, guten Tag, Herr Wang.</or><te>噢，您好，王先生。</te></s><s><or>Möchten Sie die Wohnung besichtigen?</or><te>您想看-下这套住房吗？</te></s></sp>
+	<sp who="Wang Hongliang"><s><or>Ja, gerne.</or><te>是的，非常乐意。</te></s><s><or>Wann darf ich kommen?</or><te>我什么时候方便过去？</te></s></sp>
+	<sp who="Frau Schmidt"><s><or>Jetzt bin ich noch zu Hause.</or><te>我现在正好还在家。</te></s><s><or>Aber ich muss bald weg.</or><te>但我一会就出去。</te></s><s><or>Kommen Sie gleich?</or><te>你现在方便过来吗？</te></s></sp>
+	<sp who="Wang Hongliang"><s><or>Kein Problem.</or><te>好的</te></s><s><or>Ich fahre sofort zu Ihnen.</or><te>我马上过去</te></s></sp>
+	<sp who="Frau Schmidt"><s><or>Gut. Dann bis gleich.</or><te>好的，待会见。</te></s></sp>
+	<sp who="Wang Hongliang"><s><or>Bis gleich</or><te>待会见。</te></s></sp>
+</div>
+<div type="dialog" n="3">
+
+	<sp who="Wang Hongliang"><Hilfe type="translation"><or>Guten Tag. Ich bin Hongliang Wang</or><te>您好，我是王宏亮。</te><or/><te/></Hilfe><s><or>Bin ich richtig bei Schmidts?</or><te>请问这里是史密特家吗？</te></s><s/></sp>
+	<sp who="Frau Schmidt"><s><or>Ja, richtig.</or><te>是的。</te></s><s><or>Guten Tag, Herr Wang.</or><te>王先生，您好。</te></s><s><or>Kommen Sie herein.</or><te>请进。</te></s><s><or>Ich zeige Ihnen die Wohnung.</or><te>我带您看看这套住房。</te></s></sp>
+	<sp who="Wang Hongliang"><s><or>Soll ich die Schuhe ausziehen?</or><te>要脱鞋吗？</te></s></sp>
+	<sp who="Frau Schmidt"><s><or>Nein, nicht nötig.</or><te>不，不必了。</te></s></sp>
+	<sp who="Wang Hongliang"><s><or>Danke.</or><te>谢谢。</te></s></sp>
+	</div>
+<div type='text' n='4'>
+	<p><s><or>Nun besichtigt Wang Hongliang die Wohnung.</or><te>现在王宏亮开始参观这套住房。</te></s></p>
+	<p><s><or>In der Wohnung gibt es ein Wohnzimmer, ein Schlafzimmer, ein Arbeitszimmer, ein Bad, eine Küche und einen Flur.</or><te>在这套房子里有一个起居室、一个卧室、一个书房、一个浴室．一个厨房和一个过道。
+</te></s><s><or>Das Schlafzimmer und die Küche sind renoviert, aber ziemlich klein.</or><te>卧室和厨房已装修过，但比较小。</te></s><s><or>Das Bad ist zwar nicht groß, aber modern.</or><te>浴室虽然不大，但比较现代。</te></s>
+<s><or>Das Wohnzimmer ist hell, denn es gibt da zwei Fenster und einen Balkon nach Süden.</or><te>起居室光线明亮，因为它有两个窗户和一个朝南的阳台。</te></s>
+<s><or>In dem Arbeitszimmer gibt es ein Telefon und einen Internetanschluss.</or><te>在书房里有一个电话和一个因特网插口。</te></s> <s><or>Vor dem Haus ist die Lindbergstraße und hinter dem Haus ist ein Parkplatz.</or><te>在这栋房子的前面是Lindberg大街，后面是一个停车场。</te></s></p>
+</div>
+<div type="dialog" n="5">
+<sp who="Frau Schmidt"><s><or>Gefällt Ihnen die Wohnung?</or><te>您喜欢这套住房吗？</te></s></sp>
+	
+	<sp who="Wang Hongliang"><s><or>Ja.</or><te>喜欢。</te></s> <s><or>Wie hoch ist die Miete im Monat?</or><te>每月的房租是多少呢?</te></s></sp>
+	<sp who="Frau Schmidt"><s><or>380 Euro, warm.</or><te>380欧元，暖房租。</te></s></sp>
+	<sp who="Wang Hongliang"><s><or>380 Euro...</or><te>380欧元……</te></s><s><or>Gut, ich nehme sie.</or><te>好的，我要这套住房。</te></s></sp>
+	<sp who="Frau Schmidt"><s><or>Herr Wang, Sie wissen ja, mein Mann und ich wohnen in der Nachbarwohnung.</or><te>王先生，您知道吗，我和我先生住在隔壁的那套房子里。</te></s><s><or>Sie müssen die Hausordnung einhalten.</or><te>您要
+遵守住房规定。</te></s> <s><or>Sie dürfen keine Discomusik oder so hören und spielen.</or><te>您不可以听或弹唱迪斯科之类的音乐。</te></s> <s><or>Sie dürfen auch keine Haustiere halten.</or><te>您也不能养宠物。</te></s></sp>
+	<sp who="Wang Hongliang"><s><or>Ja, natürlich.</or><te>是的，那当然。</te></s><s><or>Das weiß ich.</or><te>这我知道。</te></s></sp>
+</div>	
+</body>
+</text>

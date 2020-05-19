@@ -1,0 +1,11 @@
+wordform,wordclass,Plural,example,TE,Einheit,Part
+Wohnhaus,das,Wohnh?user,,住宅,6,Einführung
+Einfamilienhaus,das,Einf?milienh?user,,单户住宅,6,Einführung
+Reihenhaus,das,Reihenh?user,,连排房屋,6,Einführung
+Wohngemeinschaft,die,Wohngemeinschaften,"Hier sieht man ein Wohnhaus, ein Einfamilienhaus, ein Doppelhaus und eine WG.",集体住房,6,Einführung
+Zimmer,das,Zimmer,,房间,6,Einführung
+Wohnzimmer,das,Wohnzimmer,,客厅,6,Einführung
+Schlafzimmer,das,Schlafzimmer,"Die Zimmer sind Wohnzimmer,Schlafzimmer usw.",卧室,6,Einführung
+Bad,das,B?der,Das Bad ist klein.,浴室,6,Einführung
+Balkon,der,Balkone,Der Balkon geht nach Süden.,阳台,6,Einführung
+Flur,der,Flure,Die Katze sitzt im Flur.,走廊,6,Einführung

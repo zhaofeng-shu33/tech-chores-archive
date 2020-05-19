@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="TextRenderFormat.xslt"?>
+<!DOCTYPE text[
+<!ELEMENT text (title,body)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT body (p+)>
+<!ELEMENT p (s+)>
+<!ELEMENT s (or,te)>
+<!ELEMENT or (#PCDATA)>
+<!ELEMENT te (#PCDATA)>
+<!ATTLIST text id CDATA #IMPLIED>
+<!ATTLIST text type (prose|drama) "prose">
+<!ATTLIST text source CDATA #REQUIRED>
+<!ATTLIST s audio CDATA #IMPLIED>
+]>
+<text id="3" type="prose" source="新编大学德语">
+<title>Umzug</title>
+<body>
+
+<p>
+<s><or>Fang Jin aus Hangzhou studiert an der TU Berlin Informatik</or><te>来自杭州的方进在柏林工业大学学习计算机技术。</te></s>
+<s><or>und zieht heute ins Studentenwohnheim um.</or><te>今天他搬家，搬入学生宿舍。</te></s> 
+</p>
+
+<p><s><or>Er öffnet die Tür und betrachtet das Zimmer.</or><te>他打开门，仔细打量着这个房间。</te></s><s><or> Am Fenster gibt es einen Schreibtisch.</or><te>靠窗摆着一个写字台。</te></s><s><or> Vor dem Schreibtisch steht ein Drehstuhl und über dem Schreibtisch hängt eine Lampe.</or><te>写字台前有一把转椅。</te></s><s><or> Gegenüber dem Schreibtisch steht ein Bett.</or><te>写字台的上方吊着一盏灯。</te></s><s><or> Neben dem Bett ist ein Nachttisch.</or><te>写字台的对面放着一个床。</te></s><s><or> Auf dem Nachttisch steht eine Tischlampe.</or><te>床边有一个床头柜。床头柜上放着一盏台灯。</te></s><s><or> Über dem Bett hängt ein Bild an der Wand.</or><te>床上方的墙上挂着一幅画。</te></s><s><or> Neben dem Schreibtisch in der Ecke steht noch ein Regal.</or><te>在写字台旁边的角落里还摆着一个书架。</te></s></p>
+
+<p><s><or>Jetzt bringt er seine Sachen in Ordnung.</or><te>现在他开始整理自己的东西。</te></s><s><or> Er stellt seinen Laptop auf den Schreibtisch und steckt den Stecker in die Steckdose.</or><te>他把他的笔记本电脑放到写字台上面，并把电线插头插入插座。</te></s><s><or>Ein paar Bücher stellt er ins Regal.</or><te>他把几本书放进书架。</te></s><s><or> Dann macht er seinen Koffer auf,</or><te>然后他打开他的箱子，</te></s><s>
+	<or> hängt seine Kleidung in den Schrank und stellt seinen Wecker auf den Nachttisch.</or><te>把他的衣服挂到柜子里，还把他的闹钟放到床头柜上。</te></s><s><or> Seinen Koffer legt er dann unter das Bett.</or><te>然后他把箱子平放到床下。</te></s></p>
+<p>
+<s>
+<or>Nun ist alles in Ordnung.</or>
+<te>现在，房间里的东西摆得整整齐齐。</te>
+</s>
+</p>
+</body>
+</text>

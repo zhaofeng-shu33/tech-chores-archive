@@ -1,0 +1,8 @@
+|| K-: Linienpapier	nan	nan	nan	nan	nan	: mit dem Lineal Linien auf ein Blatt Papier zeichnen	<eine gepunktete, gestrichelte Linie; eine Linie zeichnen, ziehen>	1 ein relativ langer und meist gerader Strich 
+nan	nan	nan	nan	= Reihe	nan	: Die Soldaten stehen in einer Linie / bilden eine Linie; Köln, Bonn und Koblenz liegen in einer Linie entlang des Rheins	nan	2 eine Linie (1) von Personen oder Dingen 
+|| K-: Linienbus, Liniendampfer, Linienflugzeug, Linienschiff, Linienverkehr	|| -K: Buslinie, Fährlinie, Fluglinie, Schiffslinie, Eisenbahnlinie	nan	nan	nan	nan	: Die Linie 3 (der Bus, Zug usw Nr. 3) fährt zum Olympiastadion; Das Schiff verkehrt auf der Linie Hamburg-Oslo	<eine Linie einrichten, stilllegen>	3 der Weg, den ein Bus, Zug, Schiff, Flugzeug o.Ä. regelmäßig fährt oder fliegt (oder der Bus usw selbst, der diesen Weg fährt) 
+nan	nan	nan	nan	= Richtlinie, Leitlinie 	nan	: Die Regierung muss eine klare Linie im Kampf gegen die Arbeitslosigkeit verfolgen	<sich an eine klare Linie halten; eine / keine klare Linie erkennen lassen; von der festgelegten Linie abweichen>	4 die Prinzipien, nach denen man (besonders in der Politik) handelt 
+nan	|| -K: Handlinie	nan	nan	nan	nan	nan	nan	5 eine der großen langen Falten auf der inneren Fläche der Hand
+nan	|| -K: Auslinie, Grundlinie, Mittellinie, Seitenlinie	nan	nan	nan	nan	: Der Ball landete knapp hinter der Linie	nan	6 Sport; jede Linie (1), die das Spielfeld selbst oder im Spielfeld einen Raum begrenzt
+nan	nan	nan	nan	= Front 	nan	nan	<die feindlichen Linien durchbrechen>	7 Mil; die Soldaten, die in einer Reihe nebeneinander am nächsten zum Feind stehen 
+nan	nan	nan	nan	nan	nan	nan	<die männliche, weibliche Linie>	8 die Folge der Generationen (besonders in einer Familie) 

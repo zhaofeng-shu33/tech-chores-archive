@@ -1,0 +1,132 @@
+
+<TEI>
+<teiHeader>
+<fileDesc>
+<titleStmt><title>Klick auf Deutsch I</title>
+<respStmt><resp>chief editor</resp>
+<name>赵丰</name>
+</respStmt>
+</titleStmt>
+<publicationStmt><p>free for distribution</p></publicationStmt>
+<sourceDesc><p>Compiled by Foreign Language Teaching and Research Group members</p></sourceDesc>
+</fileDesc>
+</teiHeader>
+<text>
+<front><titlePage>
+<docTitle>新编大学德语</docTitle>
+<byline>
+<docAuthor>朱建华</docAuthor>
+</byline>
+<docEdition>Second Edition</docEdition>
+<docDate>2013</docDate>
+</titlePage>
+<div type="contents">
+<head>Table of Contents</head>
+<list type="numbered">
+<item n="1">Phonetik</item> 
+<item n="2">Kennenlernen</item>
+<item n="3">Studentenleben</item>
+</list>
+</div>
+</front>
+<body>
+<chapter>6</chapter>
+<head type="mainTitle">Wohnen in Deutschland</head>
+<div type="section" n="1">
+<head type="mainTitle">Text</head>
+<div type="subsection" n="1.1">
+<castList>
+<castItem type="role">
+<role xml:id="Wang_HongLiang">Wang HongLiang</role>
+<roleDesc>Informatiker bei der Firma Bosch in Hamburg</roleDesc>
+</castItem>
+<castItem type="role">
+<role xml:id="Frau_Schmidt">Frau Schmidt</role>
+<roleDesc>Mieterin der Wohnung</roleDesc>
+</castItem>
+</castList>
+<prologue>
+Wang Hongliang aus Beijing arbeitet als Informatiker bei der Firma Bosch in Hamburg. Seit Wochen sucht er eine Wohnung. Er kauft Zeitungen und sucht auch im Internet Wohnungsanzeigen. Endlich findet er etwas. Sofort ruft er die Vermieterin an.
+</prologue>
+<div type="act" n="1">
+<sp who="#Frau_Schmidt"></sp>	
+	<sp who="#Frau_Schmidt">Schmidt</sp>
+	<sp who="#Wang_Hongliang">Guten Tag, Frau Schmidt. Darf ich mich vorstellen? Mein Name ist Hongliang Wang. Ihre Telefonnummer habe ich von Ihrer Wohnungsanzeige aus dem Internet. Ich muss dringend eine Wohung mieten.</sp>
+	<sp who="#Frau_Schmidt">Ah, guten Tag, Herr Wang. Möchten Sie die Wohnung besichtigen?</sp>
+	<sp who="#Wang_Hongliang">Ja, gerne. Wann darf ich kommen?</sp>
+	<sp who="#Frau_Schmidt">Jetzt bin ich noch zu Hause. Aber ich muss bald weg. Kommen Sie gleich?</sp>
+	<sp who="#Wang_Hongliang">Kein Problem. Ich fahre sofort zu Ihnen.</sp>
+	<sp who="#Frau_Schmidt">Gut. Dann bis gleich.</sp>
+	<sp who="#Wang_Hongliang">Bis gleich</sp>
+	<sp who="#Wang_Hongliang">Guten Tag. Ich bin Hongliang Wang.<Hilfe type="translation"><or>Bin ich richtig bei Schmidts?</or><te>这里是施密特家吗?</te></Hilfe></sp>
+	<sp who="#Frau_Schmidt">Ja, richtig. Guten Tag, Herr Wang. Kommen Sie herein. Ich zeige Ihnen die Wohnung.</sp>
+	<sp who="#Wang_Hongliang">Soll ich die Schuhe ausziehen?</sp>
+	<sp who="#Frau_Schmidt">Nein, nicht nötig.</sp>
+	<sp who="#Wang_Hongliang">Danke.</sp>
+	</div>
+	<div type="act" n="2">
+	<front>
+	<prologue>Nun besichtigt Wang Hongliang die Wohnung.</prologue>
+	<set>In der Wohnung gibt es ein Wohnzimmer, ein Schlafzimmer, ein Arbeitszimmer, ein Bad, eine Küche und Flur.Das Schlafzimmer und die Küche sind renoviert, aber ziemlich klein. Das Bad ist zwar nicht groß, aber modern. Das Wohnzimmer ist hell, denn es gibt da zwei Fenster und einen Balkon nach Süden. In dem Arbeitszimmer gibt es ein Telefon und einen Internetanschluss. Vor dem Haus ist die Lindbergstraße und hinter dem Haus ist ein Parkplatz.</set>
+	</front>
+	<sp who="#Frau_Schmidt">Gefällt Ihnen die Wohnung?</sp>
+	<sp who="#Wang_Hongliang">Ja. Wie hoch ist die Miete im Monat.</sp>
+	<sp who="#Frau_Schmidt"><measure type="money" quantity="380" unit="Euro">380 Euro</measure>, warm.</sp>
+	<sp who="#Wang_Hongliang">380 Euro... Gut, ich nehme sie.</sp>
+	<sp who="#Frau_Schmidt">Herr Wang, Sie wissen ja, mein Mann und ich wohnen in der Nachbarwohnung. Sie müssen die Hausordnung einhalten. Sie dürfen keine Discomusik oder so hören und spielen. Sie dürfen auch keine Haustiere halten.</sp>
+	<sp who="#Wang_Hongliang">Ja, natürlich. Das weiß ich.</sp>
+	</div>
+
+</div>
+<div type="subsection" n="1.2">
+<head>Umzug></head>
+<p><name type="person">Fang Jin</name> aus <name type="place"> Hangzhou</name> studiert an der<name type="organisation"> TU Berlin</name> Informatik und zieht heute ins Studentenwohnheim um.</p>
+<p>Er öffnet die Tür und betrachtet das Zimmer. Am Fenster gibt es einen Schreibtisch. Vor dem Schreibtisch steht ein Drehstuhl und über dem Schreibtisch hängt eine Lampe. Gegenüber dem Schreibtisch steht ein Bett. Neben dem Bett ist ein Nachttisch. Auf dem Nachttisch steht eine Tischlampe. Über dem Bett hängt ein Bild an der Wand. Neben dem Schreibtisch in der Ecke steht noch ein Regal.</p>
+<p>Jetzt<Hilfe type="verb_phrase"><or>bringt er seine Sachen in Ordnung.</or><phrase type="translation"><or>etw. in Ordnung bringen</or><te>把...整理好/使...保持整齐</te></phrase></Hilfe> Er stellt seinen Laptop auf den Schreibtisch und steckt den Stecker in die Steckdose. Ein paar Bücher stellt er ins Regal. Dann macht er seinen Koffer auf, hängt seine Kleidung in den Schrank und stellt seinen Wecker auf den Nachttisch. Seinen Koffer legt er dann unter das Bett.
+Nun ist alles in Ordnung.</p>
+</div>
+</div>
+<div type="section" n="2">
+<head type="mainTitle">Übungen</head>
+<div type="subsection" n="2.1">
+<list type="numbered">
+<head>Steht das im Text? Kreuzen Sie an.</head>
+<label>1</label>
+<item>Wang Hongliang sucht seit Tagen eine Wohung.</item>
+<label>2</label>
+<item>Dafür kauft er keine Zeitung, sondern surft im Internet.</item>
+<label>3</label>
+<item>Er findet eine Wohungsanzeige gut und ruft an.</item>
+</list>
+</div>
+</div>
+<div type="subsection" n="2.2">
+
+<head>Was macht Wang Hongliang? 
+<Hilfe type="translation"><or>Assoziieren</or><te>联想</te></Hilfe> Sie.</head>
+<link type="verb_association_noun"><phrase type="noun">eine Wohnung</phrase>
+<list>
+<word type="verb">suchen</word>
+<word type="verb">finden</word>
+<word type="verb">mieten</word>
+<word type="verb">besichtigen</word>
+<word type="verb">nehmen</word>
+</list>
+</link>
+</div>
+<div type="subsection" n="2.3">
+<head>Wie heißen die Zimmer in der Wohnung? Tragen Sie ein.</head>
+<link type="noun_association_noun"><phrase type="noun">eine Wohnung</phrase>
+<list>
+<word type="noun">Arbeiszimmer</word>
+<word type="noun">Wohnzimmer</word>
+<word type="noun">Schlafzimmer</word>
+<word type="noun">Küche</word>
+<word type="noun">Bad</word>
+</list>
+</link>
+</div>
+</body>
+<back></back>
+</text>
+</TEI>

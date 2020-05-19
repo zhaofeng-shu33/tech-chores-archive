@@ -1,0 +1,108 @@
+<WordList Einheit="6" Anteil="Einführung" audio="Vokabeln6_1/Introduction_00.wav">
+<wordGroup>
+<word Level="4" audio="Vokabeln6_1/Introduction_01.wav">
+<description>das</description>
+<wordform><or>Wohnhaus</or>
+<reflectiveChange>Wohnhäuser</reflectiveChange>
+</wordform>
+<TE>住宅</TE>
+</word>
+  <word Level="4" audio="Vokabeln6_1/Introduction_02.wav">
+    <description>das</description>
+    <wordform>
+      <or>Einfamilienhaus</or>
+      <reflectiveChange>Einfamilienhäuser</reflectiveChange>
+    </wordform>
+    <TE>独宅，单户住宅</TE>
+  </word>
+  
+  
+  <word Level="4" audio="Vokabeln6_1/Introduction_03.wav">
+    <description>das</description>
+    <wordform>
+      <or>Reihenhaus</or>
+      <reflectiveChange>Reihenhäuser</reflectiveChange>
+    </wordform>
+    <TE>连排房屋</TE>
+  </word>
+  <word Level="4" audio="Vokabeln6_1/Introduction_04.wav">
+    <description>die</description>
+    <wordform>
+      <or>Wohngemeinschaft</or>
+      <reflectiveChange>Wohngemeinschaften</reflectiveChange>
+    </wordform>
+    <TE>集体住房，合住套房</TE>
+  </word>
+<example audio="Vokabeln6_1/IntroductionExample_01.wav">
+Hier sieht man ein Wohnhaus, ein Einfamilienhaus, ein Doppelhaus und eine WG.
+</example>
+</wordGroup>
+
+
+<wordGroup>
+  <word Level="4" audio="Vokabeln6_1/Introduction_05.wav">
+    <description>das</description>
+    <wordform>
+      <or>Zimmer</or>
+      <reflectiveChange>Zimmer</reflectiveChange>
+    </wordform>
+    <TE>房间</TE>
+  </word> 
+  <word Level="4" audio="Vokabeln6_1/Introduction_06.wav">
+    <description>das</description>
+    <wordform>
+      <or>Wohnzimmer</or>
+      <reflectiveChange>Wohnzimmer</reflectiveChange>
+    </wordform>
+    <TE>客厅,起居室</TE>
+  </word>
+  <word Level="4" audio="Vokabeln6_1/Introduction_07.wav">
+    <description>das</description>
+    <wordform>
+      <or>Schlafzimmer</or>
+      <reflectiveChange>Schlafzimmer</reflectiveChange>
+    </wordform>
+    <TE>卧室，寝室</TE>
+  </word>
+  <example audio="Vokabeln6_1/IntroductionExample_02.wav">Die Zimmer sind Wohnzimmer,Schlafzimmer usw.</example>
+  </wordGroup>
+  
+  
+  
+  
+ <wordGroup>
+<word Level="4" audio="Vokabeln6_1/Introduction_08.wav">
+    <description>das</description>
+    <wordform>
+      <or>Bad</or>
+      <reflectiveChange>Bäder</reflectiveChange>
+    </wordform>
+    <TE>浴室</TE>
+    
+</word><example audio="Vokabeln6_1/IntroductionExample_03.wav">Das Bad ist klein.</example></wordGroup>  
+
+
+<wordGroup>
+ <word Level="6" audio="Vokabeln6_1/Introduction_09.wav">
+    <description>der</description>
+    <wordform>
+      <or>Balkon</or>
+      <reflectiveChange>Balkone</reflectiveChange>
+    </wordform>
+    <TE>阳台</TE>
+    
+  </word><example audio="Vokabeln6_1/IntroductionExample_04.wav">Der Balkon geht nach Süden.</example></wordGroup>  
+  
+  
+<wordGroup>
+ <word Level="6" audio="Vokabeln6_1/Introduction_010.wav">
+    <description>der</description>
+    <wordform>
+      <or>Flur</or>
+      <reflectiveChange>Flure</reflectiveChange>
+    </wordform>
+    <TE>走廊</TE>
+    
+  </word><example audio="Vokabeln6_1/IntroductionExample_05.wav">Die Katze sitzt im Flur.</example></wordGroup>  
+  
+</WordList>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE div[
+<!ELEMENT div (list)>
+<!ELEMENT list (head,(label,item)+)>
+<!ELEMENT head (#PCDATA)>
+<!ELEMENT label (#PCDATA)>
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST list type CDATA #IMPLIED>
+<!ATTLIST div practiceNum CDATA #REQUIRED>
+<!ENTITY protagonist "Wang Hongliang">
+<!ENTITY Mieter "Frau Schmidt">
+]>
+<div practiceNum="1">
+<list type="numbered">
+<head>Steht das im Text? Kreuzen Sie an.</head>
+<label>1</label>
+<item>&protagonist; sucht seit Tagen eine Wohung.</item>
+<label>2</label>
+<item>Dafür kauft er keine Zeitung, sondern surft im Internet.</item>
+<label>3</label>
+<item>Er findet eine Wohungsanzeige gut und ruft an.</item>
+<label>4</label>
+<item>Er soll bei &Mieter; seine Schuhe ausziehen.</item>
+<label>5</label>
+<item>&protagonist; gefällt die Wohnung.</item>
+<label>6</label>
+<item>&protagonist; findet die Miete zu hoch.</item>
+<label>7</label>
+<item>&protagonist; soll die Hausordnung einhalten.</item>
+</list>
+</div>

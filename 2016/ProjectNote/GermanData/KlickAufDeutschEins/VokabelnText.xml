@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WordList>
+  <WordGroup>
+    <word Property="die" Level="4">
+      
+      <wordform>
+        <or>Suche</or>
+        <reflectiveChange>Suchen</reflectiveChange>
+      </wordform>
+      <TE>寻找</TE>
+    </word>
+        <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Informatiker</or>
+        <reflectiveChange>Informatiker</reflectiveChange>
+      </wordform>
+      <TE>电脑工程师</TE>
+    </word>
+    <example>Der Informatiker sucht eine Wohnung.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="die" Level="4">
+      
+      <wordform>
+        <or>Firma</or>
+        <reflectiveChange>Firmen</reflectiveChange>
+      </wordform>
+      <TE>公司</TE>
+    </word>
+    <example>Ich arbeite bei Firma Borsch.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Präp+D" Level="4">
+      
+      <wordform>
+        <or>seit</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>自…以来</TE>
+    </word>
+    <example>Seit Wochen sucht er eine Wohnung.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="die" Level="4">
+      
+      <wordform>
+        <or>Anzeige</or>
+        <reflectiveChange>Anzeigen</reflectiveChange>
+      </wordform>
+      <TE>广告，告示</TE>
+    </word>
+    <example>Lesen Sie die Anzeigen?</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="6">
+      
+      <wordform>
+        <or>Vermieter</or>
+        <reflectiveChange>Vermieter(die Vermieterin,-nen)</reflectiveChange>
+      </wordform>
+      <TE>出租者</TE>
+    </word>
+    <example>Er ist Vermieter.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Adv." Level="6">
+      
+      <wordform>
+        <or>dringend</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>迫切的</TE>
+    </word>
+    <example>Er möchte dringend eine Wohnung mieten.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>mieten</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>租用，租借，租赁</TE>
+    </word>
+    <example>Er möchte eine Wohnung mieten.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>besichtigen</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>参观</TE>
+    </word>
+    <example>Er besichtigt eine Mietwohung.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Adv." Level="4">
+      
+      <wordform>
+        <or>weg</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>不在，离开</TE>
+    </word>
+    <example>Der Bus ist weg.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="das" Level="4">
+      
+      <wordform>
+        <or>Problem</or>
+        <reflectiveChange>Probleme</reflectiveChange>
+      </wordform>
+      <TE>问题，困难</TE>
+    </word>
+    <example>Kein Problem!</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>zeigen</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>给……看</TE>
+    </word>
+    <example>Sie zeigt ihm die Wohnung.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>ausziehen</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>脱衣服，搬出</TE>
+    </word>
+    <example>Der Sohn zieht aus dem Elternhaus aus.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Adv." Level="4">
+      
+      <wordform>
+        <or>nötig</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>必要的</TE>
+    </word>
+    <example>Er findet die Arbeit zwar nötig, macht sie aber nicht gleich.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Adj." Level="4">
+      
+      <wordform>
+        <or>renoviert</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>修缮过的，装修过的</TE>
+    </word>
+    <example>Das Wohnzimmer ist renoviert und sieht modern und hell aus.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Adv." Level="4">
+      
+      <wordform>
+        <or>ziemlich</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>相当(改)</TE>
+    </word>
+    <example>Er trinkt ziemlich viel.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Adv." Level="4">
+      
+      <wordform>
+        <or>zwar</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>虽然</TE>
+    </word>
+    <example>Das Essen ist zwar kalt, schmeckt aber gut.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Adj." Level="4">
+      
+      <wordform>
+        <or>modern</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>现代的，时髦的</TE>
+    </word>
+    <example>Die Möbel sehen modern aus.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Adj." Level="4">
+      
+      <wordform>
+        <or>hell</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>明亮的</TE>
+    </word>
+    <example>Die Wohnung ist ganz hell.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="das" Level="4">
+      
+      <wordform>
+        <or>Fenster</or>
+        <reflectiveChange>Fenster</reflectiveChange>
+      </wordform>
+      <TE>窗户，窗子</TE>
+    </word>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Süden</or>
+        <reflectiveChange>o.Pl.</reflectiveChange>
+      </wordform>
+      <TE>南部，南方，南面</TE>
+    </word>
+    <example>Die Fenster gehen alle nach Süden.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Internetanschluss</or>
+        <reflectiveChange>Internetanschlüsse</reflectiveChange>
+      </wordform>
+      <TE>网络接口</TE>
+    </word>
+    <example>In der Mietwohnung gibt es schon Internetanschlüsse.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Präp+D/A" Level="4">
+      
+      <wordform>
+        <or>hinter</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>在…后面;到…后面去</TE>
+    </word>
+    <example>Das Kind steht hinter seiner Mutter.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Parkplatz</or>
+        <reflectiveChange>Parkplätz</reflectiveChange>
+      </wordform>
+      <TE>停车场</TE>
+    </word>
+    <example>Hinter dem Haus liegt ein Parkplatz.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Adj." Level="4">
+      
+      <wordform>
+        <or>hoch</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>高的</TE>
+    </word>
+    <word Property="die" Level="4">
+      
+      <wordform>
+        <or>Miete</or>
+        <reflectiveChange>Mieten</reflectiveChange>
+      </wordform>
+      <TE>租金</TE>
+    </word>
+    <example>Wie hoch ist die Miete?</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Monat</or>
+        <reflectiveChange>Monate</reflectiveChange>
+      </wordform>
+      <TE>月，月份</TE>
+    </word>
+    <example>Ein Jahr hat zwölf Monate.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Adj." Level="4">
+      
+      <wordform>
+        <or>warm</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>温暖的，热的</TE>
+    </word>
+    <example>Heute ist es warm.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>nehmen</or>
+        <reflectiveChange>nimmt</reflectiveChange>
+      </wordform>
+      <TE>接受，选，购，乘，坐</TE>
+    </word>
+    <example>Ich nehme die Wohnung.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Nachbar</or>
+        <reflectiveChange>Nachbarn(die Nachbarin -nen)</reflectiveChange>
+      </wordform>
+      <TE>邻居</TE>
+    </word>
+    <example>Meine Nachbarn sind alle nett.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="6">
+      
+      <wordform>
+        <or>einhalten</or>
+        <reflectiveChange>hält ein</reflectiveChange>
+      </wordform>
+      <TE>遵守 </TE>
+    </word>
+    <example>Alle Studenten müssen die Hausordnung einhalten.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="das" Level="4">
+      
+      <wordform>
+        <or>Haustier</or>
+        <reflectiveChange>Haustiere</reflectiveChange>
+      </wordform>
+      <TE>宠物</TE>
+    </word>
+    <example>In einer Mietwohung darf man kein Haustier halten.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>halten</or>
+        <reflectiveChange>hält</reflectiveChange>
+      </wordform>
+      <TE>养着，饲养；拿着，停着</TE>
+    </word>
+    <example>Das Auto hält vor dem Haus.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Umzug</or>
+        <reflectiveChange>Umzüge</reflectiveChange>
+      </wordform>
+      <TE>搬家</TE>
+    </word>
+    <example>Umzug kostet Geld.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>umziehen</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>搬家</TE>
+    </word>
+    <example>Heute zieht er um.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V.+A" Level="4">
+      
+      <wordform>
+        <or>betrachten</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>细看，打量</TE>
+    </word>
+    <example>Er betrachtet das Zimmer genau.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Drehstuhl</or>
+        <reflectiveChange>Drehstühle</reflectiveChange>
+      </wordform>
+      <TE>转椅</TE>
+    </word>
+    <example>Der Drehstuhn steht am Schreibtisch.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Präp+D/A" Level="4">
+      
+      <wordform>
+        <or>über</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>在/到…上方</TE>
+    </word>
+    <example>Über dem Tisch hängt eine Lampe.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="Präp+D" Level="4">
+      
+      <wordform>
+        <or>gegenüber</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>在…对面,面对</TE>
+    </word>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>hängen</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>挂着，悬着，吊着</TE>
+    </word>
+    <example>Die Wanduhr hängt gegenüber dem Bild.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>stehen</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>站立，竖直，竖放着</TE>
+    </word>
+    <example>Das Fahrrad steht vor den Studentenwohnheim.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Nachttisch</or>
+        <reflectiveChange>Nachttische</reflectiveChange>
+      </wordform>
+      <TE>床头柜</TE>
+    </word>
+
+    <word Property="die" Level="4">
+      
+      <wordform>
+        <or>Lampe</or>
+        <reflectiveChange>Lampen</reflectiveChange>
+      </wordform>
+      <TE>灯</TE>
+    </word>
+    <example>Auf dem Nachttische steht eine Lampe.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="die" Level="4">
+      
+      <wordform>
+        <or>Wand</or>
+        <reflectiveChange>Wände</reflectiveChange>
+      </wordform>
+      <TE>墙壁，墙面</TE>
+    </word>
+    <example>An der Wand hängt ein Bild.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="die" Level="4">
+      
+      <wordform>
+        <or>Ecke</or>
+        <reflectiveChange>Ecken</reflectiveChange>
+      </wordform>
+      <TE>角落，隅</TE>
+    </word>
+    <example>Die katze läuft in die Ecke.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="das" Level="4">
+      
+      <wordform>
+        <or>Regal</or>
+        <reflectiveChange>Regale</reflectiveChange>
+      </wordform>
+      <TE>架子，书架</TE>
+    </word>
+    <example>Im Regal stehen viele Bücher.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="die" Level="4">
+      
+      <wordform>
+        <or>Sache</or>
+        <reflectiveChange>Sachen</reflectiveChange>
+      </wordform>
+      <TE>物品，东西，事情</TE>
+    </word>
+    <example>Er bringt seine Sachen in Ordnung.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="die" Level="4">
+      
+      <wordform>
+        <or>Ordnung</or>
+        <reflectiveChange>Ordnungen</reflectiveChange>
+      </wordform>
+      <TE>规则，秩序</TE>
+    </word>
+    <example>In Ordnung!</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Laptop</or>
+        <reflectiveChange>Laptops</reflectiveChange>
+      </wordform>
+      <TE>笔记本电脑</TE>
+    </word>
+    <example>Viele Studenten haben Laptops.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>stecken</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>插入，插着</TE>
+    </word>
+    <example>Die Blumen stecken in der Vase.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="6">
+      
+      <wordform>
+        <or>Stecker</or>
+        <reflectiveChange>Stecker</reflectiveChange>
+      </wordform>
+      <TE>插头</TE>
+    </word>
+    <word Property="die" Level="6">
+      
+      <wordform>
+        <or>Steckdose</or>
+        <reflectiveChange>Steckdosen</reflectiveChange>
+      </wordform>
+      <TE>插座</TE>
+    </word>
+    <example>Er steckt den Stecker in die Steckdose.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Koffer</or>
+        <reflectiveChange>Koffer</reflectiveChange>
+      </wordform>
+      <TE>箱子</TE>
+    </word>
+    <example>Er macht seinen Koffer auf und hängt seine Kleidung in den Schrank.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="die" Level="4">
+      
+      <wordform>
+        <or>Kleidung</or>
+        <reflectiveChange>Kleidung</reflectiveChange>
+      </wordform>
+      <TE>衣服（总称）</TE>
+    </word>
+    <example>Er legt die Kleidung in den Schrank.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Schrank</or>
+        <reflectiveChange>Schränke</reflectiveChange>
+      </wordform>
+      <TE>柜子，橱子</TE>
+    </word>
+    <example>Der Schrank ist zwar alt,aber gut.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V.+A" Level="4">
+      
+      <wordform>
+        <or>stellen</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>竖放，直立</TE>
+    </word>
+    <example>Er stellt den Laptop auf den Tisch.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="der" Level="4">
+      
+      <wordform>
+        <or>Wecker</or>
+        <reflectiveChange>Wecker</reflectiveChange>
+      </wordform>
+      <TE>闹钟</TE>
+    </word>
+    <example>Dann stellt er den Wecker auf den Tisch.</example>
+  </WordGroup>
+  <WordGroup>
+    <word Property="V." Level="4">
+      
+      <wordform>
+        <or>legen</or>
+        <reflectiveChange></reflectiveChange>
+      </wordform>
+      <TE>平放，摆；躺，卧</TE>
+    </word>
+  </WordGroup>
+</WordList>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<text id="1" type="dialog" source="新编大学德语">
+	<title>Im Restaurant</title>
+	<figure num="3">
+		<person name="Thomas"/>
+		<person name="Xiaoming"/>
+		<person name="Kellnerin"/>
+	</figure>
+	<Prolog>Es ist 8 Uhr abends. Thomas lädt Xiaoming zum Abendessen im Restaurant ,,Zum Kaiser'' ein.</Prolog>
+	<body>
+		<Thomas>Hier ist die Speisekarte. Schauen wir mal hinein.</Thomas>
+		<Xiaoming>Was gibt es denn heute?</Xiaoming>
+		<Thomas>Schnitzel mit Pommes Frites, Schweinebraten mit Klößchen und Rindersteak mit Bratkartoffeln. Und... Was möchtest du gerne?</Thomas>
+		<Xiaoming>Schnizel mit Pommes Frites mag ich sehr. Und dazu nehme ich noch einen Salat.</Xiaoming>
+		<Thomas>Ja,näturlich.</Thomas>
+		<Xiaoming>Und ich möchte noch eine Zwiebelsuppe als Vorspeise.</Xiaoming>
+		<Thomas>Die möchte ich auch bestellen.</Thomas>
+		<Kellnerin>Also, was möchten Sie gerne essen?</Kellnerin>
+		<Thomas>Wir hätten gerne Schnitzel mit Pommes Frites und Rindersteak mit Bratkartoffeln, zweimal Salat und als Vorspeise zwei Zwiebelsuppen.</Thomas>
+		<Kellnerin>Und was trinken Sie?</Kellnerin>
+		<Thomas>Trinkst du Bier, Xiaoming?</Thomas>
+		<Xiaoming>Nein, lieber einen Apfelsaft.</Xiaoming>
+		<Thomas>Es ist jetzt schon Abend. Du musst nicht mehr arbeiten. Trink doch einfach ein Bier mit mir.</Thomas>
+		<Xiaoming>Na gut, trinken wir Bier.</Xiaoming>
+		<Thomas>Also zwei Bier, bitte!</Thomas>
+		<Kellnerin>Wünschen Sie sonst noch etwas?</Kellnerin>
+		<Thomas>Nein, danke. Das ist alles.</Thomas>
+		<Kellnerin>Bitte schön, Ihre Suppen. Dann wünsche ich Ihnen einen guten Appetit!</Kellnerin>
+		<Kellnerin>Ihr Schnitzel mit Pommes Frites, Ihr Rindersteak mit Bratkartoffeln und Salat. Guten Appetit.</Kellnerin>
+		<Thomas>Dannke schön!</Thomas>
+		<Xiaoming repeat="true"/>
+		<Thomas>Na, dann zum Wohl!</Thomas>
+		<Xiaoming>Prost!</Xiaoming>
+		<Thomas>Guten Appetit!</Thomas>
+		<Xiaoming>Gleichfalls!</Xiaoming>
+		<Thomas>Wie schmeckt es dir, Xiaoming?</Thomas>
+		<Xiaoming>Hm, gut! Das Schnitzel und die Pommes Frites sind lecker.</Xiaoming>
+		<Thomas>Mir schmeckt das Rindersteak auch sehr gut. Aber später probiere ich auch mal das Schnitzel. Ich komme oft nach der Arbeit hierher. Die Atmosphäre hier im Restaurant gefällt mir nämlich sehr gut.</Thomas>
+		<Xiaoming>Das finde ich auch.</Xiaoming>
+		<Thomas>So, als Nachtisch möchte ich ein Eis. Iss doch auch eins! Das Eis hier schmeckt besonders gut.</Thomas>
+		<Xiaoming>Nein, danke. Eis mag ich nicht. Bestell dir ruhig eins.</Xiaoming>
+		<Thomas>Zahlen, bitte!</Thomas>
+		<Kellnerin>Hat es geschmeckt?</Kellnerin>
+		<Thomas>Ja, sehr gut.</Thomas>
+		<Kellnerin>Zahlen Sie getrennt oder zusammen?</Kellnerin>
+		<Thomas>Zusammen.</Thomas>
+		<Kellnerin>Das macht zusammen 28,50 Euro.</Kellnerin>
+		<Thomas>Bitte schön, hier sind 30 Euro. Stimmt so.</Thomas>
+		<Kellnerin>Vielen Dank.</Kellnerin>
+		<Xiaoming>Also, Thomas, ich danke dir für das Essen.</Xiaoming>
+		<Thomas>Bitte, gern geschehen.</Thomas>
+	</body>
+</text>

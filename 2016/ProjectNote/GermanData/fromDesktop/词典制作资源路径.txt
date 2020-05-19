@@ -1,0 +1,9 @@
+现有资源目录：
+单词和少量例句读音：
+D:\QtTest\GermanP\De-De-Langenscheidt-Vokabeln
+用相对路径的方式存储单词读音的参考代码：
+D:\QtTest\ODBC\archiveText2.txt
+使用树的存储结构manipulate句子：
+D:\QtTest\ODBC\function-code_saving.txt
+mdic某德语小型词典原代码：
+D:/QtTest/MDictPC/mydic.txt

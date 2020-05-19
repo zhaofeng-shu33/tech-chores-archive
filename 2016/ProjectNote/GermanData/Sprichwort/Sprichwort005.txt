@@ -1,0 +1,8 @@
+﻿
+<text id="5" type="Geschichte" source="德译中国成语故事">
+	<title>Auf dem Rücken eines Streitrosses erworbene Verdienste</title>
+	<Chinesisch>汗马功劳</Chinesisch>
+	<p1>Das Sprichwort ,,Auf dem Rücken eines Streitrosses erworbene Verdienste'' bedeutet eigentlich große Verdienste, die in den alten Zeiten von Armeeführern mit Kriegspferden auf einem Schlachtfeld im Kampf für ihren Staat bzw. ihr Reich erworben wurden. Aber in moderner Zeit wird es im allgemeinen in Bezug auf große Erfolge in der Arbeitswelt gebraucht.</p1>
+	<p2>Die Geschichte, aus der das Sprichwort entstand, ereignete sich Anfang der Han-Dynastie. Nachdem Liu Bang zum König des Han-Reiches geworden war, hielt er große Stücke auf Xiao He. Er lobte und pries ihn wegen seiner verdienstvollen Leistung beim Transport des Armeeproviants, wegen einer großen Hilfe bei der Verwaltung des Reiches und bei der Befriedung des Volkes. Und er erhob ihn sogar zum Fürsten. Aber viele höhere Offiziere, die Liu Bang unterstanden, fühlten sich dadurch übergangen. Sie fühlten sich ungerecht behandelt, weil sie, wie sie meinten, ihr Leben auf Hunderten von Schlachtfeldern aufs Spiel gesetzt hatten, während Xiao He bei keiner einzigen Schlacht persönlich anwesend war und nur am Königshof zungenfertig redete und am Schreibtisch mit der Feder arbeitete, und am Ende nach erfolgreicher Schlacht wurde ihm viel mehr Belohung gegeben als ihnen.</p2>
+</text>
+

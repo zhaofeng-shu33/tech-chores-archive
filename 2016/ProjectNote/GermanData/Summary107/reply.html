@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>制作单词表的初衷是建立课本单词表电子化的入口，原则是凡是课本单词表有的元素都必须体现，没有的元素尽量不加，这和词典的思路不一样。</p>
+		<p>在我的Vokabeln6-1.xml中</p>
+		<ol>
+		<li>原WordGroup tag是适应课本多个单词有同一个例句的情况，可参考
+Vokabeln6-1.xml排版效果(在summary.html中有)，如果你用的课本课后单词表没有例句，不用自己造，相应的wordGroup也可以去掉。
+</li>
+<li>分4,6级是适应原课本有相应的4,6级标签，可参考
+Vokabeln6-1.xml排版效果，*和#分别表示4和6，如果你用的课本课后单词表没有4,6级标签，不用自己找，相应的Level属性也可以去掉。
+</li>
+<li>例句的翻译，如果你用的课本课后单词表没有翻译，不用自己译，我的
+Vokabeln6-1.xml也没有译.</li>
+<li>名词复数的处理，应依照你用的课本的处理方式，做等价的转换，比如我用的课本采用了下图1的处理方式,其中"-"表示单复同形，"-"上加两点表示a在复数中要变成ä,"-"后面的er表示复数是在单数的基础上词尾加上er,比如Wohnhaus变成复数为Wohnhäuser.之前在制作电子版的时候觉得这种排版效果比较难做，便采用了下面表格1的处理方式，使用了'&lt a title="Einfämilienhäuser"/&gt'。图1中1到3的图形元素暂时还没有实现，但打算用svg矢量图的方式，我十一学了一点，用它画了一个物理实验报告的图，见可以CombineFigure.svg 或图2。复数有多种情况仍参照课本的处理，比如图1的Balkon一词，我用了&lt a title="Balkone/Balkons"&gt</li>
+<li>语音部分需要指定语音文件，可以暂时不写，上次说过我的matlab的代码分割单词读音比较差，见AudioCutter.m。如果你有打算用类似的方法的话，可以参考“短时能量法”和“短时平均过零率”法进行改进，我并不是直接用一个Matlab 函数就可以完成的，大概要先读语音文件到一个一维数组，每隔一小段计算一下短时能量（平方和），设置一个阈值，将短时能量数值二值化，找到01转变点作为分割点的，对分割结果进行排序，按照时间长短取最前面的几个。</li>
+		</ol>
+		<div><p align="center">图一</p> <img src="original.jpg"/>
+		</div>
+		 
+		<table align="center" border="1"><caption>表格1</caption><tbody><tr><td bgcolor="#c88b48"><sup>*</sup>das</td><td><a title="Wohnhäuser">Wohnhaus</a></td><td style="font-family: FangSong; font-size: 20px; font-weight: bold;" bgcolor="#c88b48">住宅</td><td width="150"  rowspan="4">Hier sieht man ein Wohnhaus, ein Einfamilienhaus, ein Doppelhaus und eine WG.</td></tr><tr><td bgcolor="#c88b48"><sup>*</sup>das</td><td><a title="Einfämilienhäuser">Einfamilienhaus</a></td><td style="font-family: FangSong; font-size: 20px; font-weight: bold;" bgcolor="#c88b48">独宅，单户住宅</td></tr><tr><td bgcolor="#c88b48"><sup>*</sup>das</td><td><a title="Reihenhäuser">Reihenhaus</a></td><td style="font-family: FangSong; font-size: 20px; font-weight: bold;" bgcolor="#c88b48">连排房屋</td></tr><tr><td bgcolor="#c88b48"><sup>*</sup>die</td><td><a title="Wohngemeinschaften">Wohngemeinschaft</a></td><td style="font-family: FangSong; font-size: 20px; font-weight: bold;" bgcolor="#c88b48">集体住房，合住套房</td></tr><tr><td bgcolor="#c88b48"><sup>*</sup>das</td><td><a title="Zimmer">Zimmer</a></td><td style="font-family: FangSong; font-size: 20px; font-weight: bold;" bgcolor="#c88b48">房间</td><td width="150"  rowspan="3">Die Zimmer sind Wohnzimmer,Schlafzimmer usw.</td></tr><tr><td bgcolor="#c88b48"><sup>*</sup>das</td><td><a title="Wohnzimmer">Wohnzimmer</a></td><td style="font-family: FangSong; font-size: 20px; font-weight: bold;" bgcolor="#c88b48">客厅,起居室</td></tr><tr><td bgcolor="#c88b48"><sup>*</sup>das</td><td><a title="Schlafzimmer">Schlafzimmer</a></td><td style="font-family: FangSong; font-size: 20px; font-weight: bold;" bgcolor="#c88b48">卧室，寝室</td></tr><tr><td bgcolor="#c88b48"><sup>*</sup>das</td><td><a title="Bäder">Bad</a></td><td style="font-family: FangSong; font-size: 20px; font-weight: bold;" bgcolor="#c88b48">浴室</td><td width="150"  rowspan="1">Das Bad ist klein.</td></tr><tr><td bgcolor="#c88b48"><sup>#</sup>der</td><td><a title="Balkone/Balkons">Balkon</a></td><td style="font-family: FangSong; font-size: 20px; font-weight: bold;" bgcolor="#c88b48">阳台</td><td width="150"  rowspan="1">Der Balkon geht nach Süden.</td></tr><tr><td bgcolor="#c88b48"><sup>#</sup>der</td><td><a title="Flure">Flur</a></td><td style="font-family: FangSong; font-size: 20px; font-weight: bold;" bgcolor="#c88b48">走廊</td><td width="150"  rowspan="1">Die Katze sitzt im Flur.</td></tr></tbody></table>
+	<div><p align="center">图二</p> <img src="CombineFigure.svg"/>
+	</div>
+	<p>Einfamilienhaus复数是Einfamilienhäuser</p>	 
+	</body>
+</html>

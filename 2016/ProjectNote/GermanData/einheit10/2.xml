@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Eintrag category="Substantiv">
+	<Stichwort>Rathaus</Stichwort>
+	<Einheit>10</Einheit>
+	<Anteil>Einführung</Anteil>
+	<Genus>das</Genus>
+	<Pluralform>Rathäuser</Pluralform>
+	<GenitivSingular>Rathauses</GenitivSingular>
+	<zusammengesetzteWörter>
+		<KompositaCollection>
+			<_K>Rathausplatz</_K>
+			<_K>Rathaussaal</_K>
+		</KompositaCollection>
+		<abgeleiteteWörter>
+			<hierzu category=""/>
+		</abgeleiteteWörter>
+	</zusammengesetzteWörter>
+	<Synonymegruppe>
+		<Sym/>
+	</Synonymegruppe>
+	<Antonymegruppe>
+		<Anm/>
+	</Antonymegruppe>
+	<Kollokationen>
+		<K/>
+	</Kollokationen>
+	<AllgemeineErläuterungen>
+		<Eintrag>
+			<Chinesisch>市政厅</Chinesisch>
+			<BeispielSammlung>
+				<Beispiel>
+				<Satz></Satz>
+				<Übersetzung>Gegenüber dem Rathaus ist die Kirche.</Übersetzung>
+				</Beispiel>
+			</BeispielSammlung>
+		</Eintrag>
+	</AllgemeineErläuterungen>
+</Eintrag>

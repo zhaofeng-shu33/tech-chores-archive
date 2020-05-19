@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>赵丰</Author>
+  <LastAuthor>赵丰</LastAuthor>
+  <Created>2016-09-07T11:16:50Z</Created>
+  <Company>http://sdwm.org</Company>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>9630</WindowHeight>
+  <WindowWidth>21600</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="等线" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Bottom"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="等线" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="11" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">wordform</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">wordclass</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Plural</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">example</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">中文翻译</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">单元</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">部分</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Wohnhaus</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">das</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Wohnhäuser</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">住宅</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einführung</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einfamilienhaus</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">das</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einfämilienhäuser</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">单户住宅</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einführung</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Reihenhaus</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">das</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Reihenhäuser</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">连排房屋</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einführung</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Wohngemeinschaft</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">die</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Wohngemeinschaften</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Hier sieht man ein Wohnhaus, ein Einfamilienhaus, ein Doppelhaus und eine WG.</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">集体住房</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einführung</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Zimmer</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">das</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Zimmer</Data></Cell>
+    <Cell ss:Index="5" ss:StyleID="s62"><Data ss:Type="String">房间</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einführung</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Wohnzimmer</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">das</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Wohnzimmer</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">客厅</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einführung</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Schlafzimmer</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">das</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Schlafzimmer</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Die Zimmer sind Wohnzimmer,Schlafzimmer usw.</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">卧室</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einführung</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Bad</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">das</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Bäder</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Das Bad ist klein.</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">浴室</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einführung</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Balkon</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">der</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Balkone</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Der Balkon geht nach Süden.</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">阳台</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einführung</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Flur</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">der</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Flure</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Die Katze sitzt im Flur.</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">走廊</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Einführung</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R11C7</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

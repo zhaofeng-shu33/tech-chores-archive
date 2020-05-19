@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Eintrag category="Substantiv">
+	<Stichwort>U-Bahn</Stichwort>
+	<Einheit>10</Einheit>
+	<Anteil>Einführung</Anteil>
+	<Genus>die</Genus>
+	<Pluralform>Bahnen</Pluralform>
+	<GenitivSingular>Bahn</GenitivSingular>
+	<zusammengesetzteWörter>
+		<KompositaCollection>
+			<_K>U-Bahnstation</_K>
+			<_K>U-Bahnnetz</_K>
+			<K_/>
+		</KompositaCollection>
+		<abgeleiteteWörter>
+			<K/>
+		</abgeleiteteWörter>
+	</zusammengesetzteWörter>
+	<Synonymegruppe>
+		<Sym>Untergrundbahn</Sym>
+	</Synonymegruppe>
+	<Antonymegruppe>
+		<Anm/>
+	</Antonymegruppe>
+	<Kollokationen>
+		<K>mit der U-Bahn fahren</K>
+		<K>die U-bahn nehmen</K>
+	</Kollokationen>
+	<AllgemeineErläuterungen>
+		<Eintrag>
+			<Chinesisch>地铁，地下铁路</Chinesisch>
+			<BeispielSammlung>
+				<Beispiel>
+					<Satz>Die U-Bahn erhöht ihre Preise.</Satz>
+					<Übersetzung>地铁提高运价</Übersetzung>
+				</Beispiel>
+			</BeispielSammlung>
+		</Eintrag>
+	</AllgemeineErläuterungen>
+</Eintrag>

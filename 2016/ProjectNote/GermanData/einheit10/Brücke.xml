@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Eintrag category="Substantiv">
+	<Stichwort>Brücke</Stichwort>
+	<Einheit>10</Einheit>
+	<Anteil>Einführung</Anteil>
+	<Genus>die</Genus>
+	<Pluralform>Brücken</Pluralform>
+	<GenitivSingular>Brücke</GenitivSingular>
+	<zusammengesetzteWörter>
+		<KompositaCollection>
+			<_K>Brückenbogen</_K>
+			<_K>Brückengeländer</_K>
+			<_K>Brückenpfeiler</_K>
+			<K_>Autobahnbrücke</K_>
+			<K_>Eisenbahnbrücke</K_>
+		</KompositaCollection>
+		<abgeleiteteWörter>
+			<hierzu category=""/>
+		</abgeleiteteWörter>
+	</zusammengesetzteWörter>
+	<Synonymegruppe>
+		<Sym/>
+	</Synonymegruppe>
+	<Antonymegruppe>
+		<Anm/>
+	</Antonymegruppe>
+	<Kollokationen>
+		<K>über eine Brücke fahren</K>
+		<K>eine Brücke passieren</K>
+		<K>eine Brücke über A.</K>
+	</Kollokationen>
+	<AllgemeineErläuterungen>
+		<Eintrag>
+			<Chinesisch>桥梁，联系</Chinesisch>
+			<BeispielSammlung>
+				<Beispiel>
+					<Satz>Die Brücke spannt sich über den Fluss.</Satz>
+					<Übersetzung>河上架起一座桥。</Übersetzung>
+				</Beispiel>
+				<Beispiel>
+					<Satz>Die Musik schafft eine Brücke zwischen den Völken.</Satz>
+					<Übersetzung>音乐在各国人民间架起了一座桥。</Übersetzung>
+				</Beispiel>
+			</BeispielSammlung>
+		</Eintrag>
+	</AllgemeineErläuterungen>
+</Eintrag>
