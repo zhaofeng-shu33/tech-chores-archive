@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{url}
+\title{integral}
+\author{zhaof17 }
+\date{October 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Suppose $X, Y$ are uniformly distributed on the region
+$|x|^p + |y|^p < 1$. Compute the mutual information term
+$I(X;Y)$.
+
+The area is $S_p = 4\int_0^1 (1-x^p)^{1/p} dx = \frac{4}{p} B(\frac{1}{p} +1, \frac{1}{p})$ where $B$ is Beta function.
+The marginal distribution of $X$ is $p(x) = \frac{2(1-|x|^p)^{1/p}}{S}$. Therefore,
+$H(X) = -\int_{-1}^1 p(x) \log p(x)dx = \log \frac{S_p}{2} - \frac{4}{p S_p}\int_0^1 (1-x^p)^{1/p}\log(1-x^p)dx$.
+\begin{align*}
+    p\int_0^1 (1-x^p)^{1/p}\log(1-x^p)dx
+    &=  \int_0^1 y^{1/p-1} (1-y)^{1/p} \log(1-y) dy\\
+    &= \int_0^1 (1-y)^{1/p-1} y^{1/p} \log y dy \\
+    &= \psi(\frac{1}{p} +1) - \psi(\frac{2}{p}+1) \\
+\end{align*}
+where $\psi$ is the digamma function. The representation using
+digamma function
+can be found from \cite{wiki}.
+
+Therefore,
+$H(X) = \log \frac{S_p}{2} + \frac{4}{p^2 S_p}(\psi(\frac{2}{p} +1) - \psi(\frac{1}{p}+1))$
+\begin{align*}
+I(X;Y) &= 2H(X) - H(X,Y) \\
+&= 2\log \frac{S_p}{2} - \log S_p + \frac{8}{p^2 S_p}(\psi(\frac{2}{p} +1) - \psi(\frac{1}{p}+1)) \\
+&=\log\frac{B(\frac{1}{p}+1, \frac{1}{p})}{p}
++\frac{2}{pB(\frac{1}{p}+1, \frac{1}{p})}(\psi(\frac{2}{p} +1) - \psi(\frac{1}{p}+1)) 
+\end{align*}
+
+When $p \to \infty$, we will have
+$\frac{B(\frac{1}{p}+1, \frac{1}{p})}{p} \to 1$, therefore $I(X;Y)\to 0$.
+
+When $p \to 0$, we will have $I(X;Y) \to +\infty$.
+
+\begin{thebibliography}{9}
+\bibitem{wiki} \url{https://en.wikipedia.org/wiki/Beta_distribution#Moments_of_logarithmically_transformed_random_variables}
+
+\end{thebibliography}
+\end{document}
