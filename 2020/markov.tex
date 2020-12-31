@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{url}
+\title{probability-theory}
+\author{zhaof17 }
+\date{December 2020}
+
+\begin{document}
+
+\maketitle
+\section{Problem}
+Let $\{X_n\}_{n=0}^{\infty}$
+be a Markov chain with state space
+$\{0,1,2,\dots\}$.
+The transition probabilities are
+$p_{0,1}=1$,
+$p_{2n-1, 2n+1} = p$,
+$p_{2n-1, 2n} = 1-p$,
+$p_{2n, 2n+1} = p$,
+$p_{2n, 2n-2} = 1-p$,
+for all $n\geq 1$ where $p\in (0,1)$ is some constant.
+For every $p\in (0,1)$,
+indicate whether the Markov chain is transient,
+null recurrent, or positive recurrent.
+Prove your conclusion. When the Markov chain is
+positive recurrent, calculate the stationary
+distribution.
+\section{Preliminary result}
+The definition of transient, null recurrent and positive
+recurrent chain can be found in \cite{def}.
+
+If the Markov chain is positive recurrent. Using
+$x = x P$ we can get $x_0 = c$ and
+
+\begin{align*}
+x_{2n} &= \frac{p^{n-1} c (2-p)^{n-1}}{(1-p)^n} (n\geq 1) \\
+x_{2n+1} & = \frac{p^n c (2-p)^n}{(1-p)^n} (n\geq 0)
+\end{align*}
+This result can be proved using induction ($x=xP$) on:
+\begin{align*}
+    (1-p)(x_{2n-1} + x_{2n+2}) &= x_{2n} \\
+    p(x_{2n-1} + x_{2n}) &= x_{2n+1}
+\end{align*} for $n\geq 1$
+while the initial condition is
+$x_0=x_1=c, x_2(1-p)=x_0$.
+This method is used in Example 15, Chapter 8 of \cite{prob}.
+Although the transition matrix $P$ is infinite, we can
+still use the steady state equation.
+
+$c$ is the normalization constant such that
+$\sum_{n=0}^{+\infty} x_n = 1$.
+The series converges if $\frac{(p)(2-p)}{1-p} < 1$,
+from which we can get the necessary condition on $p$ for
+the Markov chain to be positive-recurrent:
+$p > \frac{3-\sqrt{5}}{2}$.
+We further guess that the chain is null-recurrent
+when $p=\frac{3-\sqrt{5}}{2}$
+and transient when $p<\frac{3-\sqrt{5}}{2}$.
+\begin{thebibliography}{9}
+\bibitem{def} \url{https://en.wikipedia.org/wiki/Markov_chain#Properties}
+\bibitem{prob} Chung, Kai Lai. Elementary probability theory with stochastic processes. Springer Science \& Business Media, 2003 Fourth Edition.
+\end{thebibliography}
+\end{document}
