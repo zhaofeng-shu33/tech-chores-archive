@@ -1,0 +1,18 @@
+上周阅读了贝叶斯假设检验(02)的内容，文中主要介绍了贝叶斯风险函数最小的代价准则及似然比检验的方法。
+本节中给出的贝叶斯风险函数是参数化的，即4类代价C_{ij}均可调整，其中最常用的是(0,1,1,0)的代价函数，
+对应着贝叶斯的MAP决策准则。基于贝叶斯风险函数最小的准则可给出似然比检验的一般公式，似然比检验
+的参数eta由代价C_{ij}和两类假设空间的先验分布决定。
+
+本周阅读了非贝叶斯决策理论（03）的内容，文中主要介绍了另一种假设检验的NP准则，
+即保证false alerm错误率不超过alpha时极大化detection的概率，也可表述成TypeIError<=alpha,极大化power beta.
+NP准则由于区别对待了TypeIError和TypeIIError,因此和平均化的贝叶斯风险函数准则有明显的不同。但NP引理指出
+在似然比检验的类别中由alpha取定某个eta,可以达到满足约束下极大化detection的效果。
+本文介绍了RC曲线NP引理，
+
+文中给出的NP引理的证明讨论三点(03.page 6)
+1)设alpha'的原因是将不等式约束条件转为等式约束再使用，wiki 上给出的NP lemma直接是令P_F=alpha,page 5上给出的引理条件更宽松，但
+正如文中所说，考虑到P_D是P_F的增函数，P_F\leq \alpha和P_F = \alpha没区别
+标准的Lagrange乘子，避免了对诸如KKT条件的讨论，
+2) 乘子\varphi()是关于\lambda和\mathcal{y}_0的函数，文中的思路应该是先固定\lambda,讨论\varphi关于\mathcal{y}_0的变化 
+3)\mathcal{y}_0 contains precisely those ...比较难理解，我觉得
+这里是说\mathcal{y}_0 不能取到整个space,其最大的范围即恰好是被积式非正的范围，如果再大一点$\varphi()就变小了。
