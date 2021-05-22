@@ -50,3 +50,7 @@ Homework 1
 -   Please find a paper or a financial engineering research report from
     a broker which is related to behavioral finance. Sum up the strategy
     and its behavioral finance support.
+
+> I choose a weekly report from Zhongtai Securities.
+> The title is "中泰金工事件驱动周报—主营产品涨价及冷门股效应", release in 2021/5/16.
+> In this report, a strategy based on behavioral fiance is tracked up to latest data.
