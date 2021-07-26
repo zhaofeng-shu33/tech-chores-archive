@@ -3,3 +3,8 @@ settings.json
 generate_build.py
 build
 .DS_Store
+.vscode
+*.exe
+*.pdb
+*.obj
+*.ilk
