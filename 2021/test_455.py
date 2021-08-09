@@ -10,3 +10,8 @@ def module_test(filename, right_answer):
 
 module_test('455_input_1.txt', ['3 3', '3 4'])
 module_test('455_input_2.txt', ['3 3'])
+module_test('455_input_3.txt', ['1 3', '1 4'])
+module_test('455_input_4.txt', ['3 1'])
+module_test('455_input_5.txt', ['2 5', '3 5'])
+module_test('455_input_6.txt', ['5 3', '5 4'])
+module_test('455_input_7.txt', ['1 1'])
