@@ -6,29 +6,29 @@ def count_lake(lake, M, N):
         if lake[i][j]==0 and covered[i][j] == 0:
             # search all neighbor
             covered[i][j] = num
-            valid_neighbor = []
-            if j+1<N and lake[i][j+1] == 0:
-                valid_neighbor.append((i,j+1))
-            if i+1<M and lake[i+1][j] == 0:
-                valid_neighbor.append((i+1,j))
+            valid_neighbor = [(i, j)]
             while len(valid_neighbor) > 0:
                 pi, pj = valid_neighbor.pop()
-                if pj+1<N and lake[pi][pj+1] == 0 and valid_neighbor.count((pi,pj+1)) == 0:
+                if pj+1<N and covered[pi][pj+1] == 0 and lake[pi][pj+1] == 0:
+                    covered[pi][pj+1] = num
                     valid_neighbor.append((pi,pj+1))
-                if pi+1<M and lake[pi+1][pj] == 0 and valid_neighbor.count((pi+1,pj)) == 0:
+                if pi+1<M and covered[pi+1][pj] == 0 and lake[pi+1][pj] == 0:
+                    covered[pi+1][pj] = num
                     valid_neighbor.append((pi+1,pj))
-                if pj-1>0 and lake[pi][pj-1] == 0 and valid_neighbor.count((pi,pj-1)) == 0:
+                if pj-1>=0 and covered[pi][pj-1] == 0 and lake[pi][pj-1] == 0:
+                    covered[pi][pj-1] = num
                     valid_neighbor.append((pi, pj-1))
-                if pi-1>0 and lake[pi-1][pj] == 0 and valid_neighbor.count((pi-1,pj)) == 0:
+                if pi-1>=0 and covered[pi-1][pj] == 0 and lake[pi-1][pj] == 0:
+                    covered[pi-1][pj] = num
                     valid_neighbor.append((pi-1, pj))
-            for pi,pj in valid_neighbor:
-                covered[i][j] = num
             num += 1
             i = 0
             j = 0
+            #import pdb
+            #pdb.set_trace()
         else:
             i += 1
-            if i == M - 1:
+            if i == M:
                 i = 0
                 j += 1                
     return num - 1
