@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-i = 4
+i = 3
 with open(f'{i}.html') as f:
         st = f.read()
 soup = BeautifulSoup(st, "lxml")
