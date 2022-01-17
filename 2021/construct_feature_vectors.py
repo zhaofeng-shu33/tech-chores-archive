@@ -39,4 +39,4 @@ def save_data(data_holder, target_name):
 fill_data_holder(train_data_loader, train_data_holder)
 fill_data_holder(test_data_loader, test_data_holder)
 save_data(train_data_holder, 'train_feature_1024_cifar10.npy')
-save_data(train_data_holder, 'test_feature_1024_cifar10.npy')
+save_data(test_data_holder, 'test_feature_1024_cifar10.npy')
